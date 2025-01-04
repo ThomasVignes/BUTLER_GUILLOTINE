@@ -619,14 +619,33 @@ public class GameManager : MonoBehaviour
         List<GameObject> next = zone.ShotSpecificObjects;
         foreach (var item in previous)
         {
-            if (!next.Contains(item) && item.activeSelf)
-                item.SetActive(false);
+            if (!next.Contains(item))
+            {
+                RagdollHider hider = item.GetComponent<RagdollHider>();
+                if (hider != null)
+                {
+                    hider.Hide();
+                }
+                else
+                {
+                    if (item.activeSelf)
+                        item.SetActive(false);
+                }
+            }
         }
 
         foreach (var item in next)
         {
-            if (!item.activeSelf)
-                item.SetActive(true);
+            RagdollHider hider = item.GetComponent<RagdollHider>();
+            if (hider != null)
+            {
+                hider.Show();
+            }
+            else
+            {
+                if (!item.activeSelf)
+                    item.SetActive(true);
+            }
         }
 
         //Update zone hidden objects
@@ -634,14 +653,33 @@ public class GameManager : MonoBehaviour
         next = zone.ShotSpecificHide;
         foreach (var item in previous)
         {
-            if (!next.Contains(item) && !item.activeSelf)
-                item.SetActive(true);
+            if (!next.Contains(item))
+            {
+                RagdollHider hider = item.GetComponent<RagdollHider>();
+                if (hider != null)
+                {
+                    hider.Show();
+                }
+                else
+                {
+                    if (!item.activeSelf)
+                        item.SetActive(true);
+                }
+            }
         }
 
         foreach(var item in next)
         {
-            if (item.activeSelf)
-                item.SetActive(false);
+            RagdollHider hider = item.GetComponent<RagdollHider>();
+            if (hider != null)
+            {
+                hider.Hide();
+            }
+            else
+            {
+                if (item.activeSelf)
+                    item.SetActive(false);
+            }
         }
 
 

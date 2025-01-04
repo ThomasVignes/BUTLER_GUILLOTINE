@@ -43,6 +43,9 @@ public class RagdollHider : MonoBehaviour
 
     public void Hide()
     {
+        if (!Application.isPlaying)
+            return;
+
         if (agent == null)
             Init();
 
@@ -65,6 +68,9 @@ public class RagdollHider : MonoBehaviour
     [ContextMenu("Show")]
     public void Show()
     {
+        if (!Application.isPlaying)
+            return;
+
         transform.position = originalPos;
 
         foreach (var item in deactivateObjects)

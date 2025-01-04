@@ -34,12 +34,30 @@ public class ObjectSwapper : MonoBehaviour
     {
         foreach (var item in Specific)
         {
-            item.SetActive(true);
+            RagdollHider hider = item.GetComponent<RagdollHider>();
+            if (hider != null)
+            {
+                hider.Show();
+            }
+            else
+            {
+                if (!item.activeSelf)
+                    item.SetActive(true);
+            }
         }
 
         foreach (var item in Hide)
         {
-            item.SetActive(false);
+            RagdollHider hider = item.GetComponent<RagdollHider>();
+            if (hider != null)
+            {
+                hider.Hide();
+            }
+            else
+            {
+                if (item.activeSelf)
+                    item.SetActive(false);
+            }
         }
     }
 
@@ -48,12 +66,30 @@ public class ObjectSwapper : MonoBehaviour
     {
         foreach (var item in Specific)
         {
-            item.SetActive(false);
+            RagdollHider hider = item.GetComponent<RagdollHider>();
+            if (hider != null)
+            {
+                hider.Hide();
+            }
+            else
+            {
+                if (item.activeSelf)
+                    item.SetActive(false);
+            }
         }
 
         foreach (var item in Hide)
         {
-            item.SetActive(true);
+            RagdollHider hider = item.GetComponent<RagdollHider>();
+            if (hider != null)
+            {
+                hider.Show();
+            }
+            else
+            {
+                if (!item.activeSelf)
+                    item.SetActive(true);
+            }
         }
     }
 
