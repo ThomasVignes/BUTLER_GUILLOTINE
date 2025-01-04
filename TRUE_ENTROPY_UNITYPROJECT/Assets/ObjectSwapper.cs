@@ -29,6 +29,34 @@ public class ObjectSwapper : MonoBehaviour
         }
     }
 
+    [ContextMenu("EditorShowSpecific")]
+    public void ShowSpecific()
+    {
+        foreach (var item in Specific)
+        {
+            item.SetActive(true);
+        }
+
+        foreach (var item in Hide)
+        {
+            item.SetActive(false);
+        }
+    }
+
+    [ContextMenu("EditorResetObjects")]
+    public void ResetObjects()
+    {
+        foreach (var item in Specific)
+        {
+            item.SetActive(false);
+        }
+
+        foreach (var item in Hide)
+        {
+            item.SetActive(true);
+        }
+    }
+
     /*
     private void OnTriggerEnter(Collider other)
     {
