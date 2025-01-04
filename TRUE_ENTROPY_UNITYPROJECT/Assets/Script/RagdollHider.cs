@@ -71,6 +71,9 @@ public class RagdollHider : MonoBehaviour
         if (!Application.isPlaying)
             return;
 
+        if (agent == null)
+            Init();
+
         transform.position = originalPos;
 
         foreach (var item in deactivateObjects)
