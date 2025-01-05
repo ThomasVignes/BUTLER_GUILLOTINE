@@ -18,13 +18,31 @@ public class ObjectSwapper : MonoBehaviour
             foreach (var item in Specific)
             {
                 cam.ShotSpecificObjects.Add(item);
-                item.SetActive(false);
+                RagdollHider hider = item.GetComponent<RagdollHider>();
+                if (hider != null)
+                {
+                    hider.Hide();
+                }
+                else
+                {
+                    if (item.activeSelf)
+                        item.SetActive(false);
+                }
             }
 
             foreach (var item in Hide)
             {
                 cam.ShotSpecificHide.Add(item);
-                item.SetActive(true);
+                RagdollHider hider = item.GetComponent<RagdollHider>();
+                if (hider != null)
+                {
+                    hider.Show();
+                }
+                else
+                {
+                    if (!item.activeSelf)
+                        item.SetActive(true);
+                }
             }
         }
     }
