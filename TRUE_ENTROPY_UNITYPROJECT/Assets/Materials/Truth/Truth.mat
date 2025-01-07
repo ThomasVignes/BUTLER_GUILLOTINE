@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Truth
-  m_Shader: {fileID: -6465566751694194690, guid: 18880dbf3f236464fa21cca878ff8812, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 873d04041cc0e8f4fadc4a8d3fd8ea8a, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -117,7 +117,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Diffuse:
-        m_Texture: {fileID: 2800000, guid: 3d94dcdf086297049943a0b0e7566fad, type: 3}
+        m_Texture: {fileID: 2800000, guid: ae51c8d03a35000478f96b4bd0e950e5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -173,7 +173,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: 16c53fef92528674fbf2fab05e0bf9a7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 824320c106abd434e816926fb9412479, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2DAsset_4a8f4c1a0534482599b71c6a65bd5cc6_Out_0_Texture2D:
@@ -216,7 +216,7 @@ Material:
     - _Base_Gloss: 0.5555561
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
-    - _Boost: 0.02
+    - _Boost: 0
     - _BottomBumpScale: 1
     - _BottomEmissionScaleUI: 0
     - _BottomGlossiness: 0.5
@@ -251,7 +251,7 @@ Material:
     - _MOVINGTEXTURE: 1
     - _Metallic: 0
     - _Mode: 0
-    - _NoiseStrengh: 0.18
+    - _NoiseStrengh: 1
     - _NoiseTilling: 1.37
     - _Norm1Strength: 1
     - _Norm2Strength: 1
@@ -263,7 +263,8 @@ Material:
     - _ReceiveShadows: 1
     - _STATIC: 0
     - _SYNCBREATH: 0
-    - _Smoothness: 1.76
+    - _ScreenSpaceUVScale: 0.03
+    - _Smoothness: 5.62
     - _Smoothness2: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -293,7 +294,7 @@ Material:
     - _BottomEmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _BottomEmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
     - _BottomSpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _Color: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
+    - _Color: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 1}
     - _DetailSpecCol1: {r: 1, g: 1, b: 1, a: 1}
     - _DetailSpecCol2: {r: 0.1172414, g: 1, b: 0, a: 1}
     - _DetailSpecCol3: {r: 0, g: 0, b: 1, a: 1}
@@ -307,7 +308,7 @@ Material:
     - _Mask2_color: {r: 0.05082181, g: 0.6911765, b: 0.1082329, a: 1}
     - _Mask3_color: {r: 0.04974049, g: 0.3912004, b: 0.6764706, a: 1}
     - _MovingSpeed: {r: 0.2, g: 0, b: 0, a: 0}
-    - _NoiseSpeed: {r: 1.4, g: 5.91, b: 0, a: 0}
+    - _NoiseSpeed: {r: 1, g: 4.99, b: 0, a: 0}
     - _NormalOffset: {r: 0, g: 0, b: 0, a: 0}
     - _NormalTiling: {r: 0.3, g: 0.3, b: 0, a: 0}
     - _Offset: {r: -0.39, g: 0.45, b: 0, a: 0}
