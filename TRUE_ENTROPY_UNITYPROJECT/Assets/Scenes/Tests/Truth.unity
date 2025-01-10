@@ -13083,7 +13083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7956c3e44129ebf4fbe8624006bb18aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ambiance: Bar
+  Ambiance: Truth
   ChangeVolume: 0
   NewVolume: 1
   Template: 0
@@ -14991,6 +14991,134 @@ Transform:
   m_Father: {fileID: 1715983078}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &415653778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 415653779}
+  - component: {fileID: 415653780}
+  m_Layer: 0
+  m_Name: R1 - O Jesu Christ - Unknown Choir - reversed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &415653779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415653778}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 474180324}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &415653780
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415653778}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 60f516b1773c58a498f081184f157ce0, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &428625308
 GameObject:
   m_ObjectHideFlags: 0
@@ -16017,6 +16145,7 @@ Transform:
   m_Children:
   - {fileID: 1996442976}
   - {fileID: 1426700652}
+  - {fileID: 415653779}
   m_Father: {fileID: 1022965867}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29868,7 +29997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7956c3e44129ebf4fbe8624006bb18aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ambiance: Bar
+  Ambiance: Truth
   ChangeVolume: 0
   NewVolume: 1
   Template: 0
@@ -32610,29 +32739,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   areas:
-  - Name: Bar
-    Music: {fileID: 573856179}
-    CopyrightFree: {fileID: 1426700653}
-    ImmuneExperimental: 0
-    OriginalVolume: 0
-  - Name: Empty
-    Music: {fileID: 1996442975}
-    CopyrightFree: {fileID: 1996442975}
-    ImmuneExperimental: 0
-    OriginalVolume: 0
-  - Name: OperaCorridors
-    Music: {fileID: 1474528518}
-    CopyrightFree: {fileID: 1796489973}
-    ImmuneExperimental: 0
-    OriginalVolume: 0
-  - Name: Dream
-    Music: {fileID: 1451649168}
-    CopyrightFree: {fileID: 2079000519}
-    ImmuneExperimental: 0
-    OriginalVolume: 0
-  - Name: Reality
-    Music: {fileID: 592001097}
-    CopyrightFree: {fileID: 858236804}
+  - Name: Truth
+    Music: {fileID: 415653780}
+    CopyrightFree: {fileID: 415653780}
     ImmuneExperimental: 0
     OriginalVolume: 0
   overrideAudio: {fileID: 714738684}
@@ -46942,7 +47051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7956c3e44129ebf4fbe8624006bb18aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ambiance: Bar
+  Ambiance: Truth
   ChangeVolume: 0
   NewVolume: 1
   Template: 0
@@ -69620,7 +69729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7956c3e44129ebf4fbe8624006bb18aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ambiance: Bar
+  Ambiance: Truth
   ChangeVolume: 0
   NewVolume: 1
   Template: 0

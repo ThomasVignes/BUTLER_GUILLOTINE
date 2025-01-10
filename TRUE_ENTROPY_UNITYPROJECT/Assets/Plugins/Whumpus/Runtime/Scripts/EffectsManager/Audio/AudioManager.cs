@@ -92,20 +92,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void StopTrack()
-    {
-        if (TrackObject.GetComponent<AudioSource>().clip != null)
-        {
-
-            TrackObject.GetComponent<AudioSource>().Stop();
-
-        }
-        else
-        {
-            Debug.LogError("No track by the name '" + name + "' found");
-        }
-    }
-
 
     public void Play(string name)
     {

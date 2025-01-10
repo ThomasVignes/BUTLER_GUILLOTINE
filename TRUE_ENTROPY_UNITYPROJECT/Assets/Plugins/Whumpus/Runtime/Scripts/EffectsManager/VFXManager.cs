@@ -57,6 +57,7 @@ public class VFXManager : MonoBehaviour
                 if (v.name == vfxObject.GetComponent<VfxObject>().id && !vfxObject.GetComponent<ParticleSystem>().isEmitting)
                 {
                     vfxObject.SetActive(true);
+                    vfxObject.transform.position = position;
                     notPlayingVfx.Remove(vfxObject);
                     playingVfx.Add(vfxObject);
                     NewVfxObject = vfxObject;
@@ -74,8 +75,6 @@ public class VFXManager : MonoBehaviour
                 Debug.LogError("Vfx :" + name + " doesn't exist");
                 return;
             }
-
-            NewVfxObject.transform.position = position;
             v.source.Play();
             StartCoroutine(NewVfxObject.GetComponent<VfxObject>().VfxPlayed());
         }
@@ -95,6 +94,8 @@ public class VFXManager : MonoBehaviour
                 if (v.name == vfxObject.GetComponent<VfxObject>().id && !vfxObject.GetComponent<ParticleSystem>().isEmitting)
                 {
                     vfxObject.SetActive(true);
+                    vfxObject.transform.position = position;
+                    vfxObject.transform.rotation = rotation;
                     notPlayingVfx.Remove(vfxObject);
                     playingVfx.Add(vfxObject);
                     NewVfxObject = vfxObject;
@@ -112,9 +113,6 @@ public class VFXManager : MonoBehaviour
                 Debug.LogError("Vfx :" + name + " doesn't exist");
                 return;
             }
-
-            NewVfxObject.transform.position = position;
-            NewVfxObject.transform.rotation = rotation;
             v.source.Play();
             StartCoroutine(NewVfxObject.GetComponent<VfxObject>().VfxPlayed());
         }
