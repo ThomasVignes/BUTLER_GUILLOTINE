@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float delayBeforeDialogue;
     [SerializeField] private float delayBetweenLetters;
+    [SerializeField] private float originalFOV;
 
     [Header("References")]
     [SerializeField] private List<Puppet> puppets = new List<Puppet>();
@@ -19,6 +21,8 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private List<Transform> puppetPivots = new List<Transform>();
     [SerializeField] private List<Transform> cameraPivots = new List<Transform>();
+
+    [SerializeField] private CinemachineVirtualCamera VNCam;
 
     private int currentPuppetIndex;
     private GameObject currentPuppet;
@@ -153,6 +157,12 @@ public class DialogueManager : MonoBehaviour
     IEnumerator C_Dialogue(bool hasDelay)
     {
         VNScene.SetActive(true);
+
+        if (VNCam != null && dialogues[currentDialogue].overrideFOV)
+        {
+            VNCam.m_Lens.FieldOfView = dialogues[currentDialogue].FOV;
+        }
+
         Line line = dialogues[currentDialogue].Lines[currentLine];
 
         string text = line.Text;
@@ -246,6 +256,9 @@ public class DialogueManager : MonoBehaviour
 
     public void TryEndDialogue()
     {
+        if (VNCam != null)
+            VNCam.m_Lens.FieldOfView = originalFOV;
+
         VNInterface.SetActive(false);
         VNScene.SetActive(false);
         GameManager.Instance.SetVNMode(false, false);

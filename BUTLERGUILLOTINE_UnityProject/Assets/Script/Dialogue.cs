@@ -7,6 +7,8 @@ public class Dialogue : MonoBehaviour
 {
     public string PuppetName;
     public List<Line> Lines = new List<Line>();
+    public bool overrideFOV;
+    public float FOV;
 }
 
 [System.Serializable]
