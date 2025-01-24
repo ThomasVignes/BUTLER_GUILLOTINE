@@ -2,6 +2,7 @@ using DG.Tweening.Core.Easing;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,6 +14,7 @@ public class LocalCinematic : MonoBehaviour
     public LocalCinematicLine[] lines;
     public float delayBeforeDialogue;
     public float delayBetweenLetters;
+    public bool writeText;
     public UnityEvent OnStart;
     public UnityEvent OnEndBeforeBlackScreen;
     public UnityEvent OnEnd;
@@ -27,8 +29,18 @@ public class LocalCinematic : MonoBehaviour
     public CinematicPuppet[] CinematicPuppets;
     public GameObject Camera;
     public GameObject Interface;
+    [SerializeField] TextMeshProUGUI dialogue;
 
     bool cinematicDone, playing, init;
+
+    
+
+    [Header("Experimental")]
+    [SerializeField] bool lastCinematic;
+
+    GameManager gameManager;
+
+    bool writing, skip;
 
     [ContextMenu("Play")]
     public void PlayLocal()
@@ -83,33 +95,34 @@ public class LocalCinematic : MonoBehaviour
             //Write text
             #region Write text
             yield return new WaitForSeconds(delayBeforeDialogue);
-            /*
-            var text = line.Text;
-
-            dialogue.text = "";
-
-            writing = true;
-
-            foreach (char c in text)
+            if (writeText)
             {
-                dialogue.text += c;
+                var text = line.Text;
+
+                dialogue.text = "";
+
+                writing = true;
+
+                foreach (char c in text)
+                {
+                    dialogue.text += c;
+
+                    if (skip)
+                    {
+                        break;
+                    }
+
+                    yield return new WaitForSeconds(delayBetweenLetters);
+                }
+
+                writing = false;
 
                 if (skip)
                 {
-                    break;
+                    dialogue.text = text;
+                    skip = false;
                 }
-
-                yield return new WaitForSeconds(delayBetweenLetters);
             }
-
-            writing = false;
-
-            if (skip)
-            {
-                dialogue.text = text;
-                skip = false;
-            }
-            */
             #endregion
 
             //Play animations
