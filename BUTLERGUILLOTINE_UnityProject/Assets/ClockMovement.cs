@@ -7,6 +7,7 @@ public class ClockMovement : MonoBehaviour
     [SerializeField] float timerMultiplier;
     [SerializeField] int startSeconds, startMinutes, startHours;
     [SerializeField] Transform seconds, minutes, hours;
+    [SerializeField] AudioSource tick;
 
     float sAngle, mAngle, hAngle;
     float timer, mult;
@@ -58,6 +59,8 @@ public class ClockMovement : MonoBehaviour
             lastSecs = secs;
 
             mult = Random.Range(1, timerMultiplier);
+
+            tick.Play();
         }
 
         if (secs >= 60)
