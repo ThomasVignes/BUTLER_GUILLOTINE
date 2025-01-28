@@ -127,7 +127,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: a4ec8af0ea915074ca818f728df3c9fc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9c6f40943e0420742a109ca660553340, type: 2}
+      objectReference: {fileID: 2100000, guid: d16fa222be12db44da0e7660294a8194, type: 2}
     - target: {fileID: 919132149155446097, guid: a4ec8af0ea915074ca818f728df3c9fc, type: 3}
       propertyPath: m_Name
       value: chair (4)
@@ -213,7 +213,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: a4ec8af0ea915074ca818f728df3c9fc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9c6f40943e0420742a109ca660553340, type: 2}
+      objectReference: {fileID: 2100000, guid: d16fa222be12db44da0e7660294a8194, type: 2}
     - target: {fileID: 919132149155446097, guid: a4ec8af0ea915074ca818f728df3c9fc, type: 3}
       propertyPath: m_Name
       value: chair
@@ -299,7 +299,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: a4ec8af0ea915074ca818f728df3c9fc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9c6f40943e0420742a109ca660553340, type: 2}
+      objectReference: {fileID: 2100000, guid: d16fa222be12db44da0e7660294a8194, type: 2}
     - target: {fileID: 919132149155446097, guid: a4ec8af0ea915074ca818f728df3c9fc, type: 3}
       propertyPath: m_Name
       value: chair (5)
@@ -385,7 +385,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: a4ec8af0ea915074ca818f728df3c9fc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9c6f40943e0420742a109ca660553340, type: 2}
+      objectReference: {fileID: 2100000, guid: d16fa222be12db44da0e7660294a8194, type: 2}
     - target: {fileID: 919132149155446097, guid: a4ec8af0ea915074ca818f728df3c9fc, type: 3}
       propertyPath: m_Name
       value: chair (6)
@@ -410,7 +410,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 9c0c884f1445c9d499e81842975510c9, type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c0c884f1445c9d499e81842975510c9, type: 3}
       propertyPath: m_LocalScale.x
@@ -467,11 +467,11 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9c0c884f1445c9d499e81842975510c9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9c6f40943e0420742a109ca660553340, type: 2}
+      objectReference: {fileID: 2100000, guid: d16fa222be12db44da0e7660294a8194, type: 2}
     - target: {fileID: -7511558181221131132, guid: 9c0c884f1445c9d499e81842975510c9, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 670e381be834f0943a6e19c72a29d756, type: 2}
+      objectReference: {fileID: 2100000, guid: f02e22ca319246e469efa4acc1c56e46, type: 2}
     - target: {fileID: 919132149155446097, guid: 9c0c884f1445c9d499e81842975510c9, type: 3}
       propertyPath: m_Name
       value: Table Variant
@@ -584,6 +584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nappe
       objectReference: {fileID: 0}
+    - target: {fileID: 9164213019458427128, guid: e5b5fd540676b6f468893a82a12afa3c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 84fe3a112e71bdc4ca256ac7d7b78130, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

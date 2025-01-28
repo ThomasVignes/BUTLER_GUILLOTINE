@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 275388044452220123, guid: 088842aae21acc64b8ee04f1fa253792, type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 275388044452220123, guid: 088842aae21acc64b8ee04f1fa253792, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55,14 +55,14 @@ PrefabInstance:
     - target: {fileID: 1383377811557284014, guid: 088842aae21acc64b8ee04f1fa253792, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 670e381be834f0943a6e19c72a29d756, type: 2}
+      objectReference: {fileID: 2100000, guid: f02e22ca319246e469efa4acc1c56e46, type: 2}
     - target: {fileID: 2187250251950449370, guid: 088842aae21acc64b8ee04f1fa253792, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d0dc8efe52269c54b92f4a0a6ee15377, type: 2}
     - target: {fileID: 2872374101048030458, guid: 088842aae21acc64b8ee04f1fa253792, type: 3}
       propertyPath: m_Name
-      value: GalleryDoor Variant
+      value: DoorReversed
       objectReference: {fileID: 0}
     - target: {fileID: 2872374101048030458, guid: 088842aae21acc64b8ee04f1fa253792, type: 3}
       propertyPath: m_IsActive
