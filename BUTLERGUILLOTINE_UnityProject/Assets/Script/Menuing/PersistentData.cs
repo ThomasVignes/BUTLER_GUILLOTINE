@@ -10,7 +10,7 @@ public class PersistentData : MonoBehaviour
     public bool SoundOn;
     public bool CopyrightFree;
 
-    public float Volume = 1;
+    public float Volume {  get { return AudioListener.volume; } set { AudioListener.volume = value; } }
 
     private void Awake()
     {

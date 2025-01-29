@@ -5,24 +5,29 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using static UnityEngine.Rendering.DebugUI;
 
 public class MainMenuMaster : MonoBehaviour
 {
     public static MainMenuMaster Instance;
 
-    [Header("States")]
+    [Header("Values")]
     public bool CanInput;
     public bool AutoQuit;
+    [SerializeField] float travelSpeed;
 
     [Header("References")]
     [SerializeField] private Image BlackScreen;
-    [SerializeField] private Animator hungAnimator, cam;
-    [SerializeField] private GameObject FirstMenuButton, FirstOptionButton, Main, OptionsMenu;
-    [SerializeField] private GameObject MainCam, OptionsCam, disclaimer, title;
-    [SerializeField] private AudioSource click;
+    [SerializeField] Transform Elevator;
+    [SerializeField] Transform[] Spots;
+
+    [Header("MainMenuing")]
+    [SerializeField] private GameObject FirstMenuButton;
+
+    [Header("OptionsMenuing")]
+    [SerializeField] private GameObject FirstOptionsButton;
 
     bool disclaimerMode;
+    int targetSpot;
 
     private void Awake()
     {
@@ -42,154 +47,47 @@ public class MainMenuMaster : MonoBehaviour
 
         Screen.fullScreen = true;
         AudioListener.pause = false;
+
+        Elevator.position = Spots[targetSpot].position;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            SceneManager.LoadScene(5);
-        }
+        if (!CanInput)
+            return;
 
-        if (Input.anyKey || Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
-        {
-            if (AutoQuit)
-            {
-                QuitGame();
-                return;
-            }
+        var spot = Spots[targetSpot].position;
 
-            if (!CanInput)
-                return;
-
-            click.Play();
-
-            if (!disclaimerMode)
-                StartDisclaimer();
-            else
-                StartGame();
-        }
-
-
+        if (Vector3.Distance(Elevator.position, spot) > Time.deltaTime)
+            Elevator.position = Vector3.MoveTowards(Elevator.position, spot, travelSpeed * Time.deltaTime);
     }
 
-    public void OpenOptions()
+    public void ChangeSpots(int index)
     {
-        if (CanInput)
-        {
-            StartCoroutine(ClickCooldown());
-            MainCam.SetActive(false);
-            OptionsCam.SetActive(true);
-            OptionsMenu.SetActive(true);
+        if (!CanInput)
+            return;
 
-            if (EventSystem.current.currentSelectedGameObject != null)
-                EventSystem.current.SetSelectedGameObject(null);
-
-            EventSystem.current.SetSelectedGameObject(FirstOptionButton);
-        }
-    }
-
-    public void ReturnToMain()
-    {
-        if (CanInput)
-        {
-            StartCoroutine(ClickCooldown());
-            StartCoroutine(DeactivateOptions());
-            OptionsCam.SetActive(false);
-            MainCam.SetActive(true);
-
-            if (EventSystem.current.currentSelectedGameObject != null)
-                EventSystem.current.SetSelectedGameObject(null);
-
-            EventSystem.current.SetSelectedGameObject(FirstMenuButton);
-        }
-    }
-
-    public void StartDisclaimer()
-    {
-        if (CanInput)
-        {
-            CanInput = false;
-            //hungAnimator.SetTrigger("Kidnap");
-            StartCoroutine(DisclaimerCoroutine());
-        }
+        targetSpot = index;
     }
 
     public void StartGame()
     {
-        if (CanInput)
-        {
-            CanInput = false;
-            //hungAnimator.SetTrigger("Kidnap");
-            StartCoroutine(C_StartGame());
-        }
-    }
+        if (!CanInput)
+            return;
 
-
-    public void QuitGame()
-    {
-        if (CanInput)
-        {
-            CanInput = false;
-            StartCoroutine(QuitGameCoroutine());
-        }
-    }
-
-    public void ToggleFullScreen()
-    {
-        Screen.fullScreen = !Screen.fullScreen;
-        PersistentData.Instance.FullScreen = Screen.fullScreen;
-    }
-
-    public void ToggleSound()
-    {
-        AudioListener.pause = !AudioListener.pause;
-        PersistentData.Instance.SoundOn = !AudioListener.pause;
-    }
-
-    IEnumerator ClickCooldown()
-    {
         CanInput = false;
-        yield return new WaitForSeconds(0.68f);
 
-        CanInput = true;
-    }
-
-    IEnumerator DeactivateOptions()
-    {
-        yield return new WaitForSeconds(0.17f);
-
-        OptionsMenu.SetActive(false);
-    }
-
-    IEnumerator DisclaimerCoroutine()
-    {
-        BlackFadeTo(1, 0.7f);
-        yield return new WaitForSeconds(1.3f);
-        disclaimer.SetActive(true);
-        title.SetActive(false);
-        BlackFadeTo(0, 0.7f);
-        yield return new WaitForSeconds(1);
-
-        disclaimerMode = true;
-        CanInput = true;
+        StartCoroutine(C_StartGame());
     }
 
     IEnumerator C_StartGame()
     {
-        BlackFadeTo(1, 0.7f);
-        yield return new WaitForSeconds(1.3f);
+        BlackFadeTo(1, 4f);
+
+        yield return new WaitForSeconds(7f);
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
-    IEnumerator QuitGameCoroutine()
-    {
-        BlackFadeTo(1, 1.3f);
-        yield return new WaitForSeconds(1.3f);
-
-        Application.Quit();
-    }
-
 
     public void BlackFadeTo(int value)
     {
