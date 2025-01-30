@@ -25,6 +25,7 @@ public class MainMenuMaster : MonoBehaviour
 
     [Header("OptionsMenuing")]
     [SerializeField] private GameObject FirstOptionsButton;
+    [SerializeField] private Slider masterVolume;
 
     bool disclaimerMode;
     int targetSpot;
@@ -68,6 +69,14 @@ public class MainMenuMaster : MonoBehaviour
             return;
 
         targetSpot = index;
+    }
+
+    public void UpdateVolume()
+    {
+        AudioListener.volume = masterVolume.value;
+
+        if (PersistentData.Instance != null)
+            PersistentData.Instance.Volume = AudioListener.volume;
     }
 
     public void StartGame()
