@@ -27,12 +27,18 @@ public class MainMenuMaster : MonoBehaviour
     [SerializeField] private GameObject FirstOptionsButton;
     [SerializeField] private Slider masterVolume;
 
+    [Header("Credits")]
+    [SerializeField] CreditsManager creditsManager;
+
+
     bool disclaimerMode;
     int targetSpot;
 
     private void Awake()
     {
         Instance = this;
+
+        creditsManager.Init(this);
     }
 
     private void Start()
@@ -61,6 +67,24 @@ public class MainMenuMaster : MonoBehaviour
 
         if (Vector3.Distance(Elevator.position, spot) > Time.deltaTime)
             Elevator.position = Vector3.MoveTowards(Elevator.position, spot, travelSpeed * Time.deltaTime);
+    }
+
+    public void RollCredits()
+    {
+        CanInput = false;
+
+        BlackFadeTo(1, 1);
+
+        creditsManager.Roll();
+    }
+
+    public void EndCredits()
+    {
+        creditsManager.ResetCredits();
+
+        BlackFadeTo(0, 1);
+
+        CanInput = true;
     }
 
     public void ChangeSpots(int index)
