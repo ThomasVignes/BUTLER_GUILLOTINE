@@ -12,6 +12,7 @@ public class TargetLimb : MonoBehaviour
     public float ForceMultiplier = 1;
     public RagdollLimb limb;
     public UnityEvent OnHit;
+    public bool NoBlood;
 
     LimbShield shield;
 
@@ -24,14 +25,17 @@ public class TargetLimb : MonoBehaviour
 
     public void Hit(int damage, float stun, float force, Vector3 dir)
     {
-        Debug.Log(limb.gameObject.name + " hit");
+        if (limb != null)
+            Debug.Log(limb.gameObject.name + " hit");
         
 
         if (shield == null || !shield.Active)
         {
             Owner.Hurt(damage * Multiplier);
             Owner.Stun(stun * StunMultiplier);
-            limb.rb.AddForce(force * dir);
+
+            if (limb != null)
+                limb.rb.AddForce(force * dir);
         }
         else
         {

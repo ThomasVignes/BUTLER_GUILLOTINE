@@ -54,7 +54,8 @@ public class Hitshape : MonoBehaviour
             {
                 targetLimb.Hit(damage, stun, force, owner.transform.forward.normalized);
 
-                GameObject go = Instantiate(hitFx, other.ClosestPoint(transform.position), Quaternion.identity);
+                Instantiate(hitFx, other.ClosestPoint(transform.position), Quaternion.identity);
+
 
                 if (hitSound != null) 
                     EffectsManager.Instance.audioManager.Play(hitSound);

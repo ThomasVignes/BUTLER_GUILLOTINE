@@ -77,10 +77,20 @@ public class JerController : PlayerController
         {
             if (shotLifeform)
             {
-                go = Instantiate(bloodParticle, spot, Quaternion.identity);
+                if (targetLimb.NoBlood)
+                {
+                    go = Instantiate(shootParticle, spot, Quaternion.identity);
+                    EffectsManager.Instance.audioManager.Play("Shield");
+                }
+                else
+                {
+                    go = Instantiate(bloodParticle, spot, Quaternion.identity);
+                    EffectsManager.Instance.audioManager.Play("Blood");
+                }
+
                 go.transform.LookAt(transform.position + Vector3.up * 2f);
 
-                EffectsManager.Instance.audioManager.Play("Blood");
+               
             }
             else
             {

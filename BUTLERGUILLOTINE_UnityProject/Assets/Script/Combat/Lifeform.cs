@@ -33,10 +33,11 @@ public class Lifeform : MonoBehaviour
         if (dead)
             return;
 
-        Character.Stun(stunDamage);
+        if (Character != null)
+            Character.Stun(stunDamage);
     }
 
-    public void Death()
+    public virtual void Death()
     {
         if (dead)
             return;
