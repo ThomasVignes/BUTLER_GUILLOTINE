@@ -15,7 +15,9 @@ public class ShootableLock : Lifeform
             item.ToggleDoorNoEvent(true);
         }
 
-        Instantiate(lockMesh, transform.position, transform.rotation);
+        GameObject go = Instantiate(lockMesh, transform.position, transform.rotation);
+
+        go.GetComponent<Rigidbody>().AddForce(80 * -transform.right.normalized + 30 * -Vector3.up);
 
         Destroy(gameObject);
     }
