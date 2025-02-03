@@ -111,6 +111,63 @@ public class ObjectSwapper : MonoBehaviour
         }
     }
 
+
+
+
+    public void AddToSpecific(GameObject go)
+    {
+        Specific.Add(go);
+
+        foreach (var item in cameras)
+        {
+            item.ShotSpecificObjects.Add(go);
+        }
+    }
+
+    public void AddToHide(GameObject go)
+    {
+        Hide.Add(go);
+
+        foreach (var item in cameras)
+        {
+            item.ShotSpecificHide.Add(go);
+        }
+    }
+
+    public void RemoveFromSpecific(GameObject go)
+    {
+        for (int i = 0; i < Specific.Count; i++)
+        {
+            if (Specific[i] == go)
+            {
+                Specific.RemoveAt(i);
+
+                foreach (var item in cameras)
+                {
+                    item.ShotSpecificObjects.Remove(go);
+                }
+                break;
+            }
+        }
+    }
+
+    public void RemoveFromHide(GameObject go)
+    {
+        for (int i = 0; i < Hide.Count; i++)
+        {
+            if (Hide[i] == go)
+            {
+                Hide.RemoveAt(i);
+
+                foreach (var item in cameras)
+                {
+                    item.ShotSpecificHide.Remove(go);
+                }
+                break;
+            }
+        }
+    }
+
     /*
     private void OnTriggerEnter(Collider other)
     {
