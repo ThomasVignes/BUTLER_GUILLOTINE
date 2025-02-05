@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Stroboscopic : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class Stroboscopic : MonoBehaviour
 
     [Header("Black Screen")]
     [SerializeField] GameObject overrideBlackScreen;
+
+    [Header("Events")]
+    public UnityEvent OnFlash;
+
 
     float delayTimer;
     float durationTimer;
@@ -70,12 +75,14 @@ public class Stroboscopic : MonoBehaviour
                                 finalCam.SetActive(true);
                                 afterFlash = false;
                             }
+                            OnFlash?.Invoke();
                         }
                     }
                 }
 
                 //Reset timer
                 finalTimer = Time.time + finalDuration;
+
             }
             else
             {
@@ -127,7 +134,6 @@ public class Stroboscopic : MonoBehaviour
                     delayTimer = Time.time + flashDelay;
 
                     UpdateImage();
-
                 }
             }
         }
@@ -156,6 +162,7 @@ public class Stroboscopic : MonoBehaviour
             else
                 finalCam.SetActive(true);
 
+            OnFlash?.Invoke();
         }
         else
         {
@@ -179,5 +186,6 @@ public class Stroboscopic : MonoBehaviour
 
             flashes = 0;
         }
+
     }
 }

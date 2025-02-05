@@ -8793,6 +8793,7 @@ MonoBehaviour:
   OnHit:
     m_PersistentCalls:
       m_Calls: []
+  NoBlood: 0
 --- !u!136 &6792912230463905472
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11625,6 +11626,7 @@ MonoBehaviour:
   - {fileID: 2165401836472638893}
   - {fileID: 6398243862329034430}
   - {fileID: 5502736548589663765}
+  - {fileID: 1847715642775536369}
   shootCD: 0.67
   drawDelay: 1
   legIK: {fileID: 7377324655593113487}
@@ -13390,5 +13392,10 @@ PrefabInstance:
 --- !u!4 &1646809342607166161 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8011650971822903236, guid: a744765c7f899764393e5fea908c4b90, type: 3}
+  m_PrefabInstance: {fileID: 8788139444081247509}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1847715642775536369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6940568010354477028, guid: a744765c7f899764393e5fea908c4b90, type: 3}
   m_PrefabInstance: {fileID: 8788139444081247509}
   m_PrefabAsset: {fileID: 0}
