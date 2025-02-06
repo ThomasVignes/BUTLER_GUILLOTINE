@@ -19,6 +19,8 @@ public class MainMenuMaster : MonoBehaviour
     [SerializeField] private Image BlackScreen;
     [SerializeField] Transform Elevator;
     [SerializeField] Transform[] Spots;
+    [SerializeField] AudioSource arriveSound;
+    [SerializeField] GameObject eventSystem;
 
     [Header("MainMenuing")]
     [SerializeField] private GameObject FirstMenuButton;
@@ -31,7 +33,7 @@ public class MainMenuMaster : MonoBehaviour
     [SerializeField] CreditsManager creditsManager;
 
 
-    bool disclaimerMode;
+    bool disclaimerMode, moving;
     int targetSpot;
 
     private void Awake()
@@ -63,10 +65,18 @@ public class MainMenuMaster : MonoBehaviour
         if (!CanInput)
             return;
 
+        if (!moving)
+            return;
+
         var spot = Spots[targetSpot].position;
 
         if (Vector3.Distance(Elevator.position, spot) > Time.deltaTime)
             Elevator.position = Vector3.MoveTowards(Elevator.position, spot, travelSpeed * Time.deltaTime);
+        else
+        {
+            arriveSound.Play();
+            moving = false;
+        }
     }
 
     public void RollCredits()
@@ -87,12 +97,22 @@ public class MainMenuMaster : MonoBehaviour
         CanInput = true;
     }
 
+    public void QuitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
+
     public void ChangeSpots(int index)
     {
         if (!CanInput)
             return;
 
         targetSpot = index;
+        moving = true;
     }
 
     public void UpdateVolume()
@@ -109,6 +129,7 @@ public class MainMenuMaster : MonoBehaviour
             return;
 
         CanInput = false;
+        eventSystem.SetActive(false);
 
         StartCoroutine(C_StartGame());
     }
