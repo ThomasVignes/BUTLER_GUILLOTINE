@@ -4792,6 +4792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 299716625}
   - component: {fileID: 299716626}
+  - component: {fileID: 299716627}
   m_Layer: 0
   m_Name: _PersistentData
   m_TagString: Untagged
@@ -4829,6 +4830,18 @@ MonoBehaviour:
   FullScreen: 0
   SoundOn: 0
   CopyrightFree: 0
+--- !u!114 &299716627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299716623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b446386b9b0d874cb27ed8f4557bbd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &318065328
 GameObject:
   m_ObjectHideFlags: 0
