@@ -17,6 +17,9 @@ public class Door : Interactable
 
     public bool CanOpen;
 
+    [Header("Experimental")]
+    public bool UpdateOnEnable;
+
     private bool isOpen;
 
     private void Start()
@@ -36,6 +39,14 @@ public class Door : Interactable
             if (lockedMessage != "")
                 GameManager.Instance.WriteComment(lockedMessage);
         }
+    }
+
+    private void OnEnable()
+    {
+        if (!UpdateOnEnable)
+            return;
+
+        ToggleDoor(isOpen);
     }
 
     public void ToggleDoor(bool open)
