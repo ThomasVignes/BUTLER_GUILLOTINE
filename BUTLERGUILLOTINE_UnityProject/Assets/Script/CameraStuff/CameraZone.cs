@@ -85,35 +85,52 @@ public class CameraZone : MonoBehaviour
             }
         }
 
-        foreach (var item in ShotSpecificObjects)
-        {
-            RagdollHider hider = item.GetComponent<RagdollHider>();
-            if (hider != null)
-            {
-                hider.Hide();
-            }
-            else
-            {
-                if (item.activeSelf)
-                    item.SetActive(false);
-            }
-        }
-
-        foreach (var item in ShotSpecificHide)
-        {
-            RagdollHider hider = item.GetComponent<RagdollHider>();
-            if (hider != null)
-            {
-                hider.Show();
-            }
-            else
-            {
-                if (!item.activeSelf)
-                    item.SetActive(true);
-            }
-        }
+        InitSpecificObjects();
 
         InitializeBehaviour();
+    }
+
+    public void InitSpecificObjects()
+    {
+        if (ShotSpecificObjects.Count > 0)
+        {
+            foreach (var item in ShotSpecificObjects)
+            {
+                if (item != null)
+                {
+                    RagdollHider hider = item.GetComponent<RagdollHider>();
+                    if (hider != null)
+                    {
+                        hider.Hide();
+                    }
+                    else
+                    {
+                        if (item.activeSelf)
+                            item.SetActive(false);
+                    }
+                }
+            }
+        }
+
+        if (ShotSpecificHide.Count > 0)
+        {
+            foreach (var item in ShotSpecificHide)
+            {
+                if (item != null)
+                {
+                    RagdollHider hider = item.GetComponent<RagdollHider>();
+                    if (hider != null)
+                    {
+                        hider.Show();
+                    }
+                    else
+                    {
+                        if (!item.activeSelf)
+                            item.SetActive(true);
+                    }
+                }
+            }
+        }
     }
 
     void Update()
