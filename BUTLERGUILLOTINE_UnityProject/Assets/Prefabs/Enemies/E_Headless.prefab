@@ -13182,19 +13182,8 @@ MonoBehaviour:
   Character: {fileID: 4193529176952806073}
   OnDeath:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7395392672423066884}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  DeathRagdoll: {fileID: 6890795376414181152, guid: 8bd23891c94ad064a919787bfbbc4647, type: 3}
 --- !u!195 &8934116960600033974
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -21541,7 +21530,7 @@ Transform:
   - {fileID: 325200604688149900}
   - {fileID: 1161789710254308866}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: -289.919, z: 0}
 --- !u!114 &8693973581270498049
 MonoBehaviour:

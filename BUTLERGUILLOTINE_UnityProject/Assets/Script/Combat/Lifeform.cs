@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,6 +9,7 @@ public class Lifeform : MonoBehaviour
     public int HP;
     public Character Character;
     public UnityEvent OnDeath;
+    public GameObject DeathRagdoll;
 
 
     bool dead;
@@ -45,5 +47,17 @@ public class Lifeform : MonoBehaviour
         OnDeath?.Invoke();
 
         dead = true;
+
+        if (DeathRagdoll != null)
+        {
+            GameObject go = Instantiate(DeathRagdoll);
+
+            go.transform.position = transform.position;
+            go.transform.rotation = transform.rotation;
+
+            GameManager.Instance.RemoveCharacter(Character);
+
+            Destroy(gameObject);
+        }
     }
 }

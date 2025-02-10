@@ -209,6 +209,11 @@ public class GameManager : MonoBehaviour
         player.Hide(masked);
     }
 
+    public void RemoveCharacter(Character character)
+    {
+        characters.Remove(character);
+    }
+
     public void PlayerReady()
     { 
         player.Ready();
@@ -656,30 +661,36 @@ public class GameManager : MonoBehaviour
         {
             if (!next.Contains(item))
             {
-                RagdollHider hider = item.GetComponent<RagdollHider>();
-                if (hider != null)
+                if (item != null)
                 {
-                    hider.Show();
-                }
-                else
-                {
-                    if (!item.activeSelf)
-                        item.SetActive(true);
+                    RagdollHider hider = item.GetComponent<RagdollHider>();
+                    if (hider != null)
+                    {
+                        hider.Show();
+                    }
+                    else
+                    {
+                        if (!item.activeSelf)
+                            item.SetActive(true);
+                    }
                 }
             }
         }
 
         foreach(var item in next)
         {
-            RagdollHider hider = item.GetComponent<RagdollHider>();
-            if (hider != null)
+            if (item != null)
             {
-                hider.Hide();
-            }
-            else
-            {
-                if (item.activeSelf)
-                    item.SetActive(false);
+                RagdollHider hider = item.GetComponent<RagdollHider>();
+                if (hider != null)
+                {
+                    hider.Hide();
+                }
+                else
+                {
+                    if (item.activeSelf)
+                        item.SetActive(false);
+                }
             }
         }
 
