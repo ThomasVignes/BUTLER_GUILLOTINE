@@ -56,6 +56,7 @@ public class InitRagdoll : MonoBehaviour
                 {
                     if (bone.name == item.name)
                     {
+                        bone.localPosition = item.localPosition;
                         bone.localRotation = item.localRotation;
                     }
                 }
