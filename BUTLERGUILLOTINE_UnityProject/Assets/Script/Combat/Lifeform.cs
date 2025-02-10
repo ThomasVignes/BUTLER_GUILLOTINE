@@ -55,6 +55,9 @@ public class Lifeform : MonoBehaviour
             go.transform.position = transform.position;
             go.transform.rotation = transform.rotation;
 
+            InitRagdoll initRagdoll = go.GetComponent<InitRagdoll>();
+            initRagdoll.TryMatchBones(transform);
+
             GameManager.Instance.RemoveCharacter(Character);
 
             Destroy(gameObject);

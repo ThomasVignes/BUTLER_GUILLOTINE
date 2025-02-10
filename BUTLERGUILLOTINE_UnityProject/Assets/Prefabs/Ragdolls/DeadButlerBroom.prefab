@@ -4766,6 +4766,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6123705378342248287}
+  - component: {fileID: 6490898360064033802}
   m_Layer: 0
   m_Name: DeadButlerBroom
   m_TagString: Untagged
@@ -4791,6 +4792,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6490898360064033802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6890795376414181152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f0d34bf37244604888c4ed219f6abd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tryMatchBones: 1
+  freezeAfterDelay: 0
+  secondsBeforeFreeze: 0
 --- !u!1 &6959573381394371857
 GameObject:
   m_ObjectHideFlags: 0
