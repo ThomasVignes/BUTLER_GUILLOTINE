@@ -768,6 +768,33 @@ public class GameManager : MonoBehaviour
         TeleportPlayer(transform.position, transform.rotation);
     }
 
+    public void TeleportPlayer(Transform transform, float delay, bool blackscreen)
+    {
+        StartCoroutine(C_TeleportPlayer(transform, delay, blackscreen));
+    }
+
+    public void TeleportPlayerPresetDelay(Transform transform)
+    {
+        TeleportPlayer(transform, 2, true);
+    }
+
+    IEnumerator C_TeleportPlayer(Transform transform, float delay, bool blackscreen)
+    {
+        if (blackscreen)
+            ScreenEffects.FadeTo(1, delay / 2);
+
+        yield return new WaitForSeconds(delay/2);
+
+        TeleportPlayer(transform);
+
+        yield return new WaitForSeconds(1);
+
+        if (blackscreen)
+            ScreenEffects.FadeTo(0, delay / 2);
+
+        yield return new WaitForSeconds(delay / 2);
+    }
+
     public void ChopLimb(string ID)
     {
         foreach (var item in player.Choppers)
