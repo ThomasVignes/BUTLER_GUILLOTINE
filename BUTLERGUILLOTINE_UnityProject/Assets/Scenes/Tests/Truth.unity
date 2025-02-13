@@ -3428,6 +3428,7 @@ MonoBehaviour:
       m_Calls: []
   reversedOpen: 0
   CanOpen: 0
+  UpdateOnEnable: 0
 --- !u!4 &77305003
 Transform:
   m_ObjectHideFlags: 0
@@ -26665,7 +26666,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh87746
+  m_Name: pb_Mesh330208
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -36844,7 +36845,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh82992
+  m_Name: pb_Mesh325448
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -37291,6 +37292,8 @@ MonoBehaviour:
           m_Calls: []
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!4 &1186828182
 Transform:
   m_ObjectHideFlags: 0
@@ -37468,7 +37471,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh83254
+  m_Name: pb_Mesh325710
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -43186,6 +43189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeDialogue: 1.3
   delayBetweenLetters: 0.02
+  originalFOV: 0
   puppets:
   - Name: Eric
     VNPuppet: {fileID: 1021505072}
@@ -43209,6 +43213,7 @@ MonoBehaviour:
   - {fileID: 221399218}
   cameraPivots:
   - {fileID: 1892015852}
+  VNCam: {fileID: 0}
 --- !u!4 &1382400434
 Transform:
   m_ObjectHideFlags: 0
@@ -59055,6 +59060,67 @@ Transform:
   m_Father: {fileID: 1069944524}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1630356812
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4099988458684998029, guid: 232e6693cc4827549af9745b089f5018, type: 3}
+      propertyPath: m_RootOrder
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099988458684998029, guid: 232e6693cc4827549af9745b089f5018, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.436
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099988458684998029, guid: 232e6693cc4827549af9745b089f5018, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099988458684998029, guid: 232e6693cc4827549af9745b089f5018, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 27.019
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099988458684998029, guid: 232e6693cc4827549af9745b089f5018, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099988458684998029, guid: 232e6693cc4827549af9745b089f5018, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099988458684998029, guid: 232e6693cc4827549af9745b089f5018, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099988458684998029, guid: 232e6693cc4827549af9745b089f5018, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099988458684998029, guid: 232e6693cc4827549af9745b089f5018, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099988458684998029, guid: 232e6693cc4827549af9745b089f5018, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099988458684998029, guid: 232e6693cc4827549af9745b089f5018, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696594386219604177, guid: 232e6693cc4827549af9745b089f5018, type: 3}
+      propertyPath: m_Name
+      value: WIP
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 232e6693cc4827549af9745b089f5018, type: 3}
 --- !u!1 &1630957752
 GameObject:
   m_ObjectHideFlags: 0
@@ -59734,7 +59800,6 @@ MonoBehaviour:
   FullScreen: 0
   SoundOn: 0
   CopyrightFree: 0
-  Volume: 1
 --- !u!4 &1660572476
 Transform:
   m_ObjectHideFlags: 0

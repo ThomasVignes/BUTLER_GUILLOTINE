@@ -16,11 +16,13 @@ public class MainMenuMaster : MonoBehaviour
     [SerializeField] float travelSpeed;
 
     [Header("References")]
+    [SerializeField] GameObject chapterSelect;
     [SerializeField] private Image BlackScreen;
     [SerializeField] Transform Elevator;
     [SerializeField] Transform[] Spots;
     [SerializeField] AudioSource arriveSound;
     [SerializeField] GameObject eventSystem;
+    [SerializeField] ChapterSelector chapterSelector;
 
     [Header("MainMenuing")]
     [SerializeField] private GameObject FirstMenuButton;
@@ -58,6 +60,8 @@ public class MainMenuMaster : MonoBehaviour
         AudioListener.pause = false;
 
         Elevator.position = Spots[targetSpot].position;
+        
+        chapterSelector.Init();
     }
 
     private void Update()
@@ -141,6 +145,11 @@ public class MainMenuMaster : MonoBehaviour
         yield return new WaitForSeconds(7f);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void ToggleChapterSelect(bool toggle)
+    {
+        chapterSelect.SetActive(toggle);
     }
 
     public void BlackFadeTo(int value)
