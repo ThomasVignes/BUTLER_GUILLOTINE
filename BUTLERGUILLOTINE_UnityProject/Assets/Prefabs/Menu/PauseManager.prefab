@@ -559,7 +559,7 @@ Transform:
   m_Children:
   - {fileID: 673411947254602973}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8794116428508085518
 MonoBehaviour:
@@ -1292,7 +1292,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: QUIT GAME
+  m_text: 'MAIN MENU
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f5b13beb844d03e4394c3ac505602257, type: 2}
   m_sharedMaterial: {fileID: 6429243355620650353, guid: f5b13beb844d03e4394c3ac505602257, type: 2}
@@ -1374,7 +1376,7 @@ GameObject:
   - component: {fileID: 1902806400099350123}
   - component: {fileID: 1453453427905637768}
   m_Layer: 5
-  m_Name: QuitGame
+  m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1485,7 +1487,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8794116428508085518}
         m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

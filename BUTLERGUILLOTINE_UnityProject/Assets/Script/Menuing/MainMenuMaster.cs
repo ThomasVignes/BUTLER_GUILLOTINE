@@ -42,6 +42,9 @@ public class MainMenuMaster : MonoBehaviour
     {
         Instance = this;
 
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
+
         creditsManager.Init(this);
     }
 

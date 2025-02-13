@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PauseManager : Manager
@@ -59,6 +60,15 @@ public class PauseManager : Manager
 
         if (PersistentData.Instance != null)
             PersistentData.Instance.Volume = AudioListener.volume;
+    }
+
+    public void MainMenu()
+    {
+        UnPause();
+
+        Cursor.visible = true;
+
+        SceneManager.LoadScene(1);
     }
 
     public void QuitGame()
