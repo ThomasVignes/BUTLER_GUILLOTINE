@@ -8,13 +8,14 @@ public class ImagePulse : MonoBehaviour
     [Header("Settings")]
     [SerializeField] float pulseSpeed;
     [SerializeField] float minOpacity, maxOpacity;
+    [SerializeField] float fadeOutSpeed;
 
     [Header("References")]
     [SerializeField] Image image;
 
     float currentA;
 
-    bool rising;
+    bool rising, fadeOut;
 
     private void Awake()
     {
@@ -24,6 +25,17 @@ public class ImagePulse : MonoBehaviour
 
     private void Update()
     {
+        if (fadeOut)
+        {
+
+            if (currentA > 0)
+                currentA -= fadeOutSpeed * Time.deltaTime;
+            else
+                currentA = 0;
+
+            return;
+        }
+
         if (rising) 
         { 
             if (currentA < maxOpacity)
@@ -54,5 +66,10 @@ public class ImagePulse : MonoBehaviour
         color.a = currentA/100f;
 
         image.color = color;
+    }
+
+    public void FadeOut()
+    {
+        fadeOut = true;
     }
 }
