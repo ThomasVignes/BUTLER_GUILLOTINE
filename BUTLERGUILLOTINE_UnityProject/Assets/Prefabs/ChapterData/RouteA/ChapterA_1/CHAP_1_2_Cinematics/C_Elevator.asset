@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: C_Elevator
   m_EditorClassIdentifier: 
   ID: Elevator
+  Ambience: 
   BlackScreenDuration: 3
   lines:
   - Text: 
@@ -20,94 +21,135 @@ MonoBehaviour:
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   - Text: ...Are you sure about this ?
     Duration: 8
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   - Text: 
     Duration: 1
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   - Text: We've talked about this, Ray. We don't have much of a choice.
     Duration: 8
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   - Text: 
     Duration: 1
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   - Text: I'm just apprehensive, that's all.
     Duration: 6
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   - Text: 
     Duration: 1
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   - Text: Not like this long-ass elevator is helping.
     Duration: 8
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   - Text: 
     Duration: 1
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   - Text: No shit.
     Duration: 6
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   - Text: 
     Duration: 1
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   - Text: ...
     Duration: 4
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   - Text: 
     Duration: 1
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   - Text: ...Thank you for being here with me. For this, I mean.
     Duration: 8
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   - Text: 
     Duration: 1
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   - Text: Wouldn't have it any other way. You know that.
     Duration: 8
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   - Text: 
     Duration: 1
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   - Text: Still, thanks a lot.
     Duration: 8
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   - Text: 
     Duration: 3
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
   EndBlackScreenDuration: 2
+  NoEndBlackscreen: 0
+  NoFadeOut: 0
+  ResumeTheme: Ceremony

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C_Elevator
   m_EditorClassIdentifier: 
   ID: Elevator
-  Ambience: Bar
+  Ambience: Elevator
   BlackScreenDuration: 1
   lines:
   - Text: 
@@ -26,4 +26,4 @@ MonoBehaviour:
   EndBlackScreenDuration: 1000
   NoEndBlackscreen: 0
   NoFadeOut: 1
-  ResumeTheme: Bar
+  ResumeTheme: Elevator

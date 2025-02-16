@@ -50,14 +50,14 @@ public class MainMenuMaster : MonoBehaviour
 
     private void Start()
     {
-        BlackFadeTo(1, 0.0001f);
-        BlackFadeTo(0, 3f);
+        StartCoroutine(C_ShowMenu());
+
+        /*
         if (EventSystem.current.currentSelectedGameObject != null)
             EventSystem.current.SetSelectedGameObject(null);
 
         EventSystem.current.SetSelectedGameObject(FirstMenuButton);
-
-        CanInput = true;
+        */
 
         Screen.fullScreen = true;
         AudioListener.pause = false;
@@ -148,6 +148,21 @@ public class MainMenuMaster : MonoBehaviour
         yield return new WaitForSeconds(7f);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    IEnumerator C_ShowMenu()
+    {
+        BlackFadeTo(1, 0.0001f);
+        eventSystem.SetActive(false);
+
+        yield return new WaitForSeconds(1f);
+
+        BlackFadeTo(0, 3f);
+
+        yield return new WaitForSeconds(1.8f);
+
+        CanInput = true;
+        eventSystem.SetActive(true);
     }
 
     public void ToggleChapterSelect(bool toggle)
