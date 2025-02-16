@@ -19,6 +19,7 @@ public class PlayerSwapper : MonoBehaviour
             GameManager.Instance.PreInstantiatePlayer(targetPlayer, targetPos);
     }
 
+    [ContextMenu("Manual Swap")]
     public void Swap()
     {
         StartCoroutine(C_SwapDelay());
