@@ -5,6 +5,9 @@ using UnityEngine.AI;
 
 public class Character : MonoBehaviour
 {
+    [Header("Identification")]
+    public string ID;
+
     [Header("Special (Common)")]
     [SerializeField] protected CursorType cursorType;
 
@@ -39,15 +42,24 @@ public class Character : MonoBehaviour
     protected float stunnedTimer;
     protected bool stunned;
 
+    protected bool init;
+
     public NavMeshAgent Agent { get { return agent; } } 
     public bool SpecialMode { get { return specialMode; } }
     public bool Moving { get { if (gameObject.activeInHierarchy && agent.enabled) { return agent.remainingDistance > minDistanceToMove; } else { return false; } } }
     public bool Running { get { return running; } }
     public CursorType CursorType { get { return cursorType; } }
 
+    public bool Initialized {  get { return init; } }  
+
 
     public virtual void Init()
     {
+        if (init)
+            return;
+
+        init = true;
+
         agent = GetComponent<NavMeshAgent>();
 
         originalSpeed = agent.speed;

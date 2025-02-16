@@ -1,4 +1,5 @@
 using DG.Tweening.Core.Easing;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -44,6 +45,21 @@ public class Area
     }
 }
 
+[System.Serializable]
+public class PlayableCharacter
+{
+    public string ID;
+    public CharacterData Data;
+    public GameObject Instance;
+
+    public PlayableCharacter(string ID, CharacterData Data, GameObject instance)
+    {
+        this.ID = ID;
+        this.Data = Data;
+        this.Instance = instance;
+    }
+}
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -51,6 +67,7 @@ public class GameManager : MonoBehaviour
     [Header("Chapter Data")]
     public ChapterData ChapterData;
     public string StartCinematic;
+    public List<PlayableCharacter> PlayableCharacters = new List<PlayableCharacter>();
 
     [Header("Scene Settings")]
     public bool Paused;
@@ -118,11 +135,16 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
 
-        GameObject chara = Instantiate(ChapterData.StartCharacter.ControllerPrefab, characterStart.position, characterStart.rotation);
-        character = chara.GetComponentInChildren<Character>();
-        player = chara.GetComponentInChildren<PlayerController>();
+        var instance = InstantiatePlayer(ChapterData.StartCharacter.ControllerPrefab, true);
 
-        player.Init();
+        PlayableCharacters.Clear();
+        PlayableCharacters.Add(new PlayableCharacter(ChapterData.StartCharacter.Name, ChapterData.StartCharacter, instance));
+
+        foreach (var characters in ChapterData.OtherCharacters)
+        {
+            PlayableCharacters.Add(new PlayableCharacter(characters.Name, characters, null));
+        }
+
 
         PauseManager.Init(this);
         themeManager.Init();
@@ -202,6 +224,31 @@ public class GameManager : MonoBehaviour
             else
                 ready = true;
         }
+    }
+
+
+    public bool SwapPlayer(string playerName, bool hidePreviousPlayer)
+    {
+        bool found = false; ;
+
+        foreach (var item in PlayableCharacters)
+        {
+            if (item.ID == playerName)
+            {
+                if (hidePreviousPlayer)
+                    HidePlayer(true);
+
+                if (item.Instance == null)
+                    InstantiatePlayer(item.Data.ControllerPrefab, true);
+                else
+                    ControlInstance(item.Instance);
+
+                found = true;
+                break;
+            }
+        }
+
+        return found;
     }
 
     public void HidePlayer(bool masked)
@@ -346,6 +393,27 @@ public class GameManager : MonoBehaviour
         }
 
         CursorHover();
+    }
+
+    GameObject InstantiatePlayer(GameObject prefab, bool control)
+    {
+        GameObject chara = Instantiate(prefab, characterStart.position, characterStart.rotation);
+
+        if (control)
+            ControlInstance(chara);
+
+        return chara;
+    }
+
+    void ControlInstance(GameObject instance)
+    {
+        character = instance.GetComponentInChildren<Character>();
+        player = instance.GetComponentInChildren<PlayerController>();
+
+        if (!player.Initialized)
+            player.Init();
+
+        HidePlayer(false);
     }
 
     public void SetPartner(Character character)
