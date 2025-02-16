@@ -52,11 +52,10 @@ public class PlayableCharacter
     public CharacterData Data;
     public GameObject Instance;
 
-    public PlayableCharacter(string ID, CharacterData Data, GameObject instance)
+    public PlayableCharacter(string ID, CharacterData Data)
     {
         this.ID = ID;
         this.Data = Data;
-        this.Instance = instance;
     }
 }
 
@@ -141,15 +140,19 @@ public class GameManager : MonoBehaviour
         playerFollower = go.GetComponent<PlayerFollower>();
 
 
-        var instance = InstantiatePlayer(ChapterData.StartCharacter.ControllerPrefab, true);
-
         PlayableCharacters.Clear();
-        PlayableCharacters.Add(new PlayableCharacter(ChapterData.StartCharacter.Name, ChapterData.StartCharacter, instance));
+
+        var startCharacter = new PlayableCharacter(ChapterData.StartCharacter.Name, ChapterData.StartCharacter);
+
+        PlayableCharacters.Add(startCharacter);
 
         foreach (var characters in ChapterData.OtherCharacters)
         {
-            PlayableCharacters.Add(new PlayableCharacter(characters.Name, characters, null));
+            PlayableCharacters.Add(new PlayableCharacter(characters.Name, characters));
         }
+
+        var instance = InstantiatePlayer(startCharacter, true);
+
 
         PauseManager.Init(this);
         themeManager.Init();
@@ -250,7 +253,7 @@ public class GameManager : MonoBehaviour
                     HidePlayer(true);
 
                 if (item.Instance == null)
-                    InstantiatePlayer(item.Data.ControllerPrefab, true);
+                    InstantiatePlayer(item, true);
                 else
                     ControlInstance(item.Instance);
 
@@ -415,19 +418,35 @@ public class GameManager : MonoBehaviour
         CursorHover();
     }
 
-    GameObject InstantiatePlayer(GameObject prefab, bool control)
+    GameObject InstantiatePlayer(PlayableCharacter playableCharacter, bool control)
     {
-        return InstantiatePlayer(prefab, characterStart, control);
+        return InstantiatePlayer(playableCharacter, characterStart, control);
     }
 
-    GameObject InstantiatePlayer(GameObject prefab, Transform overridePos, bool control)
+    GameObject InstantiatePlayer(PlayableCharacter playableCharacter, Transform overridePos, bool control)
     {
-        GameObject chara = Instantiate(prefab, overridePos.position, overridePos.rotation);
+        GameObject chara = Instantiate(playableCharacter.Data.ControllerPrefab, overridePos.position, overridePos.rotation);
 
         if (control)
             ControlInstance(chara);
 
         return chara;
+    }
+
+    public void PreInstantiatePlayer(string Name, Transform overridePos)
+    {
+        PlayableCharacter character = null;
+
+        foreach (PlayableCharacter c in PlayableCharacters)
+        {
+            if (c.ID == Name)
+            {
+                character = c;
+                break;
+            }
+        }
+
+        character.Instance = InstantiatePlayer(character, overridePos, false);
     }
 
     void ControlInstance(GameObject instance)

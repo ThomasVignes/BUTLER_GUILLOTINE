@@ -18,6 +18,7 @@ public class Character : MonoBehaviour
     [SerializeField] protected float rotationSpeed;
     [SerializeField] protected float minAngleToMove, minDistanceToInteract, closeInteractRange;
     [SerializeField] protected float runMultiplier, injuredMultiplier;
+    public bool Injured;
 
     [Header("Animation (Common)")]
     [SerializeField] protected float moveStateLerp;
@@ -25,7 +26,7 @@ public class Character : MonoBehaviour
     [SerializeField] protected Animator animator;
     protected NavMeshAgent agent;
 
-    protected bool rotating, running, willPickUp, injured;
+    protected bool rotating, running, willPickUp;
     protected Vector3 targetPos;
     protected Vector3 targetDir;
     protected Vector3 lastAgentVelocity;
@@ -67,10 +68,10 @@ public class Character : MonoBehaviour
 
     public void Injure(bool injure)
     {
-        if (injure == injured)
+        if (injure == Injured)
             return;
 
-        injured = injure;
+        Injured = injure;
 
         targetMoveState = 2;
     }
@@ -80,7 +81,7 @@ public class Character : MonoBehaviour
         if (SpecialMode)
             return;
 
-        if (injured)
+        if (Injured)
         {
             running = false;
             targetMoveState = 2;
@@ -161,7 +162,7 @@ public class Character : MonoBehaviour
         if (!running && agent.speed != originalSpeed)
             agent.speed = originalSpeed;
 
-        if (injured && agent.speed != originalSpeed * injuredMultiplier)
+        if (Injured && agent.speed != originalSpeed * injuredMultiplier)
             agent.speed = originalSpeed * injuredMultiplier;
 
         if (rotating)
