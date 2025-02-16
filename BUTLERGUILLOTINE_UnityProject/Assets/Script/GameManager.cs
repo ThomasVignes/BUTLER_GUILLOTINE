@@ -86,6 +86,7 @@ public class GameManager : MonoBehaviour
     private Character character;
 
     [Header("References")]
+    [SerializeField] PlayerFollower playerFollower;
     [SerializeField] ChapterManagerGeneric startGameManager;
     [SerializeField] private Transform characterStart;
     [SerializeField] GameObject inventoryCanvas;
@@ -97,7 +98,7 @@ public class GameManager : MonoBehaviour
     public List<Conditions> conditions = new List<Conditions>();
 
     PlayerController player;
-    PlayerFollower playerFollower;
+    
     Vector3 startPos;
     Quaternion startRot;
     private List<Character> characters = new List<Character>();
@@ -136,8 +137,11 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
 
-        GameObject go = Instantiate((GameObject)Resources.Load("GameManagement/PlayerFollower"));
-        playerFollower = go.GetComponent<PlayerFollower>();
+        if (playerFollower == null)
+        {
+            GameObject go = Instantiate((GameObject)Resources.Load("GameManagement/PlayerFollower"));
+            playerFollower = go.GetComponent<PlayerFollower>();
+        }
 
 
         PlayableCharacters.Clear();
