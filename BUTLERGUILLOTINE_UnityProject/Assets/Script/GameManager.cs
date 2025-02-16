@@ -98,6 +98,7 @@ public class GameManager : MonoBehaviour
     public List<Conditions> conditions = new List<Conditions>();
 
     PlayerController player;
+    PlayerFollower playerFollower;
     Vector3 startPos;
     Quaternion startRot;
     private List<Character> characters = new List<Character>();
@@ -125,6 +126,7 @@ public class GameManager : MonoBehaviour
     public bool Ready { get { return ready; } set { ready = value; } }
     public bool End { get { return end; } set { end = value; } }
     public PlayerController Player { get { return player; } }
+    public PlayerFollower PlayerFollower { get { return playerFollower; } }
     public CursorManager CursorManager { get { return cursorManager; } } 
 
 
@@ -135,6 +137,10 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
 
+        GameObject go = Instantiate((GameObject)Resources.Load("GameManagement/PlayerFollower"));
+        playerFollower = go.GetComponent<PlayerFollower>();
+
+
         var instance = InstantiatePlayer(ChapterData.StartCharacter.ControllerPrefab, true);
 
         PlayableCharacters.Clear();
@@ -144,7 +150,6 @@ public class GameManager : MonoBehaviour
         {
             PlayableCharacters.Add(new PlayableCharacter(characters.Name, characters, null));
         }
-
 
         PauseManager.Init(this);
         themeManager.Init();
@@ -226,6 +231,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void SwapPlayer(string playerName)
+    {
+        SwapPlayer(playerName, false);
+    }
+
     public bool SwapPlayer(string playerName, bool hidePreviousPlayer)
     {
         bool found = false; ;
@@ -234,6 +244,8 @@ public class GameManager : MonoBehaviour
         {
             if (item.ID == playerName)
             {
+                player.UnInit();
+
                 if (hidePreviousPlayer)
                     HidePlayer(true);
 
@@ -425,6 +437,8 @@ public class GameManager : MonoBehaviour
 
         if (!player.Initialized)
             player.Init();
+
+        playerFollower.SetTarget(player);
 
         HidePlayer(false);
     }
@@ -700,6 +714,9 @@ public class GameManager : MonoBehaviour
         //Safety
         if (currentCamZone == null)
             currentCamZone = firstCamZone;
+
+        if (zone == null)
+            return;
 
         //Update zone specific objects
         List<GameObject> previous = currentCamZone.ShotSpecificObjects;

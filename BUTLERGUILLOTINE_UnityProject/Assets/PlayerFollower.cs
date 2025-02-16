@@ -6,15 +6,16 @@ public class PlayerFollower : MonoBehaviour
 {
     PlayerController player;
 
+    public void SetTarget(PlayerController player)
+    {
+        this.player = player;
+    }
+
     void Update()
     {
         if (player == null)
-        {
-            player = GameManager.Instance.Player;
-        }
-        else
-        {
-            transform.position = player.transform.position;
-        }
+            return;
+
+        transform.position = player.transform.position;
     }
 }

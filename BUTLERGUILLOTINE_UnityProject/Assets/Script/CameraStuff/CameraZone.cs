@@ -137,11 +137,12 @@ public class CameraZone : MonoBehaviour
     {
         if (target == null)
         {
-            target = GameManager.Instance.Player.gameObject;
+            target = GameManager.Instance.PlayerFollower.gameObject;
 
             if (target != null)
                 InitializeBehaviour();
         }
+
 
         if (active)
         {

@@ -3822,107 +3822,6 @@ MonoBehaviour:
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
   IsCut: 0
---- !u!1 &2974909093615802965
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2552426923915974038}
-  - component: {fileID: 9099480687895461510}
-  - component: {fileID: 7739904106805948013}
-  - component: {fileID: 3548673780829272847}
-  m_Layer: 3
-  m_Name: CameraDetector
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2552426923915974038
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2974909093615802965}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 781041161728234247}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9099480687895461510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2974909093615802965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffe161e0e70718f4780e4d48df943f8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ChangedCam:
-    m_PersistentCalls:
-      m_Calls: []
-  CurrentCam: {fileID: 0}
-  LastCam: {fileID: 0}
---- !u!136 &7739904106805948013
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2974909093615802965}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1.5050341
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.74747807, z: 0}
---- !u!54 &3548673780829272847
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2974909093615802965}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &3110842447130135041
 GameObject:
   m_ObjectHideFlags: 0
@@ -11682,7 +11581,6 @@ Transform:
   - {fileID: 1824941699359157253}
   - {fileID: 7136552731814899696}
   - {fileID: 2892482157867694299}
-  - {fileID: 2552426923915974038}
   m_Father: {fileID: 974558630886115723}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11698,6 +11596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8996c5dd031fa3f468e8146527fbd744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 
   cursorType: 3
   CanMoveInCinematic: 0
   rotationSpeed: 6
@@ -11709,8 +11608,10 @@ MonoBehaviour:
   moveStateLerp: 4
   minDistanceToMove: 0.1
   animator: {fileID: 1735109562235365949}
+  cameraDetector: {fileID: 0}
   resetPos: {x: 0, y: 0, z: 0}
   Choppers: []
+  Maskables: []
   orderableLayer:
     serializedVersion: 2
     m_Bits: 8192

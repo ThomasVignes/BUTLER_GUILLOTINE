@@ -19,6 +19,11 @@ public class PlayerController : Character
         //rb.isKinematic = true;
     }
 
+    public virtual void UnInit()
+    {
+        init = false;
+    }
+
     public virtual void WakeUp()
     {
         animator.SetTrigger("WakeUp");

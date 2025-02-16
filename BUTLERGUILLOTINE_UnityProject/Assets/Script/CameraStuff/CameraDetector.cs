@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class CameraDetector : MonoBehaviour
 {
+    public bool Active;
+
     public UnityEvent ChangedCam;
     [SerializeField] private CameraZone CurrentCam;
     [SerializeField] private CameraZone LastCam;
@@ -12,6 +14,9 @@ public class CameraDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!Active)
+            return;
+
         CameraZone cameraZone = other.gameObject.GetComponent<CameraZone>();
 
         if (other.gameObject.GetComponent<CustomCameraZone>() != null && cameraZone == null)
@@ -33,6 +38,9 @@ public class CameraDetector : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (!Active)
+            return;
+
         CameraZone cameraZone = other.gameObject.GetComponent<CameraZone>();
 
         if (other.gameObject.GetComponent<CustomCameraZone>() != null && cameraZone == null)
@@ -49,6 +57,9 @@ public class CameraDetector : MonoBehaviour
 
     private void SwitchCam(CameraZone camZone)
     {
+        if (!Active)
+            return;
+
         if (CurrentCam != null)
         {
             CurrentCam.active = false;
@@ -67,6 +78,9 @@ public class CameraDetector : MonoBehaviour
 
     private void LastCamCheck(CameraZone exitedCamerazone)
     {
+        if (!Active)
+            return;
+
         if (LastCam != null)
             CurrentCam = LastCam;
 
