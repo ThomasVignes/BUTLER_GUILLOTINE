@@ -226,7 +226,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
     public bool SwapPlayer(string playerName, bool hidePreviousPlayer)
     {
         bool found = false; ;
@@ -247,6 +246,15 @@ public class GameManager : MonoBehaviour
                 break;
             }
         }
+
+        return found;
+    }
+
+    public bool SwapPlayer(string playerName, Transform newPos, bool hidePreviousPlayer)
+    {
+        bool found = SwapPlayer(playerName, hidePreviousPlayer);
+
+        TeleportPlayer(newPos);
 
         return found;
     }
@@ -397,7 +405,12 @@ public class GameManager : MonoBehaviour
 
     GameObject InstantiatePlayer(GameObject prefab, bool control)
     {
-        GameObject chara = Instantiate(prefab, characterStart.position, characterStart.rotation);
+        return InstantiatePlayer(prefab, characterStart, control);
+    }
+
+    GameObject InstantiatePlayer(GameObject prefab, Transform overridePos, bool control)
+    {
+        GameObject chara = Instantiate(prefab, overridePos.position, overridePos.rotation);
 
         if (control)
             ControlInstance(chara);
