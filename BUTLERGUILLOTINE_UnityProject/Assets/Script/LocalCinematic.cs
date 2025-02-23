@@ -22,6 +22,7 @@ public class LocalCinematic : MonoBehaviour
     [Header("Transition Settings")]
     public float StartBlackScreenDuration;
     public float EndBlackScreenDuration;
+    public bool OverrideKeepsGoing;
     public string ResumeTheme;
     public string ChainCinematic;
 
@@ -176,10 +177,13 @@ public class LocalCinematic : MonoBehaviour
         playing = false;
         gameManager.SetCinematicMode(false);
 
-        if (ResumeTheme == "")
-            gameManager.StopOverride();
-        else
-            gameManager.StopOverride(ResumeTheme);
+        if (!OverrideKeepsGoing)
+        {
+            if (ResumeTheme == "")
+                gameManager.StopOverride();
+            else
+                gameManager.StopOverride(ResumeTheme);
+        }
 
         if (ChainCinematic != "")
             gameManager.CinematicManager.PlayCinematic(ChainCinematic);

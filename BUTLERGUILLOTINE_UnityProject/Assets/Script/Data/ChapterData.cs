@@ -9,7 +9,7 @@ public class ChapterData : ScriptableObject
     public string Name;
     public int Number;
     public CharacterData StartCharacter;
-    public CharacterData[] OtherCharacters;
+    public CharacterData[] OtherCharacters = new CharacterData[0];
 
     [Header("Specific")]
     public List<Conditions> conditions = new List<Conditions>();

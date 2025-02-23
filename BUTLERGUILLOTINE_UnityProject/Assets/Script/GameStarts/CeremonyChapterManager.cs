@@ -74,7 +74,7 @@ public class CeremonyChapterManager : ChapterManagerGeneric
     IEnumerator C_Start()
     {
         gameManager.ScreenEffects.FadeTo(1, 0.01f);
-        AudioListener.volume = 0;
+        PersistentData.Instance.MusicVolume = 0;
 
         yield return new WaitForSeconds(2f);
 
@@ -99,7 +99,7 @@ public class CeremonyChapterManager : ChapterManagerGeneric
         introTitle.SetActive(true);
         EffectsManager.Instance.audioManager.Play("Gunshot");
 
-        AudioListener.volume = 1;
+        PersistentData.Instance.MusicVolume = 1;
 
         yield return new WaitForSeconds(3f);
 

@@ -214,10 +214,13 @@ public class CinematicManager : MonoBehaviour
         playing = false;
         gameManager.SetCinematicMode(false);
 
-        if (cinematics[currentCinematic].Data.ResumeTheme == "")
-            gameManager.StopOverride();
-        else
-            gameManager.StopOverride(cinematics[currentCinematic].Data.ResumeTheme);
+        if (!cinematics[currentCinematic].Data.OverrideKeepsGoing)
+        {
+            if (cinematics[currentCinematic].Data.ResumeTheme == "")
+                gameManager.StopOverride();
+            else
+                gameManager.StopOverride(cinematics[currentCinematic].Data.ResumeTheme);
+        }
 
         if (cinematics[currentCinematic].ChainCinematic != "")
             PlayCinematic(cinematics[currentCinematic].ChainCinematic);

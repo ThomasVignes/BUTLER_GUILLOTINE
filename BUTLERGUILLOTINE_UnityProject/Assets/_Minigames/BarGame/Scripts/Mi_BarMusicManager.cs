@@ -23,7 +23,7 @@ public class Mi_BarMusicManager : MonoBehaviour
         {
             if (Mi_BarConductor.Instance.songPosition >= nextBeat)
             {
-                EffectsManager.Instance.audioManager.PlayTrack(TrackNames[currentTrack], true);
+                //EffectsManager.Instance.audioManager.PlayTrack(TrackNames[currentTrack], true);
                 Debug.Log("yes");
                 requestChange = false;
             }

@@ -32,11 +32,11 @@ public class CeremonyAltChapterManager : ChapterManagerGeneric
     IEnumerator C_Start()
     {
         gameManager.ScreenEffects.FadeTo(1, 0.01f);
-        AudioListener.volume = 0;
+        PersistentData.Instance.MusicVolume = 0;
 
         yield return new WaitForSeconds(2.3f);
 
-        AudioListener.volume = 1;
+        PersistentData.Instance.MusicVolume = 1;
 
         gameManager.CinematicManager.PlayCinematic(startCinematic);
         gameManager.Ready = true;

@@ -12,6 +12,18 @@
 /[Bb]uilds/_OLD/
 /[Bb]uilds/_ZIPS/
 /[Kk]eepLocal/
+/BUTLERGUILLOTINE_UnityProject//[Aa]ssets/Plugins/FMOD/Cache/*
+/BUTLERGUILLOTINE_UnityProject//[Aa]ssets/StreamingAssets/**/*.bank
+/BUTLERGUILLOTINE_UnityProject//[Aa]ssets/StreamingAssets/**/*.bank.meta
+/FMOD/
+
+
+
+!/[Aa]ssets/Gizmos/FMOD/*
+!/[Aa]ssets/Editor Default Resources/FMOD/*
+!/[Aa]ssets/Plugins/FMOD/**/lib/*
+
+
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data

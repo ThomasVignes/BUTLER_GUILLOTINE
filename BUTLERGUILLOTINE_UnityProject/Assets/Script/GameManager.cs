@@ -10,6 +10,8 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using Whumpus;
+using FMOD;
+using FMODUnity;
 
 [System.Serializable]
 public class Conditions
@@ -30,11 +32,16 @@ public class Area
     public string Name;
     public AudioSource Music;
     public AudioSource CopyrightFree;
+    public EventReference Track;
+    
     public bool ImmuneExperimental;
     [HideInInspector] public float OriginalVolume;
 
     public void Init()
     {
+        if (Music == null)
+            return;
+
         if (PersistentData.Instance != null && PersistentData.Instance.CopyrightFree)
         {
             Music = CopyrightFree;
@@ -42,6 +49,13 @@ public class Area
         }
 
         OriginalVolume = Music.volume;
+    }
+
+    public Area (string name, EventReference track, bool immuneExperimental)
+    {
+        Name = name;
+        Track = track;
+        ImmuneExperimental = immuneExperimental;
     }
 }
 
@@ -143,6 +157,12 @@ public class GameManager : MonoBehaviour
             playerFollower = go.GetComponent<PlayerFollower>();
         }
 
+        if (PersistentData.Instance == null)
+        {
+            GameObject go = Instantiate((GameObject)Resources.Load("GameManagement/_PersistentData"));
+            go.GetComponent<PersistentData>().QuickInit();
+        }
+
 
         PlayableCharacters.Clear();
 
@@ -150,9 +170,12 @@ public class GameManager : MonoBehaviour
 
         PlayableCharacters.Add(startCharacter);
 
-        foreach (var characters in ChapterData.OtherCharacters)
+        if (ChapterData.OtherCharacters.Length > 0)
         {
-            PlayableCharacters.Add(new PlayableCharacter(characters.Name, characters));
+            foreach (var characters in ChapterData.OtherCharacters)
+            {
+                PlayableCharacters.Add(new PlayableCharacter(characters.Name, characters));
+            }
         }
 
         var instance = InstantiatePlayer(startCharacter, true);

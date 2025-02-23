@@ -1,10 +1,15 @@
+using FMOD.Studio;
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UIElements;
+using static UnityEditor.PlayerSettings;
 
 public class ThemeManager : MonoBehaviour
 {
+    [SerializeField] MusicData[] themes;
     [SerializeField] List<Area> areas = new List<Area>();
     [SerializeField] AudioSource overrideAudio, startAudio;
     [SerializeField] string startAreaExperimental;
@@ -17,8 +22,17 @@ public class ThemeManager : MonoBehaviour
     bool overrideAmbiance;
     float overrideTime;
 
+    EventInstance currentInstance, currentOverrideInstance;
+
     public void Init()
     {
+        areas.Clear();
+
+        foreach (var theme in themes)
+        {
+            areas.Add(new Area(theme.Name, theme.Track, theme.ImmuneExperimental));
+        }
+
         foreach (var area in areas)
         {
             area.Init();
@@ -30,6 +44,38 @@ public class ThemeManager : MonoBehaviour
             NewArea(startAreaExperimental);
     }
 
+    void SwapEvent(EventReference track)
+    {
+        currentInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+
+        currentInstance = RuntimeManager.CreateInstance(track);
+        //instance.set3DAttributes(RuntimeUtils.To3DAttributes(position));
+        currentInstance.start();
+        currentInstance.release();
+
+        /*
+        emitter.Stop();
+        emitter.EventReference = track;
+        emitter.Play();
+        */
+    }
+
+    void SwapOverride(EventReference track)
+    {        
+        currentOverrideInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+
+        currentOverrideInstance = RuntimeManager.CreateInstance(track);
+        //instance.set3DAttributes(RuntimeUtils.To3DAttributes(position));
+        currentOverrideInstance.start();
+        currentOverrideInstance.release();
+
+        /*
+        overrideEmitter.Stop();
+        overrideEmitter.EventReference = track;
+        overrideEmitter.Play();
+        */
+    }
+
     public void NewArea(string areaName)
     {
         if (overrideAmbiance)
@@ -39,19 +85,15 @@ public class ThemeManager : MonoBehaviour
         {
             if (item.Name == areaName)
             {
-                item.Music.volume = item.OriginalVolume;
+                //Change emitter volume here once parameters are figured out
 
                 if (item.Name != currentArea)
                 {
-                    item.Music.Play();
+                    SwapEvent(item.Track);
 
-                    currentAudioSource = item.Music;
                     currentArea = item.Name;
-                    currentVolume = currentAudioSource.volume;
                 }
             }
-            else
-                item.Music.Stop();
         }
     }
 
@@ -64,20 +106,14 @@ public class ThemeManager : MonoBehaviour
         {
             if (item.Name == areaName)
             {
-                if (!item.ImmuneExperimental)
-                    item.Music.volume = volume;
 
                 if (item.Name != currentArea)
                 {
-                    item.Music.Play();
+                    SwapEvent(item.Track);
 
-                    currentAudioSource = item.Music;
                     currentArea = item.Name;
-                    currentVolume = currentAudioSource.volume;
                 }
             }
-            else
-                item.Music.Stop();
         }
     }
 
@@ -88,10 +124,8 @@ public class ThemeManager : MonoBehaviour
 
     public void StopAmbiance()
     {
-        foreach (var item in areas)
-        {
-            item.Music.Stop();
-        }
+        currentInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        //currentOverrideInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
     public void PlayEndAmbiance()
@@ -107,20 +141,13 @@ public class ThemeManager : MonoBehaviour
 
         overrideAmbiance = true;
 
-        
-
         foreach (var item in areas)
         {
             if (item.Name == areaName)
             {
                 currentOverride = areaName;
 
-                overrideAudio.clip = item.Music.clip;
-                overrideAudio.volume = item.Music.volume;
-                overrideAudio.loop = item.Music.loop;
-                
-
-                overrideAudio.Play();
+                SwapOverride(item.Track);
             }
         }
     }
@@ -129,10 +156,10 @@ public class ThemeManager : MonoBehaviour
     {
         bool same = currentOverride == currentArea;
 
-        if (same)
-            overrideTime = overrideAudio.time;
+        int pos = 0;
+        currentOverrideInstance.getTimelinePosition(out pos);
 
-        overrideAudio.Stop();
+        currentOverrideInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 
         overrideAmbiance = false;
 
@@ -140,15 +167,12 @@ public class ThemeManager : MonoBehaviour
         {
             if (item.Name == currentArea)
             {
-                item.Music.volume = item.OriginalVolume;
-                item.Music.Play();
+                SwapEvent(item.Track);
 
-                currentAudioSource = item.Music;
                 currentArea = item.Name;
-                currentVolume = currentAudioSource.volume;
 
                 if (same)
-                    currentAudioSource.time = overrideTime;
+                    currentInstance.setTimelinePosition(pos);
             }
         }
     }
@@ -157,10 +181,11 @@ public class ThemeManager : MonoBehaviour
     {
         bool same = currentOverride == resumeTheme;
 
-        if (same)
-            overrideTime = overrideAudio.time;
 
-        overrideAudio.Stop();
+        int pos = 0;
+        currentOverrideInstance.getTimelinePosition(out pos);
+
+        currentOverrideInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 
         overrideAmbiance = false;
 
@@ -168,24 +193,31 @@ public class ThemeManager : MonoBehaviour
         {
             if (item.Name == resumeTheme)
             {
-                item.Music.Play();
+                SwapEvent(item.Track);
 
-                currentAudioSource = item.Music;
                 currentArea = item.Name;
-                currentVolume = currentAudioSource.volume;
 
                 if (same)
-                    currentAudioSource.time = overrideTime;
+                    currentInstance.setTimelinePosition(pos);
             }
         }
+
     }
 
     public void SetAmbianceVolume(float sound)
     {
+        //Modify once parameters are set
+
         if (currentAudioSource != null)
             currentAudioSource.volume = currentVolume * sound;
 
         if (overrideAmbiance)
             overrideAudio.volume = currentVolume * sound;
+    }
+
+    private void OnDestroy()
+    {
+        currentInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        currentOverrideInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }
