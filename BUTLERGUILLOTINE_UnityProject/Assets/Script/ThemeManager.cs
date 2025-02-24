@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UIElements;
-using static UnityEditor.Progress;
 
 public class ThemeManager : MonoBehaviour
 {
