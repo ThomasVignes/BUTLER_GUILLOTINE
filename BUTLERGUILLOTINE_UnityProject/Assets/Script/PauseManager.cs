@@ -12,6 +12,9 @@ public class PauseManager : Manager
 
     float baseScale;
 
+    public bool CanPause { get { return canPause; } set { canPause = value; } }
+
+
     public override void Init(GameManager gameManager)
     {
         base.Init(gameManager);
@@ -21,7 +24,7 @@ public class PauseManager : Manager
         canPause = true;
 
         if (PersistentData.Instance != null)
-            AudioListener.volume = PersistentData.Instance.Volume;
+            masterVolume.value = PersistentData.Instance.MasterVolume;
     }
 
     public override void Step()
@@ -34,8 +37,6 @@ public class PauseManager : Manager
             gm.Paused = !gm.Paused;
 
             pauseUI.SetActive(gm.Paused);
-
-            AudioListener.pause = gm.Paused;
 
             if (gm.Paused)
                 Time.timeScale = 0;
@@ -50,16 +51,12 @@ public class PauseManager : Manager
         pauseUI.SetActive(false);
 
         Time.timeScale = baseScale;
-
-        AudioListener.pause = false;
     }
 
     public void UpdateVolume()
     {
-        AudioListener.volume = masterVolume.value;
-
         if (PersistentData.Instance != null)
-            PersistentData.Instance.Volume = AudioListener.volume;
+            PersistentData.Instance.MasterVolume = masterVolume.value;
     }
 
     public void MainMenu()

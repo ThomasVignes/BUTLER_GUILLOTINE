@@ -1,4 +1,5 @@
 using DG.Tweening;
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,11 +17,12 @@ public class MainMenuMaster : MonoBehaviour
     [SerializeField] float travelSpeed;
 
     [Header("References")]
+    [SerializeField] Texture2D BaseCursor;
     [SerializeField] GameObject chapterSelect;
     [SerializeField] private Image BlackScreen;
     [SerializeField] Transform Elevator;
     [SerializeField] Transform[] Spots;
-    [SerializeField] AudioSource arriveSound;
+    [SerializeField] StudioEventEmitter arriveSound;
     [SerializeField] GameObject eventSystem;
     [SerializeField] ChapterSelector chapterSelector;
 
@@ -45,7 +47,12 @@ public class MainMenuMaster : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
 
+        Cursor.SetCursor(BaseCursor, new Vector2(18, 13), CursorMode.Auto);
+
         creditsManager.Init(this);
+
+        if (PersistentData.Instance != null)
+            masterVolume.value = PersistentData.Instance.MasterVolume;
     }
 
     private void Start()
@@ -60,7 +67,6 @@ public class MainMenuMaster : MonoBehaviour
         */
 
         Screen.fullScreen = true;
-        AudioListener.pause = false;
 
         Elevator.position = Spots[targetSpot].position;
         
@@ -124,10 +130,8 @@ public class MainMenuMaster : MonoBehaviour
 
     public void UpdateVolume()
     {
-        AudioListener.volume = masterVolume.value;
-
         if (PersistentData.Instance != null)
-            PersistentData.Instance.Volume = AudioListener.volume;
+            PersistentData.Instance.MasterVolume = masterVolume.value;
     }
 
     public void StartGame()

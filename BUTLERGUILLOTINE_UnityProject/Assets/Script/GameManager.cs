@@ -327,6 +327,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        PauseManager.CanPause = !cinematicMode && !cinematicStart && ready;
+
         PauseManager.Step();
 
         if (Paused)

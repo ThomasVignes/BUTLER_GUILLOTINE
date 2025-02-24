@@ -14,7 +14,7 @@ public class PersistentData : MonoBehaviour
     string masterBusPath = "bus:/";
     string musicBusPath = "bus:/Music";
     string sfxBusPath = "bus:/SFX";
-    string stepsBusPath = "bus:/Steps";
+    string stepsBusPath = "bus:/SFX/Steps";
 
     FMOD.Studio.Bus masterBus, musicBus, sfxBus, stepsBus;
 
