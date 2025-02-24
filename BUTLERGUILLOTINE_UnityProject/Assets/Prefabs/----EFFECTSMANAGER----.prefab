@@ -360,6 +360,37 @@ MonoBehaviour:
     mixerLayer: 
     audioEmitter: {fileID: 0}
     source: {fileID: 0}
+  - name: Drama
+    clipReference:
+      Guid:
+        Data1: 394120137
+        Data2: 1189293681
+        Data3: 1239038394
+        Data4: 2076996551
+      Path: "event:/Music/Raw/Direction2/SmallCuts/[Pavel H\u016Fla+Praga Camerata]
+        Schubert Death and the Maiden Quartett for Strings (Cut)"
+    clip: {fileID: 8300000, guid: 3f766bde7ed9beb46bcf57d15882f313, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    mixerLayer: 
+    audioEmitter: {fileID: 0}
+    source: {fileID: 0}
+  - name: Impact
+    clipReference:
+      Guid:
+        Data1: 380499607
+        Data2: 1099612778
+        Data3: -812472421
+        Data4: 566618412
+      Path: event:/SFX/Impact
+    clip: {fileID: 8300000, guid: 3f766bde7ed9beb46bcf57d15882f313, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    mixerLayer: 
+    audioEmitter: {fileID: 0}
+    source: {fileID: 0}
   playingAudio: []
   notPlayingAudio: []
   AudioObject: {fileID: 2317613366410218912, guid: 32ab84ad90cb4d444864fe418273ddfe, type: 3}

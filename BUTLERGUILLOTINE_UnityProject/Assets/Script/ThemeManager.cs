@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UIElements;
-using static UnityEditor.PlayerSettings;
+using static UnityEditor.Progress;
 
 public class ThemeManager : MonoBehaviour
 {
@@ -30,7 +30,7 @@ public class ThemeManager : MonoBehaviour
 
         foreach (var theme in themes)
         {
-            areas.Add(new Area(theme.Name, theme.Track, theme.ImmuneExperimental));
+            areas.Add(new Area(theme.Name, theme.Track, theme.StepsVolume, theme.ImmuneExperimental));
         }
 
         foreach (var area in areas)
@@ -52,28 +52,18 @@ public class ThemeManager : MonoBehaviour
         //instance.set3DAttributes(RuntimeUtils.To3DAttributes(position));
         currentInstance.start();
         currentInstance.release();
-
-        /*
-        emitter.Stop();
-        emitter.EventReference = track;
-        emitter.Play();
-        */
     }
 
     void SwapOverride(EventReference track)
-    {        
+    {
+        PersistentData.Instance.MusicMultiplier = 1;
+
         currentOverrideInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 
         currentOverrideInstance = RuntimeManager.CreateInstance(track);
         //instance.set3DAttributes(RuntimeUtils.To3DAttributes(position));
         currentOverrideInstance.start();
         currentOverrideInstance.release();
-
-        /*
-        overrideEmitter.Stop();
-        overrideEmitter.EventReference = track;
-        overrideEmitter.Play();
-        */
     }
 
     public void NewArea(string areaName)
@@ -85,7 +75,8 @@ public class ThemeManager : MonoBehaviour
         {
             if (item.Name == areaName)
             {
-                //Change emitter volume here once parameters are figured out
+                PersistentData.Instance.MusicMultiplier = 1;
+                PersistentData.Instance.UpdateStepsVolume(item.StepsVolume);
 
                 if (item.Name != currentArea)
                 {
@@ -106,6 +97,8 @@ public class ThemeManager : MonoBehaviour
         {
             if (item.Name == areaName)
             {
+                PersistentData.Instance.MusicMultiplier = volume;
+                PersistentData.Instance.UpdateStepsVolume(item.StepsVolume);
 
                 if (item.Name != currentArea)
                 {
@@ -140,6 +133,7 @@ public class ThemeManager : MonoBehaviour
         StopAmbiance();
 
         overrideAmbiance = true;
+        PersistentData.Instance.UpdateStepsVolume(0);
 
         foreach (var item in areas)
         {

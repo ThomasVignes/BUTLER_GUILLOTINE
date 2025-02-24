@@ -33,7 +33,8 @@ public class Area
     public AudioSource Music;
     public AudioSource CopyrightFree;
     public EventReference Track;
-    
+
+    public float StepsVolume;
     public bool ImmuneExperimental;
     [HideInInspector] public float OriginalVolume;
 
@@ -51,10 +52,11 @@ public class Area
         OriginalVolume = Music.volume;
     }
 
-    public Area (string name, EventReference track, bool immuneExperimental)
+    public Area (string name, EventReference track, float stepsVolume, bool immuneExperimental)
     {
         Name = name;
         Track = track;
+        StepsVolume = stepsVolume;
         ImmuneExperimental = immuneExperimental;
     }
 }
@@ -162,6 +164,8 @@ public class GameManager : MonoBehaviour
             GameObject go = Instantiate((GameObject)Resources.Load("GameManagement/_PersistentData"));
             go.GetComponent<PersistentData>().QuickInit();
         }
+
+        PersistentData.Instance.ResetMultipliers();
 
 
         PlayableCharacters.Clear();

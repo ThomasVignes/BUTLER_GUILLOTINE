@@ -53,7 +53,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 432
+  Length: 410
 --- !u!114 &-8162717499184498401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,10 +181,10 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638759228206982238
+  lastModified: 638760050954078456
   FileSizes:
   - Name: 
-    Value: 4614
+    Value: 4922
   Exists: 1
 --- !u!114 &-6739742189602902519
 MonoBehaviour:
@@ -298,6 +298,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 239516
+--- !u!114 &-6044067284208267192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Steps/FabricStep
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Steps/FabricStep
+  Guid:
+    Data1: -1121630605
+    Data2: 1188002167
+    Data3: -425350242
+    Data4: 2090624715
+  Banks:
+  - {fileID: 7765557908467560066}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5632208867510917013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,7 +340,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638759228212611073
+  lastModified: 638760050959880787
   FileSizes: []
   Exists: 1
 --- !u!114 &-5189839101852950846
@@ -499,7 +526,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638759228206982238
+  lastModified: 638760050954068504
   FileSizes: []
   Exists: 1
 --- !u!114 &-2820307275378040168
@@ -853,7 +880,6 @@ MonoBehaviour:
   - {fileID: 1217507757017450485}
   - {fileID: -4052891833315123179}
   - {fileID: -4598862240807655831}
-  - {fileID: 5703504245856048538}
   - {fileID: -2820307275378040168}
   - {fileID: -7184230577988995770}
   - {fileID: 1400448391076254621}
@@ -886,12 +912,17 @@ MonoBehaviour:
   - {fileID: 4689833028753712641}
   - {fileID: -5189839101852950846}
   - {fileID: -6437131847930841813}
+  - {fileID: 749386168627063559}
+  - {fileID: 5727153469415056767}
+  - {fileID: -6044067284208267192}
+  - {fileID: 1183415352513314424}
+  - {fileID: 8143309677218547436}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3346567643425602939}
   StringsBanks:
   - {fileID: -7100924490474363539}
-  cacheTime: 638759244030161473
+  cacheTime: 638760050960204890
   cacheVersion: 131617
 --- !u!114 &15166506345404804
 MonoBehaviour:
@@ -949,6 +980,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 468976
+--- !u!114 &749386168627063559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Music/Raw/Direction2/SmallCuts/[Pavel H\u016Fla+Praga Camerata]
+    Schubert Death and the Maiden Quartett for Strings (Cut)"
+  m_EditorClassIdentifier: 
+  Path: "event:/Music/Raw/Direction2/SmallCuts/[Pavel H\u016Fla+Praga Camerata] Schubert
+    Death and the Maiden Quartett for Strings (Cut)"
+  Guid:
+    Data1: 394120137
+    Data2: 1189293681
+    Data3: 1239038394
+    Data4: 2076996551
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7000
 --- !u!114 &754035755366227443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1005,6 +1065,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 522
+--- !u!114 &1183415352513314424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/StepFabric3
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/StepFabric3
+  Guid:
+    Data1: 2047359687
+    Data2: 1096536973
+    Data3: 1563365258
+    Data4: 387401393
+  Banks:
+  - {fileID: 7765557908467560066}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 339
 --- !u!114 &1217507757017450485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1031,7 +1118,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 624
+  Length: 400
 --- !u!114 &1400448391076254621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1226,7 +1313,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 78
+  Length: 56
 --- !u!114 &4504726022498812041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1368,7 +1455,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2393
---- !u!114 &5703504245856048538
+--- !u!114 &5727153469415056767
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1378,14 +1465,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/LeftStepFabric
+  m_Name: event:/SFX/StepFabric2
   m_EditorClassIdentifier: 
-  Path: event:/SFX/LeftStepFabric
+  Path: event:/SFX/StepFabric2
   Guid:
-    Data1: -1233621275
-    Data2: 1106590271
-    Data3: -1053693785
-    Data4: -2137811560
+    Data1: 1373557258
+    Data2: 1315358370
+    Data3: 1718452354
+    Data4: -1742792521
   Banks:
   - {fileID: 7765557908467560066}
   IsStream: 0
@@ -1545,7 +1632,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638759244030161473
+  lastModified: 638760050960204890
   FileSizes: []
   Exists: 1
 --- !u!114 &8052649781649294874
@@ -1577,6 +1664,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2394697
+--- !u!114 &8143309677218547436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/StepFabric1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/StepFabric1
+  Guid:
+    Data1: -1233621275
+    Data2: 1106590271
+    Data3: -1053693785
+    Data4: -2137811560
+  Banks:
+  - {fileID: 7765557908467560066}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 339
 --- !u!114 &8928112818710505927
 MonoBehaviour:
   m_ObjectHideFlags: 0
