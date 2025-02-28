@@ -11,6 +11,7 @@ public class RuthController : PlayerController
 {
     [Header("Ruth Settings")]
     [SerializeField] LayerMask orderableLayer;
+    [SerializeField] LayerMask ignoreLayer;
     [SerializeField] float drawDelay;
     [SerializeField] float castTime;
     [SerializeField] private float clickdelay;
@@ -23,7 +24,7 @@ public class RuthController : PlayerController
     
     LayerMask moveLayer;
     LayerMask interactLayer;
-    LayerMask ignoreLayer;
+    
     LayerMask wallLayer;
 
     bool casting, recovery;
@@ -72,23 +73,15 @@ public class RuthController : PlayerController
                 Vector3 targPos = new Vector3(hit.point.x, transform.position.y, hit.point.z);
                 aimTarg.position = targPos;
 
-                /*
-                Vector3 dir = targPos - aimTarg.position;
-
-                aimTarg.position += dir.normalized * 10f * Time.deltaTime;
-
-                
-                Vector3 dir = aimTarg.position - transform.position;
-
-                var dot = Vector3.Dot(dir, transform.forward);
-
-                if (dot > 0)
-                    aimTarg.position = targPos;
-                */
+                CursorStuff(hit.transform);
             }
         }
         else
+        {
+            cursorType = CursorType.Aim;
+
             rig.weight = Mathf.Lerp(rig.weight, 0, 4f * Time.deltaTime);
+        }
 
 
         if (recovery)
@@ -220,40 +213,47 @@ public class RuthController : PlayerController
     private int clicked;
     private float clicktime;
 
-    private bool HandleDoubleClick()
+    private void CursorStuff(Transform transform)
     {
-        /*
-        if (player.Running)
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (orderedCharacter == null)
         {
-            if (Time.time - clicktime < clickdelay)
-            {
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, orderableLayer))
+                cursorType = CursorType.AimLook;
+            else
+                cursorType = CursorType.Aim;
 
-            }
-        }
-        */
-
-        if (Time.time - clicktime > clickdelay)
-            clicked = 0;
-
-        clicked++;
-        if (clicked == 1) clicktime = Time.time;
-
-        if (clicked > 1 && Time.time - clicktime < clickdelay)
-        {
-            //clicked = 0;
-            //clicktime = 0;
-
-            clicktime = Time.time;
-            return true;
-        }
-        else if (Time.time - clicktime > clickdelay)
-        {
-            clicked = 0;
-            clicktime = 0;
+            return;
         }
 
-        return false;
+
+        if (transform.gameObject.layer == WhumpusUtilities.ToLayer(wallLayer))
+        {
+            cursorType = CursorType.Aim;
+            return;
+        }
+
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, orderableLayer))
+        {
+            cursorType = CursorType.AimLook;
+            return;
+        }
+
+        Interactable interactable = transform.gameObject.GetComponent<Interactable>();
+
+        if (interactable != null)
+        {
+            cursorType = CursorType.AimLook;
+            return;
+        }
+
+        if (transform.gameObject.layer == WhumpusUtilities.ToLayer(moveLayer))
+        {
+            cursorType = CursorType.AimMove;
+            return;
+        }
     }
-
 
 }

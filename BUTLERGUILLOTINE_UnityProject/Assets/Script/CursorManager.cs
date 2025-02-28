@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CursorManager : MonoBehaviour
 {
-    public Texture2D BaseCursor, MoveCursor, LookCursor, AimCursor;
+    public Texture2D BaseCursor, MoveCursor, LookCursor, AimCursor, AimMoveCursor, AimLookCursor;
 
     private CursorType current;
 
@@ -46,6 +46,14 @@ public class CursorManager : MonoBehaviour
                 Cursor.SetCursor(AimCursor, new Vector2(25, 25), CursorMode.Auto);
                 break;
 
+            case CursorType.AimMove:
+                Cursor.SetCursor(AimMoveCursor, new Vector2(25, 25), CursorMode.Auto);
+                break;
+
+            case CursorType.AimLook:
+                Cursor.SetCursor(AimLookCursor, new Vector2(25, 25), CursorMode.Auto);
+                break;
+
             case CursorType.Invisible:
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
@@ -60,5 +68,7 @@ public enum CursorType
     Move,
     Look,
     Aim,
+    AimMove,
+    AimLook,
     Invisible
 }
