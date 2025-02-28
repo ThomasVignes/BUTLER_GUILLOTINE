@@ -17,7 +17,7 @@ public class DialogueBox : Interactable
 
     bool pressed;
 
-    protected override void InteractEffects()
+    protected override void InteractEffects(Character character)
     {
         if (pressed)
             return;

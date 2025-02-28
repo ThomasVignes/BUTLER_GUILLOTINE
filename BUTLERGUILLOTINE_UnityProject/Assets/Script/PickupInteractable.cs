@@ -7,7 +7,7 @@ public class PickupInteractable : Interactable
     [SerializeField] private GameObject mesh;
     [SerializeField] private GameObject[] instances;
 
-    protected override void InteractEffects()
+    protected override void InteractEffects(Character character)
     {
         mesh.SetActive(false);
 

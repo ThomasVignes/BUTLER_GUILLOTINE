@@ -4,6 +4,7 @@ using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Animations.Rigging;
+using Whumpus;
 using static Cinemachine.CinemachineOrbitalTransposer;
 
 public class RuthController : PlayerController
@@ -12,6 +13,7 @@ public class RuthController : PlayerController
     [SerializeField] LayerMask orderableLayer;
     [SerializeField] float drawDelay;
     [SerializeField] float castTime;
+    [SerializeField] private float clickdelay;
     [SerializeField] bool canMoveDuringCast;
     [SerializeField] float delayBeforeArmCross;
     [SerializeField] ParticleSystem snapFx;
@@ -20,7 +22,9 @@ public class RuthController : PlayerController
 
     
     LayerMask moveLayer;
-    LayerMask ignoreLayers;
+    LayerMask interactLayer;
+    LayerMask ignoreLayer;
+    LayerMask wallLayer;
 
     bool casting, recovery;
     float castTimer;
@@ -33,8 +37,10 @@ public class RuthController : PlayerController
     {
         base.Init();
 
-        ignoreLayers = GameManager.Instance.IgnoreLayers;
+        ignoreLayer = GameManager.Instance.IgnoreLayers;
         moveLayer = GameManager.Instance.MoveLayer;
+        interactLayer = GameManager.Instance.InteractLayer;
+        wallLayer = GameManager.Instance.WallLayer;
     }
 
     public override void Step()
@@ -61,7 +67,7 @@ public class RuthController : PlayerController
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~ignoreLayers))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~ignoreLayer))
             {
                 Vector3 targPos = new Vector3(hit.point.x, transform.position.y, hit.point.z);
                 aimTarg.position = targPos;
@@ -128,9 +134,11 @@ public class RuthController : PlayerController
         {
             if (orderedCharacter != null)
             {
-                if (Physics.Raycast(ray, out hit, Mathf.Infinity, moveLayer))
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~ignoreLayer))
                 {
-                    orderedCharacter.SetDestination(hit.point);
+                    orderedCharacter.ToggleRun(true);
+                    //orderedCharacter.SetDestination(hit.point);
+                    TryOrder(orderedCharacter);
 
                     animator.SetTrigger("Clap");
                 }
@@ -172,4 +180,80 @@ public class RuthController : PlayerController
             }
         }
     }
+
+
+    private void TryOrder(Character ordered)
+    {
+        RaycastHit hit;
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~ignoreLayer))
+        {
+            if (hit.transform.gameObject.layer == WhumpusUtilities.ToLayer(wallLayer))
+            {
+                return;
+            }
+
+            Interactable interactable = hit.transform.gameObject.GetComponent<Interactable>();
+
+            if (interactable != null)
+            {
+                ordered.SetDestination(interactable.GetTargetPosition(), interactable);
+
+                if (interactable is PickupInteractable)
+                {
+                    ordered.PickUpAnim();
+                }
+
+                return;
+            }
+
+            if (hit.transform.gameObject.layer == WhumpusUtilities.ToLayer(moveLayer))
+            {
+                ordered.SetDestination(hit.point);
+                return;
+            }
+        }
+    }
+
+    private int clicked;
+    private float clicktime;
+
+    private bool HandleDoubleClick()
+    {
+        /*
+        if (player.Running)
+        {
+            if (Time.time - clicktime < clickdelay)
+            {
+
+            }
+        }
+        */
+
+        if (Time.time - clicktime > clickdelay)
+            clicked = 0;
+
+        clicked++;
+        if (clicked == 1) clicktime = Time.time;
+
+        if (clicked > 1 && Time.time - clicktime < clickdelay)
+        {
+            //clicked = 0;
+            //clicktime = 0;
+
+            clicktime = Time.time;
+            return true;
+        }
+        else if (Time.time - clicktime > clickdelay)
+        {
+            clicked = 0;
+            clicktime = 0;
+        }
+
+        return false;
+    }
+
+
 }

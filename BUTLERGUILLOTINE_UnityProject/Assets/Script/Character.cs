@@ -26,7 +26,7 @@ public class Character : MonoBehaviour
     [SerializeField] protected Animator animator;
     protected NavMeshAgent agent;
 
-    protected bool rotating, running, willPickUp;
+    protected bool rotating, running, willPickUp, willHold;
     protected Vector3 targetPos;
     protected Vector3 targetDir;
     protected Vector3 lastAgentVelocity;
@@ -125,13 +125,19 @@ public class Character : MonoBehaviour
                 {
                     canInteract = false;
                     movingToInteractable = false;
-                    targetInteractable.Interact();
+                    targetInteractable.Interact(this);
                     targetInteractable = null;
 
                     if (willPickUp)
                     {
                         willPickUp = false;
                         animator.SetTrigger("PickUp");
+                    }
+
+                    if (willHold)
+                    {
+                        willHold = false;
+                        animator.SetTrigger("Hold");
                     }
                 }
             }
@@ -249,6 +255,7 @@ public class Character : MonoBehaviour
     public void SetDestination(Vector3 pos, Interactable interactable)
     {
         willPickUp = false;
+        willHold = false;
 
         targetInteractable = interactable;
 
@@ -263,13 +270,19 @@ public class Character : MonoBehaviour
             {
                 canInteract = false;
                 movingToInteractable = false;
-                targetInteractable.Interact();
+                targetInteractable.Interact(this);
                 targetInteractable = null;
 
                 if (willPickUp)
                 {
                     willPickUp = false;
                     animator.SetTrigger("PickUp");
+                }
+
+                if (willHold)
+                {
+                    willHold = false;
+                    animator.SetTrigger("Hold");
                 }
             }
         }
@@ -315,5 +328,10 @@ public class Character : MonoBehaviour
     public void PickUpAnim()
     {
         willPickUp = true;
+    }
+
+    public void HoldAnim()
+    {
+
     }
 }

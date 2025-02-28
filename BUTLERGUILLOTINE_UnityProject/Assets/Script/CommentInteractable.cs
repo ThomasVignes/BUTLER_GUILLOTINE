@@ -8,7 +8,7 @@ public class CommentInteractable : Interactable
     [SerializeField] private string comment;
     public UnityEvent OnCommentEnd;
 
-    protected override void InteractEffects()
+    protected override void InteractEffects(Character character)
     {
          GameManager.Instance.WriteComment(comment, this);
     }

@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour
     public List<Conditions> conditions = new List<Conditions>();
 
     PlayerController player;
-    
+
     Vector3 startPos;
     Quaternion startRot;
     private List<Character> characters = new List<Character>();
@@ -135,8 +135,10 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public CameraEffectManager CameraEffectManager;
     [HideInInspector] public PartnerManager PartnerManager;
 
-    public LayerMask MoveLayer {  get { return moveLayer; } }
+    public LayerMask MoveLayer { get { return moveLayer; } }
     public LayerMask IgnoreLayers { get { return ignoreLayers; } }
+    public LayerMask InteractLayer { get { return interactLayer; }}
+    public LayerMask WallLayer { get { return wallLayer; }}
     public bool CinematicMode { get { return cinematicMode; } }
     public bool VNMode { get { return vnMode; } }
     public bool Ready { get { return ready; } set { ready = value; } }

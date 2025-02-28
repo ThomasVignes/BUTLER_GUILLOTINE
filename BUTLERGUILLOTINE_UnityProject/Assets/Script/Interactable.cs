@@ -14,12 +14,12 @@ public class Interactable : MonoBehaviour
 
     protected bool done;
 
-    public void Interact()
+    public void Interact(Character character)
     {
         if (!done)
         {
             OnInteract?.Invoke();
-            InteractEffects();
+            InteractEffects(character);
 
             if (!Repeatable)
             {
@@ -31,7 +31,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    protected virtual void InteractEffects()
+    protected virtual void InteractEffects(Character character)
     {
 
     }

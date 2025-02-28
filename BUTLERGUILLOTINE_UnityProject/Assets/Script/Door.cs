@@ -27,7 +27,7 @@ public class Door : Interactable
         ToggleDoor(StartOpen);
     }
 
-    protected override void InteractEffects()
+    protected override void InteractEffects(Character character)
     {
         if (CanOpen)
         {
