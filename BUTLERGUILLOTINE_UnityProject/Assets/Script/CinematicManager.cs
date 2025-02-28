@@ -26,6 +26,8 @@ public class CinematicManager : MonoBehaviour
     bool playing, writing, skip, cinematicDone;
     int currentCinematic;
 
+    Coroutine C_current;
+
     public void Init(GameManager gm)
     {
         gameManager = gm;
@@ -84,7 +86,7 @@ public class CinematicManager : MonoBehaviour
         gameManager.SetCinematicMode(true);
         cinematics[currentCinematic].OnStart?.Invoke();
 
-        StartCoroutine(C_PlayCinematic(instaFade));
+        C_current = StartCoroutine(C_PlayCinematic(instaFade));
     }
 
     IEnumerator C_PlayCinematic(bool instaFade)
@@ -207,6 +209,8 @@ public class CinematicManager : MonoBehaviour
 
     public void CloseCinematic()
     {
+        C_current = null;
+
         dialogue.text = "";
 
         cinematics[currentCinematic].OnEnd?.Invoke();
@@ -224,6 +228,22 @@ public class CinematicManager : MonoBehaviour
 
         if (cinematics[currentCinematic].ChainCinematic != "")
             PlayCinematic(cinematics[currentCinematic].ChainCinematic);
+    }
+
+    public void SkipCinematic()
+    {
+        if (C_current != null)
+            StopCoroutine(C_current);
+
+        Camera.SetActive(false);
+        Interface.SetActive(false);
+
+        cinematics[currentCinematic].OnEndBeforeBlackScreen?.Invoke();
+
+        if (!cinematics[currentCinematic].Data.NoFadeOut)
+            gameManager.ScreenEffects.FadeTo(0, 0.3f);
+
+        CloseCinematic();
     }
 
     public void PlayPuppetAction(string puppet, string action)

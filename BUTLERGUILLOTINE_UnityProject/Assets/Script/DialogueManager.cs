@@ -39,6 +39,8 @@ public class DialogueManager : MonoBehaviour
 
     GameManager gm;
 
+    public List<Dialogue> Dialogues { get { return dialogues; } }
+
     public void Init(GameManager man)
     {
         gm = man;
@@ -364,6 +366,11 @@ public class DialogueManager : MonoBehaviour
         Specific.SetActive(false);
 
         GameManager.Instance.EndComment();
+    }
+
+    public void AddDialogue(Dialogue d)
+    {
+        dialogues.Add(d);
     }
 }
 

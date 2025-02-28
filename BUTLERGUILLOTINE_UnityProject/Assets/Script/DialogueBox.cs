@@ -57,4 +57,9 @@ public class DialogueBox : Interactable
         GameManager.Instance.DialogueManager.StartDialogue(puppet, dialogueReference, this);
 
     }
+
+    public void ChangeReference(int index)
+    {
+        dialogueReference = index;
+    }
 }

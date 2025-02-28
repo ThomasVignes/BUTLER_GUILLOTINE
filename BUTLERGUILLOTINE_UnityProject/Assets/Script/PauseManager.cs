@@ -65,7 +65,7 @@ public class PauseManager : Manager
 
         Cursor.visible = true;
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("NewMenu");
     }
 
     public void QuitGame()

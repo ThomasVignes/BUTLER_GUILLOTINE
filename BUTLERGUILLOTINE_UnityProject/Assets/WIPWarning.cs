@@ -31,6 +31,6 @@ public class WIPWarning : MonoBehaviour
     public void Quit()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("NewMenu");
     }
 }
