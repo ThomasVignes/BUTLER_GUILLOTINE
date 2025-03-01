@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class FastModeDetection : MonoBehaviour
 {
+    public bool ConstantlyActive;
     [SerializeField] GameObject activator;
 
     private void Start()
     {
+        if (ConstantlyActive)
+        {
+            activator.SetActive(true);
+            return;
+        }
+
         if (PersistentData.Instance != null && PersistentData.Instance.FastMode)
             activator.SetActive(true);
         else

@@ -675,7 +675,7 @@ Transform:
   m_Children:
   - {fileID: 3850006664654326315}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1956406613556484474
 MonoBehaviour:
@@ -833,9 +833,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hello hello, the following sequence is currently work in progress, if you
-    found a way to get in here, expect some major emptiness and issues, but some
-    funny playable parts still. Probably.
+  m_text: Hello hello, the following sequence is currently work in progress. There
+    are things to check out, but said things are not finished.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
