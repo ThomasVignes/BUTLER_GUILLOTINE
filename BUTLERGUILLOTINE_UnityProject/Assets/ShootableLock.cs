@@ -4,8 +4,21 @@ using UnityEngine;
 
 public class ShootableLock : Lifeform
 {
+    [SerializeField] string overrideMessage = "I could shoot the lock open.";
     [SerializeField] Door[] doors;
     [SerializeField] GameObject lockMesh;
+
+    private void Start()
+    {
+        if (overrideMessage == "")
+            return;
+
+        foreach (Door door in doors) 
+        {
+            door.LockedMessage = overrideMessage;
+        }
+    }
+
     public override void Death()
     {
         base.Death();

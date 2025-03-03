@@ -28,5 +28,5 @@ public class MenuChapter
 {
     public string Title;
     public Sprite Image;
-    public int SceneReference;
+    public string SceneReference;
 }

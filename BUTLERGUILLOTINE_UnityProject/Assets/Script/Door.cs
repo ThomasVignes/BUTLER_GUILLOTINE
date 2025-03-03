@@ -22,6 +22,8 @@ public class Door : Interactable
 
     private bool isOpen;
 
+    public string LockedMessage { get { return lockedMessage; } set {  lockedMessage = value; } }
+
     private void Start()
     {
         ToggleDoor(StartOpen);

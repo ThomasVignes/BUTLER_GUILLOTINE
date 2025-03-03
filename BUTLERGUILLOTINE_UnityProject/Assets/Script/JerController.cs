@@ -48,6 +48,12 @@ public class JerController : PlayerController
 
         if (targetLimb != null && targetLimb.Owner != lifeform)
         {
+            if (targetLimb.Immune)
+            {
+                GameManager.Instance.WriteComment(targetLimb.ImmuneMessage);
+                return;
+            }
+
             targetLimb.Hit(1, 1, 2500, transform.forward.normalized);
 
             if (!targetLimb.Shielded)

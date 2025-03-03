@@ -10,9 +10,9 @@ public class MenuChapterButton : MonoBehaviour
     [SerializeField] Image image;
     [SerializeField] TextMeshProUGUI text;
 
-    int sceneReference;
+    string sceneReference;
 
-    public void Init(string txt, Sprite img, int sceneRef)
+    public void Init(string txt, Sprite img, string sceneRef)
     {
         image.sprite = img;
         text.text = txt;

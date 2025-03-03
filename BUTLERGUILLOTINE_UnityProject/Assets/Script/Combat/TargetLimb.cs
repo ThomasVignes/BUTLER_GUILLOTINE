@@ -14,6 +14,10 @@ public class TargetLimb : MonoBehaviour
     public UnityEvent OnHit;
     public bool NoBlood;
 
+    [Header("Immunity")]
+    public bool Immune;
+    public string ImmuneMessage;
+
     LimbShield shield;
 
     public bool Shielded { get { if (shield == null) return false; else return shield.Active; } }
@@ -43,5 +47,10 @@ public class TargetLimb : MonoBehaviour
         }
 
         OnHit.Invoke();
+    }
+
+    public void MakeVulnerable()
+    {
+        Immune = false;
     }
 }

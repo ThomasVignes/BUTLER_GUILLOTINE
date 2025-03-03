@@ -32,7 +32,7 @@ public class PauseManager : Manager
         if (!canPause)
             return;
         
-        if (Input.GetKeyDown(KeyCode.Escape)) 
+        if (Input.GetButtonDown("Pause")) 
         { 
             gm.Paused = !gm.Paused;
 

@@ -17,4 +17,9 @@ public class DisclaimerManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void Leave()
+    {
+        SceneManager.LoadScene("NewScene");
+    }
 }
