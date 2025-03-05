@@ -52,13 +52,23 @@ MonoBehaviour:
     ImmuneExperimental: 0
     OriginalVolume: 0
   items:
-  - ID: Key_Strange
-    Name: Strange Key
-    Sprite: {fileID: 21300000, guid: ed1bc74f5978dd045aa52d3b6e61ef9b, type: 3}
+  - ID: Key_Strange_Half_1
+    Name: Silver Object
+    Sprite: {fileID: 21300000, guid: 81833a8b23da0cf4884f0a6ce402edc5, type: 3}
     Equipped: 0
     Icon: {fileID: 0}
   - ID: Key_Trapdoor
     Name: Small Key
     Sprite: {fileID: 21300000, guid: 3cdabd6dea22333469a8294f465b9471, type: 3}
+    Equipped: 0
+    Icon: {fileID: 0}
+  - ID: Key_Strange_Half_2
+    Name: Silver Object
+    Sprite: {fileID: 21300000, guid: 610bf7aaacc509c41b3c600a23554f47, type: 3}
+    Equipped: 0
+    Icon: {fileID: 0}
+  - ID: Key_Strange
+    Name: Silver Key
+    Sprite: {fileID: 21300000, guid: ed1bc74f5978dd045aa52d3b6e61ef9b, type: 3}
     Equipped: 0
     Icon: {fileID: 0}
