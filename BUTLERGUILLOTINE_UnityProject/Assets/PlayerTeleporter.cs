@@ -25,14 +25,14 @@ public class PlayerTeleporter : MonoBehaviour
 
     IEnumerator C_TeleportUpEffects()
     {
-        yield return new WaitForSeconds(teleportDelay);
+        yield return new WaitForSeconds(teleportDelay/2 + 0.1f);
 
         OnTeleportUp?.Invoke();
     }
 
     IEnumerator C_TeleportDownEffects()
     {
-        yield return new WaitForSeconds(teleportDelay);
+        yield return new WaitForSeconds(teleportDelay/2 + 0.1f);
 
         OnTeleportDown?.Invoke();
     }
