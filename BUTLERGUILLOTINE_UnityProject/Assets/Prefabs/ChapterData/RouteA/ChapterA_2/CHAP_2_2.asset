@@ -20,6 +20,10 @@ MonoBehaviour:
   conditions:
   - Name: BanquetFound
     Met: 0
+  - Name: Silver1Found
+    Met: 0
+  - Name: Silver2Found
+    Met: 0
   areas:
   - Name: Death
     Music: {fileID: 0}
