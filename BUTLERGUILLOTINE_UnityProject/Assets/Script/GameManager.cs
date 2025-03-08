@@ -773,7 +773,11 @@ public class GameManager : MonoBehaviour
             return;
 
         //Update zone specific objects
-        List<GameObject> previous = currentCamZone.ShotSpecificObjects;
+        List<GameObject> previous = new List<GameObject>();
+
+        if (currentCam != null)
+            previous = currentCamZone.ShotSpecificObjects;
+
         List<GameObject> next = zone.ShotSpecificObjects;
         foreach (var item in previous)
         {
