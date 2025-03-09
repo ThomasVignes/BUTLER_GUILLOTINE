@@ -104,14 +104,20 @@ public class CinematicManager : MonoBehaviour
 
         cinematics[currentCinematic].OnStartAfterBlackScreen?.Invoke();
 
-        Camera.SetActive(true);
+        if (!cinematics[currentCinematic].NoCamera)
+            Camera.SetActive(true);
 
         //Position camera
-        Transform pivot = current.CinematicCameraPivots[current.Data.lines[0].cameraIndex];
+        Transform pivot = transform;
 
-        Camera.transform.SetParent(pivot, true);
-        Camera.transform.position = pivot.position;
-        Camera.transform.rotation = pivot.rotation;
+        if (current.CinematicCameraPivots.Length > 0)
+        {
+            pivot = current.CinematicCameraPivots[current.Data.lines[0].cameraIndex];
+
+            Camera.transform.SetParent(pivot, true);
+            Camera.transform.position = pivot.position;
+            Camera.transform.rotation = pivot.rotation;
+        }
 
         Interface.SetActive(true);
 
@@ -120,13 +126,17 @@ public class CinematicManager : MonoBehaviour
         gameManager.ScreenEffects.FadeTo(0, 1f);
 
         foreach (var line in current.Data.lines)
-        {        
+        {
             //Position camera
-            pivot = current.CinematicCameraPivots[line.cameraIndex];
+            if (current.CinematicCameraPivots.Length > 0)
+            {
+                pivot = current.CinematicCameraPivots[line.cameraIndex];
 
-            Camera.transform.SetParent(pivot, true);
-            Camera.transform.position = pivot.position;
-            Camera.transform.rotation = pivot.rotation;
+                Camera.transform.SetParent(pivot, true);
+                Camera.transform.position = pivot.position;
+                Camera.transform.rotation = pivot.rotation;
+            }
+
             //Write text
             #region Write text
             yield return new WaitForSeconds(delayBeforeDialogue);
@@ -194,7 +204,9 @@ public class CinematicManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.2f);
 
-        Camera.SetActive(false);
+        if (!cinematics[currentCinematic].NoCamera)
+            Camera.SetActive(false);
+
         Interface.SetActive(false);
 
         current.OnEndBeforeBlackScreen?.Invoke();
@@ -269,6 +281,7 @@ public class Cinematic
     public UnityEvent OnEndBeforeBlackScreen;
     public UnityEvent OnEnd;
     public string ChainCinematic;
+    public bool NoCamera;
 
     [Header("Scene References")]
     public CinematicPuppet[] CinematicPuppets;
