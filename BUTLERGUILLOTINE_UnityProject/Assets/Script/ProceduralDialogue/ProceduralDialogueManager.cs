@@ -20,9 +20,12 @@ public class ProceduralDialogueManager : MonoBehaviour
     public DialogueBatch Goodbyes;
 
     [Header("References")]
+    [SerializeField] GameObject dialogueCharacterInstance;
+    [SerializeField] GameObject[] mingleCharacters;
     [SerializeField] GameObject DialogueInstance;
     [SerializeField] List<GameObject> DialogueInstances = new List<GameObject>();
 
+    List<DialogueCharacter> dialogueCharacters = new List<DialogueCharacter>();
     List<DialogueBatchIndex> indexes = new List<DialogueBatchIndex>();
 
     DialogueCharacter initiator;
@@ -52,13 +55,31 @@ public class ProceduralDialogueManager : MonoBehaviour
         {
             CreateNewInstance();
         }
+
+        foreach (var item in mingleCharacters)
+        {
+            Character c = item.GetComponentInChildren<Character>();
+
+            GameObject go = Instantiate(dialogueCharacterInstance);
+            DialogueCharacter dc = go.GetComponent<DialogueCharacter>();
+
+
+            go.transform.SetParent(c.transform, false);
+            go.transform.localPosition = Vector3.zero;
+            go.transform.localRotation = Quaternion.identity;
+
+
+            dc.Init(c);
+
+            dialogueCharacters.Add(dc);
+        }
     }
 
     private DialogueInstance CreateNewInstance()
     {
         GameObject objToSpawn = Instantiate(DialogueInstance);
         objToSpawn.transform.SetParent(transform);
-        objToSpawn.GetComponent<DialogueInstance>().InitValues(this, minLines, maxLines, delayBeforeDialogue, delayBeforeDialogue);
+        objToSpawn.GetComponent<DialogueInstance>().InitValues(this, minLines, maxLines, delayBeforeDialogue, delayBetweenLines);
 
         DialogueInstances.Add(objToSpawn);
 

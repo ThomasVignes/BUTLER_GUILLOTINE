@@ -2,17 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PointOfInterest : MonoBehaviour
+public class PointOfInterest : HoldInteractable
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool Available = true;
+
+    private void Update()
     {
-        
+        Step();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void InteractEffects(Character character)
     {
-        
+        base.InteractEffects(character);
+
+        Available = false;
+    }
+
+    protected override void LeaveEffects()
+    {
+        base.LeaveEffects();
+
+        Available = true;
     }
 }

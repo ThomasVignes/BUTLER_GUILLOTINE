@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class DialogueCharacter : Interactable
 {
-    public bool AutoInit;
-
     [Header("AI")]
     [SerializeField] bool freeRoam;
     [SerializeField] float roamRadius;
@@ -34,14 +32,13 @@ public class DialogueCharacter : Interactable
 
     DialogueCharacter lastMingler;
 
-    private void Start()
-    {
-        if (AutoInit)
-            Init();
-    }
+    PointOfInterest poi;
 
-    public void Init()
+    public void Init(Character character)
     {
+        if (this.character == null)
+            this.character = character;
+
         ready = true;
 
         if (freeRoam)
@@ -59,6 +56,13 @@ public class DialogueCharacter : Interactable
 
         if (freeRoam)
         {
+            if (poi != null && !poi.Available && character.Moving)
+            {
+                poi = null;
+                waitTimer = 0;
+                TryWalk();
+            }
+
             if (waitTimer > 0 && !character.Moving)
             {
                 waitTimer -= Time.deltaTime;
@@ -83,6 +87,8 @@ public class DialogueCharacter : Interactable
 
         Collider[] cols = Physics.OverlapSphere(transform.position, roamRadius);
 
+        Reshuffle(cols);
+
         foreach (var item in cols)
         {
             if (item.gameObject != gameObject && item.gameObject != last)
@@ -105,12 +111,12 @@ public class DialogueCharacter : Interactable
                     return;
                 }
 
-                PointOfInterest poi = item.GetComponent<PointOfInterest>();
+                poi = item.GetComponent<PointOfInterest>();
 
-                if (poi != null)
+                if (poi != null && poi.Available)
                 {
                     targPos = item.transform.position;
-                    this.character.SetDestination(targPos);
+                    this.character.SetDestination(targPos, poi);
                     last = item.gameObject;
 
                     MingleCD();
@@ -206,5 +212,17 @@ public class DialogueCharacter : Interactable
     {
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(transform.position, roamRadius);
+    }
+
+    void Reshuffle(Collider[] texts)
+    {
+        // Knuth shuffle algorithm :: courtesy of Wikipedia :)
+        for (int t = 0; t < texts.Length; t++)
+        {
+            Collider tmp = texts[t];
+            int r = Random.Range(t, texts.Length);
+            texts[t] = texts[r];
+            texts[r] = tmp;
+        }
     }
 }
