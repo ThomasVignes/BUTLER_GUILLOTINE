@@ -17,6 +17,8 @@ public class DialogueInstance : MonoBehaviour
 
     bool speaking;
 
+    Coroutine currentDialogue;
+
     public bool Available { get { return !speaking; } }
 
     public void InitValues(ProceduralDialogueManager manager, int minLines, int maxLines, float delayBeforeDialogue, float delayBetweenLines)
@@ -26,6 +28,16 @@ public class DialogueInstance : MonoBehaviour
         this.maxLines = maxLines;
         this.delayBeforeDialogue = delayBeforeDialogue;
         this.delayBetweenLines = delayBetweenLines;
+    }
+
+    public void Interrupt()
+    {
+        if (speaking)
+        {
+            StopCoroutine(currentDialogue);
+
+            EndDialogue();
+        }
     }
 
     public void StartDialogue(DialogueCharacter initatior, DialogueCharacter interlocutor)
@@ -38,7 +50,7 @@ public class DialogueInstance : MonoBehaviour
         initiator.StartDialogue();
         interlocutor.StartDialogue();
 
-        StartCoroutine(StartDialogue());
+        currentDialogue = StartCoroutine(StartDialogue());
     }
     public void EndDialogue()
     {
@@ -46,6 +58,8 @@ public class DialogueInstance : MonoBehaviour
 
         initiator.EndDialogue();
         interlocutor.EndDialogue();
+
+        currentDialogue = null;
     }
 
     IEnumerator StartDialogue()

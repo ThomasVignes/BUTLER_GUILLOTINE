@@ -156,6 +156,43 @@ public class ProceduralDialogueManager : MonoBehaviour
 
         return false;
     }
+
+    private void OnDisable()
+    {
+        Hide();
+    }
+
+    private void OnEnable()
+    {
+        Show();
+    }
+
+    public void Hide()
+    {
+        if (!Application.isPlaying)
+            return;
+
+        foreach (var instance in DialogueInstances)
+        {
+            instance.GetComponent<DialogueInstance>().Interrupt();
+        }
+
+        foreach (var item in mingleCharacters)
+        {
+            item.GetComponent<RagdollHider>().Hide();
+        }
+    }
+
+    public void Show()
+    {
+        if (!Application.isPlaying)
+            return;
+
+        foreach (var item in mingleCharacters)
+        {
+            item.GetComponent<RagdollHider>().Show();
+        }
+    }
 }
 
 public class DialogueBatchIndex

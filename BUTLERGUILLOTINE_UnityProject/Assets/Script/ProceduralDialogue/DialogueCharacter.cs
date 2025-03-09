@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class DialogueCharacter : Interactable
 {
+    public bool Paused;
+
     [Header("AI")]
     [SerializeField] bool freeRoam;
     [SerializeField] float roamRadius;
@@ -52,6 +54,9 @@ public class DialogueCharacter : Interactable
     private void Update()
     {
         if (!ready)
+            return;
+
+        if (Paused)
             return;
 
         if (freeRoam)

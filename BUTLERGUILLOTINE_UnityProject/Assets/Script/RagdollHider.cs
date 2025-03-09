@@ -13,6 +13,8 @@ public class RagdollHider : MonoBehaviour
     Vector3 originalPos;
     NavMeshAgent agent;
 
+    DialogueCharacter dialogueCharacter;
+
     bool init;
 
     private void Awake()
@@ -39,6 +41,8 @@ public class RagdollHider : MonoBehaviour
 
         if (agent == null)
             agent = GetComponentInChildren<NavMeshAgent>();
+
+        dialogueCharacter = GetComponentInChildren<DialogueCharacter>();
     }
 
     public void Hide()
@@ -49,6 +53,7 @@ public class RagdollHider : MonoBehaviour
         if (agent == null)
             Init();
 
+        PauseDialogueCharacter(true);
 
         if (agent != null)
             agent.enabled = false;
@@ -74,6 +79,8 @@ public class RagdollHider : MonoBehaviour
         if (agent == null)
             Init();
 
+        PauseDialogueCharacter(false);
+
         transform.position = originalPos;
 
         foreach (var item in deactivateObjects)
@@ -87,5 +94,15 @@ public class RagdollHider : MonoBehaviour
 
         if (rb != null)
             rb.isKinematic = false;
+    }
+
+
+    private void PauseDialogueCharacter(bool pause)
+    {
+        if (dialogueCharacter == null)
+            dialogueCharacter = GetComponentInChildren<DialogueCharacter>();
+
+        if (dialogueCharacter != null)
+            dialogueCharacter.Paused = pause;
     }
 }
