@@ -483,6 +483,18 @@ PrefabInstance:
       propertyPath: injuredMultiplier
       value: 0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 4054352296069431573, guid: ab5a21a88f2255347bf05d3754270efe, type: 3}
+      propertyPath: Maskables.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054352296069431573, guid: ab5a21a88f2255347bf05d3754270efe, type: 3}
+      propertyPath: Maskables.Array.data[4]
+      value: 
+      objectReference: {fileID: 5619234912022280290}
+    - target: {fileID: 4054352296069431573, guid: ab5a21a88f2255347bf05d3754270efe, type: 3}
+      propertyPath: Maskables.Array.data[5]
+      value: 
+      objectReference: {fileID: 677160503841751061}
     - target: {fileID: 4965820173094365875, guid: ab5a21a88f2255347bf05d3754270efe, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.71267086
@@ -1127,6 +1139,11 @@ PrefabInstance:
       addedObject: {fileID: 986543755016721076}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab5a21a88f2255347bf05d3754270efe, type: 3}
+--- !u!1 &677160503841751061 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5736407996332389583, guid: ab5a21a88f2255347bf05d3754270efe, type: 3}
+  m_PrefabInstance: {fileID: 5115545253368280282}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4619097687043310085 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 496598354037847775, guid: ab5a21a88f2255347bf05d3754270efe, type: 3}
