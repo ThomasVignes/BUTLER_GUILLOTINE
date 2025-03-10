@@ -39,6 +39,12 @@ public class EventArea : MonoBehaviour
         }
     }
 
+    public void PlayEventWithDelay()
+    {
+        eventStarted = true;
+        delayTimer = Delay;
+    }
+
     public void PlayEvent()
     {
         OnTrigger.Invoke();
