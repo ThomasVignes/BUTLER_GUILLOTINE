@@ -15,8 +15,112 @@ MonoBehaviour:
   ID: Prison
   Ambience: 
   BlackScreenDuration: 5
-  lines: []
-  EndBlackScreenDuration: 1
+  lines:
+  - Text: 
+    Duration: 3
+    PuppetActions:
+    - PuppetName: Cam1
+      Action: Activate
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 'I want to hurl myself out of these walls. '
+    Duration: 6
+    PuppetActions: []
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 'But they won''t let me leave. '
+    Duration: 6
+    PuppetActions: []
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 1
+    PuppetActions:
+    - PuppetName: Cam2
+      Action: Activate
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 3
+    PuppetActions: []
+    cameraIndex: 1
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: Reality, events, unfolding in awful patterns.
+    Duration: 6
+    PuppetActions: []
+    cameraIndex: 1
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 'Yet none are awful in the precise way it happened. '
+    Duration: 6
+    PuppetActions: []
+    cameraIndex: 1
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: Approximations, as if we've all forgotten.
+    Duration: 6
+    PuppetActions: []
+    cameraIndex: 1
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 1
+    PuppetActions:
+    - PuppetName: Cam3
+      Action: Activate
+    cameraIndex: 1
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 3
+    PuppetActions: []
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 'But I know she remembers. '
+    Duration: 6
+    PuppetActions: []
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 1
+    PuppetActions: []
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: And now she's gone.
+    Duration: 8
+    PuppetActions: []
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 1
+    PuppetActions: []
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  EndBlackScreenDuration: 2
   NoEndBlackscreen: 0
   NoFadeOut: 0
   OverrideKeepsGoing: 0
