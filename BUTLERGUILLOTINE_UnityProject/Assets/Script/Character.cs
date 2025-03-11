@@ -222,6 +222,24 @@ public class Character : MonoBehaviour
         PausePath();
     }
 
+    public void SetDestination(Vector3 pos, bool dontReset)
+    {
+        if (!dontReset)
+        {
+            targetInteractable = null;
+            movingToInteractable = false;
+            canInteract = false;
+
+            agent.ResetPath();
+        }
+
+        targetPos = pos;
+
+        agent.SetDestination(targetPos);
+
+        computing = true;
+    }
+
     public void SetDestination(Vector3 pos)
     {
         targetInteractable = null;
@@ -333,5 +351,24 @@ public class Character : MonoBehaviour
     public void HoldAnim()
     {
 
+    }
+
+    public void TeleportCharacter(Transform transform)
+    {
+        TeleportCharacter(transform.position, false);
+    }
+
+    public void TeleportCharacter(Vector3 pos, bool stickToNavmesh)
+    {
+        if (stickToNavmesh)
+        {
+            NavMeshHit navHit;
+            if (NavMesh.SamplePosition(transform.position, out navHit, 100, 1))
+            {
+                pos = navHit.position;
+            }
+        }
+
+        agent.Warp(pos);
     }
 }

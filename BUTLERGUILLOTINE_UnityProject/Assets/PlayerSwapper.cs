@@ -10,8 +10,12 @@ public class PlayerSwapper : MonoBehaviour
 
     [Header("Player")]
     [SerializeField] string targetPlayer;
+    [SerializeField] string original;
     [SerializeField] Transform targetPos;
+    [SerializeField] Transform originalTargetPos;
     [SerializeField] bool hideOriginal;
+
+    
 
     private void Start()
     {
@@ -30,5 +34,17 @@ public class PlayerSwapper : MonoBehaviour
         yield return new WaitForSeconds(swapDelay);
 
         GameManager.Instance.SwapPlayer(targetPlayer, targetPos, hideOriginal);
+    }
+
+    public void SwapBack()
+    {
+        StartCoroutine(C_SwapBackDelay());
+    }
+
+    IEnumerator C_SwapBackDelay()
+    {
+        yield return new WaitForSeconds(swapDelay);
+
+        GameManager.Instance.SwapPlayer(original, originalTargetPos, hideOriginal);
     }
 }

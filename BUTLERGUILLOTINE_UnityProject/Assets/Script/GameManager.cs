@@ -186,7 +186,6 @@ public class GameManager : MonoBehaviour
 
         var instance = InstantiatePlayer(startCharacter, true);
 
-
         PauseManager.Init(this);
         themeManager.Init();
 
@@ -461,9 +460,12 @@ public class GameManager : MonoBehaviour
     GameObject InstantiatePlayer(PlayableCharacter playableCharacter, Transform overridePos, bool control)
     {
         GameObject chara = Instantiate(playableCharacter.Data.ControllerPrefab, overridePos.position, overridePos.rotation);
+        playableCharacter.Instance = chara;
 
         if (control)
             ControlInstance(chara);
+
+        
 
         return chara;
     }
@@ -481,7 +483,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        character.Instance = InstantiatePlayer(character, overridePos, false);
+        InstantiatePlayer(character, overridePos, false);
     }
 
     void ControlInstance(GameObject instance)
