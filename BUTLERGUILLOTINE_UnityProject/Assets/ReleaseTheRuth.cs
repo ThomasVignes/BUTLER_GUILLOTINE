@@ -7,6 +7,7 @@ public class ReleaseTheRuth : MonoBehaviour
 {
     [SerializeField] float delayBeforeTeleport;
     [SerializeField] Character ruth;
+    [SerializeField] GameObject unparented;
     [SerializeField] Transform[] warpPoints;
 
     public UnityEvent OnCatch;
@@ -42,6 +43,7 @@ public class ReleaseTheRuth : MonoBehaviour
         timer = delayBeforeTeleport;
     }
 
+    [ContextMenu("Manual Release")]
     public void Release()
     {
         chasing = true;
@@ -55,6 +57,9 @@ public class ReleaseTheRuth : MonoBehaviour
             if (Vector3.Distance(point.position, targ.position) > Vector3.Distance(furthest, targ.position))
                 furthest = point.position;
         }
+
+        if (unparented != null)
+            unparented.transform.position = furthest;
 
         ruth.TeleportCharacter(furthest, false);
         ruth.ToggleRun(true);
