@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7763107139064193930}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_HandRingFinger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 2928016015429418398}
   - component: {fileID: 6420196340477106446}
   - component: {fileID: 3563565982547963963}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: LegPiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 677215973808661965}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3867049657210303272}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Leg_Tibia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3856155121066130534}
   - component: {fileID: 3769832388443871725}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Necklace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7912020460764195106}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_Thumb03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -387,7 +387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7535714794485229193}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 7472304659116445257}
   - component: {fileID: 3803485385739486987}
   - component: {fileID: 1286509375183288280}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Ruth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,6 +446,7 @@ Transform:
   - {fileID: 3004362913114725675}
   - {fileID: 6705776159336993664}
   - {fileID: 8018613147028018989}
+  - {fileID: 7743836102073555725}
   m_Father: {fileID: 7909988709825860754}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -468,7 +469,7 @@ MonoBehaviour:
   minAngleToMove: 40
   minDistanceToInteract: 1.2
   closeInteractRange: 0.35
-  runMultiplier: 1.8
+  runMultiplier: 3
   injuredMultiplier: 0.8
   Injured: 0
   moveStateLerp: 4
@@ -532,7 +533,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6203246804961911676}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_Index03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -564,7 +565,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8071697857271289965}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Foot_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -595,7 +596,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8965518155432737281}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Breast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -628,7 +629,7 @@ GameObject:
   - component: {fileID: 2202009057547000731}
   - component: {fileID: 113048610708341085}
   - component: {fileID: 3303083685139634741}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_Thumb01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,7 +722,7 @@ GameObject:
   - component: {fileID: 3513657957483800354}
   - component: {fileID: 1998672150675837372}
   - component: {fileID: 7406321705656883743}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: LegPiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -883,7 +884,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4053510052838176736}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Unparented
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -917,7 +918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7823668546648362846}
   - component: {fileID: 8591563389570460802}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Ruth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1054,7 +1055,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5213797261281686082}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_MiddleFinger03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1301,7 +1302,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 448774169768146646}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_HandRingFinger03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1334,7 +1335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4798769495841730389}
   - component: {fileID: 1972792555811505562}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Shirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1434,7 +1435,7 @@ GameObject:
   - component: {fileID: 8649779461145028781}
   - component: {fileID: 2978917326474554623}
   - component: {fileID: 6507411037116229518}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Arm_Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1630,7 +1631,7 @@ GameObject:
   - component: {fileID: 113263875220456183}
   - component: {fileID: 3437407509683807466}
   - component: {fileID: 1916542753768607751}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Leg_Tibia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6893,7 +6894,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2975427943537260845}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_HandRingFinger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7140,7 +7141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8062965198126702975}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_MiddleFinger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7172,7 +7173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8990290135082236618}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_MiddleFinger_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7203,7 +7204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5767855835270277739}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_Thumb01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7453,7 +7454,7 @@ GameObject:
   - component: {fileID: 2896446237021455968}
   - component: {fileID: 3190598082074342564}
   - component: {fileID: 4934819585439531148}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_Spine02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7648,7 +7649,7 @@ GameObject:
   - component: {fileID: 6128994159133006046}
   - component: {fileID: 1906779073615829134}
   - component: {fileID: 3627121247719338198}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: LegPiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7812,7 +7813,7 @@ GameObject:
   - component: {fileID: 2092044596706074213}
   - component: {fileID: 8555364744182113088}
   - component: {fileID: 2610903624642674510}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_HandRingFinger03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7905,7 +7906,7 @@ GameObject:
   - component: {fileID: 3682805487642380274}
   - component: {fileID: 3026824283700620310}
   - component: {fileID: 8778305925209669091}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_HandRingFinger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7996,7 +7997,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6600546280849975422}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8030,7 +8031,7 @@ GameObject:
   - component: {fileID: 7436826982309115736}
   - component: {fileID: 444373065491755595}
   - component: {fileID: 5198754378048343427}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_HandPinkyfinger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8123,7 +8124,7 @@ GameObject:
   - component: {fileID: 285613779766227121}
   - component: {fileID: 647343156962605890}
   - component: {fileID: 3089435694335474287}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_RingFinger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8214,7 +8215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3086092784717783341}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Foot02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8248,7 +8249,7 @@ GameObject:
   - component: {fileID: 7701757952159361028}
   - component: {fileID: 6489538910776163682}
   - component: {fileID: 6284797553684999939}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_MiddleFinger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8554,7 +8555,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8524237395116955322}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8590,7 +8591,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6501007235331397209}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_HandPinkyfinger_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8623,7 +8624,7 @@ GameObject:
   - component: {fileID: 5340907190473514745}
   - component: {fileID: 7536864684784704023}
   - component: {fileID: 7706056708161365644}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_Thumb03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8932,7 +8933,7 @@ GameObject:
   - component: {fileID: 6770958558311582530}
   - component: {fileID: 4122045256844903950}
   - component: {fileID: 5423229498374153989}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Leg_Tibia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9128,7 +9129,7 @@ GameObject:
   - component: {fileID: 5524985111555520614}
   - component: {fileID: 2266018180834242965}
   - component: {fileID: 7821861910827061883}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9406,7 +9407,7 @@ GameObject:
   - component: {fileID: 2727428174164111455}
   - component: {fileID: 1375158972535961737}
   - component: {fileID: 6410485697057201616}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_Thumb04_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9498,7 +9499,7 @@ GameObject:
   - component: {fileID: 1159446194722825068}
   - component: {fileID: 1696935869291278670}
   - component: {fileID: 4381517790476338917}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_Index02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9806,7 +9807,7 @@ GameObject:
   - component: {fileID: 1225387970508143088}
   - component: {fileID: 4590529446646269004}
   - component: {fileID: 3234102592931661724}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_PinkyFinger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9900,7 +9901,7 @@ GameObject:
   - component: {fileID: 9168715178208340177}
   - component: {fileID: 1300332695608548537}
   - component: {fileID: 4258799096062766633}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Arm_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10095,7 +10096,7 @@ GameObject:
   - component: {fileID: 8549174099340920601}
   - component: {fileID: 1102398583140860990}
   - component: {fileID: 1828280012107543250}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_Thumb_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10185,7 +10186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2695078599799592702}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_Index_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10216,7 +10217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2709864754692864905}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_Head_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10248,7 +10249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8018613147028018989}
   - component: {fileID: 3386362422717927603}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: BlobDecal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10303,7 +10304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7018824438487902005}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Arm_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10420,7 +10421,7 @@ GameObject:
   - component: {fileID: 3050896782005033173}
   - component: {fileID: 5855302240231882943}
   - component: {fileID: 676205831197843837}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_HandRingFinger_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10510,7 +10511,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 943774302143771320}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_Index01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10545,7 +10546,7 @@ GameObject:
   - component: {fileID: 6698280388324960318}
   - component: {fileID: 7661909441439215836}
   - component: {fileID: 7447623581617258861}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_Spine03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10744,7 +10745,7 @@ GameObject:
   - component: {fileID: 3004362913114725675}
   - component: {fileID: 7280542777410713729}
   - component: {fileID: 4930167452290168709}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10808,6 +10809,125 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   original: {fileID: 6942318025257003044}
   global: 0
+--- !u!1 &3124022490957371601
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7743836102073555725}
+  - component: {fileID: 240987443596093095}
+  - component: {fileID: 5508206368737445618}
+  - component: {fileID: 8430631555897013341}
+  m_Layer: 0
+  m_Name: PlayerTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7743836102073555725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124022490957371601}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0.28}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3998895496156069793}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &240987443596093095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124022490957371601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfa43e37b7f51654299193597ce52cf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ReleaseTheRuth, Assembly-CSharp
+        m_MethodName: Caught
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Layer:
+    serializedVersion: 2
+    m_Bits: 8
+  Specific: {fileID: 0}
+  Repeatable: 0
+  OnExit: 0
+  StopsPlayer: 0
+  Delay: 0
+--- !u!136 &5508206368737445618
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124022490957371601}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.39367813
+  m_Height: 1.959383
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.92542744, z: 0.18367815}
+--- !u!54 &8430631555897013341
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124022490957371601}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3212381883702772418
 GameObject:
   m_ObjectHideFlags: 0
@@ -10817,7 +10937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8582205595055623197}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Arm_Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10851,7 +10971,7 @@ GameObject:
   - component: {fileID: 1330732062271304097}
   - component: {fileID: 5827828189998913938}
   - component: {fileID: 7723139224446760728}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_RingFinger03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10944,7 +11064,7 @@ GameObject:
   - component: {fileID: 1158872574828424234}
   - component: {fileID: 5640333132737475525}
   - component: {fileID: 6644333146570309969}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_Thumb02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11035,7 +11155,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5737250580469377542}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Foot_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15964,7 +16084,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5057807378952325417}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_PinkyFinger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15998,7 +16118,7 @@ GameObject:
   - component: {fileID: 7153565390248213442}
   - component: {fileID: 4975796716061412201}
   - component: {fileID: 5787357776637858651}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_PinkyFinger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16174,7 +16294,7 @@ GameObject:
   - component: {fileID: 3475764149903412615}
   - component: {fileID: 3992169067305738757}
   - component: {fileID: 3230232329147594421}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_MiddleFinger_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16264,7 +16384,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3960392069810429731}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_Index_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16297,7 +16417,7 @@ GameObject:
   - component: {fileID: 421902482044202506}
   - component: {fileID: 8265029464526326736}
   - component: {fileID: 1267887865285674334}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_MiddleFinger03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16388,7 +16508,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8266305703162364298}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Foot_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16421,7 +16541,7 @@ GameObject:
   - component: {fileID: 6326778054105816829}
   - component: {fileID: 6322423948273030965}
   - component: {fileID: 7387179051779946817}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: PelvisNoPhysics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16499,7 +16619,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2522627198755653632}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_MiddleFinger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16531,7 +16651,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2766036935752854745}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_HandPinkyfinger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17024,7 +17144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3803494220653675484}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_Thumb04_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17055,7 +17175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2580913505003370055}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Offsetter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17089,7 +17209,7 @@ GameObject:
   - component: {fileID: 879677604494212952}
   - component: {fileID: 9220237577977053445}
   - component: {fileID: 3163676384517787438}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17282,7 +17402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1767194550969899775}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_Index03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17315,7 +17435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6162755236065374339}
   - component: {fileID: 7456584357920344075}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17402,7 +17522,7 @@ GameObject:
   - component: {fileID: 1883917222794313427}
   - component: {fileID: 6409300616535990276}
   - component: {fileID: 3583939202177793606}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_Thumb02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17493,7 +17613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8950623481249829921}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_Spine01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17527,7 +17647,7 @@ GameObject:
   - component: {fileID: 8827312198967650745}
   - component: {fileID: 5786585949999953980}
   - component: {fileID: 7251543337578977447}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17610,7 +17730,7 @@ GameObject:
   - component: {fileID: 6921602472023812933}
   - component: {fileID: 3886847035060568918}
   - component: {fileID: 5452133879383962111}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_Index03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17703,7 +17823,7 @@ GameObject:
   - component: {fileID: 397318872683190333}
   - component: {fileID: 8292494686178156672}
   - component: {fileID: 3682793162919713614}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_RingFinger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17795,7 +17915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4924357521583851566}
   - component: {fileID: 6390111244761203903}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Necklace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17880,7 +18000,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6764394376810697337}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_Index02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17915,7 +18035,7 @@ GameObject:
   - component: {fileID: 7297475008547440190}
   - component: {fileID: 1374276625214159174}
   - component: {fileID: 8827726912561998449}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18109,7 +18229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2846748124530550170}
   - component: {fileID: 2105268614189087177}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18413,7 +18533,7 @@ GameObject:
   - component: {fileID: 7991824557032219994}
   - component: {fileID: 5124222404007760388}
   - component: {fileID: 9142850075127616067}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Foot01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18621,7 +18741,7 @@ GameObject:
   - component: {fileID: 1174778188924939536}
   - component: {fileID: 1555065455166575906}
   - component: {fileID: 23235356088595130}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_PinkyFinger03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18712,7 +18832,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6404865406967802740}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Leg_Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18746,7 +18866,7 @@ GameObject:
   - component: {fileID: 4754084925839249476}
   - component: {fileID: 6912828020000617098}
   - component: {fileID: 405625209811141101}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_Pelvis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18910,7 +19030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2238727296673778232}
   - component: {fileID: 707277806385203299}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Beret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18997,7 +19117,7 @@ GameObject:
   - component: {fileID: 2546118916414048679}
   - component: {fileID: 6456402495395676684}
   - component: {fileID: 674212016184796749}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_RingFinger_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19088,7 +19208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1853954226137350106}
   - component: {fileID: 4794064426511398126}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: help
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19135,7 +19255,7 @@ GameObject:
   - component: {fileID: 8176133285132340826}
   - component: {fileID: 1232444834861988716}
   - component: {fileID: 2079657513443302919}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: LegPiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19298,7 +19418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2906908353130590205}
   - component: {fileID: 858052026826418731}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Belt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19385,7 +19505,7 @@ GameObject:
   - component: {fileID: 5234040626402550227}
   - component: {fileID: 6149846950256225653}
   - component: {fileID: 4190029420743789254}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Breast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19545,7 +19665,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9032695158766916022}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19577,7 +19697,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3181391955783447355}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_HandPinkyfinger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19694,7 +19814,7 @@ GameObject:
   - component: {fileID: 4244057864821702667}
   - component: {fileID: 4946364423546262399}
   - component: {fileID: 1748522881247932168}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_Index_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19787,7 +19907,7 @@ GameObject:
   - component: {fileID: 2188241221475865739}
   - component: {fileID: 8795712789220145083}
   - component: {fileID: 7150352414015271399}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Ruth AnimRef
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19829,7 +19949,7 @@ Animator:
   m_GameObject: {fileID: 5148500648138592314}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: a5d4c93802f93da438dc94a55d2914ec, type: 3}
-  m_Controller: {fileID: 9100000, guid: ec876ea1f3ec31847b8aac49c98edbab, type: 2}
+  m_Controller: {fileID: 9100000, guid: 01f01ec05b4d129498ce0c6dfa006dd8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -19879,7 +19999,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4022935225182839544}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_RingFinger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19911,7 +20031,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9099204459024307258}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_RingFinger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19943,7 +20063,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4723100846352644176}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Foot_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19977,7 +20097,7 @@ GameObject:
   - component: {fileID: 485636844531178734}
   - component: {fileID: 7306611474126003796}
   - component: {fileID: 710404557796895860}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20079,7 +20199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3508459958967596046}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_PinkyFinger03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20111,7 +20231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5389635070491586049}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Leg_Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20144,7 +20264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7422151564284514924}
   - component: {fileID: 4671732920320129458}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Scarf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20231,7 +20351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1165941165069019467}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_MiddleFinger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20265,7 +20385,7 @@ GameObject:
   - component: {fileID: 2189281816119528352}
   - component: {fileID: 4785452715333299602}
   - component: {fileID: 2923381900317278825}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_MiddleFinger04_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20355,7 +20475,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6811250187961901416}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_MiddleFinger04_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20386,7 +20506,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8159603044487017892}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Foot02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20419,7 +20539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1603803353711429820}
   - component: {fileID: 8538122056360164507}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Pants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20509,7 +20629,7 @@ GameObject:
   - component: {fileID: 9176545690151252280}
   - component: {fileID: 5346244958705591579}
   - component: {fileID: 7922885020075522410}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20611,7 +20731,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7429688946264375359}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_Head_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20644,7 +20764,7 @@ GameObject:
   - component: {fileID: 1991877449961239178}
   - component: {fileID: 5194248628354429529}
   - component: {fileID: 2153808120041652365}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_MiddleFinger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20735,7 +20855,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5559416244608066568}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_Thumb_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20766,7 +20886,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4591989945814312471}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_Spine03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20804,7 +20924,7 @@ GameObject:
   - component: {fileID: 6271985265097345879}
   - component: {fileID: 8281039822911738245}
   - component: {fileID: 3752818886852744931}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_Index01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20897,7 +21017,7 @@ GameObject:
   - component: {fileID: 1939399055736960786}
   - component: {fileID: 7864450741813038269}
   - component: {fileID: 3224749114879911229}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_HandRingFinger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20990,7 +21110,7 @@ GameObject:
   - component: {fileID: 2092548910202035022}
   - component: {fileID: 833725414893297304}
   - component: {fileID: 813529505638887430}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_Thumb01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21083,7 +21203,7 @@ GameObject:
   - component: {fileID: 8928552939143189080}
   - component: {fileID: 6059683075017799838}
   - component: {fileID: 3098865253234182513}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_HandPinkyfinger_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21175,7 +21295,7 @@ GameObject:
   - component: {fileID: 7195086952630579340}
   - component: {fileID: 5999678777583976810}
   - component: {fileID: 8697555991326925335}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_Index03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21270,7 +21390,7 @@ GameObject:
   - component: {fileID: 3811549780585590008}
   - component: {fileID: 13952111773017517}
   - component: {fileID: 9131712462173221374}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Foot01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21476,7 +21596,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6705776159336993664}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Meshes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21515,7 +21635,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2324423306331881998}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_Thumb01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21549,7 +21669,7 @@ GameObject:
   - component: {fileID: 3705330290329010890}
   - component: {fileID: 726766478611098771}
   - component: {fileID: 8418722443590500557}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_Thumb03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21856,7 +21976,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5970213347828216630}
   - component: {fileID: 6294280211636699258}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Beret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21941,7 +22061,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6529221664726609659}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_PinkyFinger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22188,7 +22308,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1263781861223698779}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Leg_Tibia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22220,7 +22340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5498313657857417228}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_MiddleFinger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22256,7 +22376,7 @@ GameObject:
   - component: {fileID: 5372831263701882139}
   - component: {fileID: 453344760028683084}
   - component: {fileID: 2898475236874415413}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22700,7 +22820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 728824211400831552}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_Index01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22734,7 +22854,7 @@ GameObject:
   - component: {fileID: 1528362968251446011}
   - component: {fileID: 1840434576956790752}
   - component: {fileID: 4109573026319210712}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_MiddleFinger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22825,7 +22945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1797955168896743553}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Foot01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22859,7 +22979,7 @@ GameObject:
   - component: {fileID: 1622130743898833867}
   - component: {fileID: 4078543407759346189}
   - component: {fileID: 1247922998584672876}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_Index_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22950,7 +23070,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2699139557461940199}
   - component: {fileID: 2228957356511693316}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Ruth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23089,7 +23209,7 @@ GameObject:
   - component: {fileID: 5954828609448914537}
   - component: {fileID: 1632615722295151581}
   - component: {fileID: 2258971183401146895}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_MiddleFinger03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23180,7 +23300,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1751164463349341023}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Foot02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23212,7 +23332,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6385970168590577334}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23293,7 +23413,7 @@ GameObject:
   - component: {fileID: 7923560539224467172}
   - component: {fileID: 6215575830133823322}
   - component: {fileID: 8733523060233438265}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_MiddleFinger02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23601,7 +23721,7 @@ GameObject:
   - component: {fileID: 5429684598733152304}
   - component: {fileID: 4250770611390459013}
   - component: {fileID: 3532951819804387297}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_Index01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23693,7 +23813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9097773694668774445}
   - component: {fileID: 85302623270144036}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Scarf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23780,7 +23900,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5191811101586667948}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_MiddleFinger03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23812,7 +23932,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3599384761234968641}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_Thumb03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23847,7 +23967,7 @@ GameObject:
   - component: {fileID: 7543067160055776933}
   - component: {fileID: 9134386294891797415}
   - component: {fileID: 2910690762557529187}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Arm_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24043,7 +24163,7 @@ GameObject:
   - component: {fileID: 275822712030610836}
   - component: {fileID: 6039127249815098877}
   - component: {fileID: 5442954309897410681}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Leg_Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24236,7 +24356,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3181382493322593157}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_RingFinger03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24364,7 +24484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2411436553892993825}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Foot01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24396,7 +24516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6433116361259390712}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Limbs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24432,7 +24552,7 @@ GameObject:
   - component: {fileID: 5373708929239795937}
   - component: {fileID: 6498319531430596555}
   - component: {fileID: 8221435501469343957}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_Spine01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24628,7 +24748,7 @@ GameObject:
   - component: {fileID: 8890050657342689280}
   - component: {fileID: 4475659974079002108}
   - component: {fileID: 656272193851697428}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24821,7 +24941,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4749240895805518202}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_HandPinkyfinger03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24853,7 +24973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6454596781126153510}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Arm_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24885,7 +25005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4730657057615180596}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_HandRingFinger_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24916,7 +25036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5529972515579898439}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Breast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24949,7 +25069,7 @@ GameObject:
   - component: {fileID: 3122233434611239385}
   - component: {fileID: 2694432032458983162}
   - component: {fileID: 3442669245662684192}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_Index02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25040,7 +25160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5356822965537857413}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_Thumb02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25075,7 +25195,7 @@ GameObject:
   - component: {fileID: 7807418196141976557}
   - component: {fileID: 1069726583252897719}
   - component: {fileID: 4269403256770105951}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Leg_Thigh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25268,7 +25388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6919638672711539951}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Foot02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25300,7 +25420,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6942318025257003044}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25332,7 +25452,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6292722134490182480}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_RingFinger_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25365,7 +25485,7 @@ GameObject:
   - component: {fileID: 3742556902358121393}
   - component: {fileID: 1493620752934501737}
   - component: {fileID: 4907654284757365867}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Breast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25526,7 +25646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7909988709825860754}
   - component: {fileID: 6029289996859539495}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: C_MutatedRuth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25540,7 +25660,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8494795640851642870}
-  m_LocalRotation: {x: -0, y: -0.70710677, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -6.7422085, y: -27.286167, z: 41.053936}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -25549,7 +25669,7 @@ Transform:
   - {fileID: 4053510052838176736}
   - {fileID: 6914171183045681116}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!114 &6029289996859539495
 MonoBehaviour:
@@ -25595,7 +25715,7 @@ GameObject:
   - component: {fileID: 4827530498984901180}
   - component: {fileID: 1620003405805872972}
   - component: {fileID: 7683793581217222390}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25826,7 +25946,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5051867896963235899}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25863,7 +25983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4210234265363681541}
   - component: {fileID: 6788596804882871452}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Belt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30849,7 +30969,7 @@ GameObject:
   - component: {fileID: 7149840767256012959}
   - component: {fileID: 54507785673407869}
   - component: {fileID: 8364907691712092562}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Arm_Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31042,7 +31162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1391244930918430301}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_Index02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31076,7 +31196,7 @@ GameObject:
   - component: {fileID: 2581739106182390552}
   - component: {fileID: 1491314257865936145}
   - component: {fileID: 5765667208702194490}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_PinkyFinger_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31168,7 +31288,7 @@ GameObject:
   - component: {fileID: 1751993449290124966}
   - component: {fileID: 804661137357467995}
   - component: {fileID: 1109111793684123375}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_HandPinkyfinger03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31261,7 +31381,7 @@ GameObject:
   - component: {fileID: 1057079810184205146}
   - component: {fileID: 1946305249587913095}
   - component: {fileID: 7439153342889675527}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: LegPiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31425,7 +31545,7 @@ GameObject:
   - component: {fileID: 2970503292506839949}
   - component: {fileID: 2532388788634403987}
   - component: {fileID: 4738421213330743470}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_HandPinkyfinger01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31516,7 +31636,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2679338276523844406}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_Spine02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31548,7 +31668,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2527323660512870391}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_L_Hand_Thumb02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31580,7 +31700,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5497620578920064598}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Hand_PinkyFinger_Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31612,7 +31732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1772131491493959460}
   - component: {fileID: 1275851037829814581}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Pants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31699,7 +31819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7642209351895268869}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Tina_R_Arm_Forearm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
