@@ -63,7 +63,8 @@ public class Character : MonoBehaviour
 
         agent = GetComponent<NavMeshAgent>();
 
-        originalSpeed = agent.speed;
+        if (originalSpeed == 0f)
+            originalSpeed = agent.speed;
     }
 
     public void Injure(bool injure)

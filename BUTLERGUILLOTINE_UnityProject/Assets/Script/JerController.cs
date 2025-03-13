@@ -172,4 +172,11 @@ public class JerController : PlayerController
         GameManager.Instance.HitstopManager.StartHitstop();
         GameManager.Instance.CameraEffectManager.PlayEffect(CameraEffect.PlayerHit);
     }
+
+    public override void UnInit()
+    {
+        base.UnInit();
+
+        ToggleSpecial(false);
+    }
 }

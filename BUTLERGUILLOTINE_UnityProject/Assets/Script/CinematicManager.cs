@@ -84,6 +84,10 @@ public class CinematicManager : MonoBehaviour
 
         playing = true;
         gameManager.SetCinematicMode(true);
+
+        if (cinematics[currentCinematic].Data.HidePlayer)
+            gameManager.HidePlayer(true);
+
         cinematics[currentCinematic].OnStart?.Invoke();
 
         C_current = StartCoroutine(C_PlayCinematic(instaFade));
@@ -224,6 +228,9 @@ public class CinematicManager : MonoBehaviour
         C_current = null;
 
         dialogue.text = "";
+
+        if (cinematics[currentCinematic].Data.HidePlayer)
+            gameManager.HidePlayer(false);
 
         cinematics[currentCinematic].OnEnd?.Invoke();
 

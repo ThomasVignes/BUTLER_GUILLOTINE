@@ -14,17 +14,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: Chase
   Ambience: Empty
-  BlackScreenDuration: 8
+  BlackScreenDuration: 6
   lines:
   - Text: 
-    Duration: 0
+    Duration: 2
+    PuppetActions: []
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 2
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
     newAmbience: 
     soundEffects: []
-  EndBlackScreenDuration: 2
-  NoEndBlackscreen: 1
+  - Text: 
+    Duration: 0.3
+    PuppetActions:
+    - PuppetName: Jer
+      Action: Lean
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 'Get back here you piece of shit. '
+    Duration: 4
+    PuppetActions: []
+    cameraIndex: 1
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  EndBlackScreenDuration: 1
+  HidePlayer: 0
+  NoEndBlackscreen: 0
   NoFadeOut: 0
   OverrideKeepsGoing: 0
   ResumeTheme: 
