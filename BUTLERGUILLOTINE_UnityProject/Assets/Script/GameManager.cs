@@ -712,13 +712,13 @@ public class GameManager : MonoBehaviour
         if (!commentMode)
             return;
 
+        commentMode = false;
+
         if (currentComment != null)
         {
             currentComment.OnCommentEnd?.Invoke();
             currentComment = null;
         }
-
-        commentMode = false;
     }
 
     public void MoveStart(Transform target)

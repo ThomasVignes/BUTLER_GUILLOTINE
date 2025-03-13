@@ -12,4 +12,9 @@ public class CommentInteractable : Interactable
     {
          GameManager.Instance.WriteComment(comment, this);
     }
+
+    public void StandaloneComment()
+    {
+        GameManager.Instance.WriteComment(comment, this);
+    }
 }
