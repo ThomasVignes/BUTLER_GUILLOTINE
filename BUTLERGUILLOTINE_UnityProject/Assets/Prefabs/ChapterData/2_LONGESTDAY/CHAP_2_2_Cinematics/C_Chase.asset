@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: Chase
   Ambience: Empty
-  BlackScreenDuration: 6
+  BlackScreenDuration: 4
   lines:
   - Text: 
-    Duration: 2
+    Duration: 4
     PuppetActions: []
     cameraIndex: 2
     cameraEffect: 0
     newAmbience: 
     soundEffects: []
   - Text: 
-    Duration: 2
+    Duration: 4
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
     cameraEffect: 0
     newAmbience: 
     soundEffects: []
-  EndBlackScreenDuration: 1
+  EndBlackScreenDuration: 0.2
   HidePlayer: 0
   NoEndBlackscreen: 0
   NoFadeOut: 0

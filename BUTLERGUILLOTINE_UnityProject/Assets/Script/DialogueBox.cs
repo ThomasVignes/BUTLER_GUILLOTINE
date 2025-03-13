@@ -13,7 +13,7 @@ public class DialogueBox : Interactable
     [SerializeField] private float delayBeforeSwitch;
     [SerializeField] private string puppet;
     [SerializeField] private int dialogueReference;
-    [SerializeField] bool noCam;
+    [SerializeField] bool noCam, hidePlayer;
 
     bool pressed;
 
@@ -27,6 +27,9 @@ public class DialogueBox : Interactable
 
     public void End()
     {
+        if (hidePlayer)
+            GameManager.Instance.HidePlayer(false);
+
         if (!gameObject.activeSelf)
             return;
 
@@ -54,6 +57,8 @@ public class DialogueBox : Interactable
 
         GameManager.Instance.SetVNMode(true, noCam);
         GameManager.Instance.PausePlayerPath();
+        if (hidePlayer)
+            GameManager.Instance.HidePlayer(true);
         GameManager.Instance.DialogueManager.StartDialogue(puppet, dialogueReference, this);
 
     }
