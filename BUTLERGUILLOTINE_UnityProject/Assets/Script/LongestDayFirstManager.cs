@@ -70,7 +70,7 @@ public class LongestDayFirstManager : ChapterManagerGeneric
                 Destroy(item);
             }
 
-            startDialogue.Interact(null);
+            startDialogue.InteractWithCharacter(null);
 
             gameManager.StopOverride();
             //jukebox.Activate();
@@ -175,7 +175,7 @@ public class LongestDayFirstManager : ChapterManagerGeneric
         gameManager.StopOverride();
         //jukebox.Activate();
         gameManager.ScreenEffects.FadeTo(0, 0.8f);
-        startDialogue.Interact(null);
+        startDialogue.InteractWithCharacter(null);
 
         gameManager.Ready = true;
 

@@ -14,7 +14,24 @@ public class Interactable : MonoBehaviour
 
     protected bool done;
 
-    public void Interact(Character character)
+    public void Interact()
+    {
+        if (!done)
+        {
+            OnInteract?.Invoke();
+            InteractEffects(null);
+
+            if (!Repeatable)
+            {
+                done = true;
+
+                if (VanishOnDone)
+                    gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public void InteractWithCharacter(Character character)
     {
         if (!done)
         {
@@ -24,7 +41,7 @@ public class Interactable : MonoBehaviour
             if (!Repeatable)
             {
                 done = true;
-                
+
                 if (VanishOnDone)
                     gameObject.SetActive(false);
             }

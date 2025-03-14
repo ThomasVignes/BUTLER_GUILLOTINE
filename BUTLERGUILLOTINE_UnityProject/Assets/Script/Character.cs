@@ -126,7 +126,7 @@ public class Character : MonoBehaviour
                 {
                     canInteract = false;
                     movingToInteractable = false;
-                    targetInteractable.Interact(this);
+                    targetInteractable.InteractWithCharacter(this);
                     targetInteractable = null;
 
                     if (willPickUp)
@@ -289,7 +289,7 @@ public class Character : MonoBehaviour
             {
                 canInteract = false;
                 movingToInteractable = false;
-                targetInteractable.Interact(this);
+                targetInteractable.InteractWithCharacter(this);
                 targetInteractable = null;
 
                 if (willPickUp)
