@@ -8,9 +8,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1394615821580151511, guid: ccac4393f420d184e8d849d5800f6d82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159403605483240781, guid: ccac4393f420d184e8d849d5800f6d82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2465153713442281900, guid: ccac4393f420d184e8d849d5800f6d82, type: 3}
       propertyPath: m_Name
       value: Lamp Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465153713442281900, guid: ccac4393f420d184e8d849d5800f6d82, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2989876205324731158, guid: ccac4393f420d184e8d849d5800f6d82, type: 3}
       propertyPath: m_RootOrder

@@ -98,7 +98,7 @@ namespace Whumpus
 
                 if (LimitVelocity)
                 {
-                    if (m_ConfigurableJoint.targetVelocity.magnitude > MaxVelocity)
+                    if (m_ConfigurableJoint.targetVelocity.sqrMagnitude > MaxVelocity)
                     {
                         m_ConfigurableJoint.targetVelocity = m_ConfigurableJoint.targetVelocity.normalized * MaxVelocity;
                     }
@@ -106,7 +106,7 @@ namespace Whumpus
 
                 if (LimitAngularVelocity)
                 {
-                    if (m_ConfigurableJoint.targetAngularVelocity.magnitude > MaxAngularVelocity)
+                    if (m_ConfigurableJoint.targetAngularVelocity.sqrMagnitude > MaxAngularVelocity)
                     {
                         m_ConfigurableJoint.targetAngularVelocity = m_ConfigurableJoint.targetAngularVelocity.normalized * MaxAngularVelocity;
                     }
