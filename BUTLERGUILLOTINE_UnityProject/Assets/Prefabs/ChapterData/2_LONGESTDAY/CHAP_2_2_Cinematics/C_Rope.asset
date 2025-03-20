@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C_Rope
   m_EditorClassIdentifier: 
   ID: Rope
-  Ambience: 
+  Ambience: Empty
   BlackScreenDuration: 2
   lines:
   - Text: 
@@ -24,7 +24,8 @@ MonoBehaviour:
     newAmbience: 
     soundEffects: []
   EndBlackScreenDuration: 1
+  HidePlayer: 0
   NoEndBlackscreen: 1
   NoFadeOut: 0
   OverrideKeepsGoing: 0
-  ResumeTheme: 
+  ResumeTheme: Empty

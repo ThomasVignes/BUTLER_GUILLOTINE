@@ -750,6 +750,11 @@ public class GameManager : MonoBehaviour
         themeManager.StopOverride(areaName);
     }
 
+    public void ResumeAmbiance()
+    {
+        themeManager.ResumeAmbiance(); 
+    }
+
     public void StopAmbiance()
     {
         themeManager.StopAmbiance();

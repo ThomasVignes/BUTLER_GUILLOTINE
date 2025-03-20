@@ -193,7 +193,7 @@ public class LongestDayFirstManager : ChapterManagerGeneric
 
     IEnumerator C_DeathCinematic(string message)
     {
-        gameManager.SetAmbianceVolume(0f);
+        gameManager.StopAmbiance();
         gameManager.ScreenEffects.FadeTo(1, 0.3f);
 
         yield return new WaitForSeconds(1.4f);
@@ -213,6 +213,7 @@ public class LongestDayFirstManager : ChapterManagerGeneric
 
         deathText.text = "";
         EffectsManager.Instance.audioManager.Play("Gunshot");
+        gameManager.ResumeAmbiance();
 
         deathUI.SetActive(false);
 

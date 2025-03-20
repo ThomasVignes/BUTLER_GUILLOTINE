@@ -108,6 +108,8 @@ public class LocalCinematic : MonoBehaviour
                 {
                     dialogue.text += c;
 
+                    EffectsManager.Instance.audioManager.Play("SmallClick");
+
                     if (skip)
                     {
                         break;
