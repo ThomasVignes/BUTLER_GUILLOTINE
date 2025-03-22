@@ -145,7 +145,9 @@ public class GameManager : MonoBehaviour
     public bool End { get { return end; } set { end = value; } }
     public PlayerController Player { get { return player; } }
     public PlayerFollower PlayerFollower { get { return playerFollower; } }
-    public CursorManager CursorManager { get { return cursorManager; } } 
+    public CursorManager CursorManager { get { return cursorManager; } }
+
+    [HideInInspector] public Action CameraTick;
 
 
     bool cinematicMode, vnMode, commentMode, end, overrideAmbiance, ready;
@@ -857,6 +859,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        CameraTick?.Invoke();
 
         currentCamZone = zone;
     }

@@ -8,6 +8,9 @@ public class ShootableLock : Lifeform
     [SerializeField] Door[] doors;
     [SerializeField] GameObject lockMesh;
 
+    [Header("Experimental")]
+    [SerializeField] bool dontOpen;
+
     private void Start()
     {
         if (overrideMessage == "")
@@ -25,12 +28,17 @@ public class ShootableLock : Lifeform
 
         foreach (var item in doors)
         {
-            item.ToggleDoorNoEvent(true);
+            if (!dontOpen)
+                item.ToggleDoorNoEvent(true);
+            else
+                item.Unlock();
         }
 
-        GameObject go = Instantiate(lockMesh, transform.position, transform.rotation);
-
-        go.GetComponent<Rigidbody>().AddForce(80 * -transform.right.normalized + 30 * -Vector3.up);
+        if (lockMesh != null)
+        {
+            GameObject go = Instantiate(lockMesh, transform.position, transform.rotation);
+            go.GetComponent<Rigidbody>().AddForce(80 * -transform.right.normalized + 30 * -Vector3.up);
+        }
 
         Destroy(gameObject);
     }

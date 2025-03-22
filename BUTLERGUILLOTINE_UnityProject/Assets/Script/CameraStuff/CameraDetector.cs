@@ -11,6 +11,12 @@ public class CameraDetector : MonoBehaviour
     [SerializeField] private CameraZone CurrentCam;
     [SerializeField] private CameraZone LastCam;
 
+    GameManager gameManager;
+
+    private void Awake()
+    {
+        gameManager = GameManager.Instance;
+    }
 
     private void OnTriggerEnter(Collider other)
     {

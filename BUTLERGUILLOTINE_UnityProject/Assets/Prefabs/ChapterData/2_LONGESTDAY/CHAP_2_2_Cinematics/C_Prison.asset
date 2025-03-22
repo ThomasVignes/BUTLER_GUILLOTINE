@@ -69,7 +69,7 @@ MonoBehaviour:
     cameraEffect: 0
     newAmbience: 
     soundEffects: []
-  - Text: Approximations, as if we've all forgotten.
+  - Text: Approximations, as if we'd all forgotten.
     Duration: 8
     PuppetActions: []
     cameraIndex: 1
@@ -121,6 +121,7 @@ MonoBehaviour:
     newAmbience: 
     soundEffects: []
   EndBlackScreenDuration: 2
+  HidePlayer: 0
   NoEndBlackscreen: 0
   NoFadeOut: 0
   OverrideKeepsGoing: 1
