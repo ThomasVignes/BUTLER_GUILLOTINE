@@ -13021,7 +13021,11 @@ MonoBehaviour:
   resetPos: {x: -0.00009011149, y: 0.9111375, z: 0.04616464}
   Choppers:
   - {fileID: 7058887352943844991}
-  Maskables: []
+  Maskables:
+  - {fileID: 1459157463410169943}
+  - {fileID: 6766080051845613986}
+  - {fileID: 7714579008667038451}
+  - {fileID: 4261485949002913953}
 --- !u!54 &313358518662223948
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -27780,5 +27784,10 @@ PrefabInstance:
 --- !u!4 &5952406566575128962 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8011650971822903236, guid: a744765c7f899764393e5fea908c4b90, type: 3}
+  m_PrefabInstance: {fileID: 4446222851376352838}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6766080051845613986 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6940568010354477028, guid: a744765c7f899764393e5fea908c4b90, type: 3}
   m_PrefabInstance: {fileID: 4446222851376352838}
   m_PrefabAsset: {fileID: 0}
