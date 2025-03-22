@@ -10,6 +10,7 @@ public class InventoryManager : MonoBehaviour
     public Item[] items;
     [SerializeField] private Transform iconParent;
     [SerializeField] private GameObject iconPrefab;
+    [SerializeField] GameObject canvas;
 
     public void Init(Item[] items)
     {
@@ -19,6 +20,11 @@ public class InventoryManager : MonoBehaviour
         {
             item.Equipped = false;
         }
+    }
+
+    public void HideCanvas(bool hidden)
+    {
+        canvas.SetActive(!hidden);
     }
 
     public void EquipItem(string name)

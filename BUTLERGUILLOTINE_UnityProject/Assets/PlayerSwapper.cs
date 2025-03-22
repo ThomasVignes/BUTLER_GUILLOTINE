@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerSwapper : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class PlayerSwapper : MonoBehaviour
     [SerializeField] Transform originalTargetPos;
     [SerializeField] bool hideOriginal;
 
+    [Header("Delegate")]
+    public UnityEvent onSwap;
+    public UnityEvent onBack;
     
 
     private void Start()
@@ -34,6 +38,8 @@ public class PlayerSwapper : MonoBehaviour
         yield return new WaitForSeconds(swapDelay);
 
         GameManager.Instance.SwapPlayer(targetPlayer, targetPos, hideOriginal);
+
+        onSwap?.Invoke();
     }
 
     public void SwapBack()
@@ -46,5 +52,7 @@ public class PlayerSwapper : MonoBehaviour
         yield return new WaitForSeconds(swapDelay);
 
         GameManager.Instance.SwapPlayer(original, originalTargetPos, hideOriginal);
+
+        onBack?.Invoke();
     }
 }
