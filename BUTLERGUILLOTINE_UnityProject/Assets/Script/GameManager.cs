@@ -600,6 +600,7 @@ public class GameManager : MonoBehaviour
                 if (interactable != null)
                 {
                     player.SetDestination(interactable.GetTargetPosition(), interactable);
+                    interactable.OnSelected?.Invoke();
 
                     if (interactable is PickupInteractable)
                     {

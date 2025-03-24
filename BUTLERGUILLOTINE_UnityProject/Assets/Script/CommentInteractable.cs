@@ -17,4 +17,8 @@ public class CommentInteractable : Interactable
     {
         GameManager.Instance.WriteComment(comment, this);
     }
+    public void UpdateComment(string newComment)
+    {
+        comment = newComment;
+    }
 }

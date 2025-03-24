@@ -9,6 +9,7 @@ public class Interactable : MonoBehaviour
     public UnityEvent OnInteract;
     public bool Repeatable;
     public bool VanishOnDone;
+    public UnityEvent OnSelected;
 
     [SerializeField] private Transform interactionSpot;
 

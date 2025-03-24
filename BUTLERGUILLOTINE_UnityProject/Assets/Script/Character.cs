@@ -344,6 +344,11 @@ public class Character : MonoBehaviour
         PausePath();
     }
 
+    public void Resume()
+    {
+        ResumePath();
+    }
+
     public void PickUpAnim()
     {
         willPickUp = true;
