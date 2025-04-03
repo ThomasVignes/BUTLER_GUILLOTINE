@@ -706,6 +706,7 @@ public class GameManager : MonoBehaviour
             return;
 
         currentComment = comment;
+        currentComment.ToggleCommenting(true);
 
         WriteComment(text);
     }
@@ -719,7 +720,7 @@ public class GameManager : MonoBehaviour
 
         if (currentComment != null)
         {
-            currentComment.OnCommentEnd?.Invoke();
+            currentComment.ToggleCommenting(false);
             currentComment = null;
         }
     }
