@@ -14,10 +14,129 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: RuthDeath
   Ambience: Empty
-  BlackScreenDuration: 2
+  BlackScreenDuration: 4
   lines:
   - Text: 
-    Duration: 0
+    Duration: 10
+    PuppetActions: []
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 1
+    PuppetActions:
+    - PuppetName: Ruthish
+      Action: Upper
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: I feel horrible.
+    Duration: 7
+    PuppetActions:
+    - PuppetName: Ruthish
+      Action: Upper
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 12
+    PuppetActions: []
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 1
+    PuppetActions:
+    - PuppetName: Ruthish
+      Action: Look
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: Was I ever supposed to reach this place ?
+    Duration: 9
+    PuppetActions:
+    - PuppetName: Ruthish
+      Action: Look
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 1
+    PuppetActions: []
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: Huh ?
+    Duration: 7
+    PuppetActions: []
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 6
+    PuppetActions: []
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 2.5
+    PuppetActions:
+    - PuppetName: Ruthish
+      Action: Cry
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: This is wrong.
+    Duration: 7
+    PuppetActions: []
+    cameraIndex: 1
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: So wrong.
+    Duration: 7
+    PuppetActions: []
+    cameraIndex: 1
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 4
+    PuppetActions: []
+    cameraIndex: 1
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 7
+    PuppetActions:
+    - PuppetName: Jer
+      Action: Approach
+    cameraIndex: 1
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 5
+    PuppetActions:
+    - PuppetName: Ruthish
+      Action: Hold
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: Please, please make this end.
+    Duration: 10
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
@@ -25,7 +144,7 @@ MonoBehaviour:
     soundEffects: []
   EndBlackScreenDuration: 1
   HidePlayer: 0
-  NoEndBlackscreen: 1
+  NoEndBlackscreen: 0
   NoFadeOut: 0
   OverrideKeepsGoing: 0
   ResumeTheme: Empty
