@@ -18,10 +18,8 @@ MonoBehaviour:
   lines:
   - Text: 
     Duration: 100
-    PuppetActions:
-    - PuppetName: Jer
-      Action: Approach
-    cameraIndex: 1
+    PuppetActions: []
+    cameraIndex: 3
     cameraEffect: 0
     newAmbience: 
     soundEffects: []

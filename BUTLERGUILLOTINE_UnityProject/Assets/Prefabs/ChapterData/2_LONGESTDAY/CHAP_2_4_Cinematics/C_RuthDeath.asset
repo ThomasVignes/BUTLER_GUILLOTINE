@@ -88,7 +88,7 @@ MonoBehaviour:
     newAmbience: 
     soundEffects: []
   - Text: 
-    Duration: 2.5
+    Duration: 2
     PuppetActions:
     - PuppetName: Ruthish
       Action: Cry
@@ -136,13 +136,184 @@ MonoBehaviour:
     newAmbience: 
     soundEffects: []
   - Text: Please, please make this end.
+    Duration: 8
+    PuppetActions: []
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 1
+    PuppetActions:
+    - PuppetName: Ruthish
+      Action: LookAgain
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: I'm barely myself anymore.
     Duration: 10
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
     newAmbience: 
     soundEffects: []
-  EndBlackScreenDuration: 1
+  - Text: 
+    Duration: 4
+    PuppetActions: []
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 2
+    PuppetActions:
+    - PuppetName: Jer
+      Action: LookSide
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: You're right.
+    Duration: 5
+    PuppetActions: []
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: It was cruel of me to want to live this again.
+    Duration: 7
+    PuppetActions: []
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 4
+    PuppetActions:
+    - PuppetName: Jer
+      Action: LookBack
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 'I''m so sorry Ruth. '
+    Duration: 7
+    PuppetActions: []
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 3
+    PuppetActions: []
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 1
+    PuppetActions:
+    - PuppetName: Ruthish
+      Action: LookFar
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 'It''s okay. '
+    Duration: 7
+    PuppetActions: []
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: I was glad, for the time it lasted.
+    Duration: 7
+    PuppetActions: []
+    cameraIndex: 1
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: But now we must make things right.
+    Duration: 7
+    PuppetActions: []
+    cameraIndex: 1
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 2
+    PuppetActions: []
+    cameraIndex: 1
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 5
+    PuppetActions: []
+    cameraIndex: 3
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 8
+    PuppetActions:
+    - PuppetName: Jer
+      Action: ReadyGun
+    cameraIndex: 3
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 3
+    PuppetActions:
+    - PuppetName: Jer
+      Action: CockGun
+    cameraIndex: 3
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 0.005
+    PuppetActions:
+    - PuppetName: Jer
+      Action: Shoot
+    - PuppetName: Ruthish
+      Action: Shot
+    - PuppetName: Kino
+      Action: Bang
+    cameraIndex: 3
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 1
+    PuppetActions:
+    - PuppetName: Kino
+      Action: BlackScreen
+    cameraIndex: 3
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 1
+    PuppetActions:
+    - PuppetName: Kino
+      Action: ChangeRuth
+    cameraIndex: 3
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 8
+    PuppetActions:
+    - PuppetName: Kino
+      Action: EndBlackScreen
+    cameraIndex: 3
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  EndBlackScreenDuration: 4
   HidePlayer: 0
   NoEndBlackscreen: 0
   NoFadeOut: 0
