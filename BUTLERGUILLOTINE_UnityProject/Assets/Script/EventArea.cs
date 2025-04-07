@@ -16,6 +16,8 @@ public class EventArea : MonoBehaviour
 
     public float Delay;
 
+    public bool DeactivateOnDestroy;
+
     private float delayTimer;
 
     private bool eventStarted;
@@ -56,7 +58,10 @@ public class EventArea : MonoBehaviour
 
         if (!Repeatable)
         {
-            Destroy(gameObject);
+            if (!DeactivateOnDestroy)
+                Destroy(gameObject);
+            else
+                gameObject.SetActive(false);
         }
     }
 
