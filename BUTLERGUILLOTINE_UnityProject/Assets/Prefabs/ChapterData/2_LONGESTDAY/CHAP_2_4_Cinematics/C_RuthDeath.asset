@@ -341,7 +341,7 @@ MonoBehaviour:
     newAmbience: 
     soundEffects: []
   - Text: 
-    Duration: 6
+    Duration: 3
     PuppetActions:
     - PuppetName: Kino
       Action: StopLoop
@@ -350,6 +350,60 @@ MonoBehaviour:
     - PuppetName: Jer
       Action: ShootSurprise
     cameraIndex: 3
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 3
+    PuppetActions:
+    - PuppetName: Ruth
+      Action: Walk
+    cameraIndex: 4
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 0.1
+    PuppetActions:
+    - PuppetName: Ruth
+      Action: Walk
+    cameraIndex: 5
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 3
+    PuppetActions:
+    - PuppetName: Ruth
+      Action: Walk
+    cameraIndex: 6
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 0.1
+    PuppetActions:
+    - PuppetName: Ruth
+      Action: Walk
+    cameraIndex: 6
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 3
+    PuppetActions:
+    - PuppetName: Ruth
+      Action: Walk
+    cameraIndex: 6
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 3
+    PuppetActions:
+    - PuppetName: Ruth
+      Action: Walk
+    cameraIndex: 6
     cameraEffect: 0
     newAmbience: 
     soundEffects: []
