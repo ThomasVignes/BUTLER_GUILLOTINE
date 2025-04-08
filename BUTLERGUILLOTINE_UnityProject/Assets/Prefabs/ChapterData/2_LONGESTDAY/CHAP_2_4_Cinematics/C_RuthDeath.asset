@@ -181,7 +181,7 @@ MonoBehaviour:
     cameraEffect: 0
     newAmbience: 
     soundEffects: []
-  - Text: It was cruel of me to want to live this again.
+  - Text: 'I was selfish. Cruel, even. For hoping. '
     Duration: 7
     PuppetActions: []
     cameraIndex: 2
@@ -197,7 +197,7 @@ MonoBehaviour:
     cameraEffect: 0
     newAmbience: 
     soundEffects: []
-  - Text: 'I''m so sorry Ruth. '
+  - Text: 'I''m so sorry. '
     Duration: 7
     PuppetActions: []
     cameraIndex: 2
@@ -227,14 +227,14 @@ MonoBehaviour:
     cameraEffect: 0
     newAmbience: 
     soundEffects: []
-  - Text: I was glad, for the time it lasted.
+  - Text: For the time it lasted, I was glad.
     Duration: 7
     PuppetActions: []
     cameraIndex: 1
     cameraEffect: 0
     newAmbience: 
     soundEffects: []
-  - Text: But now we must make things right.
+  - Text: But we must now make things right.
     Duration: 7
     PuppetActions: []
     cameraIndex: 1
@@ -256,10 +256,49 @@ MonoBehaviour:
     newAmbience: 
     soundEffects: []
   - Text: 
-    Duration: 8
+    Duration: 10
     PuppetActions:
     - PuppetName: Jer
       Action: ReadyGun
+    cameraIndex: 3
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 0.5
+    PuppetActions:
+    - PuppetName: Ruthish
+      Action: LookUpper
+    cameraIndex: 3
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: It is now with clarity that I let go of my last regrets.
+    Duration: 8
+    PuppetActions: []
+    cameraIndex: 3
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 0.5
+    PuppetActions:
+    - PuppetName: Ruthish
+      Action: LookFar
+    cameraIndex: 3
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: One last dream. Before the end.
+    Duration: 8
+    PuppetActions: []
+    cameraIndex: 3
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 4
+    PuppetActions: []
     cameraIndex: 3
     cameraEffect: 0
     newAmbience: 
