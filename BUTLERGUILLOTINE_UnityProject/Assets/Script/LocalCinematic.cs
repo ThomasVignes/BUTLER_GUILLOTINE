@@ -15,6 +15,7 @@ public class LocalCinematic : MonoBehaviour
     public float delayBeforeDialogue;
     public float delayBetweenLetters;
     public bool writeText;
+    public bool noOpeningBlackScreen;
     public UnityEvent OnStart;
     public UnityEvent OnEndBeforeBlackScreen;
     public UnityEvent OnEnd;
@@ -80,16 +81,19 @@ public class LocalCinematic : MonoBehaviour
         if (current.Ambience != "")
             gameManager.OverrideAmbiance(current.Ambience);
 
-        if (instaFade)
-            gameManager.ScreenEffects.FadeTo(1, 0.001f);
-        else
-            gameManager.ScreenEffects.FadeTo(1, 0.2f);
+        if (!noOpeningBlackScreen)
+        {
+            if (instaFade)
+                gameManager.ScreenEffects.FadeTo(1, 0.001f);
+            else
+                gameManager.ScreenEffects.FadeTo(1, 0.2f);
 
-        yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.2f);
 
-        yield return new WaitForSeconds(current.StartBlackScreenDuration);
+            yield return new WaitForSeconds(current.StartBlackScreenDuration);
 
-        gameManager.ScreenEffects.FadeTo(0, 1f);
+            gameManager.ScreenEffects.FadeTo(0, 1f);
+        }
 
         foreach (var line in current.lines)
         {
