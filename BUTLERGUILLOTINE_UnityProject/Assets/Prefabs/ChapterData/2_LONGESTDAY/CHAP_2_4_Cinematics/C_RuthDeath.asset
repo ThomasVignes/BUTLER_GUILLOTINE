@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C_RuthDeath
   m_EditorClassIdentifier: 
   ID: RuthDeath
-  Ambience: Empty
+  Ambience: Finale
   BlackScreenDuration: 4
   lines:
   - Text: 
@@ -450,5 +450,5 @@ MonoBehaviour:
   HidePlayer: 1
   NoEndBlackscreen: 0
   NoFadeOut: 0
-  OverrideKeepsGoing: 0
-  ResumeTheme: Empty
+  OverrideKeepsGoing: 1
+  ResumeTheme: Finale
