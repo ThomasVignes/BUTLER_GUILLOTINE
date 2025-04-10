@@ -181,10 +181,10 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638774612461289706
+  lastModified: 638798917825253204
   FileSizes:
   - Name: 
-    Value: 4968
+    Value: 5068
   Exists: 1
 --- !u!114 &-6739742189602902519
 MonoBehaviour:
@@ -340,7 +340,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638760050959880787
+  lastModified: 638798919721381601
   FileSizes: []
   Exists: 1
 --- !u!114 &-5189839101852950846
@@ -526,7 +526,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638774612461279709
+  lastModified: 638798917825243195
   FileSizes: []
   Exists: 1
 --- !u!114 &-2820307275378040168
@@ -918,12 +918,14 @@ MonoBehaviour:
   - {fileID: 1183415352513314424}
   - {fileID: 8143309677218547436}
   - {fileID: 6203756437719978141}
+  - {fileID: 1742830326704773758}
+  - {fileID: 3357710003703977444}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3346567643425602939}
   StringsBanks:
   - {fileID: -7100924490474363539}
-  cacheTime: 638780765255568207
+  cacheTime: 638798919721381601
   cacheVersion: 131617
 --- !u!114 &15166506345404804
 MonoBehaviour:
@@ -1174,6 +1176,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 130
+--- !u!114 &1742830326704773758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/BarDistant
+  m_EditorClassIdentifier: 
+  Path: event:/Music/BarDistant
+  Guid:
+    Data1: -1836212051
+    Data2: 1280677027
+    Data3: -260988743
+    Data4: 1260696681
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2166331156172758305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1259,6 +1288,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 288216
+--- !u!114 &3357710003703977444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Raw/Hell
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Raw/Hell
+  Guid:
+    Data1: 282192823
+    Data2: 1292566473
+    Data3: -1888484718
+    Data4: 475282899
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3694844796348922775
 MonoBehaviour:
   m_ObjectHideFlags: 0
