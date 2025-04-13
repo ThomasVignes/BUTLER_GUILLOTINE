@@ -31,6 +31,7 @@ public class InventoryController : MonoBehaviour
     private void Awake()
     {
         originalRotation = transform.rotation;
+        textUI.SetActive(false);
 
         foreach (var item in startItems)
         {
