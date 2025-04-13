@@ -514,7 +514,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7493863993435627125}
-  - {fileID: 7014651746764495013}
+  - {fileID: 7409465804057870159}
   m_Father: {fileID: 5013863998512061893}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4803,16 +4803,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efac4342186ce264a9ebc0995ccf3a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Standalone: 0
   Active: 1
   spotlightLerp: 10
   ughDist: 0.5
+  activateDelay: 0.3
   spotlightLayers:
     serializedVersion: 2
     m_Bits: 16
   vcam: {fileID: 4631106948010152242}
   spotlight: {fileID: 92310940347521356}
   head: {fileID: 4362594987900102004}
-  tempAnimator: {fileID: 7954080340146761872}
+  characterAnimator: {fileID: 7954080340146761872}
+  curtains: {fileID: 1131109781199473919}
+  lights: {fileID: 4189450063684540955}
 --- !u!1 &6218696907110408428
 GameObject:
   m_ObjectHideFlags: 0
@@ -7541,7 +7545,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c38fc1ea21367542af97fcab8f3264b, type: 3}
---- !u!4 &7014651746764495013 stripped
+--- !u!4 &7409465804057870159 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8c38fc1ea21367542af97fcab8f3264b, type: 3}
   m_PrefabInstance: {fileID: 7014651746764495012}
