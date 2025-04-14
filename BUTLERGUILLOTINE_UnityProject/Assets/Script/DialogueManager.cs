@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private float originalFOV;
 
     [Header("References")]
+    [SerializeField] private GameObject Canvas;
     [SerializeField] private List<Puppet> puppets = new List<Puppet>();
     [SerializeField] private List<Dialogue> dialogues = new List<Dialogue>();
     [SerializeField] private GameObject VNInterface, VNScene, Specific, Camera;
@@ -70,6 +71,11 @@ public class DialogueManager : MonoBehaviour
                 EndSpecific();
             }
         }
+    }
+
+    public void ToggleCanvas(bool active)
+    {
+        Canvas.SetActive(active);
     }
 
     #region MainLoop

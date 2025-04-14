@@ -8,6 +8,7 @@ public class PlayerController : Character
 {
     //[SerializeField] protected CopyPosRot copyPosRot;
     //[SerializeField] protected Rigidbody rb;
+    public InventoryController InventoryController;
     [SerializeField] protected Vector3 resetPos;
     public LimbChopper[] Choppers;
     public GameObject[] Maskables;

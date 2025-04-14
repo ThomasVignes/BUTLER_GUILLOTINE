@@ -1,9 +1,11 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryController : MonoBehaviour
 {
@@ -13,7 +15,8 @@ public class InventoryController : MonoBehaviour
     [SerializeField] LayerMask itemLayer, spotlightLayers;
     [SerializeField] Transform vcam, spotlight, head;
     [SerializeField] Animator characterAnimator, curtains;
-    [SerializeField] GameObject lights;
+    [SerializeField] GameObject lights, cam;
+    [SerializeField] Image blackScreen;
     [SerializeField] ItemSpot[] itemSpots;
     [SerializeField] ItemData[] startItems;
 
@@ -24,7 +27,9 @@ public class InventoryController : MonoBehaviour
 
     Quaternion originalRotation, lookRotation;
 
-    Coroutine activeDelay;
+    Coroutine activeDelay, inspect;
+
+    GameManager gameManager;
 
     bool speaking;
 
@@ -39,7 +44,16 @@ public class InventoryController : MonoBehaviour
         }
 
         if (Standalone)
-            SetActive(true);
+            SetActive(true, true);
+        else
+            SetActive(false, false);
+    }
+
+    public void Init(GameManager gm)
+    {
+        Standalone = false;
+        gameManager = gm;
+        
     }
 
     private void Update()
@@ -48,21 +62,48 @@ public class InventoryController : MonoBehaviour
             UpdateInventory();
     }
 
-    public void SetActive(bool active)
+    public void SetActive(bool active, bool blackscreen)
     {
-        lights.SetActive(active);
+        if (speaking)
+        {
+            if (inspect != null)
+                StopCoroutine(inspect);
+
+            EndInspect();
+        }
+
+        if (active)
+        {
+            if (!Standalone)
+                GameManager.Instance.ToggleInventoryMode(true);
+        }
 
         curtains.SetBool("Open", active);
 
         if (activeDelay != null)
             StopCoroutine(activeDelay);
 
-        activeDelay = StartCoroutine(C_ActiveDelay(active));
+        activeDelay = StartCoroutine(C_ActiveDelay(active, blackscreen));
     }
 
-    IEnumerator C_ActiveDelay(bool active)
+    IEnumerator C_ActiveDelay(bool active, bool blackscreen)
     {
-        yield return new WaitForSeconds(activateDelay);
+        blackScreen.DOFade(1, activateDelay / 2);
+
+        yield return new WaitForSeconds(activateDelay/2);
+
+        cam.SetActive(active);
+        lights.SetActive(active);
+
+        blackScreen.DOFade(0, activateDelay / 2);
+
+        yield return new WaitForSeconds(activateDelay / 2);
+
+        if (!active)
+        {
+            if (!Standalone)
+                GameManager.Instance.ToggleInventoryMode(false);
+        }
 
         Active = active;
     }
@@ -115,7 +156,10 @@ public class InventoryController : MonoBehaviour
         characterAnimator.SetBool("Speak", true);
         speaking = true;
 
-        StartCoroutine(C_Inspect(item.Inspect));
+        if (inspect != null)
+            StopCoroutine(inspect);
+
+        inspect = StartCoroutine(C_Inspect(item.Inspect));
     }
 
     public void EndInspect()

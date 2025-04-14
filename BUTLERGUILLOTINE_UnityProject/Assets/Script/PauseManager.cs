@@ -32,6 +32,7 @@ public class PauseManager : Manager
         if (!canPause)
             return;
         
+        /*
         if (Input.GetButtonDown("Pause")) 
         { 
             gm.Paused = !gm.Paused;
@@ -43,6 +44,19 @@ public class PauseManager : Manager
             else
                 Time.timeScale = baseScale;
         }
+        */
+    }
+
+    public void TogglePause(bool paused)
+    {
+        gm.Paused = paused;
+
+        pauseUI.SetActive(gm.Paused);
+
+        if (gm.Paused)
+            Time.timeScale = 0;
+        else
+            Time.timeScale = baseScale;
     }
 
     public void UnPause()

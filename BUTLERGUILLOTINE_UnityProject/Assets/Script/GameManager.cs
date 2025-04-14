@@ -140,6 +140,7 @@ public class GameManager : MonoBehaviour
     public LayerMask InteractLayer { get { return interactLayer; }}
     public LayerMask WallLayer { get { return wallLayer; }}
     public bool CinematicMode { get { return cinematicMode; } }
+    public bool InventoryMode { get { return inventoryMode; } set { inventoryMode = value; } }
     public bool VNMode { get { return vnMode; } }
     public bool Ready { get { return ready; } set { ready = value; } }
     public bool End { get { return end; } set { end = value; } }
@@ -151,7 +152,7 @@ public class GameManager : MonoBehaviour
 
 
     bool cinematicMode, vnMode, commentMode, end, overrideAmbiance, ready;
-    bool cinematicStart;
+    bool cinematicStart, inventoryMode;
 
     private void Awake()
     {
@@ -405,6 +406,29 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+
+        if (inventoryMode)
+        {
+            CursorHover();
+            player.InventoryController.UpdateInventory();
+
+            if (Input.GetButtonDown("Pause"))
+            {
+                player.InventoryController.SetActive(false, true);
+            }
+
+            return;
+        }
+        else
+        {
+            if (Input.GetButtonDown("Pause"))
+            {
+                player.Pause();
+                player.InventoryController.SetActive(true, true);
+            }
+        }
+
+
         if (commentMode)
         {
             cursorManager.SetCursorType(CursorType.Base);
@@ -499,6 +523,12 @@ public class GameManager : MonoBehaviour
         playerFollower.SetTarget(player);
 
         HidePlayer(false);
+    }
+
+    public void ToggleInventoryMode(bool active)
+    {
+        DialogueManager.ToggleCanvas(!active);
+        inventoryMode = active;
     }
 
     public void SetPartner(Character character)
