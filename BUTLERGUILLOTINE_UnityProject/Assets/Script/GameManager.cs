@@ -710,6 +710,11 @@ public class GameManager : MonoBehaviour
     {
         cinematicMode = yes;
 
+        if (inventoryMode)
+        {
+            ToggleInventoryMode(false);
+        }
+
         currentCamZone.active = !yes;
 
         if (!vnMode)

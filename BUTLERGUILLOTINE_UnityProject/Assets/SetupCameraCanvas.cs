@@ -9,7 +9,12 @@ public class SetupCameraCanvas : MonoBehaviour
 
     private void Start()
     {
-        canvas.worldCamera = Camera.main.transform.GetChild(0).GetComponent<Camera>();
+        Camera cam = Camera.main.transform.GetChild(0).GetComponent<Camera>();
+
+        if (cam == null)
+             cam = Camera.main;
+
+        canvas.worldCamera = cam;
         canvas.planeDistance = planeDistance;
     }
 }
