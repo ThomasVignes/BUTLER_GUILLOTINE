@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870ef87f60ae6494b88efe3f0d2fc09b, type: 3}
+  m_Name: 1_SideRoomKeys
+  m_EditorClassIdentifier: 
+  ID: Key_Keyring
+  Name: Side room keys
+  Sprite: {fileID: 0}
+  LimitedUses: 1
+  Uses: 3
+  Equipped: 0
+  Icon: {fileID: 0}
+  Inspect:
+  - Text: A set of keys I took from a hole in the wall.
+    Duration: 4
+  - Text: Pretty sure it won't make up for my lost hand, but its something.
+    Duration: 5
+  InteractableObject: {fileID: 7198574688132532778, guid: d96b4fa7cb0610e46a3a46cc32fe3c4c, type: 3}

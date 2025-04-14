@@ -238,7 +238,7 @@ public class GameManager : MonoBehaviour
         }
 
         //areas = ChapterData.areas;
-        InventoryManager.Init(ChapterData.items);
+        InventoryManager.Init(this, ChapterData.items);
 
         foreach (var item in genericManagers)
         {

@@ -12,15 +12,19 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private GameObject iconPrefab;
     [SerializeField] GameObject canvas;
 
-    public void Init(Item[] items)
+    GameManager gameManager;
+
+    public void Init(GameManager gm, Item[] items)
     {
+        gameManager = gm;
+
         this.items = new Item[items.Length];
 
         for (int i = 0; i < this.items.Length; i++)
         {
             var it = items[i];
 
-            this.items[i] = new Item(it.ID, it.Name, it.Sprite, it.LimitedUses, it.Uses);
+            this.items[i] = new Item(it.ID, it.Name, it.Sprite, it.LimitedUses, it.Uses, it.Data);
         }
     }
 
@@ -45,6 +49,7 @@ public class InventoryManager : MonoBehaviour
         {
             Destroy(item.Icon);
             item.Equipped = false;
+            gameManager.Player.InventoryController.RemoveItem(item.Data);
         }
     }
 
@@ -60,6 +65,8 @@ public class InventoryManager : MonoBehaviour
         go.GetComponentInChildren<TextMeshProUGUI>().text = item.Name;
         item.Icon = go;
         item.Equipped = true;
+
+        gameManager.Player.InventoryController.AddItem(item.Data);
     }
 
     public void RemoveItem(string name)
@@ -71,6 +78,8 @@ public class InventoryManager : MonoBehaviour
 
         Destroy(item.Icon);
         item.Equipped = false;
+
+        gameManager.Player.InventoryController.RemoveItem(item.Data);
     }
 }
 
@@ -84,13 +93,15 @@ public class Item
     public int Uses;
     [HideInInspector] public bool Equipped;
     [HideInInspector] public GameObject Icon;
+    public ItemData Data;
 
-    public Item(string id, string name, Sprite sprite, bool limitedUses, int uses)
+    public Item(string id, string name, Sprite sprite, bool limitedUses, int uses, ItemData data)
     {
         ID = id;
         Name = name;
         Sprite = sprite;
         LimitedUses = limitedUses;
         Uses = uses;
+        Data = data;
     }
 }
