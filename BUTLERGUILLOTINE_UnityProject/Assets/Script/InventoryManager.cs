@@ -47,7 +47,7 @@ public class InventoryManager : MonoBehaviour
 
         if (item.Uses <= 0)
         {
-            Destroy(item.Icon);
+            //Destroy(item.Icon);
             item.Equipped = false;
             gameManager.Player.InventoryController.RemoveItem(item.Data);
         }
@@ -60,10 +60,13 @@ public class InventoryManager : MonoBehaviour
         if (item == null || item.Equipped)
             return;
 
+        /*
         GameObject go = Instantiate(iconPrefab, iconParent);
         go.GetComponent<Image>().sprite = item.Sprite;
         go.GetComponentInChildren<TextMeshProUGUI>().text = item.Name;
         item.Icon = go;
+        */
+
         item.Equipped = true;
 
         gameManager.Player.InventoryController.AddItem(item.Data);
@@ -76,7 +79,7 @@ public class InventoryManager : MonoBehaviour
         if (item == null || !item.Equipped)
             return;
 
-        Destroy(item.Icon);
+        //Destroy(item.Icon);
         item.Equipped = false;
 
         gameManager.Player.InventoryController.RemoveItem(item.Data);

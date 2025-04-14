@@ -238,6 +238,8 @@ public class InventoryController : MonoBehaviour
 
     public void RemoveItem(ItemData data) 
     {
+        return;
+
         foreach (var item in itemSpots)
         {
             if (item.Occupied && item.Instance.Data == data)
