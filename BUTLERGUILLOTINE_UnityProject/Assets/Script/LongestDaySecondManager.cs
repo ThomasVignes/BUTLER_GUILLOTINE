@@ -106,8 +106,6 @@ public class LongestDaySecondManager : ChapterManagerGeneric
 
     IEnumerator C_EndChapter()
     {
-        yield return new WaitForSeconds(8);
-
         gameManager.ScreenEffects.FadeTo(1, 2.9f);
 
         yield return new WaitForSeconds(5);
