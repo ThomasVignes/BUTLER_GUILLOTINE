@@ -143,22 +143,25 @@ public class LongestDayFourthManager : ChapterManagerGeneric
             actText.text += c;
         }
 
-        yield return new WaitForSeconds(2.3f);
+        yield return new WaitForSeconds(3.3f);
 
+        gameManager.OverrideAmbiance("Empty");
         titleText.SetActive(true);
 
         yield return new WaitForSeconds(2);
 
         gameManager.ScreenEffects.FadeTo(1, 4f);
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(8f);
 
+        /*
         var titleTxt = titleText.GetComponent<TextMeshProUGUI>();
 
         titleTxt.text = 'T' + titleTxt.text;
         EffectsManager.Instance.audioManager.Play("Click");
 
         yield return new WaitForSeconds(3f);
+        */
 
         titleUI.SetActive(false);
 

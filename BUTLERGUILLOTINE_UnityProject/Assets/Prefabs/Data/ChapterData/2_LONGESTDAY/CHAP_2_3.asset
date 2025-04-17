@@ -15,10 +15,11 @@ MonoBehaviour:
   Name: LONGEST DAY
   Number: 3
   StartCharacter: {fileID: 11400000, guid: 2d7c6aa6af5309b459beca857500212d, type: 2}
-  OtherCharacters: []
+  OtherCharacters:
+  - {fileID: 11400000, guid: 896c2508f93b03049826a05987937608, type: 2}
   conditions:
-  - Name: RuthishKilled
-    Met: 0
+  - Name: SkirtBloody
+    Met: 1
   - Name: NeedDress
     Met: 0
   areas:
@@ -48,4 +49,20 @@ MonoBehaviour:
     StepsVolume: 0
     ImmuneExperimental: 0
     OriginalVolume: 0
-  items: []
+  items:
+  - ID: Bloody_Skirt
+    Name: BloodySkirt
+    Sprite: {fileID: 0}
+    LimitedUses: 0
+    Uses: 0
+    Equipped: 0
+    Icon: {fileID: 0}
+    Data: {fileID: 11400000, guid: 4294adee03bf64b4f955316eb4be90e2, type: 2}
+  - ID: Skirt
+    Name: Skirt
+    Sprite: {fileID: 0}
+    LimitedUses: 0
+    Uses: 0
+    Equipped: 0
+    Icon: {fileID: 0}
+    Data: {fileID: 11400000, guid: 6820af98f2d452947b3b83d14d982c8b, type: 2}

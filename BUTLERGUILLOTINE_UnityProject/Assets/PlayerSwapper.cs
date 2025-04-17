@@ -14,6 +14,7 @@ public class PlayerSwapper : MonoBehaviour
     [SerializeField] string original;
     [SerializeField] Transform targetPos;
     [SerializeField] Transform originalTargetPos;
+    [SerializeField] Transform preinstantiateSpot;
     [SerializeField] bool hideOriginal;
 
     [Header("Delegate")]
@@ -24,7 +25,12 @@ public class PlayerSwapper : MonoBehaviour
     private void Start()
     {
         if (preInstantiatePlayer)
-            GameManager.Instance.PreInstantiatePlayer(targetPlayer, targetPos);
+        {
+            if (preinstantiateSpot == null)
+                GameManager.Instance.PreInstantiatePlayer(targetPlayer, targetPos);
+            else
+                GameManager.Instance.PreInstantiatePlayer(targetPlayer, preinstantiateSpot);
+        }
     }
 
     [ContextMenu("Manual Swap")]

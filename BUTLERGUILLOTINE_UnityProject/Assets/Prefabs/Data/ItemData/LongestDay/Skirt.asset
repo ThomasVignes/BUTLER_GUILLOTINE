@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870ef87f60ae6494b88efe3f0d2fc09b, type: 3}
+  m_Name: Skirt
+  m_EditorClassIdentifier: 
+  ID: Skirt
+  Name: Skirt
+  Sprite: {fileID: 0}
+  LimitedUses: 0
+  Uses: 0
+  Equipped: 0
+  Icon: {fileID: 0}
+  Inspect:
+  - Text: A perfectly good looking skirt. Time to get dressed.
+    Duration: 4
+  InteractableObject: {fileID: 7459048895653104138, guid: b039211c8c12c5d4c9ca372be3fa3cc3, type: 3}

@@ -10,6 +10,7 @@ public class LongestDayThirdManager : ChapterManagerGeneric
     [Header("Settings")]
     public bool Skip;
     [SerializeField] private string startCinematic;
+    public UnityEvent OnStart;
 
     [Header("Title")]
     [SerializeField] private TextMeshProUGUI actText;
@@ -77,6 +78,7 @@ public class LongestDayThirdManager : ChapterManagerGeneric
         PersistentData.Instance.MusicVolume = 1;
 
         gameManager.CinematicManager.PlayCinematic(startCinematic);
+        OnStart?.Invoke();
         gameManager.Ready = true;
     }
 

@@ -10,6 +10,7 @@ public class LongestDaySecondManager : ChapterManagerGeneric
     [Header("Settings")]
     public bool Skip;
     [SerializeField] private string startCinematic;
+    [SerializeField] private float endTime;
 
     [Header("Title")]
     [SerializeField] private TextMeshProUGUI actText;
@@ -106,6 +107,8 @@ public class LongestDaySecondManager : ChapterManagerGeneric
 
     IEnumerator C_EndChapter()
     {
+        yield return new WaitForSeconds(endTime);
+
         gameManager.ScreenEffects.FadeTo(1, 2.9f);
 
         yield return new WaitForSeconds(5);

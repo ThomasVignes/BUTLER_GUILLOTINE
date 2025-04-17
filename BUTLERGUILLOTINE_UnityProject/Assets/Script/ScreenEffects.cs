@@ -34,4 +34,10 @@ public class ScreenEffects : MonoBehaviour
     {
         oumuamua.DOFade(0.8f, 7);
     }
+
+    public void FadeInOut()
+    {
+        blackScreen.DOKill();
+        blackScreen.DOFade(1, 1f).OnComplete(() => blackScreen.DOFade(0, 1f));
+    }
 }
