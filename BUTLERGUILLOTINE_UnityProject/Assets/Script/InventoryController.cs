@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -238,13 +239,11 @@ public class InventoryController : MonoBehaviour
 
     public void RemoveItem(ItemData data) 
     {
-        return;
-
         foreach (var item in itemSpots)
         {
             if (item.Occupied && item.Instance.Data == data)
             {
-                Destroy(item.Instance);
+                Destroy(item.Instance.gameObject);
                 item.Occupied = false;
             }
         }

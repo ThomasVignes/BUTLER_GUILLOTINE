@@ -80,6 +80,19 @@ public class InventoryManager : MonoBehaviour
             return;
 
         //Destroy(item.Icon);
+        //item.Equipped = false;
+
+        //gameManager.Player.InventoryController.RemoveItem(item.Data);
+    }
+
+    public void TrueRemoveItem(string name)
+    {
+        Item item = Array.Find(items, e => e.ID == name);
+
+        if (item == null || !item.Equipped)
+            return;
+
+        //Destroy(item.Icon);
         item.Equipped = false;
 
         gameManager.Player.InventoryController.RemoveItem(item.Data);
