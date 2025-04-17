@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870ef87f60ae6494b88efe3f0d2fc09b, type: 3}
+  m_Name: Bloody_Skirt
+  m_EditorClassIdentifier: 
+  ID: Bloody_Skirt
+  Name: Bloody skirt
+  Sprite: {fileID: 0}
+  LimitedUses: 0
+  Uses: 0
+  Equipped: 0
+  Icon: {fileID: 0}
+  Inspect:
+  - Text: A bloodied skirt. I can't wear it like this.
+    Duration: 3
+  - Text: The bartender should have something to clean all of this off.
+    Duration: 4
+  InteractableObject: {fileID: 7459048895653104138, guid: 5c8e6018475a965458722a2cbc1668ff, type: 3}
