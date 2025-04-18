@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class CommentInteractable : Interactable
 {
     [SerializeField] private string comment;
-    public UnityEvent OnCommentEnd;
+    public UnityEvent OnCommentStart, OnCommentEnd;
     [SerializeField] CinemachineVirtualCamera commentCam;
     [SerializeField] float delayBeforeCamera = 0.6f;
 
@@ -32,6 +32,8 @@ public class CommentInteractable : Interactable
 
         if (!toggle)
             OnCommentEnd?.Invoke();
+        else
+            OnCommentStart?.Invoke();
     }
 
     IEnumerator C_CameraToggle(bool toggle)
