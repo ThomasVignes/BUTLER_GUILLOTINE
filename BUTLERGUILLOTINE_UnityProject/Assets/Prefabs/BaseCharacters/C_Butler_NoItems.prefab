@@ -15376,6 +15376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8131034313600247135}
   - component: {fileID: 1276779315847626936}
+  - component: {fileID: 3484335465641622967}
   m_Layer: 0
   m_Name: AnimRef
   m_TagString: Untagged
@@ -15391,7 +15392,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5942036846134923267}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15421,6 +15422,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3484335465641622967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5942036846134923267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff0960ef4ea6e04eac66b4a7fd2189d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RigLayers:
+  - m_Rig: {fileID: 0}
+    m_Active: 1
+  m_Effectors: []
 --- !u!1 &5948151216185249994
 GameObject:
   m_ObjectHideFlags: 0
@@ -19150,36 +19167,14 @@ MonoBehaviour:
   VanishOnDone: 1
   OnSelected:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5309069492608955567}
-        m_TargetAssemblyTypeName: Character, Assembly-CSharp
-        m_MethodName: Pause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   interactionSpot: {fileID: 2595480286011200018}
   comment: ButlerComment
   OnCommentEnd:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5309069492608955567}
-        m_TargetAssemblyTypeName: Character, Assembly-CSharp
-        m_MethodName: Resume
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  commentCam: {fileID: 0}
+  delayBeforeCamera: 0.6
 --- !u!136 &450640567965555933
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerFollower : MonoBehaviour
 {
+    public Transform Head;
     PlayerController player;
 
     public void SetTarget(PlayerController player)
