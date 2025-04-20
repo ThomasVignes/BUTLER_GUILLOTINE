@@ -13109,6 +13109,8 @@ MonoBehaviour:
   replacement: {fileID: 5736407996332389583}
   animator: {fileID: 5744386048276620940}
   chopTrigger: Chopped
+  additionalPrevious: {fileID: 8507977313067455794}
+  additionalReplacement: {fileID: 9091809212422750506}
 --- !u!114 &4066061679721696143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27599,9 +27601,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efac4342186ce264a9ebc0995ccf3a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8507977313067455794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7476274643140835986, guid: b7cd42c80f0594b45947878b0784daee, type: 3}
+  m_PrefabInstance: {fileID: 1284502692673925024}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9028662305319115903 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7827037226417386463, guid: b7cd42c80f0594b45947878b0784daee, type: 3}
+  m_PrefabInstance: {fileID: 1284502692673925024}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9091809212422750506 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8070415529837964938, guid: b7cd42c80f0594b45947878b0784daee, type: 3}
   m_PrefabInstance: {fileID: 1284502692673925024}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2380974413605420200
