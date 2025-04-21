@@ -35,9 +35,18 @@ public class ScreenEffects : MonoBehaviour
         oumuamua.DOFade(0.8f, 7);
     }
 
-    public void FadeInOut()
+    public void FadeInOut(float delayWait)
     {
         blackScreen.DOKill();
-        blackScreen.DOFade(1, 1f).OnComplete(() => blackScreen.DOFade(0, 1f));
+        StartCoroutine(C_FadeInOut(delayWait));
+    }
+
+    IEnumerator C_FadeInOut(float delayWait)
+    {
+        blackScreen.DOFade(1, 1f);
+
+        yield return new WaitForSeconds(delayWait + 1f);
+
+        blackScreen.DOFade(0, 1f);
     }
 }
