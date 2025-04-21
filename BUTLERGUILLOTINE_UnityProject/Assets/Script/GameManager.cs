@@ -153,6 +153,7 @@ public class GameManager : MonoBehaviour
 
     bool cinematicMode, vnMode, commentMode, end, overrideAmbiance, ready;
     bool cinematicStart, inventoryMode;
+    bool canInventory;
 
     private void Awake()
     {
@@ -239,6 +240,8 @@ public class GameManager : MonoBehaviour
 
         //areas = ChapterData.areas;
         InventoryManager.Init(this, ChapterData.items);
+
+        canInventory = true;
 
         foreach (var item in genericManagers)
         {
@@ -327,6 +330,11 @@ public class GameManager : MonoBehaviour
     public void PausePlayerPath()
     {
         player.Pause();
+    }
+
+    public void CanInventoryToggle(bool active)
+    {
+        canInventory = active;
     }
 
     private void Update()
@@ -421,7 +429,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (Input.GetButtonDown("Pause"))
+            if (Input.GetButtonDown("Pause") && canInventory)
             {
                 player.Pause();
                 player.InventoryController.SetActive(true, true);
