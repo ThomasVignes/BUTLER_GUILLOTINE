@@ -29,7 +29,7 @@ public class ShootableLock : Lifeform
         foreach (var item in doors)
         {
             if (!dontOpen)
-                item.ToggleDoorNoEvent(true);
+                item.ToggleDoor(true);
             else
                 item.Unlock();
         }
