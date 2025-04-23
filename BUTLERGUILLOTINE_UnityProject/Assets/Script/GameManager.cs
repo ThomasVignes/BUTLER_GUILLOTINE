@@ -359,6 +359,9 @@ public class GameManager : MonoBehaviour
             CinematicManager.Step();
             cursorManager.SetCursorType(CursorType.Invisible);
 
+            if (Input.GetKeyDown(KeyCode.RightShift))
+                CinematicManager.SkipCinematic();
+
             foreach (Character c in characters)
             {
                 if (c.CanMoveInCinematic)
