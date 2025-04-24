@@ -108,7 +108,7 @@ public class CeremonyChapterManager : ChapterManagerGeneric
 
     IEnumerator C_DeathCinematic(string message)
     {
-        gameManager.SetAmbianceVolume(0f);
+        gameManager.StopAmbiance();
         gameManager.ScreenEffects.FadeTo(1, 0.3f);
 
         yield return new WaitForSeconds(1.4f);
@@ -144,7 +144,7 @@ public class CeremonyChapterManager : ChapterManagerGeneric
         yield return new WaitForSeconds(3f);
 
         gameManager.DialogueManager.TryEndDialogue();
-        gameManager.SetAmbianceVolume(1f);
+        gameManager.ResumeAmbiance();
         gameManager.ScreenEffects.StartFade();
         Intro = true;
         gameManager.Ready = true;

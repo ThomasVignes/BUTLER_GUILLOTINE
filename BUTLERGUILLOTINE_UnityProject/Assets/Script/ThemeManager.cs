@@ -199,6 +199,11 @@ public class ThemeManager : MonoBehaviour
 
     public void SetAmbianceVolume(float sound)
     {
+        /*
+        currentOverrideInstance.setVolume(sound);
+        currentInstance.setVolume(sound);
+        */
+
         //Modify once parameters are set
 
         if (currentAudioSource != null)
