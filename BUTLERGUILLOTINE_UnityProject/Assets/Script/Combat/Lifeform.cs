@@ -10,6 +10,7 @@ public class Lifeform : MonoBehaviour
     public Character Character;
     public UnityEvent OnDeath;
     public GameObject DeathRagdoll;
+    public bool Unstunnable;
 
 
     bool dead;
@@ -35,7 +36,7 @@ public class Lifeform : MonoBehaviour
         if (dead)
             return;
 
-        if (Character != null)
+        if (Character != null && !Unstunnable)
             Character.Stun(stunDamage);
     }
 
