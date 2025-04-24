@@ -726,6 +726,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NoBlood: 0
+  Immune: 0
+  ImmuneMessage: 
 --- !u!1 &220303725140135430
 GameObject:
   m_ObjectHideFlags: 0
@@ -10170,7 +10172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a53539d1e8c697c4da85d33166eb2d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 5
+  HP: 3
   Character: {fileID: 4193529176952806073}
   OnDeath:
     m_PersistentCalls:
@@ -18583,6 +18585,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NoBlood: 0
+  Immune: 0
+  ImmuneMessage: 
 --- !u!1 &5435454460794439520
 GameObject:
   m_ObjectHideFlags: 0
@@ -23648,6 +23652,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NoBlood: 0
+  Immune: 0
+  ImmuneMessage: 
 --- !u!114 &2922365027819364201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23767,6 +23773,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NoBlood: 0
+  Immune: 0
+  ImmuneMessage: 
 --- !u!1 &8223006406972986622
 GameObject:
   m_ObjectHideFlags: 0
@@ -24292,6 +24300,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NoBlood: 0
+  Immune: 0
+  ImmuneMessage: 
 --- !u!1 &8501168665749806728
 GameObject:
   m_ObjectHideFlags: 0
@@ -24597,6 +24607,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NoBlood: 0
+  Immune: 0
+  ImmuneMessage: 
 --- !u!1 &8602787212562012063
 GameObject:
   m_ObjectHideFlags: 0
