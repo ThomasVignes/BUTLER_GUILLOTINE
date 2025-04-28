@@ -24047,27 +24047,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuChapters:
-  - Title: CEREMONY - 1
+  - Title: CEREMONY
     Image: {fileID: 21300000, guid: eb66150088bf39841b7a8b7b8dd4cead, type: 3}
     SceneReference: CEREMONY_1
-  - Title: CEREMONY - 2
-    Image: {fileID: 21300000, guid: 0697a6a08c749094b8fbfff0e87f6b66, type: 3}
-    SceneReference: CEREMONY_2
-  - Title: LONGEST DAY - 1
-    Image: {fileID: 21300000, guid: af0c0ce47112d4e49a59e5a15dad3219, type: 3}
+  - Title: LONGEST DAY
+    Image: {fileID: 21300000, guid: 0342000ab504bba429b70665a587fd86, type: 3}
     SceneReference: LONGESTDAY_1
-  - Title: LONGEST DAY - 2 - WIP
-    Image: {fileID: 21300000, guid: 36617f47bc1fe344bb7a5c1cc2b547a7, type: 3}
-    SceneReference: LONGESTDAY_2
-  - Title: 'RUTH - WIP '
-    Image: {fileID: 21300000, guid: 7a7914b8edf15a24e8c129de0bbba20a, type: 3}
-    SceneReference: RuthTest
-  - Title: TRUTH - WIP
-    Image: {fileID: 21300000, guid: 55bea8f72feff0f42b60332e55259387, type: 3}
-    SceneReference: Truth
-  - Title: FINALE - WIP
-    Image: {fileID: 21300000, guid: 977d7562fc2156245a001b2b09c9c8fc, type: 3}
-    SceneReference: MutatedSequence
   grid: {fileID: 601675733}
   instance: {fileID: 4974885728172605297, guid: f2f746857d2d83b42b4f14f2368f1199, type: 3}
 --- !u!1001 &1575549820
