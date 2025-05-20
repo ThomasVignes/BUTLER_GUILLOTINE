@@ -23,10 +23,9 @@ public class JerController : PlayerController
 
         legIK.weight = 0;
 
-        hipGun.SetActive(true);
-        handGun.SetActive(false);
-
         lifeform = GetComponent<Lifeform>();
+
+        ToggleSpecial(false);
     }
 
     public override void Special(Vector3 spot, GameObject hitObject)
@@ -177,6 +176,13 @@ public class JerController : PlayerController
     {
         base.UnInit();
 
+        //StartCoroutine(C_ToggleSpecial());
+    }
+
+    IEnumerator C_ToggleSpecial()
+    {
+        yield return new WaitForSeconds(3);
         ToggleSpecial(false);
+        
     }
 }
