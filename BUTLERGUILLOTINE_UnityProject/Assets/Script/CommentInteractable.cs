@@ -11,6 +11,8 @@ public class CommentInteractable : Interactable
     [SerializeField] CinemachineVirtualCamera commentCam;
     [SerializeField] float delayBeforeCamera = 0.6f;
 
+    public string Comment { get { return comment; } }
+
     protected override void InteractEffects(Character character)
     {
          GameManager.Instance.WriteComment(comment, this);

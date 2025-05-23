@@ -28,6 +28,8 @@ public class CinematicManager : MonoBehaviour
 
     Coroutine C_current;
 
+    public Cinematic[] Cinematics { get { return cinematics; } }
+
     public void Init(GameManager gm)
     {
         gameManager = gm;
