@@ -21,7 +21,7 @@ public class AllTextExporter : EditorWindow
         GetWindow(typeof(AllTextExporter));
     }
 
-    public string path;
+    public string path = @"E:\Unity\ActiveProjects\BUTLERGUILLOTINE\AllText.txt";
     public string[] scenes;
 
     int sceneCount;
