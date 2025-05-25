@@ -7,6 +7,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using Whumpus.Editor;
@@ -21,7 +22,9 @@ public class AllTextExporter : EditorWindow
         GetWindow(typeof(AllTextExporter));
     }
 
-    public string path = @"E:\Unity\ActiveProjects\BUTLERGUILLOTINE\AllText.txt";
+    //public string path = @"E:\Unity\ActiveProjects\BUTLERGUILLOTINE\AllText.txt";
+    public string path;
+    
     public string[] scenes;
 
     int sceneCount;
@@ -118,6 +121,13 @@ public class AllTextExporter : EditorWindow
         CinematicManager cinematicManager = FindObjectOfType<CinematicManager>();
         LocalCinematic[] localCinematics = FindObjectsOfType<LocalCinematic>();
         CommentInteractable[] commentInteractables = FindObjectsOfType<CommentInteractable>();
+        EventArea[] eventAreas = FindObjectsOfType<EventArea>();
+
+        //Test
+        foreach (var item in eventAreas)
+        {
+            SearchForEventDelegate(item.OnTrigger);
+        }
 
         //Get content from dialogueManager
         foreach (var dialogue in dialogueManager.Dialogues)
@@ -202,6 +212,21 @@ public class AllTextExporter : EditorWindow
         }
 
         return wordCount;
+    }
+
+    void SearchForEventDelegate(UnityEvent unityEvent)
+    {
+        int index = unityEvent.GetPersistentEventCount();
+
+        for (int i = 0; i < index; i++)
+        {
+            if (unityEvent.GetPersistentMethodName(i) == "WriteComment")
+            {
+                //Find arguments from here
+            }
+
+            //Debug.Log(unityEvent.GetPersistentMethodName(i));
+        }
     }
 
     string GetSceneNameFromPath(string path)
