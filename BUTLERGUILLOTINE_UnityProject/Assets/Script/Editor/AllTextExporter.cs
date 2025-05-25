@@ -89,7 +89,7 @@ public class AllTextExporter : EditorWindow
             List<TextExporterDialogue> textExporterDialogues = new List<TextExporterDialogue>();
             List<TextExporterCinematic> textExporterCinematics = new List<TextExporterCinematic>();
             List<TextExporterCinematic> textExporterLocalCinematics = new List<TextExporterCinematic>();
-            List<TextExportInteractable> textExportInteractables = new List<TextExportInteractable>();
+            List<TextExportObject> textExportInteractables = new List<TextExportObject>();
 
 
             SearchScene(scenePath, textExporterDialogues, textExporterCinematics, textExporterLocalCinematics, textExportInteractables);
@@ -110,7 +110,7 @@ public class AllTextExporter : EditorWindow
         Debug.Log("Done!");
     }
 
-    void SearchScene(string ScenePath, List<TextExporterDialogue> textExporterDialogues, List<TextExporterCinematic> textExporterCinematics, List<TextExporterCinematic> textExporterLocalCinematics, List<TextExportInteractable> textExportInteractables)
+    void SearchScene(string ScenePath, List<TextExporterDialogue> textExporterDialogues, List<TextExporterCinematic> textExporterCinematics, List<TextExporterCinematic> textExporterLocalCinematics, List<TextExportObject> textExportInteractables)
     {
         //Open scene
         //string scenePath = SceneManager.GetSceneByName(ScenePath).path;
@@ -121,6 +121,7 @@ public class AllTextExporter : EditorWindow
         CinematicManager cinematicManager = FindObjectOfType<CinematicManager>();
         LocalCinematic[] localCinematics = FindObjectsOfType<LocalCinematic>();
         CommentInteractable[] commentInteractables = FindObjectsOfType<CommentInteractable>();
+        Door[] doors = FindObjectsOfType<Door>();
         EventArea[] eventAreas = FindObjectsOfType<EventArea>();
 
         //Test
@@ -190,11 +191,21 @@ public class AllTextExporter : EditorWindow
         //Get content from commentInteractables
         foreach (var interactable in commentInteractables)
         {
-            textExportInteractables.Add(new TextExportInteractable(interactable.gameObject.name, interactable.Comment));
+            textExportInteractables.Add(new TextExportObject(interactable.gameObject.name, interactable.Comment));
 
             Debug.Log("added interactable");
 
             wordCount += CountWords(interactable.Comment);
+        }
+
+        //Get content from doors
+        foreach (var door in doors)
+        {
+            textExportInteractables.Add(new TextExportObject(door.gameObject.name, door.LockedMessage));
+
+            Debug.Log("added door");
+
+            wordCount += CountWords(door.LockedMessage);
         }
     }
 
@@ -266,9 +277,9 @@ public class SceneTextContainer
     public TextExporterDialogue[] textExporterDialogues;
     public TextExporterCinematic[] textExporterCinematics;
     public TextExporterCinematic[] textExporterLocalCinematics;
-    public TextExportInteractable[] textExportInteractables;
+    public TextExportObject[] textExportInteractables;
 
-    public SceneTextContainer(string scName, List<TextExporterDialogue> d, List<TextExporterCinematic> c, List<TextExporterCinematic> lc, List<TextExportInteractable> i)
+    public SceneTextContainer(string scName, List<TextExporterDialogue> d, List<TextExporterCinematic> c, List<TextExporterCinematic> lc, List<TextExportObject> i)
     {
         sceneName = scName;
         textExporterDialogues = d.ToArray();
@@ -307,12 +318,12 @@ public class TextExporterCinematic
 }
 
 [Serializable]
-public class TextExportInteractable
+public class TextExportObject
 {
     public string ObjectName;
     public string text;
 
-    public TextExportInteractable(string o, string t)
+    public TextExportObject(string o, string t)
     {
         ObjectName = o;
         text = t;
