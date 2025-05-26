@@ -3,6 +3,7 @@ using Codice.Client.Common;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -23,7 +24,6 @@ public class AllTextExporter : EditorWindow
 
     //public string path = @"E:\Unity\ActiveProjects\BUTLERGUILLOTINE\AllText.txt";
     public string path;
-    public string itemsDirectory;
     
     public string[] scenes;
 
@@ -58,7 +58,7 @@ public class AllTextExporter : EditorWindow
             EditorGUILayout.Space();
 
             if (sceneCount > 0)
-                EditorGUILayout.LabelField("Scene paths (only add what's after Assets/Scenes/, and no extensions)");
+                EditorGUILayout.LabelField("Scene names");
 
             for (int i = 0; i < sceneCount; i++)
             {
@@ -66,9 +66,11 @@ public class AllTextExporter : EditorWindow
             }
         }
 
+        /*
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Path to items directory");
         itemsDirectory = EditorGUILayout.TextField(itemsDirectory);
+        */
 
         //Path
         EditorGUILayout.Space();
@@ -85,31 +87,6 @@ public class AllTextExporter : EditorWindow
 
             ExportDialogue(path, scenes);
         }
-
-
-        EditorGUILayout.Space();
-        EditorGUILayout.Space();
-        EditorGUILayout.Space();
-        if (GUILayout.Button("Test"))
-        {
-            var list = EventDependencyHunter.FindDependencies("WriteComment");
-
-            foreach (var dep in list) { 
-                Debug.Log("Owner: " + dep.Owner);
-
-                foreach (var item in dep.Listeners)
-                {
-                    Debug.Log("Listener: " + item);
-                }
-
-                foreach (var item in dep.MethodNames)
-                {
-                    Debug.Log("Method: " + item);
-                }
-            }
-
-            
-        }
     }
 
     void ExportDialogue(string path, string[] scenes)
@@ -118,27 +95,56 @@ public class AllTextExporter : EditorWindow
         wordCount = 0;
         List<SceneTextContainer> containers = new List<SceneTextContainer>();
         List<TextExportItem> textExportItems = new List<TextExportItem>();
+        List<TextExportDialogueBatch> textExportDialogueBatches = new List<TextExportDialogueBatch>();
+
+        //Search for scenes
+        List<string> scenePathsToSearch = new List<string>();
+        string[] sceneGUIDs = AssetDatabase.FindAssets("t:Scene", new[] { "Assets/Scenes" });
+
+        foreach (var guid in sceneGUIDs)
+        {
+            string scenePath = AssetDatabase.GUIDToAssetPath(guid);
+
+            string sceneName = SceneManager.GetSceneByPath(scenePath).name;
+
+            foreach (var c in scenePath)
+            {
+                sceneName += c;
+
+                if (c == '/')
+                    sceneName = "";
+            }
+
+            string[] split = sceneName.Split('.');
+
+            if (scenes.Contains(split[0]))
+                scenePathsToSearch.Add(scenePath);
+        }
 
         //Search scenes
-        foreach (var scenePath in scenes)
+        foreach (var scenePath in scenePathsToSearch)
         {
             List<TextExporterDialogue> textExporterDialogues = new List<TextExporterDialogue>();
             List<TextExporterCinematic> textExporterCinematics = new List<TextExporterCinematic>();
             List<TextExporterCinematic> textExporterLocalCinematics = new List<TextExporterCinematic>();
             List<TextExportObject> textExportInteractables = new List<TextExportObject>();
             List<TextExportObject> textExportDelegates = new List<TextExportObject>();
-            
-            SearchScene(scenePath, textExporterDialogues, textExporterCinematics, textExporterLocalCinematics, textExportInteractables, textExportDelegates);
 
-            containers.Add(new SceneTextContainer(GetSceneNameFromPath(scenePath), textExporterDialogues, textExporterCinematics,
+            Scene scene = EditorSceneManager.OpenScene(scenePath);
+
+            SearchScene(textExporterDialogues, textExporterCinematics, textExporterLocalCinematics, textExportInteractables, textExportDelegates);
+
+            containers.Add(new SceneTextContainer(scene.name, textExporterDialogues, textExporterCinematics,
                 textExporterLocalCinematics, textExportInteractables));
+
+            //GetSceneNameFromPath(scenePath)
         }
 
         //Search data
-        SearchData(textExportItems);
+        SearchData(textExportItems, textExportDialogueBatches);
 
         //Package everything
-        AllTextContainer allData = new AllTextContainer(wordCount, new DataContainer(textExportItems), containers);
+        AllTextContainer allData = new AllTextContainer(wordCount, new DataContainer(textExportItems, textExportDialogueBatches), containers);
 
         //Export to JSON
         var json = JsonUtility.ToJson(allData, true);
@@ -148,16 +154,13 @@ public class AllTextExporter : EditorWindow
         Debug.Log("Done!");
     }
 
-    void SearchData(List<TextExportItem> textExportItems)
+    void SearchData(List<TextExportItem> textExportItems, List<TextExportDialogueBatch> textExportDialogueBatches)
     {
-        DirectoryInfo itemDir = new DirectoryInfo(itemsDirectory);
+        //DirectoryInfo itemDir = new DirectoryInfo(itemsDirectory);
 
 
         //Get item files
-
         string[] interactionGUIDs = AssetDatabase.FindAssets("t:ItemData", new[] { "Assets/Prefabs/Data/ItemData", "Assets/Prefabs/Data/ItemData/Ceremony", "Assets/Prefabs/Data/ItemData/LongestDay" });
-
-        //FileInfo[] info = itemDir.GetFiles("*.*");
         foreach (var guid in interactionGUIDs)
         {
             var asset = AssetDatabase.LoadMainAssetAtPath(AssetDatabase.GUIDToAssetPath(guid));
@@ -175,19 +178,46 @@ public class AllTextExporter : EditorWindow
                     wordCount += CountWords(item.Text);
                 }
 
-                Debug.Log("HERE: " + itemData.Name);
-
                 textExportItems.Add(new TextExportItem(itemData.Name, description.ToArray()));
+            }
+        }
+
+        //Get dialogue batches
+        interactionGUIDs = AssetDatabase.FindAssets("t:DialogueBatch", new[] { "Assets/Prefabs/MingleMinigame"});
+        
+        foreach (var guid in interactionGUIDs)
+        {
+            var asset = AssetDatabase.LoadMainAssetAtPath(AssetDatabase.GUIDToAssetPath(guid));
+
+            DialogueBatch batch = (DialogueBatch)asset;
+
+            if (batch != null)
+            {
+                List<string> lines = new List<string>();
+
+                foreach (var item in batch.lines)
+                {
+                    lines.Add(item);
+
+                    wordCount += CountWords(item);
+                }
+
+                textExportDialogueBatches.Add(new TextExportDialogueBatch(batch.batchName, lines.ToArray()));
             }
         }
     }
 
-    void SearchScene(string ScenePath, List<TextExporterDialogue> textExporterDialogues, List<TextExporterCinematic> textExporterCinematics, 
+    private void GetData(List<TextExportItem> textExportItems, string[] interactionGUIDs)
+    {
+
+    }
+
+    void SearchScene(List<TextExporterDialogue> textExporterDialogues, List<TextExporterCinematic> textExporterCinematics, 
         List<TextExporterCinematic> textExporterLocalCinematics, List<TextExportObject> textExportInteractables, List<TextExportObject> textExportDelegates)
     {
         //Open scene
         //string scenePath = SceneManager.GetSceneByName(ScenePath).path;
-        Scene scene = EditorSceneManager.OpenScene("Assets/Scenes/" + ScenePath + ".unity", OpenSceneMode.Single);
+        //Scene scene = EditorSceneManager.OpenScene("Assets/Scenes/" + ScenePath + ".unity", OpenSceneMode.Single);
 
         //Search for everything
         DialogueManager dialogueManager = FindObjectOfType<DialogueManager>();
@@ -369,10 +399,12 @@ public class SceneTextContainer
 public class DataContainer
 {
     public TextExportItem[] textExportItems;
+    public TextExportDialogueBatch[] textExportDialogueBatches;
 
-    public DataContainer(List<TextExportItem> textExportItems)
+    public DataContainer(List<TextExportItem> textExportItems, List<TextExportDialogueBatch> textExportDialogueBatches)
     {
         this.textExportItems = textExportItems.ToArray();
+        this.textExportDialogueBatches = textExportDialogueBatches.ToArray();
     }
 }
 
@@ -426,6 +458,19 @@ public class TextExportItem
     public TextExportItem(string o, string[] t)
     {
         ItemName = o;
+        description = t;
+    }
+}
+
+[Serializable]
+public class TextExportDialogueBatch
+{
+    public string BatchName;
+    public string[] description;
+
+    public TextExportDialogueBatch(string o, string[] t)
+    {
+        BatchName = o;
         description = t;
     }
 }
