@@ -1,5 +1,5 @@
 {
-    "globalWordCount": 4962,
+    "globalWordCount": 7958,
     "data": {
         "textExportItems": [
             {
@@ -142,6 +142,65 @@
             }
         ]
     },
+    "menuScenes": [
+        {
+            "sceneName": "NewMenu",
+            "textMeshPros": [
+                {
+                    "objectName": "ExtrasButton",
+                    "text": "Extras"
+                },
+                {
+                    "objectName": "Title",
+                    "text": "BUTLER GUILLOTINE"
+                },
+                {
+                    "objectName": "CreditsTitle",
+                    "text": "CREDITS"
+                },
+                {
+                    "objectName": "ExtrasTitle",
+                    "text": "EXTRA"
+                },
+                {
+                    "objectName": "OptionsButton",
+                    "text": "Options"
+                },
+                {
+                    "objectName": "CreditsButton",
+                    "text": "CREDITS"
+                },
+                {
+                    "objectName": "1",
+                    "text": "1"
+                },
+                {
+                    "objectName": "QuitGameButton",
+                    "text": "Quit Game\n"
+                },
+                {
+                    "objectName": "MasterVolumeTitle",
+                    "text": "MASTER VOLUME"
+                },
+                {
+                    "objectName": "0",
+                    "text": "0"
+                },
+                {
+                    "objectName": "ChapterSelect",
+                    "text": "CHAPTER SELECT"
+                },
+                {
+                    "objectName": "StartGameButton",
+                    "text": "Start Game\n"
+                },
+                {
+                    "objectName": "OptionsTitle",
+                    "text": "OPTIONS\n"
+                }
+            ]
+        }
+    ],
     "scenes": [
         {
             "sceneName": "CEREMONY_1",
@@ -1130,11 +1189,11 @@
                     "text": "Locked. There isn't even a keyhole on the door."
                 },
                 {
-                    "ObjectName": "EricDoor",
+                    "ObjectName": "Door (4)",
                     "text": ""
                 },
                 {
-                    "ObjectName": "Door (4)",
+                    "ObjectName": "EricDoor",
                     "text": ""
                 },
                 {
@@ -1160,6 +1219,420 @@
                 {
                     "ObjectName": "MainDoor",
                     "text": "The hulking doors of the theater are closed until further notice. Closed from the outside, at least."
+                },
+                {
+                    "ObjectName": "Door",
+                    "text": "Staff only ? ...Huh. "
+                }
+            ]
+        },
+        {
+            "sceneName": "CEREMONY_2",
+            "textExporterDialogues": [
+                {
+                    "text": "Greetings, madam. ",
+                    "answers": [
+                        "Hi. I'm here for the play.",
+                        "We got your damn masks."
+                    ]
+                },
+                {
+                    "text": "I'm afraid I can't let you through. ",
+                    "answers": [
+                        "What the fuck ? "
+                    ]
+                },
+                {
+                    "text": "C-calm down ! I just need you to get a mask. It's necessary for the play.",
+                    "answers": [
+                        "Fine. I'll be right back. "
+                    ]
+                },
+                {
+                    "text": "Well, enjoy the play, madam.",
+                    "answers": [
+                        "... "
+                    ]
+                },
+                {
+                    "text": "Hello, madam. I would be happy to relieve you from any luggage you may have.",
+                    "answers": [
+                        "I'm keeping it."
+                    ]
+                },
+                {
+                    "text": "...No worries. Just let me know.",
+                    "answers": [
+                        "Yeah. Right. "
+                    ]
+                },
+                {
+                    "text": "Greetings. I suppose you're here for a mask ?",
+                    "answers": [
+                        "As a matter of fact I am. Make it quick."
+                    ]
+                },
+                {
+                    "text": "Would you like a demonstration ? These masks are a bit peculiar.",
+                    "answers": [
+                        "I don't have that sort of time. "
+                    ]
+                },
+                {
+                    "text": "Alright. Enjoy your play.",
+                    "answers": [
+                        "Come on Raymond, let's go."
+                    ]
+                },
+                {
+                    "text": "Need anything else ?",
+                    "answers": [
+                        "No. We're done here. "
+                    ]
+                },
+                {
+                    "text": "This table's free...",
+                    "answers": [
+                        "...I'm ready. Let's sit down.",
+                        "...I need more time. "
+                    ]
+                }
+            ],
+            "textExporterCinematics": [
+                {
+                    "ID": "Elevator",
+                    "lines": [
+                        "",
+                        "",
+                        "Fucking elevators man.",
+                        "",
+                        "",
+                        "Tell me about it.",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "Think I should get back into improv ?",
+                        "",
+                        "",
+                        "Again with that method acting bullshit ? Its not worth it.",
+                        "",
+                        "",
+                        "Its anything but bullshit. ",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "...Ready ?",
+                        "",
+                        "",
+                        "",
+                        "...Yeah. ",
+                        "",
+                        "Yeah.",
+                        ""
+                    ],
+                    "local": false
+                }
+            ],
+            "textExporterLocalCinematics": [
+                {
+                    "ID": "Ceremony",
+                    "lines": [
+                        "StartCam",
+                        "RuthPrep",
+                        "RuthSnaps",
+                        "BlackScreen",
+                        "RemoveLights",
+                        "ChangeCam",
+                        "Reveal",
+                        "Reveal2",
+                        "Eric",
+                        "Walk",
+                        "Eric",
+                        "Ghosts",
+                        "EricUp",
+                        "Wait",
+                        "Move",
+                        "EricOhm",
+                        "Pray",
+                        "Shot",
+                        "Cam",
+                        "Shoot",
+                        "CamChange",
+                        "ShootAgain",
+                        "ShootAgain",
+                        "ShootAgain",
+                        "Die",
+                        "DieCam",
+                        "EricCam",
+                        "EricPanik",
+                        "EricBlast",
+                        "AdditionnalTendril",
+                        "AdditionnalTendril",
+                        "Wait",
+                        "JerCam",
+                        "EricCam",
+                        "EricFly",
+                        "AdditionalTendrils",
+                        "Light",
+                        "RuthDead",
+                        "Fade",
+                        "Goodbye"
+                    ],
+                    "local": true
+                }
+            ],
+            "textExportInteractables": [
+                {
+                    "ObjectName": "BottlesInteractable",
+                    "text": "A lot of whiskies."
+                },
+                {
+                    "ObjectName": "SuitcasesInteractable (3)",
+                    "text": "More suitcases."
+                },
+                {
+                    "ObjectName": "SuitcasesInteractable",
+                    "text": "Well, that's awfully convenient, huh."
+                },
+                {
+                    "ObjectName": "Elevator",
+                    "text": "No point in leaving."
+                },
+                {
+                    "ObjectName": "SuitcasesInteractable (4)",
+                    "text": "More suitcases."
+                },
+                {
+                    "ObjectName": "Bed (1)",
+                    "text": "Comfy."
+                },
+                {
+                    "ObjectName": "Bed (5)",
+                    "text": "Comfy."
+                },
+                {
+                    "ObjectName": "BottlesInteractable (1)",
+                    "text": "...Now's not the time to get shitfaced."
+                },
+                {
+                    "ObjectName": "Bed",
+                    "text": "Comfy."
+                },
+                {
+                    "ObjectName": "Bed (4)",
+                    "text": "These are all the same."
+                },
+                {
+                    "ObjectName": "SuitcasesInteractable (5)",
+                    "text": "More suitcases."
+                },
+                {
+                    "ObjectName": "Bed (3)",
+                    "text": "Comfy."
+                },
+                {
+                    "ObjectName": "SuitcasesInteractable (1)",
+                    "text": "Okay. Not going there. Got it."
+                },
+                {
+                    "ObjectName": "Door (3)",
+                    "text": "(Demo locked)"
+                },
+                {
+                    "ObjectName": "Door (7)",
+                    "text": "Locked. There isn't even a keyhole on the door."
+                },
+                {
+                    "ObjectName": "EricDoor",
+                    "text": ""
+                },
+                {
+                    "ObjectName": "Door (4)",
+                    "text": ""
+                },
+                {
+                    "ObjectName": "Door",
+                    "text": "The backstage remains locked."
+                },
+                {
+                    "ObjectName": "Door (5)",
+                    "text": "My repeated knocks are met with silence."
+                },
+                {
+                    "ObjectName": "Door (6)",
+                    "text": "The backstage remains locked."
+                },
+                {
+                    "ObjectName": "Door",
+                    "text": "Locked. "
+                },
+                {
+                    "ObjectName": "MainDoor",
+                    "text": "The hulking doors of the theater are closed until further notice. Closed from the outside, at least."
+                },
+                {
+                    "ObjectName": "Door",
+                    "text": "Staff only ? ...Huh. "
+                }
+            ]
+        },
+        {
+            "sceneName": "CEREMONY_3",
+            "textExporterDialogues": [
+                {
+                    "text": "She's out cold.",
+                    "answers": [
+                        "Sit down. (Next Chapter)",
+                        "I need a minute."
+                    ]
+                },
+                {
+                    "text": "...",
+                    "answers": [
+                        "I'm so sorry."
+                    ]
+                }
+            ],
+            "textExporterCinematics": [
+                {
+                    "ID": "Monologue",
+                    "lines": [
+                        "",
+                        "",
+                        "",
+                        "Guess I fucked up.",
+                        "",
+                        "",
+                        "",
+                        "I killed you.",
+                        "That killed Raymond.",
+                        "And didn't stop anything.",
+                        "",
+                        "",
+                        "What is there even to say.",
+                        "",
+                        "",
+                        "Well. Bottoms up. ",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "local": false
+                }
+            ],
+            "textExporterLocalCinematics": [],
+            "textExportInteractables": [
+                {
+                    "ObjectName": "MainDoor",
+                    "text": "...Locked."
+                },
+                {
+                    "ObjectName": "BottlesInteractable",
+                    "text": "Empty."
+                },
+                {
+                    "ObjectName": "Ed",
+                    "text": "..."
+                },
+                {
+                    "ObjectName": "SuitcasesInteractable (3)",
+                    "text": "..."
+                },
+                {
+                    "ObjectName": "RuthPapers",
+                    "text": "\"The last beheading of Eric Bowen, intramural church.\""
+                },
+                {
+                    "ObjectName": "Elevator",
+                    "text": "No point in leaving."
+                },
+                {
+                    "ObjectName": "SuitcasesInteractable (6)",
+                    "text": "..."
+                },
+                {
+                    "ObjectName": "Instructions",
+                    "text": "Instructions:  Stay in your room. Wait."
+                },
+                {
+                    "ObjectName": "Elevator",
+                    "text": "Its not coming back."
+                },
+                {
+                    "ObjectName": "SuitcasesInteractable (4)",
+                    "text": "..."
+                },
+                {
+                    "ObjectName": "Bed (5)",
+                    "text": "Comfy."
+                },
+                {
+                    "ObjectName": "RuthBottle",
+                    "text": "Knocked out cold."
+                },
+                {
+                    "ObjectName": "Bed",
+                    "text": "Comfy."
+                },
+                {
+                    "ObjectName": "Bed (4)",
+                    "text": "These are all the same."
+                },
+                {
+                    "ObjectName": "SuitcasesInteractable (5)",
+                    "text": "..."
+                },
+                {
+                    "ObjectName": "Bed (3)",
+                    "text": "Comfy."
+                },
+                {
+                    "ObjectName": "Bed (1)",
+                    "text": "The notes are unreadable, all smudged out."
+                },
+                {
+                    "ObjectName": "MasksPile",
+                    "text": "They don't do shit. Never did."
+                },
+                {
+                    "ObjectName": "Door (4)",
+                    "text": ""
+                },
+                {
+                    "ObjectName": "Door (7)",
+                    "text": "Locked. There isn't even a keyhole on the door."
+                },
+                {
+                    "ObjectName": "EricDoor",
+                    "text": ""
+                },
+                {
+                    "ObjectName": "Door (3)",
+                    "text": "(Demo locked)"
+                },
+                {
+                    "ObjectName": "Door",
+                    "text": "The backstage remains locked."
+                },
+                {
+                    "ObjectName": "Door (5)",
+                    "text": "My repeated knocks are met with silence."
+                },
+                {
+                    "ObjectName": "Door (6)",
+                    "text": "...Locked. I'm not going back there anyway."
+                },
+                {
+                    "ObjectName": "Door",
+                    "text": "Locked. "
+                },
+                {
+                    "ObjectName": "MainDoor",
+                    "text": "...No. "
                 },
                 {
                     "ObjectName": "Door",
@@ -2018,11 +2491,11 @@
                     "text": "Would prefer unsmoked ones."
                 },
                 {
-                    "ObjectName": "GalleryDoor",
+                    "ObjectName": "Door2",
                     "text": "Locked, no keyhole. Definetly an elevator door."
                 },
                 {
-                    "ObjectName": "Door2",
+                    "ObjectName": "GalleryDoor",
                     "text": "Locked, no keyhole. Definetly an elevator door."
                 },
                 {
@@ -2032,6 +2505,1429 @@
                 {
                     "ObjectName": "Door3",
                     "text": "Locked, no keyhole. Definetly an elevator door."
+                }
+            ]
+        },
+        {
+            "sceneName": "LONGESTDAY_2",
+            "textExporterDialogues": [
+                {
+                    "text": "...",
+                    "answers": [
+                        "Can you hear me ?",
+                        "Have you seen someone that looks like me ?"
+                    ]
+                },
+                {
+                    "text": "...",
+                    "answers": [
+                        "Well, suit yourself. "
+                    ]
+                },
+                {
+                    "text": "This feels... significant.",
+                    "answers": [
+                        "Step in.",
+                        "Not yet. "
+                    ]
+                },
+                {
+                    "text": "Guess the roof caved in...",
+                    "answers": [
+                        "Hey, going somewhere ?",
+                        "I found the banquet",
+                        "Brolombrolom. "
+                    ]
+                },
+                {
+                    "text": "I was on my way to the banquet, but it must've moved somewhere else.",
+                    "answers": [
+                        "What's with the guy on the door ?",
+                        "A banquet that moves, right."
+                    ]
+                },
+                {
+                    "text": "Oh that guy ?  Pay him no mind, he's kind of a nutcase.",
+                    "answers": [
+                        "I think I'll still pay him some mind, at least."
+                    ]
+                },
+                {
+                    "text": "Anyhow, tell me if you need anything ma'am. I'll wait for it right here.",
+                    "answers": [
+                        "Got it."
+                    ]
+                },
+                {
+                    "text": "You might still able to catch it, if you're fast enough.",
+                    "answers": [
+                        "Time to chase a banquet then.",
+                        "Very funny."
+                    ]
+                },
+                {
+                    "text": "Well that's awfully nice of you, where is it ?",
+                    "answers": [
+                        "Its still here, but not here either."
+                    ]
+                },
+                {
+                    "text": "...What do you mean ?",
+                    "answers": [
+                        "When I went upstairs, the room shifted."
+                    ]
+                },
+                {
+                    "text": "Well, its a start. I'll go check it out.",
+                    "answers": [
+                        "After you, bud."
+                    ]
+                },
+                {
+                    "text": "I hope the janitor's coming...",
+                    "answers": [
+                        "What happened ?",
+                        "Aren't you the janitor ?",
+                        "No idea. "
+                    ]
+                },
+                {
+                    "text": "No idea. I was just checking up on the guests.",
+                    "answers": [
+                        "And this is fine to you ?"
+                    ]
+                },
+                {
+                    "text": "Well it is like, the third pile today. You get used to it.",
+                    "answers": [
+                        "Huh. Okay. "
+                    ]
+                },
+                {
+                    "text": "Me ? No no no. This broom's not even real, ahah !",
+                    "answers": [
+                        "What do you mean the broom isn't real ?",
+                        "You look like a janitor to me."
+                    ]
+                },
+                {
+                    "text": "...",
+                    "answers": [
+                        "..."
+                    ]
+                },
+                {
+                    "text": "I'm not the janitor, okay ?",
+                    "answers": [
+                        "Okay. "
+                    ]
+                },
+                {
+                    "text": "I could sleep for a while.",
+                    "answers": [
+                        "Sleep.",
+                        "No need."
+                    ]
+                },
+                {
+                    "text": "Not sure this bed's trustworthy anymore.",
+                    "answers": [
+                        "(Leave)"
+                    ]
+                },
+                {
+                    "text": "What kind of idiot would fall for this ?",
+                    "answers": [
+                        "(Leave)"
+                    ]
+                },
+                {
+                    "text": "Oh, hello again, madam. I'm afraid I can't let you through, the janitor's working.",
+                    "answers": [
+                        "I wanted to greet her.",
+                        "Okay, got it."
+                    ]
+                },
+                {
+                    "text": "I'm sorry, I can't let you do that.",
+                    "answers": [
+                        "Why is that ?",
+                        "Move.",
+                        "Okay, okay."
+                    ]
+                },
+                {
+                    "text": "Its hard work, okay ? It would be best not to disturb her.",
+                    "answers": [
+                        "Just a peek, I'm sure she won't mind."
+                    ]
+                },
+                {
+                    "text": "She would totally mind, have some respect, would you ?",
+                    "answers": [
+                        "Okay, okay, sorry.",
+                        "Move."
+                    ]
+                },
+                {
+                    "text": "Thank you.",
+                    "answers": [
+                        "(Leave)"
+                    ]
+                },
+                {
+                    "text": "Is this seriously a threat ? ",
+                    "answers": [
+                        "I have to see her. Move before something happens."
+                    ]
+                },
+                {
+                    "text": "(The broom butler can now be shot.)",
+                    "answers": [
+                        "(Leave)"
+                    ]
+                },
+                {
+                    "text": "...huh.",
+                    "answers": [
+                        "Go down.",
+                        "Stay. "
+                    ]
+                },
+                {
+                    "text": "A ladder leading upwards.",
+                    "answers": [
+                        "Go up.",
+                        "Stay. "
+                    ]
+                },
+                {
+                    "text": "A hidden opening in the floor.",
+                    "answers": [
+                        "Go down.",
+                        "Stay. "
+                    ]
+                },
+                {
+                    "text": "A ladder leading upwards.",
+                    "answers": [
+                        "Go up.",
+                        "Stay. "
+                    ]
+                },
+                {
+                    "text": "Come on bud, back in the cell you go.",
+                    "answers": [
+                        "...Fine. "
+                    ]
+                },
+                {
+                    "text": "The rope holds firm.",
+                    "answers": [
+                        "Go down.",
+                        "Stay. "
+                    ]
+                },
+                {
+                    "text": "The rope holds firm.",
+                    "answers": [
+                        "Go up.",
+                        "Stay. "
+                    ]
+                },
+                {
+                    "text": "...",
+                    "answers": [
+                        "Hey."
+                    ]
+                },
+                {
+                    "text": "Oh. Fancy meeting you here, Jer. It's been a while.",
+                    "answers": [
+                        "What are you doing here ?"
+                    ]
+                },
+                {
+                    "text": "Mingling. Trying to get some people to know me. That's the key in this business.",
+                    "answers": [
+                        "Seems pretty fun.",
+                        "Eh."
+                    ]
+                },
+                {
+                    "text": "Honestly, I would rather be lounging about with you just about any time, but I'll at least wait for the award.",
+                    "answers": [
+                        "What award is this ?"
+                    ]
+                },
+                {
+                    "text": "A sort of prestigious memento. Probably rewarding a performance of some kind ?",
+                    "answers": [
+                        "So you have no idea ? "
+                    ]
+                },
+                {
+                    "text": "Well, I'm here to meet people, couldn't care less about some award.",
+                    "answers": [
+                        "Now you got me curious.",
+                        "That's cutthroat."
+                    ]
+                },
+                {
+                    "text": "You should try mingling too. We could take this opportunity to recommend the bar.  Its fun, I promise. ",
+                    "answers": [
+                        "Didn't you just say that you hated it ?"
+                    ]
+                },
+                {
+                    "text": "Nah. I said that I preferred spending time with you. ",
+                    "answers": [
+                        "Well, guess I'll take a look around. See you."
+                    ]
+                },
+                {
+                    "text": "Anytime. Have fun.",
+                    "answers": [
+                        "(Leave)"
+                    ]
+                },
+                {
+                    "text": "...",
+                    "answers": [
+                        "Can I borrow you for a second ?"
+                    ]
+                },
+                {
+                    "text": "Borrow me as much as you like, Jer.",
+                    "answers": [
+                        "I had a couple questions.",
+                        "Do you know what this is ? (Show the silver object)",
+                        "Actually, nevermind. (Leave)"
+                    ]
+                },
+                {
+                    "text": "Well. Ask away.",
+                    "answers": [
+                        "How are you doing ?",
+                        "So... this is a moving banquet ?",
+                        "Got any tips for me ?"
+                    ]
+                },
+                {
+                    "text": "I was bored out of my mind, until now.",
+                    "answers": [
+                        "What do you mean ?",
+                        "..."
+                    ]
+                },
+                {
+                    "text": "You're cute when you're flustered.",
+                    "answers": [
+                        "Come on."
+                    ]
+                },
+                {
+                    "text": "What do you mean ?",
+                    "answers": [
+                        "Well, this banquet moves."
+                    ]
+                },
+                {
+                    "text": "Really ? That's something.",
+                    "answers": [
+                        "How did you get in here if you didn't even know that ?"
+                    ]
+                },
+                {
+                    "text": "Me ? Well. I just, walked in. Through one of the elevators.",
+                    "answers": [
+                        "Huh.",
+                        "That's unfair."
+                    ]
+                },
+                {
+                    "text": "Whats with the face ? Was it so hard to get in here ?",
+                    "answers": [
+                        "See that rope over there ?"
+                    ]
+                },
+                {
+                    "text": "Oh.",
+                    "answers": [
+                        "Yeah."
+                    ]
+                },
+                {
+                    "text": "Drinks are on me when we get back.",
+                    "answers": [
+                        "Not like we were paying for them in the first place but I'll take it."
+                    ]
+                },
+                {
+                    "text": "No.",
+                    "answers": [
+                        "Oh."
+                    ]
+                },
+                {
+                    "text": "Anything else ?",
+                    "answers": [
+                        "How are you doing ?",
+                        "So... this is a moving banquet ?",
+                        "Got any other tips for me ?"
+                    ]
+                },
+                {
+                    "text": "Do you really want me to answer that ?",
+                    "answers": [
+                        "I need to know."
+                    ]
+                },
+                {
+                    "text": "Looks like an orifice to me. I don't want to know where you got that.",
+                    "answers": [
+                        "It came from another orifice against a wall.",
+                        "Understandable."
+                    ]
+                },
+                {
+                    "text": "Well, I'm no hole expert. Maybe look out for other silver-ish things ?",
+                    "answers": [
+                        "I guess."
+                    ]
+                },
+                {
+                    "text": "Anyhow, I'm no orifice expert. Maybe look out for other silver-ish things ?",
+                    "answers": [
+                        "I guess."
+                    ]
+                },
+                {
+                    "text": "It is indeed right here.",
+                    "answers": [
+                        "Any idea how to get down ?",
+                        "What do you want with that banquet anyway ?",
+                        "Yup. "
+                    ]
+                },
+                {
+                    "text": "Not off the top of my head. If only we had some kind of rope...",
+                    "answers": [
+                        "I don't walk around with rope.",
+                        "Would this thing do the trick ? (Show the literal intestines)"
+                    ]
+                },
+                {
+                    "text": "Me neither, and I'm starting to think that I should.",
+                    "answers": [
+                        "We'll think of something. "
+                    ]
+                },
+                {
+                    "text": "I'm supposed to help with the ceremony. Raymond's going to kill me if I don't make it in time.",
+                    "answers": [
+                        "He sounds like an asshole."
+                    ]
+                },
+                {
+                    "text": "Definetly. But I don't really have much of a choice.",
+                    "answers": [
+                        "Sad. "
+                    ]
+                },
+                {
+                    "text": "What is-",
+                    "answers": [
+                        "(nod)"
+                    ]
+                },
+                {
+                    "text": "You know what, I don't even want to know. Its useable. I'll take it.",
+                    "answers": [
+                        "Amazing. (Hand over the useable rope)"
+                    ]
+                },
+                {
+                    "text": "Guess we did it.",
+                    "answers": [
+                        "What are you going to do now ?",
+                        "I have a spot to recommend",
+                        "Yup yup. "
+                    ]
+                },
+                {
+                    "text": "I'm going to wait for the ceremony to start, we're even a bit early, if you can believe it.",
+                    "answers": [
+                        "What ceremony is this ?"
+                    ]
+                },
+                {
+                    "text": "No idea. I'm just waiting for orders now.",
+                    "answers": [
+                        "Great workplace conditions. "
+                    ]
+                },
+                {
+                    "text": "Do tell me. ",
+                    "answers": [
+                        "Down the hall, the last elevator on the right. Bar's amazing."
+                    ]
+                },
+                {
+                    "text": "I'll keep that in mind, thank you.",
+                    "answers": [
+                        "(Leave)"
+                    ]
+                },
+                {
+                    "text": "...",
+                    "answers": [
+                        "What happened ?"
+                    ]
+                },
+                {
+                    "text": "The janitor happened. She doesn't care about us.",
+                    "answers": [
+                        "..."
+                    ]
+                },
+                {
+                    "text": "If only I had a weapon, this would all be over. ",
+                    "answers": [
+                        "..."
+                    ]
+                },
+                {
+                    "text": "...",
+                    "answers": [
+                        "I've got one."
+                    ]
+                },
+                {
+                    "text": "Then kill her before this happens to someone you love. Its the only way.",
+                    "answers": [
+                        "... "
+                    ]
+                },
+                {
+                    "text": "(Looks like the fucker crashed onto this door. It's still locked, though.)",
+                    "answers": [
+                        "(Look around)"
+                    ]
+                },
+                {
+                    "text": "Hey... what's this ?",
+                    "answers": [
+                        "(Examine)"
+                    ]
+                },
+                {
+                    "text": "Ew.",
+                    "answers": [
+                        "(Put it back down)"
+                    ]
+                },
+                {
+                    "text": "...",
+                    "answers": [
+                        "..."
+                    ]
+                },
+                {
+                    "text": "(Come to think of it, this could make a nice rope to reach the banquet.)",
+                    "answers": [
+                        "Pocket the \"rope\"."
+                    ]
+                },
+                {
+                    "text": "...",
+                    "answers": [
+                        "(Leave)"
+                    ]
+                },
+                {
+                    "text": "(Is it time to wait for the award ?)",
+                    "answers": [
+                        "(Yup.)",
+                        "(Not yet.)"
+                    ]
+                },
+                {
+                    "text": "Well, that was something.",
+                    "answers": [
+                        "I didn't get it at all."
+                    ]
+                },
+                {
+                    "text": "On the bright side, looks like you know what that hole is for now.",
+                    "answers": [
+                        "Not that its any more reassuring."
+                    ]
+                },
+                {
+                    "text": "Oh come on, you're strong. You'll sort it out",
+                    "answers": [
+                        "Uhuh... "
+                    ]
+                },
+                {
+                    "text": "...",
+                    "answers": [
+                        "Finally found you.",
+                        "Nope. "
+                    ]
+                },
+                {
+                    "text": "What are you doing ? You're not supposed to be here.",
+                    "answers": [
+                        "I need something from you.",
+                        "What is this place ?"
+                    ]
+                },
+                {
+                    "text": "The Truth.",
+                    "answers": [
+                        "..."
+                    ]
+                },
+                {
+                    "text": "What ? Why ? What would you need from me ?",
+                    "answers": [
+                        "I need your skirt."
+                    ]
+                },
+                {
+                    "text": "Are you serious ? Do you have any idea of what you've just done ?",
+                    "answers": [
+                        "This does not have to get ugly.",
+                        "What about a favour ?"
+                    ]
+                },
+                {
+                    "text": "...",
+                    "answers": [
+                        "Come on."
+                    ]
+                },
+                {
+                    "text": "I'm not going to play your little game here. I know what you are doing.",
+                    "answers": [
+                        "... "
+                    ]
+                },
+                {
+                    "text": "I don't need a fucking favor ! You doomed me !",
+                    "answers": [
+                        "I literally just tried to find you."
+                    ]
+                },
+                {
+                    "text": "I see what you're doing. You can't fool me pretending to be oblivious like that.",
+                    "answers": [
+                        "Shut up."
+                    ]
+                },
+                {
+                    "text": "You cannot escape it. You cannot freeze it. This will not work.",
+                    "answers": [
+                        "Shut up ! "
+                    ]
+                },
+                {
+                    "text": "(You shouldn't have ran.)",
+                    "answers": [
+                        "(Take the skirt)",
+                        "(Leave)"
+                    ]
+                },
+                {
+                    "text": "(I need to get out of here, fast.)",
+                    "answers": [
+                        "(Leave)"
+                    ]
+                },
+                {
+                    "text": "I don't have anything left to do here.",
+                    "answers": [
+                        "(Time to go.)",
+                        "(Not yet.)"
+                    ]
+                }
+            ],
+            "textExporterCinematics": [
+                {
+                    "ID": "Rope",
+                    "lines": [
+                        ""
+                    ],
+                    "local": false
+                },
+                {
+                    "ID": "Prison",
+                    "lines": [
+                        "",
+                        "I want to hurl myself out of these walls. ",
+                        "But they won't let me leave. ",
+                        "",
+                        "",
+                        "Reality, events, unfolding in awful patterns.",
+                        "Yet none are awful in the precise way it happened. ",
+                        "Approximations, as if we'd all forgotten.",
+                        "",
+                        "",
+                        "But I know she remembers. ",
+                        "She always did.",
+                        "And now she's gone.",
+                        ""
+                    ],
+                    "local": false
+                },
+                {
+                    "ID": "Chase",
+                    "lines": [
+                        "",
+                        "",
+                        "",
+                        "Get back here you piece of shit. "
+                    ],
+                    "local": false
+                },
+                {
+                    "ID": "Banquet",
+                    "lines": [
+                        ""
+                    ],
+                    "local": false
+                }
+            ],
+            "textExporterLocalCinematics": [
+                {
+                    "ID": "Sleep",
+                    "lines": [
+                        "Start",
+                        "Arm"
+                    ],
+                    "local": true
+                }
+            ],
+            "textExportInteractables": [
+                {
+                    "ObjectName": "CommentInteractable",
+                    "text": "ButlerComment"
+                },
+                {
+                    "ObjectName": "CommentInteractable",
+                    "text": "ButlerComment"
+                },
+                {
+                    "ObjectName": "CommentInteractable",
+                    "text": "ButlerComment"
+                },
+                {
+                    "ObjectName": "CommentInteractable",
+                    "text": "ButlerComment"
+                },
+                {
+                    "ObjectName": "CommentInteractable",
+                    "text": "ButlerComment"
+                },
+                {
+                    "ObjectName": "CommentInteractable",
+                    "text": "ButlerComment"
+                },
+                {
+                    "ObjectName": "CommentInteractable",
+                    "text": "ButlerComment"
+                },
+                {
+                    "ObjectName": "CommentInteractable",
+                    "text": "ButlerComment"
+                },
+                {
+                    "ObjectName": "CommentInteractable",
+                    "text": "ButlerComment"
+                },
+                {
+                    "ObjectName": "CommentInteractable",
+                    "text": "ButlerComment"
+                },
+                {
+                    "ObjectName": "EmptyCell (2)",
+                    "text": "Empty cells."
+                },
+                {
+                    "ObjectName": "EmptyCell (5)",
+                    "text": "Empty cells."
+                },
+                {
+                    "ObjectName": "Elevator",
+                    "text": "I'm not done here."
+                },
+                {
+                    "ObjectName": "EmptyCell (1)",
+                    "text": "Empty cells."
+                },
+                {
+                    "ObjectName": "EmptyCell",
+                    "text": "Empty cells."
+                },
+                {
+                    "ObjectName": "JerCell",
+                    "text": "..."
+                },
+                {
+                    "ObjectName": "Blocker",
+                    "text": "I can't leave without convincing her."
+                },
+                {
+                    "ObjectName": "EmptyCell (4)",
+                    "text": "Empty cells."
+                },
+                {
+                    "ObjectName": "CommentInteractable",
+                    "text": "More piles."
+                },
+                {
+                    "ObjectName": "EmptyCell (3)",
+                    "text": "Empty cells."
+                },
+                {
+                    "ObjectName": "TrapdooroffSpot",
+                    "text": "This spot feels off."
+                },
+                {
+                    "ObjectName": "InterrogationRoom",
+                    "text": "...I can't believe it."
+                },
+                {
+                    "ObjectName": "Door (4)",
+                    "text": "Locked from the other side."
+                },
+                {
+                    "ObjectName": "DoorReversed (6)",
+                    "text": "Locked."
+                },
+                {
+                    "ObjectName": "Door (9)",
+                    "text": "This elevator is closed."
+                },
+                {
+                    "ObjectName": "Door (13)",
+                    "text": "This excuse for a door is merged with the wall."
+                },
+                {
+                    "ObjectName": "Door (6)",
+                    "text": "No way I'm opening that one."
+                },
+                {
+                    "ObjectName": "DoorReversed (4)",
+                    "text": "It is super locked."
+                },
+                {
+                    "ObjectName": "DoorReversed",
+                    "text": "Another locked door, how original."
+                },
+                {
+                    "ObjectName": "Door (12)",
+                    "text": "This elevator is condemned."
+                },
+                {
+                    "ObjectName": "DoorReversed (1)",
+                    "text": "A magnificent, locked door."
+                },
+                {
+                    "ObjectName": "Door (8)",
+                    "text": "Locked. What did I expect ?"
+                },
+                {
+                    "ObjectName": "Door (5)",
+                    "text": "Unopenable."
+                },
+                {
+                    "ObjectName": "Door (11)",
+                    "text": "This elevator is sealed."
+                },
+                {
+                    "ObjectName": "DoorReversed (5)",
+                    "text": "Forever closed."
+                },
+                {
+                    "ObjectName": "Door (1)",
+                    "text": "A door. "
+                },
+                {
+                    "ObjectName": "Door (7)",
+                    "text": "Locked."
+                },
+                {
+                    "ObjectName": "MainDoor",
+                    "text": "Its completely stuck."
+                },
+                {
+                    "ObjectName": "DoorReversed (7)",
+                    "text": "I could shoot the lock open."
+                },
+                {
+                    "ObjectName": "Door (2)",
+                    "text": "Fuck you."
+                },
+                {
+                    "ObjectName": "DoorReversed (3)",
+                    "text": "Looks extremely locked to me."
+                },
+                {
+                    "ObjectName": "DoorReversed (2)",
+                    "text": "Locked. What did I expect ?"
+                },
+                {
+                    "ObjectName": "Door (10)",
+                    "text": "Locked. I could probably shoot the lock open."
+                },
+                {
+                    "ObjectName": "Door (3)",
+                    "text": "No doorknob ?"
+                },
+                {
+                    "ObjectName": "Door (14)",
+                    "text": "Locked. I could probably shoot the lock open."
+                },
+                {
+                    "ObjectName": "SilverDoor",
+                    "text": "A silver door. I wonder where it leads."
+                },
+                {
+                    "ObjectName": "Door",
+                    "text": "..."
+                }
+            ]
+        },
+        {
+            "sceneName": "LONGESTDAY_3",
+            "textExporterDialogues": [
+                {
+                    "text": "Once I go down, I don't think I'll be coming back.",
+                    "answers": [
+                        "(Time to go.)",
+                        "(Not yet.)"
+                    ]
+                },
+                {
+                    "text": "Time to dress up.",
+                    "answers": [
+                        "(Dress up.)",
+                        "(Not yet.)"
+                    ]
+                },
+                {
+                    "text": "Why hello again Jeremiah.",
+                    "answers": [
+                        "How's it going ?",
+                        "Nope. "
+                    ]
+                },
+                {
+                    "text": "As you can see, business is booming ! And I have you to thank for that.",
+                    "answers": [
+                        "Had to happen eventually, this place is great.",
+                        "Where's Ruth ?",
+                        "Do you have a spot where I could wash this ? (Show the bloody skirt.)"
+                    ]
+                },
+                {
+                    "text": "Come on, no need to be modest about it. You did great.",
+                    "answers": [
+                        "Pretty sure Ruth did most of the job.",
+                        "You're damn right I did."
+                    ]
+                },
+                {
+                    "text": "She sold you well. Almost everyone here knows about you. ",
+                    "answers": [
+                        "That seems excessive."
+                    ]
+                },
+                {
+                    "text": "Ruth sold you well. Almost everyone here knows about you. ",
+                    "answers": [
+                        "That seems excessive."
+                    ]
+                },
+                {
+                    "text": "She's head over heels for you, that much is obvious.",
+                    "answers": [
+                        "I just wish she wouldn't brag about it every chance she gets."
+                    ]
+                },
+                {
+                    "text": "I think you should boast about it too, it's admirable to be proud of what makes you happy.",
+                    "answers": [
+                        "Heh. I guess so. "
+                    ]
+                },
+                {
+                    "text": "She rushed to the gallery with a few butlers. I haven't seen her this enthusiastic in a millenia.",
+                    "answers": [
+                        "As if it was not enough pressure already."
+                    ]
+                },
+                {
+                    "text": "That's calle anticipation, its a good thing.",
+                    "answers": [
+                        "...uhuh. "
+                    ]
+                },
+                {
+                    "text": "The blood's still fresh. I could wash it off in the sink real quick.",
+                    "answers": [
+                        "Great.",
+                        "You're not questioning me ?"
+                    ]
+                },
+                {
+                    "text": "Nah.",
+                    "answers": [
+                        "Thanks."
+                    ]
+                },
+                {
+                    "text": "Give me a second, and I'll be done.",
+                    "answers": [
+                        "(Wait for the bartender to finish.)"
+                    ]
+                },
+                {
+                    "text": "Can't wear a bloody skirt. That's... too avant-garde.",
+                    "answers": [
+                        "(Leave)"
+                    ]
+                },
+                {
+                    "text": "Well. You look basically the same.",
+                    "answers": [
+                        "I know, ugh."
+                    ]
+                },
+                {
+                    "text": "I mean you look good, but it's like... a minimal change. A very Ruth-ish change.",
+                    "answers": [
+                        "As long as she's happy."
+                    ]
+                }
+            ],
+            "textExporterCinematics": [
+                {
+                    "ID": "ElevatorUp",
+                    "lines": [
+                        ""
+                    ],
+                    "local": false
+                },
+                {
+                    "ID": "Elevator",
+                    "lines": [
+                        ""
+                    ],
+                    "local": false
+                }
+            ],
+            "textExporterLocalCinematics": [],
+            "textExportInteractables": [
+                {
+                    "ObjectName": "TableChat1",
+                    "text": "Pretty sure I got stood up."
+                },
+                {
+                    "ObjectName": "TableChat1 (2)",
+                    "text": "This place is really great, even if the bartender's a bit off."
+                },
+                {
+                    "ObjectName": "ChangeFirst",
+                    "text": "Oughta get changed first."
+                },
+                {
+                    "ObjectName": "TableChat1 (4)",
+                    "text": "Its nice to have a little break from eternity sometimes."
+                },
+                {
+                    "ObjectName": "TableChat1 (3)",
+                    "text": "I forgot what I ordered. Hope it's nothing too strong."
+                },
+                {
+                    "ObjectName": "Papers",
+                    "text": "These are blank."
+                },
+                {
+                    "ObjectName": "Elevator",
+                    "text": "I am not going back there."
+                },
+                {
+                    "ObjectName": "TableChat1 (5)",
+                    "text": "We shouldn't stay for too long. I wanna see what the gallery's all about."
+                },
+                {
+                    "ObjectName": "TableChat1 (1)",
+                    "text": "Honestly ? I don't mind drinking alone. It's inspiring."
+                },
+                {
+                    "ObjectName": "Ashtray",
+                    "text": "Would prefer unsmoked ones."
+                },
+                {
+                    "ObjectName": "GalleryDoor",
+                    "text": "Locked, no keyhole. Definetly an elevator door."
+                },
+                {
+                    "ObjectName": "Door3",
+                    "text": "Locked, no keyhole. Definetly an elevator door."
+                },
+                {
+                    "ObjectName": "Door1",
+                    "text": "Locked, no keyhole. Definetly an elevator door."
+                },
+                {
+                    "ObjectName": "Door2",
+                    "text": "Locked, no keyhole. Definetly an elevator door."
+                }
+            ]
+        },
+        {
+            "sceneName": "LONGESTDAY_4",
+            "textExporterDialogues": [
+                {
+                    "text": "Waiting for Jeremiah. Do NOT cross if you are not Jeremiah. The gallery will open soon.                       - Ruth",
+                    "answers": [
+                        "(Cross)",
+                        "(Stay)"
+                    ]
+                },
+                {
+                    "text": "Am I forgetting something ?",
+                    "answers": [
+                        "(Cross)",
+                        "(Stay)"
+                    ]
+                },
+                {
+                    "text": "Jeremiah, I presume ?",
+                    "answers": [
+                        "Yup, that's me.",
+                        "Nah. "
+                    ]
+                },
+                {
+                    "text": "Its a pleasure to finally meet you, madam. ",
+                    "answers": [
+                        "And you are ?",
+                        "You know me ?"
+                    ]
+                },
+                {
+                    "text": "Just your average butler. I can fix you a drink, if you so wish.",
+                    "answers": [
+                        "Maybe later."
+                    ]
+                },
+                {
+                    "text": "How could I not ? Ruth keeps talking about you every chance she gets. You have an aura about you.",
+                    "answers": [
+                        "Really ? That's... cool. "
+                    ]
+                },
+                {
+                    "text": "Understood. Wouldn't want to keep Ruth waiting.",
+                    "answers": [
+                        "You got it. "
+                    ]
+                },
+                {
+                    "text": "...",
+                    "answers": [
+                        "Heya.",
+                        "... "
+                    ]
+                },
+                {
+                    "text": "Got no luggage either, ma'am ?",
+                    "answers": [
+                        "Nah."
+                    ]
+                },
+                {
+                    "text": "Where are all these damn suitcases coming from then ? Damn.",
+                    "answers": [
+                        "Thought all of these were Ruth's.",
+                        "What's inside ?"
+                    ]
+                },
+                {
+                    "text": "No chance. She would chop my head off if I kept her stuff in the entrance.",
+                    "answers": [
+                        "Oof. "
+                    ]
+                },
+                {
+                    "text": "...",
+                    "answers": [
+                        "..."
+                    ]
+                },
+                {
+                    "text": "Holy shit. I never checked.",
+                    "answers": [
+                        "Well open it !"
+                    ]
+                },
+                {
+                    "text": "...",
+                    "answers": [
+                        "So ? "
+                    ]
+                },
+                {
+                    "text": "...They're all locked.",
+                    "answers": [
+                        "Fuck this. "
+                    ]
+                },
+                {
+                    "text": "Hello madam. Masks are not obligatory anymore. They're basically cosmetic.",
+                    "answers": [
+                        "Huh ? Okay.",
+                        "Too bad. "
+                    ]
+                },
+                {
+                    "text": "First time around ?",
+                    "answers": [
+                        "And hopefully not the last."
+                    ]
+                },
+                {
+                    "text": "Hold on. I got it. You're Jer.",
+                    "answers": [
+                        "That's me."
+                    ]
+                },
+                {
+                    "text": "No mask for you then. Ruth said that this was a \"face off\" event. She must be really fond of you.",
+                    "answers": [
+                        "...I don't think I would've taken one either way. "
+                    ]
+                },
+                {
+                    "text": "...",
+                    "answers": [
+                        "Hey man, doing any better ?",
+                        "(Leave)"
+                    ]
+                },
+                {
+                    "text": "...",
+                    "answers": [
+                        "Creep. "
+                    ]
+                },
+                {
+                    "text": "...",
+                    "answers": [
+                        "Ruth ?",
+                        "(Leave)"
+                    ]
+                },
+                {
+                    "text": "Why hello again. I don't think I thanked you properly.",
+                    "answers": [
+                        "Everything went well ?",
+                        "No need. (Leave)"
+                    ]
+                },
+                {
+                    "text": "Absolutely. We were just talking about that. And the gallery.",
+                    "answers": [
+                        "Guess I'll leave you two to it then."
+                    ]
+                },
+                {
+                    "text": "See you around.",
+                    "answers": [
+                        "(Leave)"
+                    ]
+                }
+            ],
+            "textExporterCinematics": [
+                {
+                    "ID": "RuthDeath",
+                    "lines": [
+                        "",
+                        "",
+                        "I feel horrible.",
+                        "",
+                        "",
+                        "Was I ever supposed to reach this place ?",
+                        "",
+                        "Huh ?",
+                        "",
+                        "",
+                        "This is wrong.",
+                        "So wrong.",
+                        "",
+                        "",
+                        "",
+                        "Please, please make this end.",
+                        "",
+                        "I'm barely myself anymore.",
+                        "",
+                        "",
+                        "You're right.",
+                        "I was selfish. Cruel, even. For hoping. ",
+                        "",
+                        "I'm so sorry. ",
+                        "",
+                        "",
+                        "It's okay. ",
+                        "For the time it lasted, I was glad.",
+                        "But we must now make things right.",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "It is now with clarity that I let go of my last regrets.",
+                        "",
+                        "One last dream. Before the end.",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "local": false
+                }
+            ],
+            "textExporterLocalCinematics": [],
+            "textExportInteractables": [
+                {
+                    "ObjectName": "SuitcasesInteractable (5)",
+                    "text": "A wide array of suitcases."
+                },
+                {
+                    "ObjectName": "SuitcasesInteractable",
+                    "text": "A wide array of suitcases."
+                },
+                {
+                    "ObjectName": "SuitcasesInteractable (2)",
+                    "text": "A wide array of suitcases."
+                },
+                {
+                    "ObjectName": "SuitcasesInteractable (4)",
+                    "text": "A wide array of suitcases."
+                },
+                {
+                    "ObjectName": "Elevator",
+                    "text": "No way. I've been looking forward to this."
+                },
+                {
+                    "ObjectName": "SuitcasesInteractable (3)",
+                    "text": "A wide array of suitcases."
+                },
+                {
+                    "ObjectName": "SuitcasesInteractable (1)",
+                    "text": "A wide array of suitcases."
+                },
+                {
+                    "ObjectName": "Door2",
+                    "text": "Locked, no keyhole. Definetly an elevator door."
+                }
+            ]
+        },
+        {
+            "sceneName": "LONGESTDAY_5",
+            "textExporterDialogues": [],
+            "textExporterCinematics": [],
+            "textExporterLocalCinematics": [
+                {
+                    "ID": "Ceremony",
+                    "lines": [
+                        "Shoot",
+                        "Shoot",
+                        "Shoot",
+                        "Shoot",
+                        "Shoot",
+                        "ShootUnZoom",
+                        "ShootUnZoom",
+                        "ShootUnZoom",
+                        "ShootUnZoom",
+                        "Title"
+                    ],
+                    "local": true
+                }
+            ],
+            "textExportInteractables": [
+                {
+                    "ObjectName": "EmptyCell (2)",
+                    "text": "Empty cells."
+                },
+                {
+                    "ObjectName": "Bed (4)",
+                    "text": "These are all the same."
+                },
+                {
+                    "ObjectName": "Bed (3)",
+                    "text": "Comfy."
+                },
+                {
+                    "ObjectName": "Bed (1)",
+                    "text": "Comfy."
+                },
+                {
+                    "ObjectName": "EmptyCell (5)",
+                    "text": "Empty cells."
+                },
+                {
+                    "ObjectName": "Bed (5)",
+                    "text": "Comfy."
+                },
+                {
+                    "ObjectName": "EmptyCell (1)",
+                    "text": "Empty cells."
+                },
+                {
+                    "ObjectName": "EmptyCell",
+                    "text": "Empty cells."
+                },
+                {
+                    "ObjectName": "JerCell",
+                    "text": "There is only one way out."
+                },
+                {
+                    "ObjectName": "Disgusting",
+                    "text": "Disgusting."
+                },
+                {
+                    "ObjectName": "EmptyCell (4)",
+                    "text": "Empty cells."
+                },
+                {
+                    "ObjectName": "EmptyCell (3)",
+                    "text": "Empty cells."
+                },
+                {
+                    "ObjectName": "Bed",
+                    "text": "Comfy."
+                },
+                {
+                    "ObjectName": "Door",
+                    "text": "..."
                 }
             ]
         }

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -24,7 +25,9 @@ public class AllTextExporter : EditorWindow
 
     //public string path = @"E:\Unity\ActiveProjects\BUTLERGUILLOTINE\AllText.txt";
     public string path;
-    
+
+    public string menuScene;
+
     public string[] scenes;
 
     int sceneCount;
@@ -41,6 +44,10 @@ public class AllTextExporter : EditorWindow
         EditorGUILayout.LabelField("Currently discriminates WriteComment() command from GameManger, asshole");
         EditorGUILayout.Space();
         EditorGUILayout.Space();
+
+        //Menu Scene select
+        EditorGUILayout.LabelField("Menu scene name");
+        menuScene = EditorGUILayout.TextField(menuScene);
 
         //Scene select
         sceneCount = Mathf.Max(0, EditorGUILayout.IntField("Scene number", sceneCount));
@@ -93,11 +100,15 @@ public class AllTextExporter : EditorWindow
     {
         //Init data variables
         wordCount = 0;
-        List<SceneTextContainer> containers = new List<SceneTextContainer>();
         List<TextExportItem> textExportItems = new List<TextExportItem>();
         List<TextExportDialogueBatch> textExportDialogueBatches = new List<TextExportDialogueBatch>();
 
+        //Init scene container variables
+        List<MenuSceneTextContainer> menuContainers = new List<MenuSceneTextContainer>();
+        List<SceneTextContainer> containers = new List<SceneTextContainer>();
+
         //Search for scenes
+        string menuScenePath = "EMPTY";
         List<string> scenePathsToSearch = new List<string>();
         string[] sceneGUIDs = AssetDatabase.FindAssets("t:Scene", new[] { "Assets/Scenes" });
 
@@ -105,20 +116,18 @@ public class AllTextExporter : EditorWindow
         {
             string scenePath = AssetDatabase.GUIDToAssetPath(guid);
 
-            string sceneName = SceneManager.GetSceneByPath(scenePath).name;
-
-            foreach (var c in scenePath)
-            {
-                sceneName += c;
-
-                if (c == '/')
-                    sceneName = "";
-            }
-
-            string[] split = sceneName.Split('.');
-
-            if (scenes.Contains(split[0]))
+            if (scenes.Contains(GetSceneNameFromPath(scenePath)))
                 scenePathsToSearch.Add(scenePath);
+            else if (GetSceneNameFromPath(scenePath) == menuScene)
+                menuScenePath = scenePath;
+        }
+
+        //Search menu scene
+        if (menuScenePath != "EMPTY")
+        {
+            List<TextExporterTextMeshPro> textExporterTextMeshPros = new List<TextExporterTextMeshPro>();
+            SearchSceneAsMenu(menuScenePath, textExporterTextMeshPros);
+            menuContainers.Add(new MenuSceneTextContainer(GetSceneNameFromPath(menuScenePath), textExporterTextMeshPros));
         }
 
         //Search scenes
@@ -130,11 +139,9 @@ public class AllTextExporter : EditorWindow
             List<TextExportObject> textExportInteractables = new List<TextExportObject>();
             List<TextExportObject> textExportDelegates = new List<TextExportObject>();
 
-            Scene scene = EditorSceneManager.OpenScene(scenePath);
+            SearchScene(scenePath, textExporterDialogues, textExporterCinematics, textExporterLocalCinematics, textExportInteractables, textExportDelegates);
 
-            SearchScene(textExporterDialogues, textExporterCinematics, textExporterLocalCinematics, textExportInteractables, textExportDelegates);
-
-            containers.Add(new SceneTextContainer(scene.name, textExporterDialogues, textExporterCinematics,
+            containers.Add(new SceneTextContainer(GetSceneNameFromPath(scenePath), textExporterDialogues, textExporterCinematics,
                 textExporterLocalCinematics, textExportInteractables));
 
             //GetSceneNameFromPath(scenePath)
@@ -144,7 +151,7 @@ public class AllTextExporter : EditorWindow
         SearchData(textExportItems, textExportDialogueBatches);
 
         //Package everything
-        AllTextContainer allData = new AllTextContainer(wordCount, new DataContainer(textExportItems, textExportDialogueBatches), containers);
+        AllTextContainer allData = new AllTextContainer(wordCount, new DataContainer(textExportItems, textExportDialogueBatches), menuContainers, containers);
 
         //Export to JSON
         var json = JsonUtility.ToJson(allData, true);
@@ -207,17 +214,11 @@ public class AllTextExporter : EditorWindow
         }
     }
 
-    private void GetData(List<TextExportItem> textExportItems, string[] interactionGUIDs)
-    {
-
-    }
-
-    void SearchScene(List<TextExporterDialogue> textExporterDialogues, List<TextExporterCinematic> textExporterCinematics, 
+    void SearchScene(string scenePath, List<TextExporterDialogue> textExporterDialogues, List<TextExporterCinematic> textExporterCinematics, 
         List<TextExporterCinematic> textExporterLocalCinematics, List<TextExportObject> textExportInteractables, List<TextExportObject> textExportDelegates)
     {
         //Open scene
-        //string scenePath = SceneManager.GetSceneByName(ScenePath).path;
-        //Scene scene = EditorSceneManager.OpenScene("Assets/Scenes/" + ScenePath + ".unity", OpenSceneMode.Single);
+        Scene scene = EditorSceneManager.OpenScene(scenePath);
 
         //Search for everything
         DialogueManager dialogueManager = FindObjectOfType<DialogueManager>();
@@ -312,7 +313,20 @@ public class AllTextExporter : EditorWindow
             wordCount += CountWords(door.LockedMessage);
         }
     }
+    void SearchSceneAsMenu(string scenePath, List<TextExporterTextMeshPro> textExporterTextMeshPros)
+    {
+        //Open scene
+        Scene scene = EditorSceneManager.OpenScene(scenePath);
 
+        TextMeshProUGUI[] texts = FindObjectsOfType<TextMeshProUGUI>();
+
+        foreach (var item in texts)
+        {
+            textExporterTextMeshPros.Add(new TextExporterTextMeshPro(item.gameObject.name, item.text));
+
+            wordCount += CountWords(item.text);
+        }
+    }
     int CountWords(string text)
     {
         int wordCount = 1;
@@ -344,19 +358,21 @@ public class AllTextExporter : EditorWindow
         }
     }
 
-    string GetSceneNameFromPath(string path)
+    string GetSceneNameFromPath(string scenePath)
     {
-        string SceneName = "";
+        string sceneName = SceneManager.GetSceneByPath(scenePath).name;
 
-        foreach (var c in path)
+        foreach (var c in scenePath)
         {
-            SceneName += c;
+            sceneName += c;
 
             if (c == '/')
-                SceneName = "";
+                sceneName = "";
         }
 
-        return SceneName;
+        string[] split = sceneName.Split('.');
+
+        return split[0];
     }
 }
 
@@ -366,13 +382,28 @@ public class AllTextContainer
 {
     public int globalWordCount;
     public DataContainer data;
+    public MenuSceneTextContainer[] menuScenes;
     public SceneTextContainer[] scenes;
 
-    public AllTextContainer(int global, DataContainer dataContainer, List<SceneTextContainer> containers)
+    public AllTextContainer(int global, DataContainer dataContainer, List<MenuSceneTextContainer> menuContainers, List<SceneTextContainer> containers)
     {
         globalWordCount = global;
+        menuScenes = menuContainers.ToArray();
         scenes = containers.ToArray();
         data = dataContainer;
+    }
+}
+
+[Serializable]
+public class MenuSceneTextContainer
+{
+    public string sceneName;
+    public TextExporterTextMeshPro[] textMeshPros;
+
+    public MenuSceneTextContainer(string sceneName, List<TextExporterTextMeshPro> textMeshPros)
+    {
+        this.sceneName = sceneName;
+        this.textMeshPros = textMeshPros.ToArray();
     }
 }
 
@@ -405,6 +436,19 @@ public class DataContainer
     {
         this.textExportItems = textExportItems.ToArray();
         this.textExportDialogueBatches = textExportDialogueBatches.ToArray();
+    }
+}
+
+[Serializable]
+public class TextExporterTextMeshPro
+{
+    public string objectName;
+    public string text;
+
+    public TextExporterTextMeshPro(string objectName, string text)
+    {
+        this.objectName = objectName;
+        this.text = text;
     }
 }
 
