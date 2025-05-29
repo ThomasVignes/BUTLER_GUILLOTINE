@@ -10,14 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72c0b439231fd234dafeb68b45f5e61a, type: 3}
-  m_Name: 1_Char_Butler
+  m_Name: 0_Char_Butler
   m_EditorClassIdentifier: 
   Name: Butler
   Nickname: 
   Pronoun: 2
   Special: 0
-  ControllerPrefab: {fileID: 0}
+  ControllerPrefab: {fileID: 5926033992594826728, guid: 89eb5803cf8649d45843707bacb58243, type: 3}
   Icon: {fileID: 0}
-  CharPuppets:
-  - ID: VN_Base
-    Prefab: {fileID: 5842237155790165566, guid: 41b0ce8cd8d20074dbe2d96c10419e55, type: 3}
+  CharPuppets: []
