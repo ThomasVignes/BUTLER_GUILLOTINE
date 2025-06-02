@@ -13,8 +13,10 @@ public class ChapterData : ScriptableObject
 
     [Header("Specific")]
     public List<Conditions> conditions = new List<Conditions>();
-    public List<Area> areas = new List<Area>();
 
     [Header("Inventory")]
     public Item[] items;
+
+    [Header("Comments")]
+    public CommentData CommentData;
 }

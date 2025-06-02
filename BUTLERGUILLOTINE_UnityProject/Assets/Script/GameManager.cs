@@ -12,6 +12,7 @@ using UnityEngine.SceneManagement;
 using Whumpus;
 using FMOD;
 using FMODUnity;
+using System.Net.Http;
 
 [System.Serializable]
 public class Conditions
@@ -743,7 +744,10 @@ public class GameManager : MonoBehaviour
             return;
 
         commentMode = true;
-        DialogueManager.WriteSpecific(text);
+
+        string comment = this.ChapterData.CommentData.GetCommentWithID(text);
+
+        DialogueManager.WriteSpecific(comment);
     }
 
     public void WriteComment(string text, CommentInteractable comment)

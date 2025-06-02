@@ -94,6 +94,54 @@ public class AllTextExporter : EditorWindow
 
             ExportDialogue(path, scenes);
         }
+
+        EditorGUILayout.Space();
+        if (GUILayout.Button("Test"))
+        {
+            string[] propertiesToTrack = new string[2] { "OnTrigger", "OnExititit" };
+
+            var dep = EventDependencyHunter.FindDependencies("WriteComment");
+
+            foreach (var item in dep)
+            {
+                Debug.Log(item.Owner);
+                SerializedObject so = new SerializedObject(item.Owner);
+                var property = so.GetIterator();
+
+                while (property.Next(true))
+                {
+                    //Debug.Log(property.name);
+
+                    if (propertiesToTrack.Contains(property.name))
+                    {
+                        SerializedProperty persistentCalls = so.FindProperty(property.name + ".m_PersistentCalls.m_Calls");
+
+                        if (persistentCalls.arraySize > 0)
+                        {
+                            for (int i = 0; i < persistentCalls.arraySize; ++i)
+                            {
+                                Debug.Log(persistentCalls.GetArrayElementAtIndex(i).propertyPath);
+
+                                //Find a way to get the method name instead of data index, maybe through findpropertyrelative ?
+
+                                Debug.Log(persistentCalls.GetArrayElementAtIndex(i).FindPropertyRelative("m_Arguments.m_StringArgument").stringValue);
+                            }
+                        }
+                    }
+                }
+                /*  
+                SerializedProperty persistentCalls = so.FindProperty("OnTrigger.m_PersistentCalls.m_Calls");
+
+                for (int i = 0; i < persistentCalls.arraySize; ++i)
+                {
+                    // in this example I'm just logging it
+                    Debug.Log(persistentCalls.GetArrayElementAtIndex(i).FindPropertyRelative("m_Arguments.m_StringArgument").stringValue);
+                }
+                */
+
+                break;
+            }
+        }
     }
 
     void ExportDialogue(string path, string[] scenes)
@@ -351,12 +399,25 @@ public class AllTextExporter : EditorWindow
         {
             if (unityEvent.GetPersistentMethodName(i) == "WriteComment")
             {
-                //Find arguments from here
             }
 
             //Debug.Log(unityEvent.GetPersistentMethodName(i));
         }
     }
+    /*
+    void SearchForEventArgument(GameObject go, UnityEvent unityEvent) 
+    {
+        //Find arguments from here
+        SerializedObject so = new SerializedObject(unityEven);
+        SerializedProperty persistentCalls = so.FindProperty("Find a generic way to serialize unityEvent" + "m_PersistentCalls.m_Calls");
+
+        for (int i = 0; i < persistentCalls.arraySize; ++i)
+        {
+            // in this example I'm just logging it
+            Debug.Log(persistentCalls.GetArrayElementAtIndex(i).FindPropertyRelative("m_Arguments.m_StringArgument").stringValue);
+        }
+    }
+    */
 
     string GetSceneNameFromPath(string scenePath)
     {

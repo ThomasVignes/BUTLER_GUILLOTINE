@@ -35,33 +35,6 @@ MonoBehaviour:
     Met: 0
   - Name: DiedToRuth
     Met: 1
-  areas:
-  - Name: Corridors
-    Music: {fileID: 0}
-    CopyrightFree: {fileID: 0}
-    Track:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    StepsVolume: 0
-    ImmuneExperimental: 0
-    OriginalVolume: 0
-  - Name: Ballroom
-    Music: {fileID: 0}
-    CopyrightFree: {fileID: 0}
-    Track:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    StepsVolume: 0
-    ImmuneExperimental: 0
-    OriginalVolume: 0
   items:
   - ID: Key_StaffRoom
     Name: Staff Room Key
@@ -103,3 +76,4 @@ MonoBehaviour:
     Equipped: 1
     Icon: {fileID: 0}
     Data: {fileID: 11400000, guid: 9ba0529238a522745a6c3a61debeac20, type: 2}
+  CommentData: {fileID: 11400000, guid: d5e59984fae9e0d46a051904a0083d58, type: 2}

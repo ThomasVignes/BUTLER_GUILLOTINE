@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -87,6 +89,26 @@ public class EventDependencyHunter : MonoBehaviour
         }
 
         return infos;
+    }
+
+    public static IEnumerable<SerializedProperty> GetPropertiesWithAttribute<TAttribute>(SerializedObject serializedObject)
+    {
+        var targetObjectType = serializedObject.targetObject.GetType();
+        var property = serializedObject.GetIterator();
+
+        while (property.Next(true))
+        {
+            var field = targetObjectType.GetField(property.name);
+
+            Debug.Log(field);
+
+            if (field != null && Attribute.IsDefined(field, typeof(TAttribute)))
+            {
+                Debug.Log(property);
+
+                yield return property.Copy();
+            }
+        }
     }
 
 }
