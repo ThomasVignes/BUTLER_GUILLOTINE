@@ -24,6 +24,7 @@ public class EventDependencyHunter : MonoBehaviour
 
                 var info = new EventReferenceInfo();
                 info.Owner = d.Owner;
+                info.Event = d.Event;
 
                 foreach (var i in indexes)
                 {
@@ -74,6 +75,7 @@ public class EventDependencyHunter : MonoBehaviour
                 int count = unityEvent.GetPersistentEventCount();
                 var info = new EventReferenceInfo();
                 info.Owner = e.Key;
+                info.Event = unityEvent;
 
                 for (int i = 0; i < count; i++)
                 {
@@ -116,6 +118,7 @@ public class EventDependencyHunter : MonoBehaviour
 public class EventReferenceInfo
 {
     public MonoBehaviour Owner { get; set; }
+    public UnityEventBase Event { get; set; }
     public List<MonoBehaviour> Listeners { get; set; } = new List<MonoBehaviour>();
     public List<string> MethodNames { get; set; } = new List<string>();
 }

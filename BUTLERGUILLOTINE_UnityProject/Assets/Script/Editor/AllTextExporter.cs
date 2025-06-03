@@ -41,8 +41,6 @@ public class AllTextExporter : EditorWindow
         EditorGUILayout.LabelField("AllTextExporter exports a JSON file containing all dialogue written within the butler engine.");
         EditorGUILayout.Space();
         EditorGUILayout.Space();
-        EditorGUILayout.LabelField("Currently discriminates WriteComment() command from GameManger, asshole");
-        EditorGUILayout.Space();
         EditorGUILayout.Space();
 
         //Menu Scene select
@@ -98,49 +96,66 @@ public class AllTextExporter : EditorWindow
         EditorGUILayout.Space();
         if (GUILayout.Button("Test"))
         {
+            int count = 0;
+
             string[] propertiesToTrack = new string[2] { "OnTrigger", "OnExititit" };
 
-            var dep = EventDependencyHunter.FindDependencies("WriteComment");
+            string methodName = "WriteComment";
 
-            foreach (var item in dep)
+            List<TextExporterDelegateObject> delegateObjects = new List<TextExporterDelegateObject>();
+
+
+
+            var dep = EventDependencyHunter.FindDependencies(methodName);
+
+            foreach (var eventRef in dep)
             {
-                Debug.Log(item.Owner);
-                SerializedObject so = new SerializedObject(item.Owner);
+                //Setup Values
+                int instanceID = int.MaxValue;
+                string propertyPath = "NONE";
+                int dataIndex = int.MaxValue;
+                string text = "NONE";
+
+
+                SerializedObject so = new SerializedObject(eventRef.Owner);
                 var property = so.GetIterator();
+
+
+                instanceID = eventRef.Owner.GetInstanceID();
+                propertyPath = property.propertyPath;
+
 
                 while (property.Next(true))
                 {
-                    //Debug.Log(property.name);
+                    SerializedProperty persistentCalls = so.FindProperty(property.name + ".m_PersistentCalls.m_Calls");
 
-                    if (propertiesToTrack.Contains(property.name))
+                    if (persistentCalls != null && persistentCalls.arraySize > 0)
                     {
-                        SerializedProperty persistentCalls = so.FindProperty(property.name + ".m_PersistentCalls.m_Calls");
-
-                        if (persistentCalls.arraySize > 0)
+                        for (int i = 0; i < persistentCalls.arraySize; ++i)
                         {
-                            for (int i = 0; i < persistentCalls.arraySize; ++i)
+                            if (eventRef.Event.GetPersistentMethodName(i) == methodName)
                             {
-                                Debug.Log(persistentCalls.GetArrayElementAtIndex(i).propertyPath);
+                                dataIndex = i;
+                                text = persistentCalls.GetArrayElementAtIndex(i).FindPropertyRelative("m_Arguments.m_StringArgument").stringValue;
 
-                                //Find a way to get the method name instead of data index, maybe through findpropertyrelative ?
+                                delegateObjects.Add(new TextExporterDelegateObject(instanceID, propertyPath, methodName, dataIndex, text));
 
+                                /*
+                                Debug.Log(i);
+                                Debug.Log(eventRef.Event.GetPersistentMethodName(i));
                                 Debug.Log(persistentCalls.GetArrayElementAtIndex(i).FindPropertyRelative("m_Arguments.m_StringArgument").stringValue);
+
+                                count++;
+                                */
+
+                                CountWords(text);
                             }
                         }
                     }
                 }
-                /*  
-                SerializedProperty persistentCalls = so.FindProperty("OnTrigger.m_PersistentCalls.m_Calls");
-
-                for (int i = 0; i < persistentCalls.arraySize; ++i)
-                {
-                    // in this example I'm just logging it
-                    Debug.Log(persistentCalls.GetArrayElementAtIndex(i).FindPropertyRelative("m_Arguments.m_StringArgument").stringValue);
-                }
-                */
-
-                break;
             }
+
+            Debug.Log(count);
         }
     }
 
@@ -185,12 +200,12 @@ public class AllTextExporter : EditorWindow
             List<TextExporterCinematic> textExporterCinematics = new List<TextExporterCinematic>();
             List<TextExporterCinematic> textExporterLocalCinematics = new List<TextExporterCinematic>();
             List<TextExportObject> textExportInteractables = new List<TextExportObject>();
-            List<TextExportObject> textExportDelegates = new List<TextExportObject>();
+            List<TextExporterDelegateObject> textExportDelegates = new List<TextExporterDelegateObject>();
 
             SearchScene(scenePath, textExporterDialogues, textExporterCinematics, textExporterLocalCinematics, textExportInteractables, textExportDelegates);
 
             containers.Add(new SceneTextContainer(GetSceneNameFromPath(scenePath), textExporterDialogues, textExporterCinematics,
-                textExporterLocalCinematics, textExportInteractables));
+                textExporterLocalCinematics, textExportInteractables, textExportDelegates));
 
             //GetSceneNameFromPath(scenePath)
         }
@@ -263,7 +278,7 @@ public class AllTextExporter : EditorWindow
     }
 
     void SearchScene(string scenePath, List<TextExporterDialogue> textExporterDialogues, List<TextExporterCinematic> textExporterCinematics, 
-        List<TextExporterCinematic> textExporterLocalCinematics, List<TextExportObject> textExportInteractables, List<TextExportObject> textExportDelegates)
+        List<TextExporterCinematic> textExporterLocalCinematics, List<TextExportObject> textExportInteractables, List<TextExporterDelegateObject> textExporterDelegateObjects)
     {
         //Open scene
         Scene scene = EditorSceneManager.OpenScene(scenePath);
@@ -276,11 +291,11 @@ public class AllTextExporter : EditorWindow
         Door[] doors = FindObjectsOfType<Door>();
 
         //Get delegate objects (DOESNT WORK FOR NOW)
-        var Delegates = EventDependencyHunter.FindDependencies("WriteComment");
+        var delegs = GetDelegateObjectsFromScene();
 
-        foreach (var item in Delegates)
+        foreach (var item in delegs)
         {
-            textExportDelegates.Add(new TextExportObject(item.Owner.gameObject.name, "text"));
+            textExporterDelegateObjects.Add(item);
         }
 
         //Get content from dialogueManager
@@ -361,6 +376,70 @@ public class AllTextExporter : EditorWindow
             wordCount += CountWords(door.LockedMessage);
         }
     }
+
+    TextExporterDelegateObject[] GetDelegateObjectsFromScene()
+    {
+        int count = 0;
+
+        string methodName = "WriteComment";
+
+        List<TextExporterDelegateObject> delegateObjects = new List<TextExporterDelegateObject>();
+
+
+        var dep = EventDependencyHunter.FindDependencies(methodName);
+
+        foreach (var eventRef in dep)
+        {
+            //Setup Values
+            int instanceID = int.MaxValue;
+            string propertyPath = "NONE";
+            int dataIndex = int.MaxValue;
+            string text = "NONE";
+
+
+            SerializedObject so = new SerializedObject(eventRef.Owner);
+            var property = so.GetIterator();
+
+
+            instanceID = eventRef.Owner.GetInstanceID();
+            propertyPath = property.propertyPath;
+
+
+            while (property.Next(true))
+            {
+                SerializedProperty persistentCalls = so.FindProperty(property.name + ".m_PersistentCalls.m_Calls");
+
+                if (persistentCalls != null && persistentCalls.arraySize > 0)
+                {
+                    for (int i = 0; i < persistentCalls.arraySize; ++i)
+                    {
+                        if (i < eventRef.Event.GetPersistentEventCount() && eventRef.Event.GetPersistentMethodName(i) == methodName)
+                        {
+                            dataIndex = i;
+                            text = persistentCalls.GetArrayElementAtIndex(i).FindPropertyRelative("m_Arguments.m_StringArgument").stringValue;
+
+                            delegateObjects.Add(new TextExporterDelegateObject(instanceID, propertyPath, methodName, dataIndex, text));
+
+                            
+                            Debug.Log(i);
+                            Debug.Log(eventRef.Event.GetPersistentMethodName(i));
+                            Debug.Log(persistentCalls.GetArrayElementAtIndex(i).FindPropertyRelative("m_Arguments.m_StringArgument").stringValue);
+
+                            count++;
+                            
+
+                            CountWords(text);
+                        }
+                    }
+                }
+            }
+        }
+
+        Debug.Log(count);
+
+        return delegateObjects.ToArray();
+    }
+
     void SearchSceneAsMenu(string scenePath, List<TextExporterTextMeshPro> textExporterTextMeshPros)
     {
         //Open scene
@@ -476,14 +555,16 @@ public class SceneTextContainer
     public TextExporterCinematic[] textExporterCinematics;
     public TextExporterCinematic[] textExporterLocalCinematics;
     public TextExportObject[] textExportInteractables;
+    public TextExporterDelegateObject[] textExportDelegates;
 
-    public SceneTextContainer(string scName, List<TextExporterDialogue> d, List<TextExporterCinematic> c, List<TextExporterCinematic> lc, List<TextExportObject> i)
+    public SceneTextContainer(string scName, List<TextExporterDialogue> d, List<TextExporterCinematic> c, List<TextExporterCinematic> lc, List<TextExportObject> i, List<TextExporterDelegateObject> dob)
     {
         sceneName = scName;
         textExporterDialogues = d.ToArray();
         textExporterCinematics = c.ToArray();
         textExporterLocalCinematics = lc.ToArray();
         textExportInteractables = i.ToArray();
+        textExportDelegates = dob.ToArray();
     }
 }
 
@@ -510,6 +591,25 @@ public class TextExporterTextMeshPro
     {
         this.objectName = objectName;
         this.text = text;
+    }
+}
+
+[Serializable]
+public class TextExporterDelegateObject
+{
+    public int InstanceID;
+    //public string PropertyPath;
+    public string CommandName;
+    public int DataIndex;
+    public string Text;
+
+    public TextExporterDelegateObject(int i, string p, string c, int d, string text)
+    {
+        InstanceID = i;
+        //PropertyPath = p;
+        CommandName = c;
+        DataIndex = d;
+        Text = text;
     }
 }
 
