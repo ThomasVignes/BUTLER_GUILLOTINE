@@ -15,7 +15,8 @@ MonoBehaviour:
   Name: CEREMONY
   Number: 1
   StartCharacter: {fileID: 11400000, guid: c1c177c8dd114094a9ebff2ecad45f52, type: 2}
-  OtherCharacters: []
+  OtherCharacters:
+  - {fileID: 11400000, guid: f143c92b8559be5488f321c8e8bd4543, type: 2}
   conditions:
   - Name: HangmanFound
     Met: 0

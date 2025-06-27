@@ -662,6 +662,16 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void PlayerMoveTo(Transform spot)
+    {
+        PlayerMoveTo(spot.position);
+    }
+
+    public void PlayerMoveTo(Vector3 spot)
+    {
+        player.SetDestination(spot);
+    }
+
     private void CursorHover()
     {
         RaycastHit hit;
@@ -745,9 +755,9 @@ public class GameManager : MonoBehaviour
 
         commentMode = true;
 
-        string comment = this.ChapterData.CommentData.GetCommentWithID(text);
+        //string comment = this.ChapterData.CommentData.GetCommentWithID(text);
 
-        DialogueManager.WriteSpecific(comment);
+        DialogueManager.WriteSpecific(text);
     }
 
     public void WriteComment(string text, CommentInteractable comment)
@@ -1052,5 +1062,10 @@ public class GameManager : MonoBehaviour
         {
             PartnerManager.Partner.transform.root.gameObject.SetActive(false);
         }
+    }
+
+    public void TryRealityShift(string code)
+    {
+        
     }
 }

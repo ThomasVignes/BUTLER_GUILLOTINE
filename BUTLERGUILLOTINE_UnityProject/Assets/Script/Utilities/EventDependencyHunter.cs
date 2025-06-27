@@ -7,6 +7,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
+#if UNITY_EDITOR
 public class EventDependencyHunter : MonoBehaviour
 {
     private static List<EventReferenceInfo> dependencies;
@@ -122,3 +123,4 @@ public class EventReferenceInfo
     public List<MonoBehaviour> Listeners { get; set; } = new List<MonoBehaviour>();
     public List<string> MethodNames { get; set; } = new List<string>();
 }
+#endif
