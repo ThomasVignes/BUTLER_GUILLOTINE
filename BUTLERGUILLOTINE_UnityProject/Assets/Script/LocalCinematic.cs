@@ -39,6 +39,7 @@ public class LocalCinematic : MonoBehaviour
 
     [Header("Experimental")]
     [SerializeField] bool lastCinematic;
+    [SerializeField] bool noEndingBlackScreen;
 
     GameManager gameManager;
 
@@ -155,10 +156,13 @@ public class LocalCinematic : MonoBehaviour
 
         cinematicDone = true;
 
-        if (instaFade)
-            gameManager.ScreenEffects.FadeTo(1, 0.001f);
-        else
-            gameManager.ScreenEffects.FadeTo(1, 0.2f);
+        if (!noEndingBlackScreen)
+        {
+            if (instaFade)
+                gameManager.ScreenEffects.FadeTo(1, 0.001f);
+            else
+                gameManager.ScreenEffects.FadeTo(1, 0.2f);
+        }
 
         yield return new WaitForSeconds(0.2f);
 
@@ -167,9 +171,11 @@ public class LocalCinematic : MonoBehaviour
 
         OnEndBeforeBlackScreen?.Invoke();
 
-        yield return new WaitForSeconds(current.EndBlackScreenDuration);
-
-        gameManager.ScreenEffects.FadeTo(0, 1f);
+        if (!noEndingBlackScreen)
+        {
+            yield return new WaitForSeconds(current.EndBlackScreenDuration);
+            gameManager.ScreenEffects.FadeTo(0, 1f);
+        }
 
         CloseCinematic(gameManager);
     }
