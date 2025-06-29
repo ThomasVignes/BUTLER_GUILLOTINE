@@ -7,6 +7,7 @@ using UnityEngine.Rendering;
 public class ProximitySound : MonoBehaviour
 {
     [Header("Values")]
+    [SerializeField] bool autoEnable;
     [SerializeField] float maxRange;
     [SerializeField] float minRange;
     [SerializeField] AnimationCurve falloff;
@@ -20,6 +21,12 @@ public class ProximitySound : MonoBehaviour
     Transform playerPos;
 
     bool running;
+
+    private void Start()
+    {
+        if (autoEnable)
+            SetActive(true);
+    }
 
     private void Update()
     {
