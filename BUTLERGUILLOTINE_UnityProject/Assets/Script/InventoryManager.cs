@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private Transform iconParent;
     [SerializeField] private GameObject iconPrefab;
     [SerializeField] GameObject canvas;
+    [SerializeField] TextMeshProUGUI notification;
 
     GameManager gameManager;
 
@@ -26,6 +28,29 @@ public class InventoryManager : MonoBehaviour
 
             this.items[i] = new Item(it.ID, it.Name, it.Sprite, it.LimitedUses, it.Uses, it.Data);
         }
+
+        notification.DOFade(0, 0.01f);
+    }
+
+    public void ShowNotification(string itemName)
+    {
+        if (itemName == "")
+            itemName = "item";
+
+        notification.text = "picked up new item";
+        notification.DOFade(1, 0.5f).OnComplete(() => StartCoroutine(StayThenFade()));
+    }
+
+    IEnumerator StayThenFade()
+    {
+        yield return new WaitForSeconds(2);
+
+        notification.DOFade(0, 0.5f);
+    }
+
+    public void InstaHideNotification()
+    {
+        notification.DOFade(0, 0.001f);
     }
 
     public void HideCanvas(bool hidden)
@@ -70,6 +95,8 @@ public class InventoryManager : MonoBehaviour
         item.Equipped = true;
 
         gameManager.Player.InventoryController.AddItem(item.Data);
+
+        ShowNotification(item.Name);
     }
 
     public void RemoveItem(string name)

@@ -437,6 +437,8 @@ public class GameManager : MonoBehaviour
             {
                 player.Pause();
                 player.InventoryController.SetActive(true, true);
+
+                InventoryManager.InstaHideNotification();
             }
         }
 
