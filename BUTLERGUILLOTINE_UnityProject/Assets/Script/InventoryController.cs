@@ -32,7 +32,7 @@ public class InventoryController : MonoBehaviour
 
     GameManager gameManager;
 
-    bool speaking;
+    bool speaking, skip;
 
     InventoryItem selectedItem, equippedItem;
 
@@ -126,7 +126,20 @@ public class InventoryController : MonoBehaviour
             return;
 
         if (speaking)
+        {
+            if (!skip)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    if (!waitingForLine)
+                        skip = true;
+                    else
+                        SkipInspect();
+                }
+            }
+
             return;
+        }
 
         RaycastHit hit;
 
@@ -226,7 +239,6 @@ public class InventoryController : MonoBehaviour
 
         textUI.SetActive(true);
         characterAnimator.SetBool("Speak", true);
-        speaking = true;
 
         if (examine != null)
             StopCoroutine(examine);
@@ -244,42 +256,98 @@ public class InventoryController : MonoBehaviour
         speaking = false;
     }
 
-    IEnumerator C_Inspect(InspectLine[] lines)
+    bool waitingForLine;
+    int lineIndex;
+    Coroutine writeLine;
+
+    InspectLine[] lines;
+
+    IEnumerator C_Inspect(InspectLine[] l)
     {
         UnselectCurrent();
 
         dialogue.text = "";
 
+        lines = l;
+        lineIndex = 0;
+
         yield return new WaitForSeconds(0.1f);
 
-        foreach (var line in lines)
+        speaking = true;
+
+
+        if (lineIndex < lines.Length)
+            writeLine = StartCoroutine(C_WriteLine(lines[lineIndex]));
+        else
+            EndInspect();
+    }
+
+    void SkipInspect()
+    {
+        /*
+        if (skip)
+            return;
+        */
+
+        waitingForLine = false;
+
+        StopCoroutine(writeLine);
+
+        lineIndex++;
+
+        if (lineIndex < lines.Length)
+            writeLine = StartCoroutine(C_WriteLine(lines[lineIndex]));
+        else
+            EndInspect();
+    }
+
+    IEnumerator C_WriteLine(InspectLine line)
+    {
+        skip = false;
+
+        var text = line.Text;
+
+        dialogue.text = "";
+
+        char last = 'a';
+
+        foreach (char c in text)
         {
-            var text = line.Text;
+            dialogue.text += c;
 
-            dialogue.text = "";
+            EffectsManager.Instance.audioManager.Play("SmallClick");
 
-            char last = 'a';
+            yield return new WaitForSeconds(delayBetweenLetters);
 
-            foreach (char c in text)
-            {
-                dialogue.text += c;
-
-                EffectsManager.Instance.audioManager.Play("SmallClick");
-
+            /*
+            if (c == '.' && last != c)
                 yield return new WaitForSeconds(delayBetweenLetters);
+            */
 
-                /*
-                if (c == '.' && last != c)
-                    yield return new WaitForSeconds(delayBetweenLetters);
-                */
+            last = c;
 
-                last = c;
+            if (skip)
+            {
+                skip = false;
+                dialogue.text = text;
+                break;
             }
-
-            yield return new WaitForSeconds(line.Duration);
         }
 
-        EndInspect();
+
+        waitingForLine = true;
+
+        yield return new WaitForSeconds(line.Duration);
+
+        waitingForLine = false;
+
+        
+        lineIndex++;
+
+        if (lineIndex < lines.Length)
+            writeLine = StartCoroutine(C_WriteLine(lines[lineIndex]));
+        else
+            EndInspect();
     }
 
     public void AddItem(ItemData data)
