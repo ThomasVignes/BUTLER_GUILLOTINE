@@ -9,6 +9,7 @@ public class ItemData : ScriptableObject
     public string ID;
     public string Name;
     public Sprite Sprite;
+    public bool Equippable;
     public bool LimitedUses;
     public int Uses;
     [HideInInspector] public bool Equipped;

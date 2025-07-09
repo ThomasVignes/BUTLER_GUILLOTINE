@@ -16,6 +16,8 @@ public class InventoryManager : MonoBehaviour
 
     GameManager gameManager;
 
+    string currentItemID;
+
     public void Init(GameManager gm, Item[] items)
     {
         gameManager = gm;
@@ -26,7 +28,7 @@ public class InventoryManager : MonoBehaviour
         {
             var it = items[i];
 
-            this.items[i] = new Item(it.ID, it.Name, it.Sprite, it.LimitedUses, it.Uses, it.Data);
+            this.items[i] = new Item(it.Data);
         }
 
         notification.DOFade(0, 0.01f);
@@ -62,7 +64,7 @@ public class InventoryManager : MonoBehaviour
     {
         Item item = Array.Find(items, e => e.ID == name);
 
-        if (item == null || !item.Equipped)
+        if (item == null || !item.InInventory)
             return;
 
         if (!item.LimitedUses)
@@ -73,54 +75,87 @@ public class InventoryManager : MonoBehaviour
         if (item.Uses <= 0)
         {
             //Destroy(item.Icon);
-            item.Equipped = false;
+            item.InInventory = false;
             gameManager.Player.InventoryController.RemoveItem(item.Data);
         }
     }
 
-    public void EquipItem(string name)
+    public void Equip(InventoryItem invItem)
     {
-        Item item = Array.Find(items, e => e.ID == name);
+        var ID = invItem.Data.ID;
+
+        Item item = Array.Find(items, e => e.ID == ID);
 
         if (item == null || item.Equipped)
             return;
 
-        /*
+
+        if (currentItemID != "")
+            RemoveItem(currentItemID);
+
         GameObject go = Instantiate(iconPrefab, iconParent);
         go.GetComponent<Image>().sprite = item.Sprite;
         go.GetComponentInChildren<TextMeshProUGUI>().text = item.Name;
         item.Icon = go;
-        */
 
         item.Equipped = true;
 
-        gameManager.Player.InventoryController.AddItem(item.Data);
+        currentItemID = item.ID;
+    }
 
-        ShowNotification(item.Name);
+    public void Unequip(InventoryItem invItem)
+    {
+        var ID = invItem.Data.ID;
+
+        Item item = Array.Find(items, e => e.ID == ID);
+
+        if (item == null || !item.Equipped)
+            return;
+
+
+        Destroy(item.Icon);
+        item.Equipped = false;
+
+        currentItemID = "";
     }
 
     public void RemoveItem(string name)
     {
         Item item = Array.Find(items, e => e.ID == name);
 
-        if (item == null || !item.Equipped)
+        if (item == null || !item.InInventory)
             return;
 
-        //Destroy(item.Icon);
-        //item.Equipped = false;
 
-        //gameManager.Player.InventoryController.RemoveItem(item.Data);
+        Destroy(item.Icon);
+        item.Equipped = false;
+
+        currentItemID = "";
+    }
+
+    public void EquipItem(string name)
+    {
+        Item item = Array.Find(items, e => e.ID == name);
+
+        if (item == null || item.InInventory)
+            return;
+
+        item.InInventory = true;
+
+        gameManager.Player.InventoryController.AddItem(item.Data);
+
+        ShowNotification(item.Name);
     }
 
     public void TrueRemoveItem(string name)
     {
         Item item = Array.Find(items, e => e.ID == name);
 
-        if (item == null || !item.Equipped)
+        if (item == null || !item.InInventory)
             return;
 
         //Destroy(item.Icon);
-        item.Equipped = false;
+        item.InInventory = false;
 
         gameManager.Player.InventoryController.RemoveItem(item.Data);
     }
@@ -129,22 +164,23 @@ public class InventoryManager : MonoBehaviour
 [System.Serializable]
 public class Item
 {
-    public string ID;
-    public string Name;
-    public Sprite Sprite;
-    public bool LimitedUses;
-    public int Uses;
+    [HideInInspector] public string ID;
+    [HideInInspector] public string Name;
+    [HideInInspector] public Sprite Sprite;
+    [HideInInspector] public bool LimitedUses;
+    [HideInInspector] public int Uses;
     [HideInInspector] public bool Equipped;
+    [HideInInspector] public bool InInventory;
     [HideInInspector] public GameObject Icon;
     public ItemData Data;
 
-    public Item(string id, string name, Sprite sprite, bool limitedUses, int uses, ItemData data)
+    public Item(ItemData data)
     {
-        ID = id;
-        Name = name;
-        Sprite = sprite;
-        LimitedUses = limitedUses;
-        Uses = uses;
         Data = data;
+        ID = data.ID;
+        Name = data.Name;
+        Sprite = data.Sprite;
+        LimitedUses = data.LimitedUses;
+        Uses = data.Uses;
     }
 }

@@ -8,9 +8,13 @@ public class InventoryItem : Interactable
 
     public InspectLine[] Inspect { get { return data.Inspect; } }
     public ItemData Data { get { return data; } }
+    public ItemSpot ItemSpot { get { return spot; } }
 
-    public void Init(ItemData d)
+    private ItemSpot spot;
+
+    public void Init(ItemData d, ItemSpot s)
     {
         data = d;
+        spot = s;
     }
 }

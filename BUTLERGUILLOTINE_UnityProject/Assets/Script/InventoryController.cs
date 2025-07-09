@@ -28,11 +28,13 @@ public class InventoryController : MonoBehaviour
 
     Quaternion originalRotation, lookRotation;
 
-    Coroutine activeDelay, inspect;
+    Coroutine activeDelay, examine;
 
     GameManager gameManager;
 
     bool speaking;
+
+    InventoryItem selectedItem, equippedItem;
 
     private void Awake()
     {
@@ -48,6 +50,11 @@ public class InventoryController : MonoBehaviour
             SetActive(true, true);
         else
             SetActive(false, false);
+
+        foreach (var item in itemSpots)
+        {
+            item.ItemUI.Init(this);
+        }
     }
 
     public void Init(GameManager gm)
@@ -67,10 +74,14 @@ public class InventoryController : MonoBehaviour
     {
         if (speaking)
         {
-            if (inspect != null)
-                StopCoroutine(inspect);
+            if (examine != null)
+                StopCoroutine(examine);
 
             EndInspect();
+        }
+        else
+        {
+            UnselectCurrent();
         }
 
         if (active)
@@ -142,25 +153,85 @@ public class InventoryController : MonoBehaviour
 
                 if (item != null)
                 {
-                    Inspect(item);
+                    if (selectedItem == null || selectedItem != item)
+                        Select(item);
+                    else
+                        UnselectCurrent();
                 }
             }
         }
     }
 
-    public void Inspect(InventoryItem item)
+    void UnselectCurrent()
+    {
+        if (selectedItem == null)
+            return;
+
+        selectedItem.ItemSpot.ItemUI.Show(false);
+        selectedItem = null;
+    }
+
+    public void Select(InventoryItem item)
+    {
+        UnselectCurrent();
+
+        selectedItem = item;
+
+        item.ItemSpot.ItemUI.Show(true);
+    }
+
+    public void EquipItem()
+    {
+        if (equippedItem != null)
+        {
+            if (selectedItem == equippedItem)
+            {
+                UnequipSelected();
+                return;
+            }
+            else
+            {
+                GameManager.Instance.InventoryManager.Unequip(equippedItem);
+                equippedItem.ItemSpot.ItemUI.UpdateEquipText(false);
+            }
+        }
+
+        EquipSelected();
+    }
+
+    void EquipSelected()
+    {
+        GameManager.Instance.InventoryManager.Equip(selectedItem);
+        selectedItem.ItemSpot.ItemUI.UpdateEquipText(true);
+
+        equippedItem = selectedItem;
+
+    }
+
+    void UnequipSelected()
+    {
+        GameManager.Instance.InventoryManager.Unequip(selectedItem);
+        selectedItem.ItemSpot.ItemUI.UpdateEquipText(false);
+
+        equippedItem = null;
+    }
+
+    public void ExamineSelected()
     {
         if (speaking)
+            return;
+
+        if (selectedItem == null)
             return;
 
         textUI.SetActive(true);
         characterAnimator.SetBool("Speak", true);
         speaking = true;
 
-        if (inspect != null)
-            StopCoroutine(inspect);
+        if (examine != null)
+            StopCoroutine(examine);
 
-        inspect = StartCoroutine(C_Inspect(item.Inspect));
+        examine = StartCoroutine(C_Inspect(selectedItem.Inspect));
     }
 
     public void EndInspect()
@@ -175,6 +246,8 @@ public class InventoryController : MonoBehaviour
 
     IEnumerator C_Inspect(InspectLine[] lines)
     {
+        UnselectCurrent();
+
         dialogue.text = "";
 
         yield return new WaitForSeconds(0.1f);
@@ -231,10 +304,12 @@ public class InventoryController : MonoBehaviour
         itemInteractable.transform.localPosition = Vector3.zero;
         itemInteractable.transform.localRotation = Quaternion.identity;
 
-        itemInteractable.GetComponent<InventoryItem>().Init(data);
+        itemInteractable.GetComponent<InventoryItem>().Init(data, spot);
 
         spot.Instance = itemInteractable.GetComponent<InventoryItem>();
         spot.Occupied = true;
+        spot.ItemUI.UpdateName(data.Name);
+        spot.ItemUI.ToggleEquippable(data.Equippable);
     }
 
     public void RemoveItem(ItemData data) 
@@ -256,4 +331,5 @@ public class ItemSpot
     public bool Occupied;
     public Transform Spot;
     public InventoryItem Instance;
+    public ItemUI ItemUI;
 }
