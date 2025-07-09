@@ -27533,14 +27533,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: ERIC_INVENTORY
       objectReference: {fileID: 0}
-    - target: {fileID: 5534330131660528758, guid: b7cd42c80f0594b45947878b0784daee, type: 3}
-      propertyPath: startItems.Array.size
-      value: 1
+    - target: {fileID: 812794091829448757, guid: b7cd42c80f0594b45947878b0784daee, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: NaN
       objectReference: {fileID: 0}
-    - target: {fileID: 5534330131660528758, guid: b7cd42c80f0594b45947878b0784daee, type: 3}
-      propertyPath: startItems.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: d5544948ce124e44d98951db7504cceb, type: 2}
+    - target: {fileID: 812794091829448757, guid: b7cd42c80f0594b45947878b0784daee, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: NaN
+      objectReference: {fileID: 0}
+    - target: {fileID: 812794091829448757, guid: b7cd42c80f0594b45947878b0784daee, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: NaN
+      objectReference: {fileID: 0}
+    - target: {fileID: 812794091829448757, guid: b7cd42c80f0594b45947878b0784daee, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: NaN
+      objectReference: {fileID: 0}
+    - target: {fileID: 812794091829448757, guid: b7cd42c80f0594b45947878b0784daee, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: NaN
+      objectReference: {fileID: 0}
+    - target: {fileID: 812794091829448757, guid: b7cd42c80f0594b45947878b0784daee, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: NaN
+      objectReference: {fileID: 0}
     - target: {fileID: 7827037226417386463, guid: b7cd42c80f0594b45947878b0784daee, type: 3}
       propertyPath: m_RootOrder
       value: 5
