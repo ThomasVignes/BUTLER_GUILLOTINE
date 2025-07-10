@@ -6,21 +6,32 @@ using UnityEngine.Events;
 
 public class Door : Interactable
 {
+    [Header("Values")]
     public bool StartOpen;
-
     [SerializeField] private string lockedMessage;
+    [SerializeField] bool reversedOpen;
+    public bool CanOpen;
+
+    [Header("Unlocking")]
+    public bool InstaUnlock = true;
+    [SerializeField] string keyID;
+
+    [Header("References")]
     [SerializeField] private Animator animator;
 
-    public UnityEvent OnOpen, OnUnlock;
+    [Header("Events")]
+    public UnityEvent OnOpen;
+    public UnityEvent OnUnlock;
 
-    [SerializeField] bool reversedOpen;
 
-    public bool CanOpen;
+
 
     [Header("Experimental")]
     public bool UpdateOnEnable;
 
     private bool isOpen;
+
+    bool unlocked;
 
     public string LockedMessage { get { return lockedMessage; } set {  lockedMessage = value; } }
 
@@ -31,6 +42,20 @@ public class Door : Interactable
 
     protected override void InteractEffects(Character character)
     {
+        if (keyID != "" && !unlocked)
+        {
+            if (keyID == GameManager.Instance.EquippedItemID)
+            {
+                if (InstaUnlock)
+                    Unlock();
+                else
+                {
+                    Unlock();
+                    return;
+                }
+            }
+        }
+
         if (CanOpen)
         {
             if (!isOpen)
@@ -83,6 +108,8 @@ public class Door : Interactable
 
     public void Unlock()
     {
+        unlocked = true;
+
         CanOpen = true;
 
         OnUnlock?.Invoke();

@@ -4626,6 +4626,10 @@ MonoBehaviour:
   interactionSpot: {fileID: 1905568029}
   StartOpen: 0
   lockedMessage: Its completely stuck.
+  reversedOpen: 0
+  CanOpen: 0
+  InstaUnlock: 1
+  keyID: 
   animator: {fileID: 77305001}
   OnOpen:
     m_PersistentCalls:
@@ -4633,8 +4637,6 @@ MonoBehaviour:
   OnUnlock:
     m_PersistentCalls:
       m_Calls: []
-  reversedOpen: 0
-  CanOpen: 0
   UpdateOnEnable: 0
 --- !u!4 &77305003
 Transform:
@@ -23892,67 +23894,6 @@ Transform:
   m_Father: {fileID: 1248333282}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -0.36, y: 2.273, z: -0.803}
---- !u!1 &454772741
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 454772742}
-  - component: {fileID: 454772743}
-  m_Layer: 0
-  m_Name: MultiTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &454772742
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454772741}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.3499727, y: -3.4990504, z: -0.76705676}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 976997198}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &454772743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454772741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 522de422f7271d9488db7fc0043c0da1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PriorityTriggers: 0
-  NumberBeforeTrigger: 3
-  Delegates:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 922174303}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: UpdateCondition
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: NeedKey
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!1 &455301522
 GameObject:
   m_ObjectHideFlags: 0
@@ -30684,19 +30625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnInteract:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 454772743}
-        m_TargetAssemblyTypeName: MultiTrigger, Assembly-CSharp
-        m_MethodName: Trigger
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   Repeatable: 1
   VanishOnDone: 0
   OnSelected:
@@ -30705,6 +30634,10 @@ MonoBehaviour:
   interactionSpot: {fileID: 459409276}
   StartOpen: 0
   lockedMessage: The Master.
+  reversedOpen: 0
+  CanOpen: 0
+  InstaUnlock: 1
+  keyID: 
   animator: {fileID: 635489706}
   OnOpen:
     m_PersistentCalls:
@@ -30712,8 +30645,6 @@ MonoBehaviour:
   OnUnlock:
     m_PersistentCalls:
       m_Calls: []
-  reversedOpen: 0
-  CanOpen: 0
   UpdateOnEnable: 0
 --- !u!4 &635489708
 Transform:
@@ -47276,7 +47207,6 @@ Transform:
   - {fileID: 2030832810}
   - {fileID: 635489708}
   - {fileID: 1303686272}
-  - {fileID: 454772742}
   - {fileID: 1517073824}
   - {fileID: 1694926047}
   m_Father: {fileID: 0}
@@ -58416,18 +58346,6 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 1303686276}
-            m_TargetAssemblyTypeName: Door, Assembly-CSharp
-            m_MethodName: Unlock
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: Key_Eric
-              m_BoolArgument: 0
-            m_CallState: 2
           - m_Target: {fileID: 922174302}
             m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
             m_MethodName: EquipItem
@@ -64955,19 +64873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnInteract:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 454772743}
-        m_TargetAssemblyTypeName: MultiTrigger, Assembly-CSharp
-        m_MethodName: Trigger
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   Repeatable: 1
   VanishOnDone: 0
   OnSelected:
@@ -64976,6 +64882,10 @@ MonoBehaviour:
   interactionSpot: {fileID: 1454442767}
   StartOpen: 0
   lockedMessage: The Performer.
+  reversedOpen: 0
+  CanOpen: 0
+  InstaUnlock: 1
+  keyID: Key_Eric
   animator: {fileID: 1303686275}
   OnOpen:
     m_PersistentCalls:
@@ -64983,8 +64893,6 @@ MonoBehaviour:
   OnUnlock:
     m_PersistentCalls:
       m_Calls: []
-  reversedOpen: 0
-  CanOpen: 0
   UpdateOnEnable: 0
 --- !u!1 &1303736870
 GameObject:
@@ -112161,19 +112069,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnInteract:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 454772743}
-        m_TargetAssemblyTypeName: MultiTrigger, Assembly-CSharp
-        m_MethodName: Trigger
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   Repeatable: 1
   VanishOnDone: 0
   OnSelected:
@@ -112182,6 +112078,10 @@ MonoBehaviour:
   interactionSpot: {fileID: 1296477445}
   StartOpen: 0
   lockedMessage: The Murderer.
+  reversedOpen: 0
+  CanOpen: 0
+  InstaUnlock: 1
+  keyID: 
   animator: {fileID: 2030832813}
   OnOpen:
     m_PersistentCalls:
@@ -112189,8 +112089,6 @@ MonoBehaviour:
   OnUnlock:
     m_PersistentCalls:
       m_Calls: []
-  reversedOpen: 0
-  CanOpen: 0
   UpdateOnEnable: 0
 --- !u!1 &2030949242
 GameObject:

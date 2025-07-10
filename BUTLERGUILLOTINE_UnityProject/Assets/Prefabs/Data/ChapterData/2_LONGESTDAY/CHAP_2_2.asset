@@ -28,33 +28,6 @@ MonoBehaviour:
     Met: 0
   - Name: RecommendBar
     Met: 0
-  areas:
-  - Name: Death
-    Music: {fileID: 0}
-    CopyrightFree: {fileID: 0}
-    Track:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    StepsVolume: 0
-    ImmuneExperimental: 0
-    OriginalVolume: 0
-  - Name: Despair
-    Music: {fileID: 0}
-    CopyrightFree: {fileID: 0}
-    Track:
-      Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    StepsVolume: 0
-    ImmuneExperimental: 0
-    OriginalVolume: 0
   items:
   - ID: Key_Strange_Half_1
     Name: Silver Object
@@ -62,30 +35,16 @@ MonoBehaviour:
     LimitedUses: 0
     Uses: 0
     Equipped: 1
+    InInventory: 0
     Icon: {fileID: 0}
     Data: {fileID: 11400000, guid: e5084e9c715e2904bad1b261bbe202b1, type: 2}
-  - ID: Key_Trapdoor
-    Name: Small Key
-    Sprite: {fileID: 21300000, guid: 3cdabd6dea22333469a8294f465b9471, type: 3}
-    LimitedUses: 0
-    Uses: 0
-    Equipped: 0
-    Icon: {fileID: 0}
-    Data: {fileID: 0}
-  - ID: Key_Strange_Half_2
-    Name: Silver Object
-    Sprite: {fileID: 21300000, guid: 610bf7aaacc509c41b3c600a23554f47, type: 3}
-    LimitedUses: 0
-    Uses: 0
-    Equipped: 0
-    Icon: {fileID: 0}
-    Data: {fileID: 0}
   - ID: Key_Strange
     Name: Silver Key
     Sprite: {fileID: 21300000, guid: ed1bc74f5978dd045aa52d3b6e61ef9b, type: 3}
     LimitedUses: 0
     Uses: 0
     Equipped: 0
+    InInventory: 0
     Icon: {fileID: 0}
     Data: {fileID: 11400000, guid: 2ec77e1e71e2a4643a77197a685b5587, type: 2}
   - ID: Key_Rope
@@ -94,6 +53,7 @@ MonoBehaviour:
     LimitedUses: 0
     Uses: 0
     Equipped: 0
+    InInventory: 0
     Icon: {fileID: 0}
     Data: {fileID: 11400000, guid: 4a5f996c441658b4581bcc6b6d94a44f, type: 2}
   - ID: Key_Corridor
@@ -102,6 +62,7 @@ MonoBehaviour:
     LimitedUses: 0
     Uses: 0
     Equipped: 1
+    InInventory: 0
     Icon: {fileID: 0}
     Data: {fileID: 11400000, guid: 336be74ef236cce458e03b61c94e9ea7, type: 2}
   - ID: Key_Up
@@ -110,6 +71,7 @@ MonoBehaviour:
     LimitedUses: 0
     Uses: 0
     Equipped: 1
+    InInventory: 0
     Icon: {fileID: 0}
     Data: {fileID: 11400000, guid: 2b009750a122bd8439f5083916783460, type: 2}
   - ID: Bloody_Skirt
@@ -118,5 +80,7 @@ MonoBehaviour:
     LimitedUses: 0
     Uses: 0
     Equipped: 1
+    InInventory: 0
     Icon: {fileID: 0}
     Data: {fileID: 11400000, guid: 4294adee03bf64b4f955316eb4be90e2, type: 2}
+  CommentData: {fileID: 0}

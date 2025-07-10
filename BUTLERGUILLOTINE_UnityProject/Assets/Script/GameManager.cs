@@ -148,6 +148,7 @@ public class GameManager : MonoBehaviour
     public PlayerController Player { get { return player; } }
     public PlayerFollower PlayerFollower { get { return playerFollower; } }
     public CursorManager CursorManager { get { return cursorManager; } }
+    public string EquippedItemID { get { return InventoryManager.EquippedItemID; } }
 
     [HideInInspector] public Action CameraTick;
 

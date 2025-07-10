@@ -15,11 +15,16 @@ MonoBehaviour:
   ID: Skirt
   Name: Skirt
   Sprite: {fileID: 0}
+  Equippable: 0
   LimitedUses: 0
   Uses: 0
   Equipped: 0
   Icon: {fileID: 0}
   Inspect:
   - Text: A perfectly good looking skirt. Time to get dressed.
+    Duration: 4
+  - Text: ...
+    Duration: 4
+  - Text: I'd rather do it in the back room.
     Duration: 4
   InteractableObject: {fileID: 7459048895653104138, guid: b039211c8c12c5d4c9ca372be3fa3cc3, type: 3}

@@ -16,7 +16,9 @@ public class InventoryManager : MonoBehaviour
 
     GameManager gameManager;
 
-    string currentItemID;
+    string equippedItemID;
+
+    public string EquippedItemID { get { return equippedItemID; } }
 
     public void Init(GameManager gm, Item[] items)
     {
@@ -90,8 +92,8 @@ public class InventoryManager : MonoBehaviour
             return;
 
 
-        if (currentItemID != "")
-            RemoveItem(currentItemID);
+        if (equippedItemID != "")
+            RemoveItem(equippedItemID);
 
         GameObject go = Instantiate(iconPrefab, iconParent);
         go.GetComponent<Image>().sprite = item.Sprite;
@@ -100,7 +102,7 @@ public class InventoryManager : MonoBehaviour
 
         item.Equipped = true;
 
-        currentItemID = item.ID;
+        equippedItemID = item.ID;
     }
 
     public void Unequip(InventoryItem invItem)
@@ -116,7 +118,7 @@ public class InventoryManager : MonoBehaviour
         Destroy(item.Icon);
         item.Equipped = false;
 
-        currentItemID = "";
+        equippedItemID = "";
     }
 
     public void RemoveItem(string name)
@@ -130,7 +132,7 @@ public class InventoryManager : MonoBehaviour
         Destroy(item.Icon);
         item.Equipped = false;
 
-        currentItemID = "";
+        equippedItemID = "";
     }
 
     public void EquipItem(string name)
