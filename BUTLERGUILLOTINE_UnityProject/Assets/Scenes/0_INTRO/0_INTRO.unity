@@ -2514,7 +2514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7956c3e44129ebf4fbe8624006bb18aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ambiance: JesuChristReversed
+  Ambiance: LaSonnambula
   ChangeVolume: 0
   NewVolume: 1
   Template: 0
@@ -9135,7 +9135,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35978
+  m_Name: pb_Mesh172676
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -19340,7 +19340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7956c3e44129ebf4fbe8624006bb18aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ambiance: JesuChristReversed
+  Ambiance: LaSonnambula
   ChangeVolume: 0
   NewVolume: 1
   Template: 0
@@ -21069,7 +21069,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh39652
+  m_Name: pb_Mesh176350
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -38686,7 +38686,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41308
+  m_Name: pb_Mesh178006
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -40768,7 +40768,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38768
+  m_Name: pb_Mesh175466
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -45795,7 +45795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7956c3e44129ebf4fbe8624006bb18aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ambiance: JesuChristReversed
+  Ambiance: LaSonnambula
   ChangeVolume: 0
   NewVolume: 1
   Template: 0
@@ -50704,7 +50704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   themes:
-  - {fileID: 11400000, guid: b2226622dea1dd644ac6aece0a73643b, type: 2}
+  - {fileID: 11400000, guid: 2ecfcb1f1abb0e5439b32d135113fa66, type: 2}
   areas:
   - Name: Truth
     Music: {fileID: 415653780}
@@ -57587,7 +57587,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31532
+  m_Name: pb_Mesh168236
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -58273,11 +58273,11 @@ MonoBehaviour:
           m_Calls: []
       JumpDialogue: 0
       DialogueIndex: 0
-  - Text: You did have quite a bit of "say". But not anymore.
+  - Text: You did have quite a bit of "say", but not anymore. You lost.
     Action: Speak2
     cameraEffect: 0
     Answers:
-    - Text: 'Fine. '
+    - Text: ...
       ConditionNeeded: 
       DialogueEnd: 0
       HideLeavePrompt: 0
@@ -58292,7 +58292,7 @@ MonoBehaviour:
     Action: Speak
     cameraEffect: 0
     Answers:
-    - Text: That doesn't help me in the slightest.
+    - Text: That doesn't help me.
       ConditionNeeded: 
       DialogueEnd: 0
       HideLeavePrompt: 0
@@ -58333,7 +58333,7 @@ MonoBehaviour:
           m_Calls: []
       JumpDialogue: 0
       DialogueIndex: 0
-  - Text: Before I forget. This key's yours. Try not to lose it next time.
+  - Text: Here's your key. Try not to lose it again.
     Action: Speak
     cameraEffect: 0
     Answers:
@@ -58877,7 +58877,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31924
+  m_Name: pb_Mesh168628
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -65728,7 +65728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7956c3e44129ebf4fbe8624006bb18aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ambiance: JesuChristReversed
+  Ambiance: LaSonnambula
   ChangeVolume: 0
   NewVolume: 1
   Template: 0
@@ -74146,7 +74146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7956c3e44129ebf4fbe8624006bb18aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ambiance: JesuChristReversed
+  Ambiance: LaSonnambula
   ChangeVolume: 0
   NewVolume: 1
   Template: 0
@@ -75130,7 +75130,7 @@ GameObject:
   - component: {fileID: 1517073823}
   - component: {fileID: 1517073822}
   m_Layer: 7
-  m_Name: Instructions
+  m_Name: Couch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75178,7 +75178,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   interactionSpot: {fileID: 1086672352}
-  comment: I don't really want to sit on this couch.
+  comment: ...
   OnCommentStart:
     m_PersistentCalls:
       m_Calls: []
@@ -92508,7 +92508,7 @@ GameObject:
   - component: {fileID: 1694926046}
   - component: {fileID: 1694926045}
   m_Layer: 7
-  m_Name: Instructions (1)
+  m_Name: Couch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93000,7 +93000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7956c3e44129ebf4fbe8624006bb18aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ambiance: JesuChristReversed
+  Ambiance: LaSonnambula
   ChangeVolume: 0
   NewVolume: 1
   Template: 0
@@ -112619,7 +112619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7956c3e44129ebf4fbe8624006bb18aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ambiance: JesuChristReversed
+  Ambiance: LaSonnambula
   ChangeVolume: 0
   NewVolume: 1
   Template: 0
@@ -116613,7 +116613,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41310
+  m_Name: pb_Mesh178008
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
