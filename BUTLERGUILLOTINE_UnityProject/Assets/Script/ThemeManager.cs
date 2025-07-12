@@ -2,12 +2,14 @@ using FMOD.Studio;
 using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UIElements;
 
 public class ThemeManager : MonoBehaviour
 {
+    public bool ClearInterScenes = true;
     [SerializeField] MusicData[] themes;
     [SerializeField] List<Area> areas = new List<Area>();
     [SerializeField] AudioSource overrideAudio, startAudio;
@@ -25,6 +27,16 @@ public class ThemeManager : MonoBehaviour
 
     public void Init()
     {
+        if (ClearInterScenes)
+        {
+            var interScenes = FindObjectsOfType<InterSceneTheme>();
+            for (int i = 0; i < interScenes.Length; i++)
+            {
+                interScenes[i].Stop();
+                Destroy(interScenes[i].gameObject);
+            }
+        }
+
         areas.Clear();
 
         foreach (var theme in themes)
@@ -125,6 +137,25 @@ public class ThemeManager : MonoBehaviour
         overrideAmbiance = true;
 
         overrideAudio.Play();
+    }
+
+    public void CreateInterScene(string areaName)
+    {
+        StopAmbiance();
+
+        overrideAmbiance = true;
+        PersistentData.Instance.UpdateStepsVolume(0);
+
+        foreach (var item in areas)
+        {
+            if (item.Name == areaName)
+            {
+                var interScene = Instantiate((GameObject)Resources.Load("GameManagement/InterSceneTheme"));
+                InterSceneTheme theme = interScene.GetComponent<InterSceneTheme>();
+
+                theme.Play(item.Track);
+            }
+        }
     }
 
     public void OverrideAmbiance(string areaName)

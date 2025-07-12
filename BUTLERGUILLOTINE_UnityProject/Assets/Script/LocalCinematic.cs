@@ -65,7 +65,9 @@ public class LocalCinematic : MonoBehaviour
         var gameManager = GameManager.Instance;
 
         playing = true;
-        gameManager.SetCinematicMode(true);
+
+        if (gameManager != null) 
+            gameManager.SetCinematicMode(true);
 
         Interface.SetActive(true);
         Camera.SetActive(true);
