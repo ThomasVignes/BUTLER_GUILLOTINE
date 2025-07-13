@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,6 +33,7 @@ public class Answer
     public bool BranchToCurrent = true;
     public int BranchIndex;
     public UnityEvent Delegate;
+    public string OverrideSound;
 
     [Header("Dialogue Jump Parameters")]
     public bool JumpDialogue;

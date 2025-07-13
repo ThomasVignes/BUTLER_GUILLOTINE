@@ -297,9 +297,13 @@ public class DialogueManager : MonoBehaviour
 
         selecting = false;
 
-        EffectsManager.Instance.audioManager.Play("SmallValidate");
-
         Answer answer = dialogues[currentDialogue].Lines[currentLine].Answers[index];
+
+        if (answer.OverrideSound == "")
+            EffectsManager.Instance.audioManager.Play("SmallValidate");
+        else
+            EffectsManager.Instance.audioManager.Play(answer.OverrideSound);
+
 
         answer.Delegate?.Invoke();
 

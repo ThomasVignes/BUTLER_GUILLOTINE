@@ -23,6 +23,7 @@ public class LastWillScene : MonoBehaviour
 
         if (hasFlash)
         {
+            EffectsManager.Instance.audioManager.Play("Flash");
             animator.SetTrigger("FastFlash");
 
             yield return new WaitForSeconds(0.05f);
@@ -45,6 +46,7 @@ public class LastWillScene : MonoBehaviour
 
     IEnumerator C_NextScene()
     {
+        EffectsManager.Instance.audioManager.Play("Flash");
         animator.SetTrigger("FastFlash");
 
         yield return new WaitForSeconds(0.05f);

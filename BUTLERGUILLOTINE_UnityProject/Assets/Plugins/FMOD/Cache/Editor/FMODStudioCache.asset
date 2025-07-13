@@ -241,10 +241,10 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638878446906715173
+  lastModified: 638879567214182449
   FileSizes:
   - Name: 
-    Value: 5156
+    Value: 5196
   Exists: 1
 --- !u!114 &-7080253878821521677
 MonoBehaviour:
@@ -642,7 +642,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638878446906705166
+  lastModified: 638879567214016889
   FileSizes: []
   Exists: 1
 --- !u!114 &-2820307275378040168
@@ -864,12 +864,13 @@ MonoBehaviour:
   - {fileID: -3994410163403700543}
   - {fileID: 8992328822088973828}
   - {fileID: -5535506076535644234}
+  - {fileID: 5842602037318836236}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3346567643425602939}
   StringsBanks:
   - {fileID: -7100924490474363539}
-  cacheTime: 638879392922747748
+  cacheTime: 638879570557141642
   cacheVersion: 131617
 --- !u!114 &15166506345404804
 MonoBehaviour:
@@ -1396,6 +1397,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 339
+--- !u!114 &5842602037318836236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Polaroid
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Polaroid
+  Guid:
+    Data1: -1821235480
+    Data2: 1135727958
+    Data3: -302311266
+    Data4: -177720409
+  Banks:
+  - {fileID: 7765557908467560066}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5926909688275673257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1689,7 +1717,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638780765255568207
+  lastModified: 638879570557141642
   FileSizes: []
   Exists: 1
 --- !u!114 &8143309677218547436
