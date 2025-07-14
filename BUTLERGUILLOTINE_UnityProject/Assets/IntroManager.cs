@@ -74,7 +74,7 @@ public class IntroManager : ChapterManagerGeneric
 
     IEnumerator C_EndChapter()
     {
-        //fixedCam.SetActive(true);
+        EffectsManager.Instance.audioManager.Play("Flash");
         animator.SetTrigger("Blast");
 
         yield return new WaitForSeconds(0.05f);

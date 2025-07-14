@@ -43,6 +43,8 @@ public class ItemUI : MonoBehaviour
 
     public void EquipItem()
     {
+        EffectsManager.Instance.audioManager.Play("SmallClick");
+
         controller.EquipItem();
     }
 
@@ -56,6 +58,7 @@ public class ItemUI : MonoBehaviour
 
     public void ExamineItem()
     {
+        EffectsManager.Instance.audioManager.Play("SmallClick");
         controller.ExamineSelected();
     }
 
