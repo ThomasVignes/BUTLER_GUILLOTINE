@@ -52,7 +52,7 @@ public class LastWillScene : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
         blackScreen.SetActive(true);
 
-        yield return new WaitForSeconds(FlashDuration);
+        yield return new WaitForSeconds(5);
 
         Cursor.visible = true;
         SceneManager.LoadScene(NextSceneName);

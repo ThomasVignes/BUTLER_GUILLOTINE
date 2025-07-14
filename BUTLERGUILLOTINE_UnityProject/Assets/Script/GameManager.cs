@@ -13,6 +13,7 @@ using Whumpus;
 using FMOD;
 using FMODUnity;
 using System.Net.Http;
+using UnityEngine.Events;
 
 [System.Serializable]
 public class Conditions
@@ -101,6 +102,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject vnCam;
     [SerializeField] private CameraZone firstCamZone;
     private Character character;
+
+    [Header("Inventory")]
+    [SerializeField] UnityEvent OnInventoryOpen;
+    [SerializeField] UnityEvent OnInventoryClose;
 
     [Header("References")]
     [SerializeField] PlayerFollower playerFollower;
@@ -429,6 +434,8 @@ public class GameManager : MonoBehaviour
             if (Input.GetButtonDown("Pause"))
             {
                 player.InventoryController.SetActive(false, true);
+
+                OnInventoryClose?.Invoke();
             }
 
             return;
@@ -441,6 +448,8 @@ public class GameManager : MonoBehaviour
                 player.InventoryController.SetActive(true, true);
 
                 InventoryManager.InstaHideNotification();
+
+                OnInventoryOpen?.Invoke();
             }
         }
 

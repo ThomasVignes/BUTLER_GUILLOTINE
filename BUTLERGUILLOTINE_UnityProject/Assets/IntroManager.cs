@@ -74,7 +74,7 @@ public class IntroManager : ChapterManagerGeneric
 
     IEnumerator C_EndChapter()
     {
-        fixedCam.SetActive(true);
+        //fixedCam.SetActive(true);
         animator.SetTrigger("Blast");
 
         yield return new WaitForSeconds(0.05f);

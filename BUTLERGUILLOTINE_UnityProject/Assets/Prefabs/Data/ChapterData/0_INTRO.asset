@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: CEREMONY
   Number: 1
-  StartCharacter: {fileID: 11400000, guid: f143c92b8559be5488f321c8e8bd4543, type: 2}
+  StartCharacter: {fileID: 11400000, guid: f8b59e48e3a3ac649810612f38eebc06, type: 2}
   OtherCharacters: []
   conditions:
   - Name: NeedKey
@@ -26,6 +26,7 @@ MonoBehaviour:
     LimitedUses: 0
     Uses: 0
     Equipped: 1
+    InInventory: 0
     Icon: {fileID: 0}
     Data: {fileID: 11400000, guid: 66c0a1bc1658a674abea7e68376fef6c, type: 2}
   CommentData: {fileID: 11400000, guid: d5e59984fae9e0d46a051904a0083d58, type: 2}
