@@ -9,12 +9,9 @@ public class IntroManager : ChapterManagerGeneric
 {
     [Header("Settings")]
     public bool Skip;
-    [SerializeField] private string startCinematic;
-    [SerializeField] private float endTime;
+    public LocalCinematic startCinematic;
     [SerializeField] Animator animator;
-
     [SerializeField] GameObject fixedCam;
-
 
 
     public override void Init(GameManager gameManager)
@@ -30,12 +27,11 @@ public class IntroManager : ChapterManagerGeneric
     {
         gameManager.ThemeManager.CreateInterScene("LaSonnambula");
 
-        if (Skip)
+        if (!Skip)
         {
+            Intro = false;
             gameManager.Ready = true;
-
-            gameManager.StopOverride();
-
+            startCinematic.PlayLocal();
             return;
         }
 

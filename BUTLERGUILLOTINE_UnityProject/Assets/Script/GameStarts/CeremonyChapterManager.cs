@@ -17,6 +17,8 @@ public class CeremonyChapterManager : ChapterManagerGeneric
 
     public override void StartGame()
     {
+        Cursor.visible = false;
+
         endText.text = "";
 
         StartCoroutine(C_Start());
@@ -102,6 +104,8 @@ public class CeremonyChapterManager : ChapterManagerGeneric
         PersistentData.Instance.MusicVolume = 1;
 
         yield return new WaitForSeconds(3f);
+
+        Cursor.visible = true;
 
         RestartGame();
     }

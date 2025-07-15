@@ -937,6 +937,8 @@ public class GameManager : MonoBehaviour
         CameraTick?.Invoke();
 
         currentCamZone = zone;
+
+        cursorManager.ToggleBlackAndWhite(currentCamZone.BlackAndWhite);
     }
 
     public void UpdateCondition(string condition)

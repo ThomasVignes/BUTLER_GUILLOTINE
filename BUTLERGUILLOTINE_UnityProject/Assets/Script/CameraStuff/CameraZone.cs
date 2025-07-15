@@ -22,6 +22,7 @@ public class CameraZone : MonoBehaviour
     public string Ambiance;
     public bool ChangeVolume;
     public float NewVolume = 1;
+    public bool BlackAndWhite;
 
     [SerializeField] Template Template;
     [Header("Custom camera")]
