@@ -40,6 +40,7 @@ public class LocalCinematic : MonoBehaviour
     [Header("Experimental")]
     [SerializeField] bool lastCinematic;
     [SerializeField] bool noEndingBlackScreen;
+    [SerializeField] bool dontDeleteLines;
 
     GameManager gameManager;
 
@@ -98,6 +99,9 @@ public class LocalCinematic : MonoBehaviour
             gameManager.ScreenEffects.FadeTo(0, 1f);
         }
 
+        if (dontDeleteLines)
+            dialogue.text = "";
+
         foreach (var line in current.lines)
         {
             //Write text
@@ -107,7 +111,8 @@ public class LocalCinematic : MonoBehaviour
             {
                 var text = line.Text;
 
-                dialogue.text = "";
+                if (!dontDeleteLines)
+                    dialogue.text = "";
 
                 writing = true;
 
