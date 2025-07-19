@@ -9,10 +9,10 @@ public class IntroManager : ChapterManagerGeneric
 {
     [Header("Settings")]
     public bool Skip;
-    public LocalCinematic startCinematic;
+    public DialogueCinematic startCinematic;
     [SerializeField] Animator animator;
     [SerializeField] GameObject fixedCam;
-
+    public UnityEvent OnStart;
 
     public override void Init(GameManager gameManager)
     {
@@ -31,11 +31,18 @@ public class IntroManager : ChapterManagerGeneric
         {
             Intro = false;
             gameManager.Ready = true;
-            startCinematic.PlayLocal();
+            startCinematic.Play();
             return;
         }
 
         StartCoroutine(C_Start());
+    }
+
+    public void QuickStart()
+    {
+        Intro = false;
+        gameManager.Ready = true;
+        OnStart?.Invoke();
     }
 
     IEnumerator C_Start()

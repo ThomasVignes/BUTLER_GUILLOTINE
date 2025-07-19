@@ -22,6 +22,7 @@ public class DialogueCinematic : MonoBehaviour
     public float StartBlackScreenDuration;
     public float EndBlackScreenDuration;
     [SerializeField] bool instaFade;
+    public float StartBlackScreenFade, EndBlackScreenFade = 1;
     public bool noOpeningBlackScreen;
     [SerializeField] bool noEndingBlackScreen;
 
@@ -95,8 +96,6 @@ public class DialogueCinematic : MonoBehaviour
         Camera.SetActive(false);
         Interface.SetActive(false);
 
-        OnEndBeforeBlackScreen?.Invoke();
-
         if (!noEndingBlackScreen)
         {
             StartCoroutine(C_EndBlackScreen(gameManager));
@@ -115,7 +114,7 @@ public class DialogueCinematic : MonoBehaviour
         if (!noEndingBlackScreen)
         {
             if (instaFade)
-                gameManager.ScreenEffects.FadeTo(1, 0.001f);
+                gameManager.ScreenEffects.FadeTo(1, 0.0001f);
             else
                 gameManager.ScreenEffects.FadeTo(1, 0.2f);
         }
@@ -130,7 +129,8 @@ public class DialogueCinematic : MonoBehaviour
         if (!noEndingBlackScreen)
         {
             yield return new WaitForSeconds(EndBlackScreenDuration);
-            gameManager.ScreenEffects.FadeTo(0, 1f);
+            gameManager.ScreenEffects.FadeTo(0, EndBlackScreenFade);
+            yield return new WaitForSeconds(EndBlackScreenFade - 0.2f);
         }
 
         TryEndDialogue(gameManager);
@@ -178,15 +178,15 @@ public class DialogueCinematic : MonoBehaviour
             if (instaFade)
                 gameManager.ScreenEffects.FadeTo(1, 0.001f);
             else
-                gameManager.ScreenEffects.FadeTo(1, 0.2f);
+                gameManager.ScreenEffects.FadeTo(1, StartBlackScreenFade);
 
             yield return new WaitForSeconds(0.2f);
 
             yield return new WaitForSeconds(StartBlackScreenDuration);
 
-            gameManager.ScreenEffects.FadeTo(0, 1f);
+            gameManager.ScreenEffects.FadeTo(0, StartBlackScreenFade);
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(StartBlackScreenFade - 0.2f);
         }
 
 
@@ -206,12 +206,15 @@ public class DialogueCinematic : MonoBehaviour
             textUI.text += "\n\n";
         }
 
-        var before = textUI.text;
-
         var line = lines[currentLineIndex];
 
         if (line.DeletesPreviousText)
+        {
             textUI.text = "";
+        }
+
+        var before = textUI.text;
+
 
         foreach (char c in line.Text)
         {
