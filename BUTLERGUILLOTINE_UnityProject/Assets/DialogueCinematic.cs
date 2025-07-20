@@ -17,6 +17,7 @@ public class DialogueCinematic : MonoBehaviour
     [SerializeField] float delayBetweenLetters;
     [SerializeField] bool autoEnter;
     [SerializeField] bool dontRemoveLines;
+    public UnityEvent OnEachLineEnd;
 
     [Header("BlackScreens")]
     public float StartBlackScreenDuration;
@@ -48,6 +49,18 @@ public class DialogueCinematic : MonoBehaviour
 
     int currentLineIndex;
 
+    float strongPuncWait, lightPuncWait;
+
+    private void Start()
+    {
+        strongPuncWait = GameManager.Instance.StrongPunctuationWait;
+        lightPuncWait = GameManager.Instance.LightPunctuationWait;
+
+        foreach (var item in CinematicPuppets)
+        {
+            item.Animator = item.Puppet.GetComponentInChildren<Animator>();
+        }
+    }
 
     private void Update()
     {
@@ -91,6 +104,8 @@ public class DialogueCinematic : MonoBehaviour
 
     public void DialogueFinished()
     {
+        playingDialogue = false;
+
         var gameManager = GameManager.Instance;
 
         Camera.SetActive(false);
@@ -215,6 +230,13 @@ public class DialogueCinematic : MonoBehaviour
 
         var before = textUI.text;
 
+        //Play animations
+        foreach (var item in line.PuppetActions)
+        {
+            PlayPuppetAction(item.PuppetName, item.Action);
+        }
+
+        int charCount = 0;
 
         foreach (char c in line.Text)
         {
@@ -224,10 +246,19 @@ public class DialogueCinematic : MonoBehaviour
             }
 
             textUI.text += c;
+            charCount++;
 
             EffectsManager.Instance.audioManager.Play("SmallClick");
 
-            yield return new WaitForSeconds(delayBetweenLetters);
+            string strongPunctuations = ".?!";
+            string lightPunctuations = ",:";
+
+            if (strongPunctuations.Contains(c) && charCount < line.Text.Length - 1)
+                yield return new WaitForSeconds(strongPuncWait);
+            else if (lightPunctuations.Contains(c))
+                yield return new WaitForSeconds(lightPuncWait);
+            else
+                yield return new WaitForSeconds(delayBetweenLetters);
         }
 
         if (skip)
@@ -236,11 +267,7 @@ public class DialogueCinematic : MonoBehaviour
             skip = false;
         }
 
-        //Play animations
-        foreach (var item in line.PuppetActions)
-        {
-            PlayPuppetAction(item.PuppetName, item.Action);
-        }
+        OnEachLineEnd?.Invoke();
 
         writing = false;
     }

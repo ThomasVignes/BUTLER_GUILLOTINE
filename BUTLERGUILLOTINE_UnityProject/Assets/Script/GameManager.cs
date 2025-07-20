@@ -79,6 +79,10 @@ public class PlayableCharacter
 
 public class GameManager : MonoBehaviour
 {
+    //Global Hidden Values
+    public float StrongPunctuationWait = 0.4f;
+    public float LightPunctuationWait = 0.07f;
+
     public static GameManager Instance;
 
     [Header("Chapter Data")]

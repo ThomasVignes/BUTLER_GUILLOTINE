@@ -26,6 +26,8 @@ public class InventoryController : MonoBehaviour
     [SerializeField] GameObject textUI;
     [SerializeField] TextMeshProUGUI dialogue;
 
+    float strongPuncWait, lightPuncWait;
+
     Quaternion originalRotation, lookRotation;
 
     Coroutine activeDelay, examine;
@@ -55,6 +57,11 @@ public class InventoryController : MonoBehaviour
         {
             item.ItemUI.Init(this);
         }
+    }
+    private void Start()
+    {
+        strongPuncWait = GameManager.Instance.StrongPunctuationWait;
+        lightPuncWait = GameManager.Instance.LightPunctuationWait;
     }
 
     public void Init(GameManager gm)
@@ -311,18 +318,27 @@ public class InventoryController : MonoBehaviour
 
         char last = 'a';
 
+        var charCount = 0;
+
         foreach (char c in text)
         {
             dialogue.text += c;
 
             EffectsManager.Instance.audioManager.Play("SmallClick");
 
-            yield return new WaitForSeconds(delayBetweenLetters);
+            charCount++;
 
-            /*
-            if (c == '.' && last != c)
+            string strongPunctuations = ".?!";
+            string lightPunctuations = ",:";
+
+            if (strongPunctuations.Contains(c) && charCount < line.Text.Length - 1)
+                yield return new WaitForSeconds(strongPuncWait);
+            else if (lightPunctuations.Contains(c))
+                yield return new WaitForSeconds(lightPuncWait);
+            else
                 yield return new WaitForSeconds(delayBetweenLetters);
-            */
+
+            //yield return new WaitForSeconds(delayBetweenLetters);
 
             last = c;
 

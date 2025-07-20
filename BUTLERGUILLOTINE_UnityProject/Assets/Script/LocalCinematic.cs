@@ -46,6 +46,15 @@ public class LocalCinematic : MonoBehaviour
 
     bool writing, skip;
 
+    float strongPuncWait, lightPuncWait;
+
+    private void Start()
+    {
+        strongPuncWait = GameManager.Instance.StrongPunctuationWait;
+        lightPuncWait = GameManager.Instance.LightPunctuationWait;
+    }
+
+
     [ContextMenu("Play")]
     public void PlayLocal()
     {
@@ -116,6 +125,8 @@ public class LocalCinematic : MonoBehaviour
 
                 writing = true;
 
+                var charCount = 0;
+
                 foreach (char c in text)
                 {
                     dialogue.text += c;
@@ -127,7 +138,19 @@ public class LocalCinematic : MonoBehaviour
                         break;
                     }
 
-                    yield return new WaitForSeconds(delayBetweenLetters);
+                    charCount++;
+
+                    string strongPunctuations = ".?!";
+                    string lightPunctuations = ",:";
+
+                    if (strongPunctuations.Contains(c) && charCount < line.Text.Length - 1)
+                        yield return new WaitForSeconds(strongPuncWait);
+                    else if (lightPunctuations.Contains(c))
+                        yield return new WaitForSeconds(lightPuncWait);
+                    else
+                        yield return new WaitForSeconds(delayBetweenLetters);
+
+                    //yield return new WaitForSeconds(delayBetweenLetters);
                 }
 
                 writing = false;

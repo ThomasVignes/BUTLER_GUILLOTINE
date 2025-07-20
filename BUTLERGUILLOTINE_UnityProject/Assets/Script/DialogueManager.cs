@@ -38,13 +38,19 @@ public class DialogueManager : MonoBehaviour
     private bool selecting;
     private bool specific, endSpecific;
 
-    GameManager gm;
+    GameManager gm; 
+    
+    float strongPuncWait, lightPuncWait;
+
 
     public List<Dialogue> Dialogues { get { return dialogues; } }
 
     public void Init(GameManager man)
     {
         gm = man;
+
+        strongPuncWait = gm.StrongPunctuationWait;
+        lightPuncWait = gm.LightPunctuationWait;
 
         foreach (var item in puppets)
         {
@@ -195,6 +201,8 @@ public class DialogueManager : MonoBehaviour
 
         writing = true;
 
+        var charCount = 0;
+
         foreach (char c in text)
         {
             characterDialogue.text += c;
@@ -206,7 +214,19 @@ public class DialogueManager : MonoBehaviour
                 break;
             }
 
-            yield return new WaitForSeconds(delayBetweenLetters);
+            charCount++;
+
+            string strongPunctuations = ".?!";
+            string lightPunctuations = ",:";
+
+            if (strongPunctuations.Contains(c) && charCount < line.Text.Length - 1)
+                yield return new WaitForSeconds(strongPuncWait);
+            else if (lightPunctuations.Contains(c))
+                yield return new WaitForSeconds(lightPuncWait);
+            else
+                yield return new WaitForSeconds(delayBetweenLetters);
+
+            //yield return new WaitForSeconds(delayBetweenLetters);
         }
 
         writing = false;
@@ -343,6 +363,8 @@ public class DialogueManager : MonoBehaviour
 
         writing = true;
 
+        var charCount = 0;
+
         foreach (char c in text)
         {
             observationDialogue.text += c;
@@ -354,7 +376,24 @@ public class DialogueManager : MonoBehaviour
                 break;
             }
 
-            yield return new WaitForSeconds(delayBetweenLetters);
+            charCount++;
+
+            string strongPunctuations = ".?!";
+            string lightPunctuations = ",:";
+
+            var last = charCount - 1;
+
+            if (last < 0)
+                last = 0;
+
+            if (strongPunctuations.Contains(c) && charCount < text.Length - 1 && text[last] != c)
+                yield return new WaitForSeconds(strongPuncWait);
+            else if (lightPunctuations.Contains(c))
+                yield return new WaitForSeconds(lightPuncWait);
+            else
+                yield return new WaitForSeconds(delayBetweenLetters);
+
+            //yield return new WaitForSeconds(delayBetweenLetters);
         }
 
         writing = false;

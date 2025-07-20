@@ -23,6 +23,8 @@ public class CinematicManager : MonoBehaviour
 
     GameManager gameManager;
 
+    float strongPuncWait, lightPuncWait;
+
     bool playing, writing, skip, cinematicDone;
     int currentCinematic;
 
@@ -33,6 +35,9 @@ public class CinematicManager : MonoBehaviour
     public void Init(GameManager gm)
     {
         gameManager = gm;
+
+        strongPuncWait = gameManager.StrongPunctuationWait;
+        lightPuncWait = gameManager.LightPunctuationWait;
 
         foreach (var item in cinematics)
         {
@@ -155,6 +160,8 @@ public class CinematicManager : MonoBehaviour
 
             char last = 'a';
 
+            var charCount = 0;
+
             foreach (char c in text)
             {
                 dialogue.text += c;
@@ -166,7 +173,19 @@ public class CinematicManager : MonoBehaviour
                     break;
                 }
 
-                yield return new WaitForSeconds(delayBetweenLetters);
+                charCount++;
+
+                string strongPunctuations = ".?!";
+                string lightPunctuations = ",:";
+
+                if (strongPunctuations.Contains(c) && charCount < line.Text.Length - 1)
+                    yield return new WaitForSeconds(strongPuncWait);
+                else if (lightPunctuations.Contains(c))
+                    yield return new WaitForSeconds(lightPuncWait);
+                else
+                    yield return new WaitForSeconds(delayBetweenLetters);
+
+                // yield return new WaitForSeconds(delayBetweenLetters);
 
                 /*
                 if (c == '.' && last != c)
