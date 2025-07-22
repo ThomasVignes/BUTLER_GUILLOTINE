@@ -147,6 +147,8 @@ public class InventoryManager : MonoBehaviour
         gameManager.Player.InventoryController.AddItem(item.Data);
 
         ShowNotification(item.Name);
+
+        EffectsManager.Instance.audioManager.Play("Item");
     }
 
     public void TrueRemoveItem(string name)

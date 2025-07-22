@@ -300,6 +300,21 @@ MonoBehaviour:
     mixerLayer: 
     audioEmitter: {fileID: 0}
     source: {fileID: 0}
+  - name: Item
+    clipReference:
+      Guid:
+        Data1: -190027933
+        Data2: 1118739731
+        Data3: -1028198486
+        Data4: 1454542896
+      Path: event:/SFX/Item
+    clip: {fileID: 8300000, guid: a1b462d6281f9dd408da8ac2e83d1f88, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    mixerLayer: 
+    audioEmitter: {fileID: 0}
+    source: {fileID: 0}
   - name: Collapse
     clipReference:
       Guid:

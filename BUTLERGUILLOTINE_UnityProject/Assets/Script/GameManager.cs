@@ -745,7 +745,7 @@ public class GameManager : MonoBehaviour
             ghostManager.UpdateGhosts();
     }
 
-    public void SetCinematicMode(bool yes)
+    public void SetCinematicMode(bool yes, bool noBounce)
     {
         cinematicMode = yes;
 
@@ -761,6 +761,9 @@ public class GameManager : MonoBehaviour
 
         if (!yes)
             ghostManager.UpdateGhosts();
+
+        if (BounceLight.Instance != null && noBounce)
+            BounceLight.Instance.Toggle(!yes);
     }
 
     CommentInteractable currentComment;

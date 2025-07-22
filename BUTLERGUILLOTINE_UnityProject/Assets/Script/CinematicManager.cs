@@ -90,7 +90,7 @@ public class CinematicManager : MonoBehaviour
             return;
 
         playing = true;
-        gameManager.SetCinematicMode(true);
+        gameManager.SetCinematicMode(true, cinematics[currentCinematic].NoBounce);
 
         if (cinematics[currentCinematic].Data.HidePlayer)
             gameManager.HidePlayer(true);
@@ -256,7 +256,7 @@ public class CinematicManager : MonoBehaviour
         cinematics[currentCinematic].OnEnd?.Invoke();
 
         playing = false;
-        gameManager.SetCinematicMode(false);
+        gameManager.SetCinematicMode(false, cinematics[currentCinematic].NoBounce);
 
         if (!cinematics[currentCinematic].Data.OverrideKeepsGoing)
         {
@@ -310,6 +310,7 @@ public class Cinematic
     public UnityEvent OnEnd;
     public string ChainCinematic;
     public bool NoCamera;
+    public bool NoBounce = true;
 
     [Header("Scene References")]
     public CinematicPuppet[] CinematicPuppets;

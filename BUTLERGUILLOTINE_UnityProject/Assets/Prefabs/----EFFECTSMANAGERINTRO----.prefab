@@ -165,6 +165,21 @@ MonoBehaviour:
     mixerLayer: 
     audioEmitter: {fileID: 0}
     source: {fileID: 0}
+  - name: Item
+    clipReference:
+      Guid:
+        Data1: -190027933
+        Data2: 1118739731
+        Data3: -1028198486
+        Data4: 1454542896
+      Path: event:/SFX/Item
+    clip: {fileID: 8300000, guid: a1b462d6281f9dd408da8ac2e83d1f88, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mixerLayer: 
+    audioEmitter: {fileID: 0}
+    source: {fileID: 0}
   - name: Clac
     clipReference:
       Guid:
@@ -174,7 +189,7 @@ MonoBehaviour:
         Data4: -515828403
       Path: event:/SFX/unlock-padlock-deadbolt-on-door-001-8441
     clip: {fileID: 8300000, guid: 2e40e3befa933204e96aea6d5653fb7a, type: 3}
-    volume: 1.5
+    volume: 1
     pitch: 0.7
     loop: 0
     mixerLayer: 
@@ -189,7 +204,7 @@ MonoBehaviour:
         Data4: -515828403
       Path: event:/SFX/unlock-padlock-deadbolt-on-door-001-8441
     clip: {fileID: 8300000, guid: 2e40e3befa933204e96aea6d5653fb7a, type: 3}
-    volume: 1.5
+    volume: 1
     pitch: 0.7
     loop: 0
     mixerLayer: 
@@ -320,7 +335,7 @@ Transform:
   - {fileID: 6055004262476004451}
   - {fileID: 4379220878010770370}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2577924485865205203
 MonoBehaviour:

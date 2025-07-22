@@ -14,6 +14,7 @@ public class LocalCinematic : MonoBehaviour
     public LocalCinematicLine[] lines;
     public float delayBeforeDialogue;
     public float delayBetweenLetters;
+    public bool NoBounce = true;
     public bool writeText;
     public bool noOpeningBlackScreen;
     public UnityEvent OnStart;
@@ -77,7 +78,7 @@ public class LocalCinematic : MonoBehaviour
         playing = true;
 
         if (gameManager != null) 
-            gameManager.SetCinematicMode(true);
+            gameManager.SetCinematicMode(true, NoBounce);
 
         Interface.SetActive(true);
         Camera.SetActive(true);
@@ -217,7 +218,7 @@ public class LocalCinematic : MonoBehaviour
         OnEnd?.Invoke();
 
         playing = false;
-        gameManager.SetCinematicMode(false);
+        gameManager.SetCinematicMode(false, NoBounce);
 
         if (!OverrideKeepsGoing)
         {

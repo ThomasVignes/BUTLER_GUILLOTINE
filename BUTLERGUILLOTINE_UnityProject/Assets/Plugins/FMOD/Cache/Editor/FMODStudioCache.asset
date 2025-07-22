@@ -241,10 +241,10 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638879567214182449
+  lastModified: 638887078909103533
   FileSizes:
   - Name: 
-    Value: 5196
+    Value: 5424
   Exists: 1
 --- !u!114 &-7080253878821521677
 MonoBehaviour:
@@ -344,7 +344,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638879392922747748
+  lastModified: 638887091126113420
   FileSizes: []
   Exists: 1
 --- !u!114 &-5535506076535644234
@@ -642,7 +642,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638879567214016889
+  lastModified: 638887078909093523
   FileSizes: []
   Exists: 1
 --- !u!114 &-2820307275378040168
@@ -756,6 +756,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 182282
+--- !u!114 &-885162807186563252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/Mein Herze schwimmt im Blut, BWV 199 - 2. Stumme Seufzer,
+    stille Klagen (Soprano, Trumpet and Organ arr. - Rondeau)
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/Mein Herze schwimmt im Blut, BWV 199 - 2. Stumme Seufzer,
+    stille Klagen (Soprano, Trumpet and Organ arr. - Rondeau)
+  Guid:
+    Data1: 920608808
+    Data2: 1182498845
+    Data3: -1791643715
+    Data4: 1545656267
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 512208
 --- !u!114 &-128397739020455780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,7 +881,6 @@ MonoBehaviour:
   - {fileID: -128397739020455780}
   - {fileID: 2155109383544119605}
   - {fileID: 4887522213632553083}
-  - {fileID: 2687971971169327026}
   - {fileID: -8472037648813472654}
   - {fileID: 1167339418333726338}
   - {fileID: 6804578654069408960}
@@ -865,12 +893,16 @@ MonoBehaviour:
   - {fileID: 8992328822088973828}
   - {fileID: -5535506076535644234}
   - {fileID: 5842602037318836236}
+  - {fileID: 535194451511086927}
+  - {fileID: -885162807186563252}
+  - {fileID: 4262090142514657376}
+  - {fileID: 5969526685616598212}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3346567643425602939}
   StringsBanks:
   - {fileID: -7100924490474363539}
-  cacheTime: 638879570557141642
+  cacheTime: 638887091126113420
   cacheVersion: 131617
 --- !u!114 &15166506345404804
 MonoBehaviour:
@@ -928,6 +960,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 456071
+--- !u!114 &535194451511086927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Item
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Item
+  Guid:
+    Data1: -190027933
+    Data2: 1118739731
+    Data3: -1028198486
+    Data4: 1454542896
+  Banks:
+  - {fileID: 7765557908467560066}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &803653886844739955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1148,33 +1207,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 696
---- !u!114 &2687971971169327026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Hell
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Hell
-  Guid:
-    Data1: 282192823
-    Data2: 1292566473
-    Data3: -1888484718
-    Data4: 475282899
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &2972454930318478947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1233,6 +1265,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 247510
+--- !u!114 &4262090142514657376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/Empty
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/Empty
+  Guid:
+    Data1: 25145901
+    Data2: 1219030397
+    Data3: 1479376552
+    Data4: -31230948
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &4321211888702978622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1451,6 +1510,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 624
+--- !u!114 &5969526685616598212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Hell
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Hell
+  Guid:
+    Data1: 282192823
+    Data2: 1292566473
+    Data3: -1888484718
+    Data4: 475282899
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6203756437719978141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1717,7 +1803,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638879570557141642
+  lastModified: 638887064035292984
   FileSizes: []
   Exists: 1
 --- !u!114 &8143309677218547436

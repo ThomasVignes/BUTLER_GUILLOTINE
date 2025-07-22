@@ -19,6 +19,10 @@ public class DialogueCinematic : MonoBehaviour
     [SerializeField] bool dontRemoveLines;
     public UnityEvent OnEachLineEnd;
 
+    [Header("UI")]
+    [SerializeField] string writeWait;
+    [SerializeField] float flickerDelay;
+
     [Header("BlackScreens")]
     public float StartBlackScreenDuration;
     public float EndBlackScreenDuration;
@@ -98,6 +102,7 @@ public class DialogueCinematic : MonoBehaviour
         }
         else
         {
+            EffectsManager.Instance.audioManager.Play("SmallValidate");
             DialogueFinished();
         }
     }
