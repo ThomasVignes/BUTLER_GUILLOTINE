@@ -49,6 +49,13 @@ public class LastWillScene : MonoBehaviour
         EffectsManager.Instance.audioManager.Play("Flash");
         animator.SetTrigger("FastFlash");
 
+        var interScenes = FindObjectsOfType<InterSceneTheme>();
+        for (int i = 0; i < interScenes.Length; i++)
+        {
+            interScenes[i].Stop();
+            Destroy(interScenes[i].gameObject);
+        }
+
         yield return new WaitForSeconds(0.05f);
         blackScreen.SetActive(true);
 
