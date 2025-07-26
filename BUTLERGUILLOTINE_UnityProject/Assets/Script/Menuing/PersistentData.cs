@@ -11,6 +11,7 @@ public class PersistentData : MonoBehaviour
     public bool SoundOn;
     public bool CopyrightFree;
     public bool FastMode;
+    public bool DemoMode;
 
     string masterBusPath = "bus:/";
     string musicBusPath = "bus:/Music";

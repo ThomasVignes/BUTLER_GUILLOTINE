@@ -153,6 +153,7 @@ public class GameManager : MonoBehaviour
     public bool InventoryMode { get { return inventoryMode; } set { inventoryMode = value; } }
     public bool VNMode { get { return vnMode; } }
     public bool Ready { get { return ready; } set { ready = value; } }
+    public bool DialogueCinematic { get { return dialogueCinematic;} set {  dialogueCinematic = value; } }
     public bool End { get { return end; } set { end = value; } }
     public PlayerController Player { get { return player; } }
     public PlayerFollower PlayerFollower { get { return playerFollower; } }
@@ -163,7 +164,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public Action CameraTick;
 
 
-    bool cinematicMode, vnMode, commentMode, end, overrideAmbiance, ready;
+    bool cinematicMode, vnMode, commentMode, end, overrideAmbiance, ready, dialogueCinematic;
     bool cinematicStart, inventoryMode;
     bool canInventory;
 
@@ -429,31 +430,33 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-
-        if (inventoryMode)
+        if (!dialogueCinematic)
         {
-            CursorHover();
-            player.InventoryController.UpdateInventory();
-
-            if (Input.GetButtonDown("Pause"))
+            if (inventoryMode)
             {
-                player.InventoryController.SetActive(false, true);
+                CursorHover();
+                player.InventoryController.UpdateInventory();
 
-                OnInventoryClose?.Invoke();
+                if (Input.GetButtonDown("Pause"))
+                {
+                    player.InventoryController.SetActive(false, true);
+
+                    OnInventoryClose?.Invoke();
+                }
+
+                return;
             }
-
-            return;
-        }
-        else
-        {
-            if (Input.GetButtonDown("Pause") && canInventory)
+            else
             {
-                player.Pause();
-                player.InventoryController.SetActive(true, true);
+                if (Input.GetButtonDown("Pause") && canInventory)
+                {
+                    player.Pause();
+                    player.InventoryController.SetActive(true, true);
 
-                InventoryManager.InstaHideNotification();
+                    InventoryManager.InstaHideNotification();
 
-                OnInventoryOpen?.Invoke();
+                    OnInventoryOpen?.Invoke();
+                }
             }
         }
 

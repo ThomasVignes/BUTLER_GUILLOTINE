@@ -7,6 +7,9 @@ public class FastChapterLoader : MonoBehaviour
 {
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F11))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
         if (Input.GetKeyDown(KeyCode.Alpha0))
             SceneManager.LoadScene(0);
 

@@ -32,8 +32,8 @@ public class PauseManager : Manager
         if (!canPause)
             return;
         
-        /*
-        if (Input.GetButtonDown("Pause")) 
+        
+        if (Input.GetButtonDown("PauseGame")) 
         { 
             gm.Paused = !gm.Paused;
 
@@ -44,7 +44,7 @@ public class PauseManager : Manager
             else
                 Time.timeScale = baseScale;
         }
-        */
+        
     }
 
     public void TogglePause(bool paused)
@@ -79,7 +79,7 @@ public class PauseManager : Manager
 
         Cursor.visible = true;
 
-        SceneManager.LoadScene("NewMenu");
+        SceneManager.LoadScene(1);
     }
 
     public void QuitGame()

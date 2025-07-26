@@ -159,7 +159,10 @@ public class DialogueCinematic : MonoBehaviour
     public void TryEndDialogue(GameManager gameManager)
     {
         if (gameManager != null)
+        {
+            gameManager.DialogueCinematic = false;
             gameManager.SetVNMode(false, false);
+        }
 
         OnEnd?.Invoke();
 
@@ -174,7 +177,10 @@ public class DialogueCinematic : MonoBehaviour
         var gameManager = GameManager.Instance;
 
         if (gameManager != null)
+        {
+            gameManager.DialogueCinematic = true;
             gameManager.SetVNMode(true, false);
+        }
 
         Interface.SetActive(true);
         Camera.SetActive(true);
