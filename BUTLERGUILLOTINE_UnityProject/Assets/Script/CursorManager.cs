@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Whumpus;
 
 public class CursorManager : MonoBehaviour
 {
+    public bool Standalone;
     public Texture2D BaseCursor, MoveCursor, LookCursor, AimCursor, AimMoveCursor, AimLookCursor;
     public Texture2D BaseCursor_bw, MoveCursor_bw, LookCursor_bw, AimCursor_bw, AimMoveCursor_bw, AimLookCursor_bw;
+
+    [Header("Standalone Settings")]
+    [SerializeField] LayerMask ignoreLayers;
+    [SerializeField] LayerMask interactLayer, aimLayer, wallLayer, moveLayer;
 
     bool blackAndWhite;
 
@@ -16,6 +22,13 @@ public class CursorManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
 
         current = CursorType.Base;
+    }
+
+    private void Update()
+    {
+        if (Standalone)
+            CursorHover();
+
     }
 
     public void ToggleBlackAndWhite(bool blackAndWhite)
@@ -40,9 +53,9 @@ public class CursorManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
         }
 
-        switch (type) 
+        switch (type)
         {
-            case CursorType.Base :
+            case CursorType.Base:
                 if (!blackAndWhite)
                     Cursor.SetCursor(BaseCursor, new Vector2(18, 13), CursorMode.Auto);
                 else
@@ -89,6 +102,46 @@ public class CursorManager : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 break;
         }
+    }
+
+    private void CursorHover()
+    {
+        RaycastHit hit;
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~ignoreLayers))
+        {
+
+            if (hit.transform.gameObject.layer == WhumpusUtilities.ToLayer(wallLayer))
+            {
+                SetCursorType(CursorType.Base);
+                return;
+            }
+
+            if (hit.transform.gameObject.layer == WhumpusUtilities.ToLayer(aimLayer))
+            {
+                SetCursorType(CursorType.Aim);
+                return;
+            }
+
+            Interactable interactable = hit.transform.gameObject.GetComponent<Interactable>();
+
+            if (hit.transform.gameObject.layer == WhumpusUtilities.ToLayer(interactLayer))
+            {
+                SetCursorType(CursorType.Look);
+
+                return;
+            }
+
+            if (hit.transform.gameObject.layer == WhumpusUtilities.ToLayer(moveLayer))
+            {
+                SetCursorType(CursorType.Move);
+                return;
+            }
+        }
+
+        SetCursorType(CursorType.Base);
     }
 }
 
