@@ -6,6 +6,9 @@ using UnityEngine.Serialization;
 public class TypewriterCameraController : MonoBehaviour
 {
     #region Variables
+    [Header("Camera blend")]
+    [SerializeField] float cameraBlendSpeed;
+
     [Header("Movement")]
     [SerializeField] float rotationThreshold;
     [SerializeField] float rotationSpeed;
@@ -29,6 +32,12 @@ public class TypewriterCameraController : MonoBehaviour
     private float _targetYRotation;
     private KeyboardZoneManager _zoneManager;
 
+    private float maxRotationX, maxRotationY;
+    private float xOffset, yOffset;
+
+    bool locked;
+    Quaternion targetRotation;
+
     #endregion
 
     #region Unity Methods
@@ -37,7 +46,6 @@ public class TypewriterCameraController : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         _startRotation = transform.localEulerAngles;
-        _zoneManager = KeyboardZoneManager.Instance;
     }
     public void Step()
     {
@@ -50,21 +58,24 @@ public class TypewriterCameraController : MonoBehaviour
         float normalizedX = (mousePos.x / screenWidth - 0.5f) * 2f;
         float normalizedY = (mousePos.y / screenHeight - 0.5f) * 2f;
 
-        var xOffset = xLookoffset;
-        var yOffset = yLookoffset;
+        if (locked)
+        {
+            xOffset = Mathf.Lerp(xOffset, xLookoffset, cameraBlendSpeed * Time.deltaTime);
+            yOffset = Mathf.Lerp(yOffset, yLookoffset, cameraBlendSpeed * Time.deltaTime);
 
-
-        if (_zoneManager.IsCollider)
-        { 
-            SensitivityOfCamera(_insideMaxRotationX, _insideMaxRotationY,normalizedX,normalizedY);
+            maxRotationX = Mathf.Lerp(maxRotationX, _insideMaxRotationX, cameraBlendSpeed * Time.deltaTime);
+            maxRotationY = Mathf.Lerp(maxRotationY, _insideMaxRotationY, cameraBlendSpeed * Time.deltaTime);
         }
         else
         {
-            xOffset = 0;
-            yOffset = 0;
+            xOffset = Mathf.Lerp(xOffset, 0, cameraBlendSpeed * Time.deltaTime);
+            yOffset = Mathf.Lerp(yOffset, 0, cameraBlendSpeed * Time.deltaTime);
 
-            SensitivityOfCamera(_outsideMaxRotationX, _outsideMaxRotationY,normalizedX,normalizedY);
+            maxRotationX = Mathf.Lerp(maxRotationX, _outsideMaxRotationX, cameraBlendSpeed * Time.deltaTime);
+            maxRotationY = Mathf.Lerp(maxRotationY, _outsideMaxRotationY, cameraBlendSpeed * Time.deltaTime);
         }
+
+        CameraConstraints(maxRotationX, maxRotationY,normalizedX,normalizedY);
 
         Quaternion targetRot = Quaternion.Euler(_targetXRotation, _targetYRotation, _startRotation.z);
 
@@ -78,10 +89,28 @@ public class TypewriterCameraController : MonoBehaviour
     #endregion
     
     #region Private Methods
-    private void SensitivityOfCamera(float maxRotationX, float maxRotationY, float normalizedX, float normalizedY)
+    private void CameraConstraints(float maxRotationX, float maxRotationY, float normalizedX, float normalizedY)
     {
         _targetXRotation = -normalizedY * maxRotationX + _startRotation.x;
         _targetYRotation = normalizedX * maxRotationY + _startRotation.y;
     }
+
+    private void ResetCameraValues()
+    {
+        _targetXRotation = 0;
+        _targetYRotation = 0;
+    }
+    
     #endregion
+
+    public void LockMode(bool active, Vector2 offset, Vector2 lockAmount)
+    {
+        xLookoffset = offset.x;
+        yLookoffset = offset.y;
+
+        _insideMaxRotationX = lockAmount.x;
+        _insideMaxRotationY = lockAmount.y;
+
+        locked = active;
+    }
 }

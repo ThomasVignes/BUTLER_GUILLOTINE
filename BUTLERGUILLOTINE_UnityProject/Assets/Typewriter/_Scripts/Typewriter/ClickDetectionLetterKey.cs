@@ -39,7 +39,6 @@ public class ClickDetectionLetterKey : MonoBehaviour
     private Vector3 _initialPosition;
     private Vector3 _downPosition;
     private bool _isAnimating = false;
-    private KeyboardZoneManager _zoneManager;
     #endregion
     
     #region Unity Methods
@@ -55,11 +54,9 @@ public class ClickDetectionLetterKey : MonoBehaviour
         }
         _initialPosition = transform.position;
         _downPosition = _initialPosition + Vector3.down * AnimationSettingsManager.Instance.DownDistance;
-        _zoneManager = KeyboardZoneManager.Instance;
     }
-    private void OnMouseDown()
+    public void ClickLetter()
     {
-        if (_zoneManager.IsCollider == false) return;
         if (_isAnimating) return;
         foreach (var finger in _allFingers)
         {

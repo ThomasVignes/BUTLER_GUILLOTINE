@@ -1593,6 +1593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c1809a2828844f4ab43f20d44da6b55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraBlendSpeed: 10
   rotationThreshold: 9999
   rotationSpeed: 90
   _outsideMaxRotationX: 30
@@ -3982,7 +3983,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2526245315024695118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.017, y: 0.017814731, z: -0.345}
+  m_LocalPosition: {x: 0.035, y: 0.017814731, z: -0.359}
   m_LocalScale: {x: 0.13391726, y: 0.084832035, z: 0.10623892}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5116,9 +5117,17 @@ MonoBehaviour:
   resetPos: {x: 0, y: 0, z: 0}
   Choppers: []
   Maskables: []
-  _speed: 1
-  _rotationSpeed: 5
+  _speed: 3
+  _rotationSpeed: 6
+  _facingRotationSpeed: 10
+  interactables:
+    serializedVersion: 2
+    m_Bits: 128
+  buttons:
+    serializedVersion: 2
+    m_Bits: 1048576
   cameraController: {fileID: 1934094102641734720}
+  ExitSpot: {fileID: 182024026197651336}
 --- !u!195 &410967481694678192
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5783,7 +5792,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3327197274489342460}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0.98, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -8059,6 +8068,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7062754927034329830}
+  - {fileID: 182024026197651336}
   m_Father: {fileID: 7225692543772801847}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9933,7 +9943,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1351595977583557582}
-  - {fileID: 182024026197651336}
   m_Father: {fileID: 5085215230289447556}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 8.231, z: 0}
@@ -10026,9 +10035,6 @@ MonoBehaviour:
   EnterPosition: {x: 0, y: 0, z: 0}
   EnterRotation: {x: 0, y: 0, z: 0}
   _enterPositionAndRotation: {fileID: 2526245315024695118}
-  ExitPosition: {x: 0, y: 0, z: 0}
-  ExitRotation: {x: 0, y: 0, z: 0}
-  _exitPositionAndRotation: {fileID: 6831223176996775826}
 --- !u!1 &6569781618523735953
 GameObject:
   m_ObjectHideFlags: 0
@@ -10599,12 +10605,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6831223176996775826}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -4.380793, y: 0.03732626, z: -3.131459}
-  m_LocalScale: {x: 0.13391726, y: 0.084832035, z: 0.10623892}
+  m_LocalRotation: {x: -0, y: 0.72254276, z: -0, w: 0.69132626}
+  m_LocalPosition: {x: -2.734001, y: 0.005000204, z: 0.72000027}
+  m_LocalScale: {x: 0.12660979, y: 0.1, z: 0.07889001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 158898453993153500}
+  m_Father: {fileID: 4297259379139278024}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &7187962579656429543
@@ -12163,7 +12169,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 55
+    FieldOfView: 53
     OrthographicSize: 5
     NearClipPlane: 0.03
     FarClipPlane: 1000
