@@ -76,7 +76,7 @@ public class KeyboardZoneManager : MonoBehaviour
     #region Private Methods
     private void OnMouseDown()
     {
-        PlayerMovements.Instance.GoToKeyboard();
+        TypewriterPlayer.Instance.GoToKeyboard();
     }
     #endregion
 }
