@@ -12,6 +12,9 @@ public class TypewriterPlayer : PlayerController
     [SerializeField] private float _speed = 5f;
     [SerializeField] private float _rotationSpeed = 5f;
 
+    [Header("References")]
+    [SerializeField] private TypewriterCameraController cameraController;
+
     private CharacterController _characterController;
     private KeyboardZoneManager _zoneManager;
     private Vector3 _targetPosition;
@@ -34,13 +37,25 @@ public class TypewriterPlayer : PlayerController
         _characterController = GetComponent<CharacterController>();
         _zoneManager = KeyboardZoneManager.Instance;
         _targetPosition = transform.position;
+
+        cameraController.Init();
+
+        agent.enabled = false;
     }
     public override void Step()
     {
         //base.Step();
 
-        
+        cameraController.Step();
+        LegacyMovement();
+
+    }
+
+    private void LegacyMovement()
+    {
         if (_zoneManager.IsCollider && !_isGoingToExit && !_hasReachedExit) return;
+
+        
         if (Input.GetMouseButtonDown(0) && !_goingToKeyboard && !_isGoingToExit)
         {
             Plane plane = new Plane(Vector3.up, transform.position);
@@ -51,6 +66,8 @@ public class TypewriterPlayer : PlayerController
                 _isMoving = true;
             }
         }
+        
+
         if (_isMoving)
         {
             Vector3 direction = _targetPosition - transform.position;
@@ -101,10 +118,9 @@ public class TypewriterPlayer : PlayerController
                 transform.rotation = Quaternion.Slerp(transform.rotation, _targetRotation, Time.deltaTime * _rotationSpeed);
             }
         }
-        
     }
     #endregion
-    
+
     #region Public Methods
     public void GoToKeyboard()
     {

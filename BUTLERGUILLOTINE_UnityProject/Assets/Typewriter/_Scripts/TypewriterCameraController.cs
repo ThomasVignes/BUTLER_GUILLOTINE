@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class MouseCameraFollows : MonoBehaviour
+public class TypewriterCameraController : MonoBehaviour
 {
     #region Variables
     [Header("Movement")]
@@ -32,14 +32,14 @@ public class MouseCameraFollows : MonoBehaviour
     #endregion
 
     #region Unity Methods
-    private void Start()
+    public void Init()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         _startRotation = transform.localEulerAngles;
         _zoneManager = KeyboardZoneManager.Instance;
     }
-    private void Update()
+    public void Step()
     {
         if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0) _hasMouseMoved = true;
         if (!_hasMouseMoved) return; 
