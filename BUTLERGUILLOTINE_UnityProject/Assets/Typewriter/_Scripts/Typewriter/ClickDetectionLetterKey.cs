@@ -69,7 +69,8 @@ public class ClickDetectionLetterKey : MonoBehaviour
         if (_isExitKey)
         {
             Debug.Log("touche exit");
-            TypewriterPlayer.Instance.GoToExit(); 
+            TypewriterPlayer.Instance.GoToExit();
+            AnimationSettingsManager.Instance.EnableArms(false);
             return;
         }
 

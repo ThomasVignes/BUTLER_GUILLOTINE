@@ -18,5 +18,10 @@ public class AnimationSettingsManager : MonoBehaviour
         if (Instance != null && Instance != this) Destroy(gameObject);
         else Instance = this;
     }
+
+    public void EnableArms(bool arms)
+    {
+        TypewriterPlayer.Instance.SetIK(arms);
+    }
     #endregion
 }

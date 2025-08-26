@@ -196,5 +196,10 @@ public class TypewriterPlayer : PlayerController
         _isGoingToExit = true;
         _hasReachedExit = false;
     }
+
+    public void SetIK(bool active)
+    {
+        animator.SetBool("Writing", active);
+    }
     #endregion
 }
