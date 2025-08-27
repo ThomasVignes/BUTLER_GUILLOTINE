@@ -149,7 +149,7 @@ public class MainMenuMaster : MonoBehaviour
     {
         BlackFadeTo(1, 4f);
 
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(9f);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
