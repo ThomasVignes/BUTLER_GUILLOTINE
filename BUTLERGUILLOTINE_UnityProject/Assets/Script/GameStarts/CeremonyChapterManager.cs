@@ -112,7 +112,20 @@ public class CeremonyChapterManager : ChapterManagerGeneric
 
         Cursor.visible = true;
 
-        RestartGame();
+        yield return new WaitForSeconds(3f);
+
+        gameManager.DialogueManager.TryEndDialogue();
+        gameManager.ThemeManager.ResumeAmbianceSecure();
+        gameManager.ScreenEffects.StartFade();
+        Intro = true;
+        gameManager.Ready = true;
+
+        if (introUi.activeSelf)
+        {
+            yield return new WaitForSeconds(2);
+
+            introUi.SetActive(false);
+        }
     }
 
     IEnumerator C_DeathCinematic(string message)
@@ -162,10 +175,11 @@ public class CeremonyChapterManager : ChapterManagerGeneric
 
     IEnumerator C_Restart()
     {
+        gameManager.ResumeAmbiance();
+
         yield return new WaitForSeconds(3f);
 
         gameManager.DialogueManager.TryEndDialogue();
-        gameManager.ResumeAmbiance();
         gameManager.ScreenEffects.StartFade();
         Intro = true;
         gameManager.Ready = true;

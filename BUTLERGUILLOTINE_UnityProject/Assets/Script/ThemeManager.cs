@@ -72,6 +72,10 @@ public class ThemeManager : MonoBehaviour
 
     public void NewArea(string areaName)
     {
+        NewArea(areaName, false);
+    }
+    public void NewArea(string areaName, bool reset)
+    {
         if (overrideAmbiance)
             return;
 
@@ -82,7 +86,7 @@ public class ThemeManager : MonoBehaviour
                 PersistentData.Instance.MusicMultiplier = 1;
                 PersistentData.Instance.UpdateStepsVolume(item.StepsVolume);
 
-                if (item.Name != currentArea)
+                if (reset || (item.Name != currentArea))
                 {
                     SwapEvent(item.Track);
 
@@ -91,6 +95,7 @@ public class ThemeManager : MonoBehaviour
             }
         }
     }
+
 
     public void NewArea(string areaName, float volume)
     {
@@ -115,6 +120,11 @@ public class ThemeManager : MonoBehaviour
     }
 
     public void ResumeAmbiance()
+    {
+        NewArea(currentArea, true);
+    }
+
+    public void ResumeAmbianceSecure()
     {
         NewArea(currentArea);
     }
