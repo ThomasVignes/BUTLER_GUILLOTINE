@@ -16,6 +16,10 @@ public class MainMenuMaster : MonoBehaviour
     public bool AutoQuit;
     [SerializeField] float travelSpeed;
 
+    [Header("Modularity")]
+    [SerializeField] float silenceTime;
+    [SerializeField] StudioEventEmitter emitter;
+
     [Header("References")]
     [SerializeField] Texture2D BaseCursor;
     [SerializeField] GameObject chapterSelect;
@@ -150,6 +154,10 @@ public class MainMenuMaster : MonoBehaviour
         BlackFadeTo(1, 4f);
 
         yield return new WaitForSeconds(9f);
+
+        emitter.Stop();
+
+        yield return new WaitForSeconds(silenceTime);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

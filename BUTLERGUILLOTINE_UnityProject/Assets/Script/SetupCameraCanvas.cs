@@ -9,10 +9,17 @@ public class SetupCameraCanvas : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(C_StartDelay());
+    }
+
+    IEnumerator C_StartDelay()
+    {
+        yield return new WaitForSeconds(0.05f);
+
         Camera cam = Camera.main.transform.GetChild(0).GetComponent<Camera>();
 
         if (cam == null)
-             cam = Camera.main;
+            cam = Camera.main;
 
         canvas.worldCamera = cam;
         canvas.planeDistance = planeDistance;
