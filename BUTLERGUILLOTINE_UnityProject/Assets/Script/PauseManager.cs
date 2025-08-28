@@ -79,6 +79,8 @@ public class PauseManager : Manager
 
         Cursor.visible = true;
 
+        ButlerEngineUtilities.ClearAllInterScenes();
+
         SceneManager.LoadScene(1);
     }
 

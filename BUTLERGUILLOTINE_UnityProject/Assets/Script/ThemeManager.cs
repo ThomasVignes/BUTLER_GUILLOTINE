@@ -28,14 +28,7 @@ public class ThemeManager : MonoBehaviour
     public void Init()
     {
         if (ClearInterScenes)
-        {
-            var interScenes = FindObjectsOfType<InterSceneTheme>();
-            for (int i = 0; i < interScenes.Length; i++)
-            {
-                interScenes[i].Stop();
-                Destroy(interScenes[i].gameObject);
-            }
-        }
+            ButlerEngineUtilities.ClearAllInterScenes();
 
         areas.Clear();
 
