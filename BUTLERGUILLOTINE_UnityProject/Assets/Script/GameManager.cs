@@ -80,6 +80,7 @@ public class PlayableCharacter
 public class GameManager : MonoBehaviour
 {
     //Global Hidden Values
+    public float DelayBetweenLetters = 0.02f;
     public float StrongPunctuationWait = 0.4f;
     public float LightPunctuationWait = 0.07f;
 
@@ -583,7 +584,7 @@ public class GameManager : MonoBehaviour
 
     public void EndGame(string message)
     {
-        startGameManager.Death(message);
+        startGameManager.Death(message.ToUpper());
     }
 
 

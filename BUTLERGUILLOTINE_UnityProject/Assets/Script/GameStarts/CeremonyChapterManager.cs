@@ -15,8 +15,13 @@ public class CeremonyChapterManager : ChapterManagerGeneric
     bool gettingUp;
     float introTimer;
 
+    float strongPuncWait, lightPuncWait;
+
     public override void StartGame()
     {
+        strongPuncWait = gameManager.StrongPunctuationWait;
+        lightPuncWait = gameManager.LightPunctuationWait;
+
         Cursor.visible = false;
 
         endText.text = "";
@@ -119,12 +124,24 @@ public class CeremonyChapterManager : ChapterManagerGeneric
 
         endText.text = "";
 
+        var charCount = 0;
+
         foreach (char c in message)
         {
-            yield return new WaitForSeconds(0.06f);
+            endText.text += c;
             EffectsManager.Instance.audioManager.Play("Click");
 
-            endText.text += c;
+            charCount++;
+
+            string strongPunctuations = ".?!";
+            string lightPunctuations = ",:";
+
+            if (strongPunctuations.Contains(c) && charCount < message.Length - 1)
+                yield return new WaitForSeconds(strongPuncWait);
+            else if (lightPunctuations.Contains(c))
+                yield return new WaitForSeconds(lightPuncWait);
+            else
+                yield return new WaitForSeconds(0.06f);
         }
 
         yield return new WaitForSeconds(2.3f);
