@@ -10,6 +10,10 @@ public class InventoryTutorial : Tutorial
             return;
 
 
+        if (GameManager.Instance.VNMode)
+            return;
+
+
         if (Input.GetButtonDown("Pause"))
         {
             EndTutorial();

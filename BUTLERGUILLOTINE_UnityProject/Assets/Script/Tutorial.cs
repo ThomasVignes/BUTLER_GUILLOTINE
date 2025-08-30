@@ -11,7 +11,7 @@ public class Tutorial : MonoBehaviour
 
     public bool active;
 
-    public void Activate()
+    public virtual void Activate()
     {
         if (active)
             return;
@@ -24,7 +24,7 @@ public class Tutorial : MonoBehaviour
     }
 
 
-    public void EndTutorial()
+    public virtual void EndTutorial()
     {
         active = false;
 

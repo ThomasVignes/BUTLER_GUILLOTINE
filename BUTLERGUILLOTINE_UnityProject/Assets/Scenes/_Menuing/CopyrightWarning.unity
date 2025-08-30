@@ -360,7 +360,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -180}
+  m_AnchoredPosition: {x: 0, y: -302}
   m_SizeDelta: {x: 1200, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &234878819
@@ -383,11 +383,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "There are exceptions to this, being the following tracks \navailable in
-    the public domain:  \n                         \nO Jesu Christ - Unknown Choir\nLa
-    sonnambula - Ah, non credea mirarti - Arr. Adelina Patti\nMein Herze schwimmt
-    im Blut, BWV 199 - 2. Stumme Seufzer, stille Klagen - Arr. Michel Rondeau \nLamento
-    della ninfa - Anna Simboli (soprano)\n\n\n\n\n\n"
+  m_text: "The public domain songs that will stay and be credited directly \\nin-game
+    are :\n\nO Jesu Christ - Unknown Choir\nLa sonnambula - Ah, non credea mirarti
+    - Arr. Adelina Patti\nMein Herze schwimmt im Blut, BWV 199 - 2. Stumme Seufzer,
+    stille Klagen - Arr. Michel Rondeau \nLamento della ninfa - Anna Simboli (soprano)\n\n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 83a517b4bd85fc8459b204e706a96b4c, type: 2}
   m_sharedMaterial: {fileID: -8812502942654963859, guid: 83a517b4bd85fc8459b204e706a96b4c, type: 2}
@@ -787,7 +786,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -298, y: -628}
+  m_AnchoredPosition: {x: -316, y: -768}
   m_SizeDelta: {x: 1200, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &648227038
@@ -812,16 +811,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'All rights reserved to :
 
-    - James Leyland Kirby
-
-    - Xiu Xiu
-
-    -
-    Silun Lee
-
     - Yeakun Yoo
 
-    - Neowiz'
+    - James Leyland Kirby'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 83a517b4bd85fc8459b204e706a96b4c, type: 2}
   m_sharedMaterial: {fileID: -8812502942654963859, guid: 83a517b4bd85fc8459b204e706a96b4c, type: 2}
@@ -1215,7 +1207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 228}
+  m_AnchoredPosition: {x: 0, y: 244}
   m_SizeDelta: {x: 1200, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1129304725
@@ -1238,12 +1230,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The demo currently contains copyrighted music that I do not own for the
-    best possible representation of the game''s atmosphere.     All this material
-    will be replaced later on.
-
-
-'
+  m_text: "The demo currently contains two copyrighted tracks that I do not own for
+    the best possible representation of the game's atmosphere, these being: \r\n\nLies
+    of P - Estella Opera House Ambience\nThe Caretaker-All You Are Going to Want
+    to do is Get Back There\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 83a517b4bd85fc8459b204e706a96b4c, type: 2}
   m_sharedMaterial: {fileID: -8812502942654963859, guid: 83a517b4bd85fc8459b204e706a96b4c, type: 2}

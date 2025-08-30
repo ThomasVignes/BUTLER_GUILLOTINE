@@ -18,6 +18,8 @@ public class RunTutorial : Tutorial
         if (!active)
             return;
 
+        if (GameManager.Instance.VNMode)
+            return;
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -25,6 +27,11 @@ public class RunTutorial : Tutorial
                 EndTutorial();
 
         }
+    }
+
+    public override void Activate()
+    {
+        base.Activate();
     }
 
 
