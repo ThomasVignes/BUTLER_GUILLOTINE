@@ -13,6 +13,9 @@ public class PersistentData : MonoBehaviour
     public bool FastMode;
     public bool DemoMode;
 
+    [Header("Demo Specific")]
+    public bool FinishedOnce;
+
     string masterBusPath = "bus:/";
     string musicBusPath = "bus:/Music";
     string sfxBusPath = "bus:/SFX";

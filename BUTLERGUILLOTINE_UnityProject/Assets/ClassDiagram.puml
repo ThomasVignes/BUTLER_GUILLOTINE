@@ -1,0 +1,2547 @@
+﻿@startuml
+class AddDialogue {
+    - Start() : void
+}
+class Bai {
+    - Awake() : void
+    + Baiii() : void
+    + OpenURL(url : string) : void
+}
+class BounceLight {
+    - Awake() : void
+    + Toggle(active : bool) : void
+}
+class BuildSave {
+    + GameFinished : bool
+    + Ceremony1Reached : bool
+    + Ceremony2Reached : bool
+    + Ceremony3Reached : bool
+    + LongestDay1Reached : bool
+    + LongestDay2Reached : bool
+    + LongestDay3Reached : bool
+    + LongestDay4Reached : bool
+    + LongestDay5Reached : bool
+    + PlaceholderSave() : void
+    + SaveTo(buildSaveData : BuildSaveData) : void
+}
+class BuildSaveData {
+    + GameFinished : bool
+    + Ceremony1Reached : bool
+    + Ceremony2Reached : bool
+    + Ceremony3Reached : bool
+    + LongestDay1Reached : bool
+    + LongestDay2Reached : bool
+    + LongestDay3Reached : bool
+    + LongestDay4Reached : bool
+    + LongestDay5Reached : bool
+    + PlaceholderSave() : void
+    + SaveTo(buildSaveData : BuildSaveData) : void
+}
+class CameraEffectManager {
+    + Init(man : GameManager) : void
+    - Update() : void
+    + PlayEffect(effect : CameraEffect) : void
+    + ElevatorEffect() : void
+}
+class CameraTickEvent {
+    - Start() : void
+}
+class ChapterDetector {
+}
+class ChapterSelector {
+    + Title : string
+    + Image : Sprite
+    + SceneReference : string
+    + Init() : void
+}
+class MenuChapter {
+    + Title : string
+    + Image : Sprite
+    + SceneReference : string
+    + Init() : void
+}
+class Character {
+    + ID : string
+    # cursorType : CursorType
+    + CanMoveInCinematic : bool
+    # rotationSpeed : float
+    + Injured : bool
+    # moveStateLerp : float
+    # minDistanceToMove : float
+    # animator : Animator
+    # agent : NavMeshAgent
+    # targetPos : Vector3
+    # targetDir : Vector3
+    # lastAgentVelocity : Vector3
+    # lastAgentPath : NavMeshPath
+    # targetInteractable : Interactable
+    # originalSpeed : float
+    # specialMode : bool
+    # targetMoveState : int
+    # currentMoveState : float
+    # stunnedTimer : float
+    # stunned : bool
+    # init : bool
+    + Injure(injure : bool) : void
+    + ToggleRun(run : bool) : void
+    # SetDirection() : void
+    + SetDestination(pos : Vector3, dontReset : bool) : void
+    + SetDestination(pos : Vector3) : void
+    + SetDestination(pos : Transform) : void
+    + SetDestination(pos : Vector3, interactable : Interactable) : void
+    + Pause() : void
+    + Resume() : void
+    + PickUpAnim() : void
+    + HoldAnim() : void
+    + TeleportCharacter(transform : Transform) : void
+    + TeleportCharacter(pos : Vector3, stickToNavmesh : bool) : void
+}
+class CharacterStocker {
+    - Start() : void
+    - OnTriggerEnter(other : Collider) : void
+    - OnTriggerExit(other : Collider) : void
+}
+class CinematicManager {
+    + Data : CinematicData
+    + OnStart : UnityEvent
+    + OnStartAfterBlackScreen : UnityEvent
+    + OnEndBeforeBlackScreen : UnityEvent
+    + OnEnd : UnityEvent
+    + ChainCinematic : string
+    + NoCamera : bool
+    + CinematicPuppets : CinematicPuppet[]
+    + CinematicCameraPivots : Transform[]
+    + Name : string
+    + Puppet : GameObject
+    + Animator : Animator
+    + Init(gm : GameManager) : void
+    + Step() : void
+    + PlayCinematic(ID : string) : void
+    + PlayCinematic(ID : string, instaFade : bool) : void
+    + CloseCinematic() : void
+    + SkipCinematic() : void
+    + PlayPuppetAction(puppet : string, action : string) : void
+    + Init() : void
+    + Init() : void
+}
+class Cinematic {
+    + Data : CinematicData
+    + OnStart : UnityEvent
+    + OnStartAfterBlackScreen : UnityEvent
+    + OnEndBeforeBlackScreen : UnityEvent
+    + OnEnd : UnityEvent
+    + ChainCinematic : string
+    + NoCamera : bool
+    + CinematicPuppets : CinematicPuppet[]
+    + CinematicCameraPivots : Transform[]
+    + Name : string
+    + Puppet : GameObject
+    + Animator : Animator
+    + Init(gm : GameManager) : void
+    + Step() : void
+    + PlayCinematic(ID : string) : void
+    + PlayCinematic(ID : string, instaFade : bool) : void
+    + CloseCinematic() : void
+    + SkipCinematic() : void
+    + PlayPuppetAction(puppet : string, action : string) : void
+    + Init() : void
+    + Init() : void
+}
+class CinematicPuppet {
+    + Data : CinematicData
+    + OnStart : UnityEvent
+    + OnStartAfterBlackScreen : UnityEvent
+    + OnEndBeforeBlackScreen : UnityEvent
+    + OnEnd : UnityEvent
+    + ChainCinematic : string
+    + NoCamera : bool
+    + CinematicPuppets : CinematicPuppet[]
+    + CinematicCameraPivots : Transform[]
+    + Name : string
+    + Puppet : GameObject
+    + Animator : Animator
+    + Init(gm : GameManager) : void
+    + Step() : void
+    + PlayCinematic(ID : string) : void
+    + PlayCinematic(ID : string, instaFade : bool) : void
+    + CloseCinematic() : void
+    + SkipCinematic() : void
+    + PlayPuppetAction(puppet : string, action : string) : void
+    + Init() : void
+    + Init() : void
+}
+class ClockMovement {
+    - Awake() : void
+    + ResetClock() : void
+    - Update() : void
+}
+class CombatManager {
+}
+class CommentInteractable {
+    - comment : string
+    + StandaloneComment() : void
+    + UpdateComment(newComment : string) : void
+    + ToggleCommenting(toggle : bool) : void
+}
+class CommentRandomizer {
+    + EventDelegates : UnityEvent
+    - Start() : void
+    + EnableAllComments() : void
+}
+class CopyCamera {
+    - Awake() : void
+}
+class CopyPlayerPos {
+    + ToggleActive(active : bool) : void
+    - Update() : void
+}
+class CopyPosRot {
+    - original : Transform
+    - Update() : void
+    + Step() : void
+}
+class CreditsManager {
+    + Init(master : MainMenuMaster) : void
+    + Roll() : void
+    + ResetCredits() : void
+    - Update() : void
+}
+class CursorManager {
+    + Standalone : bool
+    - current : CursorType
+    + Init() : void
+    - Update() : void
+    + ToggleBlackAndWhite(blackAndWhite : bool) : void
+    + SetCursorType(type : CursorType) : void
+    - CursorHover() : void
+}
+class DangerZone {
+    - deathText : string
+    - layer : LayerMask
+    - Update() : void
+    - OnTriggerEnter(other : Collider) : void
+    - OnTriggerExit(other : Collider) : void
+}
+class DebugAudioSwap {
+    - Start() : void
+}
+class DebugChapterSelect {
+}
+class DebugChapterSkip {
+    + Skip() : void
+}
+class DebugCinematicSkipper {
+    - Start() : void
+    - Update() : void
+    + EarlyClose() : void
+}
+class DelegateBlock {
+    + Delegates : UnityEvent
+    + Trigger() : void
+}
+class DemoFlashesScene {
+    - Start() : void
+    + NextScene() : void
+}
+class DemoOverrider {
+    + Active : bool
+    + EndScene : string
+    + CinematicThing : GameObject
+    - Awake() : void
+    + Part1() : void
+    + Part2() : void
+}
+class Demo_SecretKey {
+    - Start() : void
+}
+class Dialogue {
+    + PuppetName : string
+    + overrideFOV : bool
+    + FOV : float
+    + Text : string
+    + Action : string
+    + cameraEffect : CameraEffect
+    + Text : string
+    + ConditionNeeded : string
+    + DialogueEnd : bool
+    + HideLeavePrompt : bool
+    + BranchIndex : int
+    + Delegate : UnityEvent
+    + OverrideSound : string
+    + JumpDialogue : bool
+    + DialogueIndex : int
+}
+class Line {
+    + PuppetName : string
+    + overrideFOV : bool
+    + FOV : float
+    + Text : string
+    + Action : string
+    + cameraEffect : CameraEffect
+    + Text : string
+    + ConditionNeeded : string
+    + DialogueEnd : bool
+    + HideLeavePrompt : bool
+    + BranchIndex : int
+    + Delegate : UnityEvent
+    + OverrideSound : string
+    + JumpDialogue : bool
+    + DialogueIndex : int
+}
+class Answer {
+    + PuppetName : string
+    + overrideFOV : bool
+    + FOV : float
+    + Text : string
+    + Action : string
+    + cameraEffect : CameraEffect
+    + Text : string
+    + ConditionNeeded : string
+    + DialogueEnd : bool
+    + HideLeavePrompt : bool
+    + BranchIndex : int
+    + Delegate : UnityEvent
+    + OverrideSound : string
+    + JumpDialogue : bool
+    + DialogueIndex : int
+}
+class DialogueBox {
+    + OnDialogueEnd : UnityEvent
+    - once : bool
+    - delayBeforeDelegates : float
+    - delayBeforeSwitch : float
+    - puppet : string
+    - dialogueReference : int
+    + End() : void
+    + ChangeReference(index : int) : void
+}
+class DialogueCinematic {
+    + lines : DialogueCinematicLine[]
+    + OnEachLineEnd : UnityEvent
+    + StartBlackScreenDuration : float
+    + EndBlackScreenDuration : float
+    + noOpeningBlackScreen : bool
+    + OnStart : UnityEvent
+    + OnEndBeforeBlackScreen : UnityEvent
+    + OnEnd : UnityEvent
+    + CinematicPuppets : CinematicPuppet[]
+    + Text : string
+    + DeletesPreviousText : bool
+    + PuppetActions : PuppetAction[]
+    + cameraEffect : CameraEffect
+    + newAmbience : string
+    + soundEffects : string[]
+    + Delegates : UnityEvent
+    - Start() : void
+    - Update() : void
+    + CanSkip() : void
+    + Next() : void
+    + DialogueFinished() : void
+    + TryEndDialogue(gameManager : GameManager) : void
+    + Play() : void
+    + PlayPuppetAction(puppet : string, action : string) : void
+}
+class DialogueCinematicLine {
+    + lines : DialogueCinematicLine[]
+    + OnEachLineEnd : UnityEvent
+    + StartBlackScreenDuration : float
+    + EndBlackScreenDuration : float
+    + noOpeningBlackScreen : bool
+    + OnStart : UnityEvent
+    + OnEndBeforeBlackScreen : UnityEvent
+    + OnEnd : UnityEvent
+    + CinematicPuppets : CinematicPuppet[]
+    + Text : string
+    + DeletesPreviousText : bool
+    + PuppetActions : PuppetAction[]
+    + cameraEffect : CameraEffect
+    + newAmbience : string
+    + soundEffects : string[]
+    + Delegates : UnityEvent
+    - Start() : void
+    - Update() : void
+    + CanSkip() : void
+    + Next() : void
+    + DialogueFinished() : void
+    + TryEndDialogue(gameManager : GameManager) : void
+    + Play() : void
+    + PlayPuppetAction(puppet : string, action : string) : void
+}
+class DialogueInstance {
+    - minLines : int
+    - maxLines : int
+    - delayBeforeDialogue : float
+    - delayBetweenLines : float
+    - initiator : DialogueCharacter
+    - interlocutor : DialogueCharacter
+    + InitValues(manager : ProceduralDialogueManager, minLines : int, maxLines : int, delayBeforeDialogue : float, delayBetweenLines : float) : void
+    + Interrupt() : void
+    + StartDialogue(initatior : DialogueCharacter, interlocutor : DialogueCharacter) : void
+    + EndDialogue() : void
+}
+class DialogueManager {
+    - delayBeforeDialogue : float
+    - delayBetweenLetters : float
+    - originalFOV : float
+    - Canvas : GameObject
+    - VNCam : CinemachineVirtualCamera
+    - currentPuppetIndex : int
+    - currentPuppet : GameObject
+    - currentAnimator : Animator
+    - currentDialogue : int
+    - currentLine : int
+    - currentDialogueBox : DialogueBox
+    - cameraPosOriginal : Vector3
+    - skip : bool
+    - writing : bool
+    - selecting : bool
+    + Name : string
+    + VNPuppet : GameObject
+    + PivotIndex : int
+    + CameraIndex : int
+    + OriginalPos : Vector3
+    + Init(man : GameManager) : void
+    + Step() : void
+    + ToggleCanvas(active : bool) : void
+    + StartDialogue(puppet : string, index : int, dialogueBox : DialogueBox) : void
+    + JumpToOtherDialogue(puppet : string, index : int) : void
+    + LoadDialogue(hasDelay : bool) : void
+    + TryEndDialogue() : void
+    + SelectAnswer(index : int) : void
+    + WriteSpecific(text : string) : void
+    + EndSpecific() : void
+    + AddDialogue(d : Dialogue) : void
+    + ResetPos() : void
+}
+class Puppet {
+    - delayBeforeDialogue : float
+    - delayBetweenLetters : float
+    - originalFOV : float
+    - Canvas : GameObject
+    - VNCam : CinemachineVirtualCamera
+    - currentPuppetIndex : int
+    - currentPuppet : GameObject
+    - currentAnimator : Animator
+    - currentDialogue : int
+    - currentLine : int
+    - currentDialogueBox : DialogueBox
+    - cameraPosOriginal : Vector3
+    - skip : bool
+    - writing : bool
+    - selecting : bool
+    + Name : string
+    + VNPuppet : GameObject
+    + PivotIndex : int
+    + CameraIndex : int
+    + OriginalPos : Vector3
+    + Init(man : GameManager) : void
+    + Step() : void
+    + ToggleCanvas(active : bool) : void
+    + StartDialogue(puppet : string, index : int, dialogueBox : DialogueBox) : void
+    + JumpToOtherDialogue(puppet : string, index : int) : void
+    + LoadDialogue(hasDelay : bool) : void
+    + TryEndDialogue() : void
+    + SelectAnswer(index : int) : void
+    + WriteSpecific(text : string) : void
+    + EndSpecific() : void
+    + AddDialogue(d : Dialogue) : void
+    + ResetPos() : void
+}
+class DisclaimerManager {
+    + UpdateCopyright() : void
+    + Continue() : void
+    + Leave() : void
+}
+class Door {
+    + StartOpen : bool
+    - lockedMessage : string
+    + CanOpen : bool
+    - animator : Animator
+    + OnOpen : UnityEvent
+    + OnUnlock : UnityEvent
+    + UpdateOnEnable : bool
+    - isOpen : bool
+    - Start() : void
+    - OnEnable() : void
+    + ToggleDoor(open : bool) : void
+    + ToggleDoorNoEvent(open : bool) : void
+    + Unlock() : void
+    + ChangeLockMessage(message : string) : void
+}
+class DoorHoldInteractable {
+    - Update() : void
+}
+class EquipTutorial {
+}
+class EventArea {
+    + OnTrigger : UnityEvent
+    + Layer : LayerMask
+    + Specific : GameObject
+    + Delay : float
+    + DeactivateOnDestroy : bool
+    - delayTimer : float
+    - eventStarted : bool
+    - Update() : void
+    + PlayEventWithDelay() : void
+    + PlayEvent() : void
+    - OnTriggerEnter(other : Collider) : void
+    - OnTriggerExit(other : Collider) : void
+}
+class ExplosiveHead {
+    + AutoOnStart : bool
+    - Start() : void
+    - Update() : void
+    + Blast() : void
+}
+class FastChapterLoader {
+}
+class FastModeDetection {
+    + ConstantlyActive : bool
+    - Start() : void
+}
+class FastModeScreen {
+    + NextScene(fast : bool) : void
+}
+class FightSceneManager {
+    - Start() : void
+    + NextScene() : void
+}
+class Flasher {
+    - Awake() : void
+    + F() : void
+    + Flash(yes : bool) : void
+}
+class Florp {
+    - Update() : void
+    + Trigger() : void
+}
+class FovPulse {
+    + Active : bool
+    + Activate(active : bool) : void
+    - Start() : void
+    - Update() : void
+}
+class Conditions {
+    + Name : string
+    + Met : bool
+    + Name : string
+    + Music : AudioSource
+    + CopyrightFree : AudioSource
+    + Track : EventReference
+    + StepsVolume : float
+    + ImmuneExperimental : bool
+    + OriginalVolume : float
+    + ID : string
+    + Data : CharacterData
+    + Instance : GameObject
+    + ChapterData : ChapterData
+    + StartCinematic : string
+    + Paused : bool
+    + SpecialActive : bool
+    + ManualPlayerSpawn : bool
+    + LockSpecial : bool
+    + LockSpecialComment : string
+    - clickdelay : float
+    - currentCam : GameObject
+    - vnCam : GameObject
+    - firstCamZone : CameraZone
+    - character : Character
+    - characterStart : Transform
+    + PauseManager : PauseManager
+    - clicked : int
+    - clicktime : float
+    - specialActive : bool
+    - currentCamZone : CameraZone
+    - cursorManager : CursorManager
+    - ghostManager : GhostManager
+    + CinematicManager : CinematicManager
+    + DialogueManager : DialogueManager
+    + ScreenEffects : ScreenEffects
+    + HitstopManager : HitstopManager
+    + InventoryManager : InventoryManager
+    + CameraEffectManager : CameraEffectManager
+    + PartnerManager : PartnerManager
+    + CameraTick : Action
+    + Init() : void
+    - Awake() : void
+    + SwapPlayer(playerName : string) : void
+    + SwapPlayer(playerName : string, hidePreviousPlayer : bool) : bool
+    + SwapPlayer(playerName : string, newPos : Transform, hidePreviousPlayer : bool) : bool
+    + HidePlayer(masked : bool) : void
+    + RemoveCharacter(character : Character) : void
+    + PlayerReady() : void
+    + PausePlayerPath() : void
+    + CanInventoryToggle(active : bool) : void
+    - Update() : void
+    + PreInstantiatePlayer(Name : string, overridePos : Transform) : void
+    + ToggleInventoryMode(active : bool) : void
+    + SetPartner(character : Character) : void
+    + InjurePlayer(injure : bool) : void
+    + EndChapter() : void
+    + EndGame(message : string) : void
+    - HandleDoubleClick() : bool
+    - TryClick() : void
+    + PlayerMoveTo(spot : Transform) : void
+    + PlayerMoveTo(spot : Vector3) : void
+    - CursorHover() : void
+    + SetVNMode(yes : bool, noCam : bool) : void
+    + SetCinematicMode(yes : bool, noBounce : bool) : void
+    + WriteComment(text : string) : void
+    + WriteComment(text : string, comment : CommentInteractable) : void
+    + EndComment() : void
+    + MoveStart(target : Transform) : void
+    + NewArea(areaName : string) : void
+    + NewArea(areaName : string, volume : float) : void
+    + StopOverride() : void
+    + StopOverride(areaName : string) : void
+    + ResumeAmbiance() : void
+    + StopAmbiance() : void
+    + PlayEndAmbiance() : void
+    + CamZoneQuickUpdate(zone : CameraZone) : void
+    + SetCamZone(zone : CameraZone) : void
+    + UpdateCondition(condition : string) : void
+    + FalseCondition(condition : string) : void
+    + ConditionMet(condition : string) : bool
+    + OverrideAmbiance(overrideArea : string) : void
+    + SetAmbianceVolume(sound : float) : void
+    + UnlockAllDoors() : void
+    + ResetPlayer() : void
+    + TeleportPlayer(pos : Vector3, rot : Quaternion) : void
+    + TeleportPlayer(transform : Transform) : void
+    + TeleportPlayer(transform : Transform, delay : float, blackscreen : bool) : void
+    + TeleportPlayerPresetDelay(transform : Transform) : void
+    + ChopLimb(ID : string) : void
+    + PutMask(on : bool) : void
+    + ExperimentalDeactivatePlayer() : void
+    + TryRealityShift(code : string) : void
+}
+class Area {
+    + Name : string
+    + Met : bool
+    + Name : string
+    + Music : AudioSource
+    + CopyrightFree : AudioSource
+    + Track : EventReference
+    + StepsVolume : float
+    + ImmuneExperimental : bool
+    + OriginalVolume : float
+    + ID : string
+    + Data : CharacterData
+    + Instance : GameObject
+    + ChapterData : ChapterData
+    + StartCinematic : string
+    + Paused : bool
+    + SpecialActive : bool
+    + ManualPlayerSpawn : bool
+    + LockSpecial : bool
+    + LockSpecialComment : string
+    - clickdelay : float
+    - currentCam : GameObject
+    - vnCam : GameObject
+    - firstCamZone : CameraZone
+    - character : Character
+    - characterStart : Transform
+    + PauseManager : PauseManager
+    - clicked : int
+    - clicktime : float
+    - specialActive : bool
+    - currentCamZone : CameraZone
+    - cursorManager : CursorManager
+    - ghostManager : GhostManager
+    + CinematicManager : CinematicManager
+    + DialogueManager : DialogueManager
+    + ScreenEffects : ScreenEffects
+    + HitstopManager : HitstopManager
+    + InventoryManager : InventoryManager
+    + CameraEffectManager : CameraEffectManager
+    + PartnerManager : PartnerManager
+    + CameraTick : Action
+    + Init() : void
+    - Awake() : void
+    + SwapPlayer(playerName : string) : void
+    + SwapPlayer(playerName : string, hidePreviousPlayer : bool) : bool
+    + SwapPlayer(playerName : string, newPos : Transform, hidePreviousPlayer : bool) : bool
+    + HidePlayer(masked : bool) : void
+    + RemoveCharacter(character : Character) : void
+    + PlayerReady() : void
+    + PausePlayerPath() : void
+    + CanInventoryToggle(active : bool) : void
+    - Update() : void
+    + PreInstantiatePlayer(Name : string, overridePos : Transform) : void
+    + ToggleInventoryMode(active : bool) : void
+    + SetPartner(character : Character) : void
+    + InjurePlayer(injure : bool) : void
+    + EndChapter() : void
+    + EndGame(message : string) : void
+    - HandleDoubleClick() : bool
+    - TryClick() : void
+    + PlayerMoveTo(spot : Transform) : void
+    + PlayerMoveTo(spot : Vector3) : void
+    - CursorHover() : void
+    + SetVNMode(yes : bool, noCam : bool) : void
+    + SetCinematicMode(yes : bool, noBounce : bool) : void
+    + WriteComment(text : string) : void
+    + WriteComment(text : string, comment : CommentInteractable) : void
+    + EndComment() : void
+    + MoveStart(target : Transform) : void
+    + NewArea(areaName : string) : void
+    + NewArea(areaName : string, volume : float) : void
+    + StopOverride() : void
+    + StopOverride(areaName : string) : void
+    + ResumeAmbiance() : void
+    + StopAmbiance() : void
+    + PlayEndAmbiance() : void
+    + CamZoneQuickUpdate(zone : CameraZone) : void
+    + SetCamZone(zone : CameraZone) : void
+    + UpdateCondition(condition : string) : void
+    + FalseCondition(condition : string) : void
+    + ConditionMet(condition : string) : bool
+    + OverrideAmbiance(overrideArea : string) : void
+    + SetAmbianceVolume(sound : float) : void
+    + UnlockAllDoors() : void
+    + ResetPlayer() : void
+    + TeleportPlayer(pos : Vector3, rot : Quaternion) : void
+    + TeleportPlayer(transform : Transform) : void
+    + TeleportPlayer(transform : Transform, delay : float, blackscreen : bool) : void
+    + TeleportPlayerPresetDelay(transform : Transform) : void
+    + ChopLimb(ID : string) : void
+    + PutMask(on : bool) : void
+    + ExperimentalDeactivatePlayer() : void
+    + TryRealityShift(code : string) : void
+}
+class PlayableCharacter {
+    + Name : string
+    + Met : bool
+    + Name : string
+    + Music : AudioSource
+    + CopyrightFree : AudioSource
+    + Track : EventReference
+    + StepsVolume : float
+    + ImmuneExperimental : bool
+    + OriginalVolume : float
+    + ID : string
+    + Data : CharacterData
+    + Instance : GameObject
+    + ChapterData : ChapterData
+    + StartCinematic : string
+    + Paused : bool
+    + SpecialActive : bool
+    + ManualPlayerSpawn : bool
+    + LockSpecial : bool
+    + LockSpecialComment : string
+    - clickdelay : float
+    - currentCam : GameObject
+    - vnCam : GameObject
+    - firstCamZone : CameraZone
+    - character : Character
+    - characterStart : Transform
+    + PauseManager : PauseManager
+    - clicked : int
+    - clicktime : float
+    - specialActive : bool
+    - currentCamZone : CameraZone
+    - cursorManager : CursorManager
+    - ghostManager : GhostManager
+    + CinematicManager : CinematicManager
+    + DialogueManager : DialogueManager
+    + ScreenEffects : ScreenEffects
+    + HitstopManager : HitstopManager
+    + InventoryManager : InventoryManager
+    + CameraEffectManager : CameraEffectManager
+    + PartnerManager : PartnerManager
+    + CameraTick : Action
+    + Init() : void
+    - Awake() : void
+    + SwapPlayer(playerName : string) : void
+    + SwapPlayer(playerName : string, hidePreviousPlayer : bool) : bool
+    + SwapPlayer(playerName : string, newPos : Transform, hidePreviousPlayer : bool) : bool
+    + HidePlayer(masked : bool) : void
+    + RemoveCharacter(character : Character) : void
+    + PlayerReady() : void
+    + PausePlayerPath() : void
+    + CanInventoryToggle(active : bool) : void
+    - Update() : void
+    + PreInstantiatePlayer(Name : string, overridePos : Transform) : void
+    + ToggleInventoryMode(active : bool) : void
+    + SetPartner(character : Character) : void
+    + InjurePlayer(injure : bool) : void
+    + EndChapter() : void
+    + EndGame(message : string) : void
+    - HandleDoubleClick() : bool
+    - TryClick() : void
+    + PlayerMoveTo(spot : Transform) : void
+    + PlayerMoveTo(spot : Vector3) : void
+    - CursorHover() : void
+    + SetVNMode(yes : bool, noCam : bool) : void
+    + SetCinematicMode(yes : bool, noBounce : bool) : void
+    + WriteComment(text : string) : void
+    + WriteComment(text : string, comment : CommentInteractable) : void
+    + EndComment() : void
+    + MoveStart(target : Transform) : void
+    + NewArea(areaName : string) : void
+    + NewArea(areaName : string, volume : float) : void
+    + StopOverride() : void
+    + StopOverride(areaName : string) : void
+    + ResumeAmbiance() : void
+    + StopAmbiance() : void
+    + PlayEndAmbiance() : void
+    + CamZoneQuickUpdate(zone : CameraZone) : void
+    + SetCamZone(zone : CameraZone) : void
+    + UpdateCondition(condition : string) : void
+    + FalseCondition(condition : string) : void
+    + ConditionMet(condition : string) : bool
+    + OverrideAmbiance(overrideArea : string) : void
+    + SetAmbianceVolume(sound : float) : void
+    + UnlockAllDoors() : void
+    + ResetPlayer() : void
+    + TeleportPlayer(pos : Vector3, rot : Quaternion) : void
+    + TeleportPlayer(transform : Transform) : void
+    + TeleportPlayer(transform : Transform, delay : float, blackscreen : bool) : void
+    + TeleportPlayerPresetDelay(transform : Transform) : void
+    + ChopLimb(ID : string) : void
+    + PutMask(on : bool) : void
+    + ExperimentalDeactivatePlayer() : void
+    + TryRealityShift(code : string) : void
+}
+class GameManager {
+    + Name : string
+    + Met : bool
+    + Name : string
+    + Music : AudioSource
+    + CopyrightFree : AudioSource
+    + Track : EventReference
+    + StepsVolume : float
+    + ImmuneExperimental : bool
+    + OriginalVolume : float
+    + ID : string
+    + Data : CharacterData
+    + Instance : GameObject
+    + ChapterData : ChapterData
+    + StartCinematic : string
+    + Paused : bool
+    + SpecialActive : bool
+    + ManualPlayerSpawn : bool
+    + LockSpecial : bool
+    + LockSpecialComment : string
+    - clickdelay : float
+    - currentCam : GameObject
+    - vnCam : GameObject
+    - firstCamZone : CameraZone
+    - character : Character
+    - characterStart : Transform
+    + PauseManager : PauseManager
+    - clicked : int
+    - clicktime : float
+    - specialActive : bool
+    - currentCamZone : CameraZone
+    - cursorManager : CursorManager
+    - ghostManager : GhostManager
+    + CinematicManager : CinematicManager
+    + DialogueManager : DialogueManager
+    + ScreenEffects : ScreenEffects
+    + HitstopManager : HitstopManager
+    + InventoryManager : InventoryManager
+    + CameraEffectManager : CameraEffectManager
+    + PartnerManager : PartnerManager
+    + CameraTick : Action
+    + Init() : void
+    - Awake() : void
+    + SwapPlayer(playerName : string) : void
+    + SwapPlayer(playerName : string, hidePreviousPlayer : bool) : bool
+    + SwapPlayer(playerName : string, newPos : Transform, hidePreviousPlayer : bool) : bool
+    + HidePlayer(masked : bool) : void
+    + RemoveCharacter(character : Character) : void
+    + PlayerReady() : void
+    + PausePlayerPath() : void
+    + CanInventoryToggle(active : bool) : void
+    - Update() : void
+    + PreInstantiatePlayer(Name : string, overridePos : Transform) : void
+    + ToggleInventoryMode(active : bool) : void
+    + SetPartner(character : Character) : void
+    + InjurePlayer(injure : bool) : void
+    + EndChapter() : void
+    + EndGame(message : string) : void
+    - HandleDoubleClick() : bool
+    - TryClick() : void
+    + PlayerMoveTo(spot : Transform) : void
+    + PlayerMoveTo(spot : Vector3) : void
+    - CursorHover() : void
+    + SetVNMode(yes : bool, noCam : bool) : void
+    + SetCinematicMode(yes : bool, noBounce : bool) : void
+    + WriteComment(text : string) : void
+    + WriteComment(text : string, comment : CommentInteractable) : void
+    + EndComment() : void
+    + MoveStart(target : Transform) : void
+    + NewArea(areaName : string) : void
+    + NewArea(areaName : string, volume : float) : void
+    + StopOverride() : void
+    + StopOverride(areaName : string) : void
+    + ResumeAmbiance() : void
+    + StopAmbiance() : void
+    + PlayEndAmbiance() : void
+    + CamZoneQuickUpdate(zone : CameraZone) : void
+    + SetCamZone(zone : CameraZone) : void
+    + UpdateCondition(condition : string) : void
+    + FalseCondition(condition : string) : void
+    + ConditionMet(condition : string) : bool
+    + OverrideAmbiance(overrideArea : string) : void
+    + SetAmbianceVolume(sound : float) : void
+    + UnlockAllDoors() : void
+    + ResetPlayer() : void
+    + TeleportPlayer(pos : Vector3, rot : Quaternion) : void
+    + TeleportPlayer(transform : Transform) : void
+    + TeleportPlayer(transform : Transform, delay : float, blackscreen : bool) : void
+    + TeleportPlayerPresetDelay(transform : Transform) : void
+    + ChopLimb(ID : string) : void
+    + PutMask(on : bool) : void
+    + ExperimentalDeactivatePlayer() : void
+    + TryRealityShift(code : string) : void
+}
+class Ghost {
+    - OnEnable() : void
+    - OnTriggerEnter(other : Collider) : void
+}
+class GhostManager {
+    + UpdateGhosts() : void
+}
+class Hitshape {
+    - Awake() : void
+    - Update() : void
+    + Trigger() : void
+    + Disable() : void
+    - OnTriggerEnter(other : Collider) : void
+}
+class HitstopManager {
+    + StartHitstop() : void
+    - StopTime() : IEnumerator
+}
+class HoldInteractable {
+    + OnUnHold : UnityEvent
+    + Hold : bool
+    # holder : Character
+    - Update() : void
+}
+class ImagePulse {
+    - Awake() : void
+    - Update() : void
+    + FadeOut() : void
+}
+class InitRagdoll {
+    - Awake() : void
+    + TryMatchBones(parent : Transform) : void
+}
+class Interactable {
+    + OnInteract : UnityEvent
+    + Repeatable : bool
+    + VanishOnDone : bool
+    + OnSelected : UnityEvent
+    - interactionSpot : Transform
+    # done : bool
+    + Interact() : void
+    + InteractWithCharacter(character : Character) : void
+    + GetTargetPosition() : Vector3
+}
+class InterSceneTheme {
+    - Start() : void
+    + Play(reference : EventReference) : void
+    + Stop() : void
+}
+class IntroManager {
+    + Skip : bool
+    + startCinematic : DialogueCinematic
+    + OnStart : UnityEvent
+    + QuickStart() : void
+    + Title() : void
+}
+class InventoryController {
+    + Standalone : bool
+    + Active : bool
+    + Occupied : bool
+    + Spot : Transform
+    + Instance : InventoryItem
+    + ItemUI : ItemUI
+    - Awake() : void
+    - Start() : void
+    + Init(gm : GameManager) : void
+    - Update() : void
+    + SetActive(active : bool, blackscreen : bool) : void
+    + UpdateInventory() : void
+    + Select(item : InventoryItem) : void
+    + EquipItem() : void
+    + ExamineSelected() : void
+    + EndInspect() : void
+    + AddItem(data : ItemData) : void
+    + RemoveItem(data : ItemData) : void
+}
+class ItemSpot {
+    + Standalone : bool
+    + Active : bool
+    + Occupied : bool
+    + Spot : Transform
+    + Instance : InventoryItem
+    + ItemUI : ItemUI
+    - Awake() : void
+    - Start() : void
+    + Init(gm : GameManager) : void
+    - Update() : void
+    + SetActive(active : bool, blackscreen : bool) : void
+    + UpdateInventory() : void
+    + Select(item : InventoryItem) : void
+    + EquipItem() : void
+    + ExamineSelected() : void
+    + EndInspect() : void
+    + AddItem(data : ItemData) : void
+    + RemoveItem(data : ItemData) : void
+}
+class InventoryItem {
+    - spot : ItemSpot
+    + Init(d : ItemData, s : ItemSpot) : void
+}
+class InventoryManager {
+    + items : Item[]
+    - iconParent : Transform
+    - iconPrefab : GameObject
+    + ID : string
+    + Name : string
+    + Sprite : Sprite
+    + LimitedUses : bool
+    + Uses : int
+    + Equipped : bool
+    + InInventory : bool
+    + Icon : GameObject
+    + Data : ItemData
+    + Init(gm : GameManager, items : Item[]) : void
+    + ShowNotification(itemName : string) : void
+    + InstaHideNotification() : void
+    + HideCanvas(hidden : bool) : void
+    + UseItem(name : string) : void
+    + Equip(invItem : InventoryItem) : void
+    + Unequip(invItem : InventoryItem) : void
+    + RemoveItem(name : string) : void
+    + EquipItem(name : string) : void
+    + TrueRemoveItem(name : string) : void
+}
+class Item {
+    + items : Item[]
+    - iconParent : Transform
+    - iconPrefab : GameObject
+    + ID : string
+    + Name : string
+    + Sprite : Sprite
+    + LimitedUses : bool
+    + Uses : int
+    + Equipped : bool
+    + InInventory : bool
+    + Icon : GameObject
+    + Data : ItemData
+    + Init(gm : GameManager, items : Item[]) : void
+    + ShowNotification(itemName : string) : void
+    + InstaHideNotification() : void
+    + HideCanvas(hidden : bool) : void
+    + UseItem(name : string) : void
+    + Equip(invItem : InventoryItem) : void
+    + Unequip(invItem : InventoryItem) : void
+    + RemoveItem(name : string) : void
+    + EquipItem(name : string) : void
+    + TrueRemoveItem(name : string) : void
+}
+class InventoryTutorial {
+    - Update() : void
+}
+class ItemUI {
+    + EquipText : string
+    + UnequipText : string
+    + Init(controller : InventoryController) : void
+    + UpdateName(name : string) : void
+    + Show(show : bool) : void
+    + EquipItem() : void
+    + UpdateEquipText(equipped : bool) : void
+    + ExamineItem() : void
+    + ToggleEquippable(equippable : bool) : void
+}
+class JerController {
+}
+class Jukebox {
+    + Activate() : void
+    + PlayNext() : void
+}
+class LastWillScene {
+    - Start() : void
+    + NextScene() : void
+}
+class LimbChopper {
+    + ID : string
+    + Chop() : void
+}
+class LimbShield {
+    + HP : int
+    + Absorb(damage : int) : void
+}
+class LocalCinematic {
+    + ID : string
+    + Ambience : string
+    + lines : LocalCinematicLine[]
+    + delayBeforeDialogue : float
+    + delayBetweenLetters : float
+    + writeText : bool
+    + noOpeningBlackScreen : bool
+    + OnStart : UnityEvent
+    + OnEndBeforeBlackScreen : UnityEvent
+    + OnEnd : UnityEvent
+    + StartBlackScreenDuration : float
+    + EndBlackScreenDuration : float
+    + OverrideKeepsGoing : bool
+    + ResumeTheme : string
+    + ChainCinematic : string
+    + CinematicPuppets : CinematicPuppet[]
+    + Camera : GameObject
+    + Interface : GameObject
+    + Text : string
+    + Duration : float
+    + PuppetActions : PuppetAction[]
+    + cameraEffect : CameraEffect
+    + newAmbience : string
+    + soundEffects : string[]
+    + Delegates : UnityEvent
+    - Start() : void
+    + PlayLocal() : void
+    + CloseCinematic(gameManager : GameManager) : void
+    + PlayPuppetAction(puppet : string, action : string) : void
+}
+class LocalCinematicLine {
+    + ID : string
+    + Ambience : string
+    + lines : LocalCinematicLine[]
+    + delayBeforeDialogue : float
+    + delayBetweenLetters : float
+    + writeText : bool
+    + noOpeningBlackScreen : bool
+    + OnStart : UnityEvent
+    + OnEndBeforeBlackScreen : UnityEvent
+    + OnEnd : UnityEvent
+    + StartBlackScreenDuration : float
+    + EndBlackScreenDuration : float
+    + OverrideKeepsGoing : bool
+    + ResumeTheme : string
+    + ChainCinematic : string
+    + CinematicPuppets : CinematicPuppet[]
+    + Camera : GameObject
+    + Interface : GameObject
+    + Text : string
+    + Duration : float
+    + PuppetActions : PuppetAction[]
+    + cameraEffect : CameraEffect
+    + newAmbience : string
+    + soundEffects : string[]
+    + Delegates : UnityEvent
+    - Start() : void
+    + PlayLocal() : void
+    + CloseCinematic(gameManager : GameManager) : void
+    + PlayPuppetAction(puppet : string, action : string) : void
+}
+class LongestDayFirstManager {
+    + Skip : bool
+    - startCinematic : string
+    - actText : TextMeshProUGUI
+    - toDestroy : List<GameObject>
+    - introDelay : float
+    + Title() : void
+}
+class LongestDayFourthManager {
+    + Skip : bool
+    - startCinematic : string
+    - actText : TextMeshProUGUI
+    - toDestroy : List<GameObject>
+    - respawnDelay : float
+    + Title() : void
+}
+class LongestDaySecondManager {
+    + Skip : bool
+    - startCinematic : string
+    - endTime : float
+    - actText : TextMeshProUGUI
+    - toDestroy : List<GameObject>
+    - respawnDelay : float
+    + Title() : void
+}
+class LongestDayThirdManager {
+    + Skip : bool
+    - startCinematic : string
+    + OnStart : UnityEvent
+    - actText : TextMeshProUGUI
+    - introDelay : float
+    + Title() : void
+}
+class LookAtCamera {
+}
+class Manager {
+    # gm : GameManager
+}
+class MaskManager {
+    + PutMask(on : bool) : void
+}
+class MaterialRandomizer {
+    - Start() : void
+}
+class MenuChapterButton {
+    + Init(txt : string, img : Sprite, sceneRef : string) : void
+    + LoadChapter() : void
+}
+class MultiTrigger {
+    + PriorityTriggers : int
+    + NumberBeforeTrigger : int
+    + Delegates : UnityEvent
+    + PriorityTrigger(go : GameObject) : void
+    + Trigger() : void
+    + Disable() : void
+}
+class ObjectSwapper {
+    - Awake() : void
+    + ShowSpecific() : void
+    + ResetObjects() : void
+    + AddToSpecific(go : GameObject) : void
+    + AddToHide(go : GameObject) : void
+    + RemoveFromSpecific(go : GameObject) : void
+    + RemoveFromHide(go : GameObject) : void
+    - OnTriggerEnter(other : Collider) : void
+    - OnTriggerExit(other : Collider) : void
+}
+class OrderedCharacter {
+    + Select(selected : bool) : void
+}
+class PartnerManager {
+    + Init(gm : GameManager) : void
+    + Step() : void
+    + ConstantStep() : void
+    + SetPartner(partner : Character) : void
+    - RunManagement(dist : float) : void
+}
+class PauseManager {
+    + TogglePause(paused : bool) : void
+    + UnPause() : void
+    + UpdateVolume() : void
+    + MainMenu() : void
+    + QuitGame() : void
+}
+class PickupInteractable {
+    - mesh : GameObject
+    - instances : GameObject[]
+}
+class PlayerController {
+    # copyPosRot : CopyPosRot
+    # rb : Rigidbody
+    + InventoryController : InventoryController
+    # resetPos : Vector3
+    + Choppers : LimbChopper[]
+    + Maskables : GameObject[]
+    + Freeze(frozen : bool) : void
+    + Hide(hidden : bool) : void
+}
+class PlayerFollower {
+    + Head : Transform
+    + SetTarget(player : PlayerController) : void
+}
+class PlayerSwapper {
+    + onSwap : UnityEvent
+    + onBack : UnityEvent
+    - Start() : void
+    + Swap() : void
+    + SwapBack() : void
+}
+class PlayerTeleporter {
+    + TeleportUp() : void
+    + TeleportDown() : void
+}
+class PointOfInterest {
+    - Update() : void
+}
+class PreludeChapterManager {
+    - introDelay : float
+}
+class ProximitySound {
+    - Start() : void
+    - Update() : void
+    + SetActive(active : bool) : void
+    - OnDrawGizmos() : void
+}
+class RagdollHider {
+    - Awake() : void
+    - Start() : void
+    - Init() : void
+    + Hide() : void
+    + Show() : void
+    - PauseDialogueCharacter(pause : bool) : void
+}
+class RealityShifting {
+}
+class ReleaseTheRuth {
+    + OnCatch : UnityEvent
+    + Countdown() : void
+    + Release() : void
+    + Caught() : void
+}
+class RigToggler {
+    + ToggleRig(active : bool) : void
+    - Update() : void
+}
+class RunTutorial {
+    - clickdelay : float
+    - clicked : int
+    - clicktime : float
+    - Update() : void
+    - HandleDoubleClick() : bool
+}
+class RuthController {
+    - clickdelay : float
+    - clicked : int
+    - clicktime : float
+    - TryOrder(ordered : Character) : void
+    - CursorStuff(transform : Transform) : void
+}
+class ScreenEffects {
+    + StartFade() : void
+    + SetBlackScreenAlpha(amount : float) : void
+    + FadeTo(amount : float, duration : float) : void
+    + OumuamuaFade() : void
+    + FadeInOut(delayWait : float) : void
+}
+class SetupCameraCanvas {
+    - Start() : void
+}
+class Shaking {
+}
+class ShootableLock {
+    - Start() : void
+}
+class ShootTutorial {
+    + Activate() : void
+    - Update() : void
+    + EndTutorial() : void
+}
+class Stepper {
+}
+class Stroboscopic {
+    + OnFlash : UnityEvent
+    - Awake() : void
+    + Trigger() : void
+}
+class TendrilBatch {
+    + Trigger() : void
+}
+class ThemeManager {
+    + Init() : void
+    + NewArea(areaName : string) : void
+    + NewArea(areaName : string, reset : bool) : void
+    + NewArea(areaName : string, volume : float) : void
+    + ResumeAmbiance() : void
+    + ResumeAmbianceSecure() : void
+    + StopAmbiance() : void
+    + PlayEndAmbiance() : void
+    + CreateInterScene(areaName : string) : void
+    + OverrideAmbiance(areaName : string) : void
+    + StopOverride() : void
+    + StopOverride(resumeTheme : string) : void
+    + SetAmbianceVolume(sound : float) : void
+    - OnDestroy() : void
+}
+class Tutorial {
+    + tutorialMessage : string
+    + tutorialText : TextMeshProUGUI
+    + active : bool
+}
+class TypewriterChapterManager {
+}
+class WIPWarning {
+    - Awake() : void
+    + Resume() : void
+    + Quit() : void
+}
+class FootManager {
+    + CanSound : bool
+    + CanVfx : bool
+    + Ground : LayerMask
+    - walkParticle : GameObject
+    - particleSpot : Transform
+    - currentVfx : GameObject
+    - OnCollisionEnter(collision : Collision) : void
+}
+class CameraDetector {
+    + Active : bool
+    + ChangedCam : UnityEvent
+    - CurrentCam : CameraZone
+    - LastCam : CameraZone
+    - Awake() : void
+    - OnTriggerEnter(other : Collider) : void
+    - OnTriggerExit(other : Collider) : void
+    - SwitchCam(camZone : CameraZone) : void
+    - LastCamCheck(exitedCamerazone : CameraZone) : void
+}
+class CameraZone {
+    + Ambiance : string
+    + ChangeVolume : bool
+    + BlackAndWhite : bool
+    + Offset : Vector3
+    - switchObject : GameObject
+    - target : GameObject
+    - direction : Transform
+    - baseCol : BoxCollider
+    - path : CinemachineSmoothPath
+    - dollyCart : CinemachineDollyCart
+    + Vcam : CinemachineVirtualCamera
+    - Awake() : void
+    + InitSpecificObjects() : void
+    - FirstActiveFrame() : void
+    - InitializeBehaviour() : void
+}
+class CustomCameraZone {
+    + CameraZone : CameraZone
+}
+class EnemyAI {
+    # attackDelay : float
+    # attackRecovery : float
+    # chainDelay : float
+    # searchRange : float
+    # loseRange : float
+    # loseDelay : float
+    # target : Character
+    # hitshape : Hitshape
+    # showGizmos : bool
+    + Detect() : void
+    + ManualAggro() : void
+    + HeavyLoop() : void
+}
+class Lifeform {
+    + HP : int
+    + Character : Character
+    + OnDeath : UnityEvent
+    + DeathRagdoll : GameObject
+    + Unstunnable : bool
+    + Hurt() : void
+    + Hurt(damage : int) : void
+    + Stun(stunDamage : float) : void
+}
+class TargetLimb {
+    + Owner : Lifeform
+    + limb : RagdollLimb
+    + OnHit : UnityEvent
+    + NoBlood : bool
+    + Immune : bool
+    + ImmuneMessage : string
+    - Awake() : void
+    + Hit(damage : int, stun : float, force : float, dir : Vector3) : void
+    + MakeVulnerable() : void
+}
+class ChapterData {
+    + Name : string
+    + Number : int
+    + StartCharacter : CharacterData
+    + items : Item[]
+    + CommentData : CommentData
+}
+class CharacterData {
+    + Name : string
+    + Nickname : string
+    + Pronoun : CharacterPronoun
+    + Special : CharacterSpecial
+    + ControllerPrefab : GameObject
+    + Icon : Sprite
+    + CharPuppets : CharacterPuppet[]
+    + ID : string
+    + Prefab : GameObject
+}
+class CharacterPuppet {
+    + Name : string
+    + Nickname : string
+    + Pronoun : CharacterPronoun
+    + Special : CharacterSpecial
+    + ControllerPrefab : GameObject
+    + Icon : Sprite
+    + CharPuppets : CharacterPuppet[]
+    + ID : string
+    + Prefab : GameObject
+}
+class CinematicData {
+    + ID : string
+    + Ambience : string
+    + BlackScreenDuration : float
+    + lines : CinematicLine[]
+    + EndBlackScreenDuration : float
+    + HidePlayer : bool
+    + OverrideKeepsGoing : bool
+    + ResumeTheme : string
+    + Text : string
+    + Duration : float
+    + PuppetActions : PuppetAction[]
+    + cameraIndex : int
+    + cameraEffect : CameraEffect
+    + newAmbience : string
+    + soundEffects : string[]
+    + PuppetName : string
+    + Action : string
+}
+class CinematicLine {
+    + ID : string
+    + Ambience : string
+    + BlackScreenDuration : float
+    + lines : CinematicLine[]
+    + EndBlackScreenDuration : float
+    + HidePlayer : bool
+    + OverrideKeepsGoing : bool
+    + ResumeTheme : string
+    + Text : string
+    + Duration : float
+    + PuppetActions : PuppetAction[]
+    + cameraIndex : int
+    + cameraEffect : CameraEffect
+    + newAmbience : string
+    + soundEffects : string[]
+    + PuppetName : string
+    + Action : string
+}
+class PuppetAction {
+    + ID : string
+    + Ambience : string
+    + BlackScreenDuration : float
+    + lines : CinematicLine[]
+    + EndBlackScreenDuration : float
+    + HidePlayer : bool
+    + OverrideKeepsGoing : bool
+    + ResumeTheme : string
+    + Text : string
+    + Duration : float
+    + PuppetActions : PuppetAction[]
+    + cameraIndex : int
+    + cameraEffect : CameraEffect
+    + newAmbience : string
+    + soundEffects : string[]
+    + PuppetName : string
+    + Action : string
+}
+class CommentData {
+    + ID : string
+    + Content : string
+    + HasCommentWithID(commentID : string) : bool
+    + GetCommentWithID(commentID : string) : string
+    + GetCommentWithIndex(index : int) : string
+}
+class Comment {
+    + ID : string
+    + Content : string
+    + HasCommentWithID(commentID : string) : bool
+    + GetCommentWithID(commentID : string) : string
+    + GetCommentWithIndex(index : int) : string
+}
+class ItemData {
+    + ID : string
+    + Name : string
+    + Sprite : Sprite
+    + Equippable : bool
+    + LimitedUses : bool
+    + Uses : int
+    + Equipped : bool
+    + Icon : GameObject
+    + Inspect : InspectLine[]
+    + InteractableObject : GameObject
+    + Text : string
+    + Duration : float
+}
+class InspectLine {
+    + ID : string
+    + Name : string
+    + Sprite : Sprite
+    + Equippable : bool
+    + LimitedUses : bool
+    + Uses : int
+    + Equipped : bool
+    + Icon : GameObject
+    + Inspect : InspectLine[]
+    + InteractableObject : GameObject
+    + Text : string
+    + Duration : float
+}
+class MusicData {
+    + Name : string
+    + Track : EventReference
+    + ImmuneExperimental : bool
+}
+class AllTextExporter {
+    + path : string
+    + menuScene : string
+    + scenes : string[]
+    + globalWordCount : int
+    + data : DataContainer
+    + menuScenes : MenuSceneTextContainer[]
+    + scenes : SceneTextContainer[]
+    + sceneName : string
+    + textMeshPros : TextExporterTextMeshPro[]
+    + sceneName : string
+    + textExporterDialogues : TextExporterDialogue[]
+    + textExporterCinematics : TextExporterCinematic[]
+    + textExporterLocalCinematics : TextExporterCinematic[]
+    + textExportInteractables : TextExportObject[]
+    + textExportDelegates : TextExporterDelegateObject[]
+    + textExportItems : TextExportItem[]
+    + textExportDialogueBatches : TextExportDialogueBatch[]
+    + objectName : string
+    + text : string
+    + InstanceID : int
+    + PropertyPath : string
+    + CommandName : string
+    + DataIndex : int
+    + Text : string
+    + text : string
+    + answers : string[]
+    + ID : string
+    + lines : string[]
+    + local : bool
+    + ObjectName : string
+    + text : string
+    + ItemName : string
+    + description : string[]
+    + BatchName : string
+    + description : string[]
+    + OnGUI() : void
+}
+class AllTextContainer {
+    + path : string
+    + menuScene : string
+    + scenes : string[]
+    + globalWordCount : int
+    + data : DataContainer
+    + menuScenes : MenuSceneTextContainer[]
+    + scenes : SceneTextContainer[]
+    + sceneName : string
+    + textMeshPros : TextExporterTextMeshPro[]
+    + sceneName : string
+    + textExporterDialogues : TextExporterDialogue[]
+    + textExporterCinematics : TextExporterCinematic[]
+    + textExporterLocalCinematics : TextExporterCinematic[]
+    + textExportInteractables : TextExportObject[]
+    + textExportDelegates : TextExporterDelegateObject[]
+    + textExportItems : TextExportItem[]
+    + textExportDialogueBatches : TextExportDialogueBatch[]
+    + objectName : string
+    + text : string
+    + InstanceID : int
+    + PropertyPath : string
+    + CommandName : string
+    + DataIndex : int
+    + Text : string
+    + text : string
+    + answers : string[]
+    + ID : string
+    + lines : string[]
+    + local : bool
+    + ObjectName : string
+    + text : string
+    + ItemName : string
+    + description : string[]
+    + BatchName : string
+    + description : string[]
+    + OnGUI() : void
+}
+class MenuSceneTextContainer {
+    + path : string
+    + menuScene : string
+    + scenes : string[]
+    + globalWordCount : int
+    + data : DataContainer
+    + menuScenes : MenuSceneTextContainer[]
+    + scenes : SceneTextContainer[]
+    + sceneName : string
+    + textMeshPros : TextExporterTextMeshPro[]
+    + sceneName : string
+    + textExporterDialogues : TextExporterDialogue[]
+    + textExporterCinematics : TextExporterCinematic[]
+    + textExporterLocalCinematics : TextExporterCinematic[]
+    + textExportInteractables : TextExportObject[]
+    + textExportDelegates : TextExporterDelegateObject[]
+    + textExportItems : TextExportItem[]
+    + textExportDialogueBatches : TextExportDialogueBatch[]
+    + objectName : string
+    + text : string
+    + InstanceID : int
+    + PropertyPath : string
+    + CommandName : string
+    + DataIndex : int
+    + Text : string
+    + text : string
+    + answers : string[]
+    + ID : string
+    + lines : string[]
+    + local : bool
+    + ObjectName : string
+    + text : string
+    + ItemName : string
+    + description : string[]
+    + BatchName : string
+    + description : string[]
+    + OnGUI() : void
+}
+class SceneTextContainer {
+    + path : string
+    + menuScene : string
+    + scenes : string[]
+    + globalWordCount : int
+    + data : DataContainer
+    + menuScenes : MenuSceneTextContainer[]
+    + scenes : SceneTextContainer[]
+    + sceneName : string
+    + textMeshPros : TextExporterTextMeshPro[]
+    + sceneName : string
+    + textExporterDialogues : TextExporterDialogue[]
+    + textExporterCinematics : TextExporterCinematic[]
+    + textExporterLocalCinematics : TextExporterCinematic[]
+    + textExportInteractables : TextExportObject[]
+    + textExportDelegates : TextExporterDelegateObject[]
+    + textExportItems : TextExportItem[]
+    + textExportDialogueBatches : TextExportDialogueBatch[]
+    + objectName : string
+    + text : string
+    + InstanceID : int
+    + PropertyPath : string
+    + CommandName : string
+    + DataIndex : int
+    + Text : string
+    + text : string
+    + answers : string[]
+    + ID : string
+    + lines : string[]
+    + local : bool
+    + ObjectName : string
+    + text : string
+    + ItemName : string
+    + description : string[]
+    + BatchName : string
+    + description : string[]
+    + OnGUI() : void
+}
+class DataContainer {
+    + path : string
+    + menuScene : string
+    + scenes : string[]
+    + globalWordCount : int
+    + data : DataContainer
+    + menuScenes : MenuSceneTextContainer[]
+    + scenes : SceneTextContainer[]
+    + sceneName : string
+    + textMeshPros : TextExporterTextMeshPro[]
+    + sceneName : string
+    + textExporterDialogues : TextExporterDialogue[]
+    + textExporterCinematics : TextExporterCinematic[]
+    + textExporterLocalCinematics : TextExporterCinematic[]
+    + textExportInteractables : TextExportObject[]
+    + textExportDelegates : TextExporterDelegateObject[]
+    + textExportItems : TextExportItem[]
+    + textExportDialogueBatches : TextExportDialogueBatch[]
+    + objectName : string
+    + text : string
+    + InstanceID : int
+    + PropertyPath : string
+    + CommandName : string
+    + DataIndex : int
+    + Text : string
+    + text : string
+    + answers : string[]
+    + ID : string
+    + lines : string[]
+    + local : bool
+    + ObjectName : string
+    + text : string
+    + ItemName : string
+    + description : string[]
+    + BatchName : string
+    + description : string[]
+    + OnGUI() : void
+}
+class TextExporterTextMeshPro {
+    + path : string
+    + menuScene : string
+    + scenes : string[]
+    + globalWordCount : int
+    + data : DataContainer
+    + menuScenes : MenuSceneTextContainer[]
+    + scenes : SceneTextContainer[]
+    + sceneName : string
+    + textMeshPros : TextExporterTextMeshPro[]
+    + sceneName : string
+    + textExporterDialogues : TextExporterDialogue[]
+    + textExporterCinematics : TextExporterCinematic[]
+    + textExporterLocalCinematics : TextExporterCinematic[]
+    + textExportInteractables : TextExportObject[]
+    + textExportDelegates : TextExporterDelegateObject[]
+    + textExportItems : TextExportItem[]
+    + textExportDialogueBatches : TextExportDialogueBatch[]
+    + objectName : string
+    + text : string
+    + InstanceID : int
+    + PropertyPath : string
+    + CommandName : string
+    + DataIndex : int
+    + Text : string
+    + text : string
+    + answers : string[]
+    + ID : string
+    + lines : string[]
+    + local : bool
+    + ObjectName : string
+    + text : string
+    + ItemName : string
+    + description : string[]
+    + BatchName : string
+    + description : string[]
+    + OnGUI() : void
+}
+class TextExporterDelegateObject {
+    + path : string
+    + menuScene : string
+    + scenes : string[]
+    + globalWordCount : int
+    + data : DataContainer
+    + menuScenes : MenuSceneTextContainer[]
+    + scenes : SceneTextContainer[]
+    + sceneName : string
+    + textMeshPros : TextExporterTextMeshPro[]
+    + sceneName : string
+    + textExporterDialogues : TextExporterDialogue[]
+    + textExporterCinematics : TextExporterCinematic[]
+    + textExporterLocalCinematics : TextExporterCinematic[]
+    + textExportInteractables : TextExportObject[]
+    + textExportDelegates : TextExporterDelegateObject[]
+    + textExportItems : TextExportItem[]
+    + textExportDialogueBatches : TextExportDialogueBatch[]
+    + objectName : string
+    + text : string
+    + InstanceID : int
+    + PropertyPath : string
+    + CommandName : string
+    + DataIndex : int
+    + Text : string
+    + text : string
+    + answers : string[]
+    + ID : string
+    + lines : string[]
+    + local : bool
+    + ObjectName : string
+    + text : string
+    + ItemName : string
+    + description : string[]
+    + BatchName : string
+    + description : string[]
+    + OnGUI() : void
+}
+class TextExporterDialogue {
+    + path : string
+    + menuScene : string
+    + scenes : string[]
+    + globalWordCount : int
+    + data : DataContainer
+    + menuScenes : MenuSceneTextContainer[]
+    + scenes : SceneTextContainer[]
+    + sceneName : string
+    + textMeshPros : TextExporterTextMeshPro[]
+    + sceneName : string
+    + textExporterDialogues : TextExporterDialogue[]
+    + textExporterCinematics : TextExporterCinematic[]
+    + textExporterLocalCinematics : TextExporterCinematic[]
+    + textExportInteractables : TextExportObject[]
+    + textExportDelegates : TextExporterDelegateObject[]
+    + textExportItems : TextExportItem[]
+    + textExportDialogueBatches : TextExportDialogueBatch[]
+    + objectName : string
+    + text : string
+    + InstanceID : int
+    + PropertyPath : string
+    + CommandName : string
+    + DataIndex : int
+    + Text : string
+    + text : string
+    + answers : string[]
+    + ID : string
+    + lines : string[]
+    + local : bool
+    + ObjectName : string
+    + text : string
+    + ItemName : string
+    + description : string[]
+    + BatchName : string
+    + description : string[]
+    + OnGUI() : void
+}
+class TextExporterCinematic {
+    + path : string
+    + menuScene : string
+    + scenes : string[]
+    + globalWordCount : int
+    + data : DataContainer
+    + menuScenes : MenuSceneTextContainer[]
+    + scenes : SceneTextContainer[]
+    + sceneName : string
+    + textMeshPros : TextExporterTextMeshPro[]
+    + sceneName : string
+    + textExporterDialogues : TextExporterDialogue[]
+    + textExporterCinematics : TextExporterCinematic[]
+    + textExporterLocalCinematics : TextExporterCinematic[]
+    + textExportInteractables : TextExportObject[]
+    + textExportDelegates : TextExporterDelegateObject[]
+    + textExportItems : TextExportItem[]
+    + textExportDialogueBatches : TextExportDialogueBatch[]
+    + objectName : string
+    + text : string
+    + InstanceID : int
+    + PropertyPath : string
+    + CommandName : string
+    + DataIndex : int
+    + Text : string
+    + text : string
+    + answers : string[]
+    + ID : string
+    + lines : string[]
+    + local : bool
+    + ObjectName : string
+    + text : string
+    + ItemName : string
+    + description : string[]
+    + BatchName : string
+    + description : string[]
+    + OnGUI() : void
+}
+class TextExportObject {
+    + path : string
+    + menuScene : string
+    + scenes : string[]
+    + globalWordCount : int
+    + data : DataContainer
+    + menuScenes : MenuSceneTextContainer[]
+    + scenes : SceneTextContainer[]
+    + sceneName : string
+    + textMeshPros : TextExporterTextMeshPro[]
+    + sceneName : string
+    + textExporterDialogues : TextExporterDialogue[]
+    + textExporterCinematics : TextExporterCinematic[]
+    + textExporterLocalCinematics : TextExporterCinematic[]
+    + textExportInteractables : TextExportObject[]
+    + textExportDelegates : TextExporterDelegateObject[]
+    + textExportItems : TextExportItem[]
+    + textExportDialogueBatches : TextExportDialogueBatch[]
+    + objectName : string
+    + text : string
+    + InstanceID : int
+    + PropertyPath : string
+    + CommandName : string
+    + DataIndex : int
+    + Text : string
+    + text : string
+    + answers : string[]
+    + ID : string
+    + lines : string[]
+    + local : bool
+    + ObjectName : string
+    + text : string
+    + ItemName : string
+    + description : string[]
+    + BatchName : string
+    + description : string[]
+    + OnGUI() : void
+}
+class TextExportItem {
+    + path : string
+    + menuScene : string
+    + scenes : string[]
+    + globalWordCount : int
+    + data : DataContainer
+    + menuScenes : MenuSceneTextContainer[]
+    + scenes : SceneTextContainer[]
+    + sceneName : string
+    + textMeshPros : TextExporterTextMeshPro[]
+    + sceneName : string
+    + textExporterDialogues : TextExporterDialogue[]
+    + textExporterCinematics : TextExporterCinematic[]
+    + textExporterLocalCinematics : TextExporterCinematic[]
+    + textExportInteractables : TextExportObject[]
+    + textExportDelegates : TextExporterDelegateObject[]
+    + textExportItems : TextExportItem[]
+    + textExportDialogueBatches : TextExportDialogueBatch[]
+    + objectName : string
+    + text : string
+    + InstanceID : int
+    + PropertyPath : string
+    + CommandName : string
+    + DataIndex : int
+    + Text : string
+    + text : string
+    + answers : string[]
+    + ID : string
+    + lines : string[]
+    + local : bool
+    + ObjectName : string
+    + text : string
+    + ItemName : string
+    + description : string[]
+    + BatchName : string
+    + description : string[]
+    + OnGUI() : void
+}
+class TextExportDialogueBatch {
+    + path : string
+    + menuScene : string
+    + scenes : string[]
+    + globalWordCount : int
+    + data : DataContainer
+    + menuScenes : MenuSceneTextContainer[]
+    + scenes : SceneTextContainer[]
+    + sceneName : string
+    + textMeshPros : TextExporterTextMeshPro[]
+    + sceneName : string
+    + textExporterDialogues : TextExporterDialogue[]
+    + textExporterCinematics : TextExporterCinematic[]
+    + textExporterLocalCinematics : TextExporterCinematic[]
+    + textExportInteractables : TextExportObject[]
+    + textExportDelegates : TextExporterDelegateObject[]
+    + textExportItems : TextExportItem[]
+    + textExportDialogueBatches : TextExportDialogueBatch[]
+    + objectName : string
+    + text : string
+    + InstanceID : int
+    + PropertyPath : string
+    + CommandName : string
+    + DataIndex : int
+    + Text : string
+    + text : string
+    + answers : string[]
+    + ID : string
+    + lines : string[]
+    + local : bool
+    + ObjectName : string
+    + text : string
+    + ItemName : string
+    + description : string[]
+    + BatchName : string
+    + description : string[]
+    + OnGUI() : void
+}
+class EffectsManager {
+    + audioManager : AudioManager
+    + vfxManager : VFXManager
+}
+class RandomSeed {
+    + SeedName : string
+    + SeedValue : int
+}
+class Track {
+    + name : string
+    + clip : AudioClip
+    + source : AudioSource
+}
+class Vfx {
+    + name : string
+    + particle : GameObject
+    + source : ParticleSystem
+}
+class VFXManager {
+    + VfxObjects : Vfx[]
+    + IsPlaying(name : string) : bool
+    + PlayFx(name : string, position : Vector3) : void
+    + PlayFx(name : string, position : Vector3, rotation : Quaternion) : void
+    + PlayFx(name : string, position : Vector3, parent : Transform, followRotation : bool) : void
+    + PlayRandomRange(names : string[], position : Vector3) : void
+    + PlayTrail(name : string, position : Transform) : void
+    + StopParticle(name : string) : void
+    - Initialize(p : Vfx) : GameObject
+}
+class VfxObject {
+    + _particleSystem : ParticleSystem
+    + VfxDone : Action
+    + id : string
+    + VfxPlayed() : IEnumerator
+}
+class CeremonyAltChapterManager {
+    + Skip : bool
+    - startCinematic : string
+}
+class CeremonyChapterManager {
+    - introDelay : float
+}
+class CeremonyLastChapterManager {
+    + startCinematic : string
+    - introDelay : float
+}
+class ChapterManagerGeneric <<abstract>> {
+    + Intro : bool
+    # gameManager : GameManager
+}
+class MainMenuButton {
+    + delegates : UnityEvent
+    - bounceStr : float
+    - Indicator : GameObject
+    - startPos : Vector3
+    - delay : float
+    - Start() : void
+    - Update() : void
+    + ClickEffects() : void
+    + ClickReset() : void
+    + OnSelect(eventData : BaseEventData) : void
+    + OnDeselect(data : BaseEventData) : void
+}
+class MainMenuMaster {
+    + CanInput : bool
+    + AutoQuit : bool
+    - BlackScreen : Image
+    - FirstMenuButton : GameObject
+    - FirstOptionsButton : GameObject
+    - masterVolume : Slider
+    - Awake() : void
+    - Start() : void
+    - Update() : void
+    + RollCredits() : void
+    + EndCredits() : void
+    + QuitGame() : void
+    + ChangeSpots(index : int) : void
+    + UpdateVolume() : void
+    + StartGame() : void
+    + ToggleChapterSelect(toggle : bool) : void
+    + BlackFadeTo(value : int) : void
+    + BlackFadeTo(value : int, speed : float) : void
+}
+class PauseMenu {
+    - renderCam : Camera
+    - MenuRender : RawImage
+    - Options : bool
+    - Awake() : void
+    - Start() : void
+    + OnClickResume() : void
+    + OnClickOptions(state : bool) : void
+    + ToggleFullScreen() : void
+    + ToggleSound() : void
+    + OnClickQuit() : void
+}
+class PersistentData {
+    + FullScreen : bool
+    + SoundOn : bool
+    + CopyrightFree : bool
+    + FastMode : bool
+    + DemoMode : bool
+    + FinishedOnce : bool
+    - Awake() : void
+    + QuickInit() : void
+    + UpdateStepsVolume(volume : float) : void
+    + UpdateVolumes() : void
+    + ResetMultipliers() : void
+}
+class LegStepper {
+    + CanStep : bool
+    + Moving : bool
+    + TryMove() : void
+}
+class StepperController {
+    - Start() : void
+}
+class DialogueBatch {
+    + batchName : string
+    + lines : string[]
+    + linesBeforeRepeats : int
+}
+class DialogueCharacter {
+    + Paused : bool
+    + Init(character : Character) : void
+    - Update() : void
+    + TryWalk() : void
+    + SpeakTo() : void
+    + Call(initiator : DialogueCharacter) : void
+    + Speak(text : string) : void
+    + StartDialogue() : void
+    + EndDialogue() : void
+    + SetWalkTimer() : void
+    + ResetMingle() : void
+    + MingleCD() : void
+    - OnDrawGizmosSelected() : void
+}
+class ProceduralDialogueManager {
+    - minLines : int
+    - maxLines : int
+    - delayBeforeDialogue : float
+    - delayBetweenLines : float
+    + Greetings : DialogueBatch
+    + Content : DialogueBatch
+    + Goodbyes : DialogueBatch
+    + Name : string
+    + UniqueBeforeRepeats : int
+    - Start() : void
+    + Init(gameManager : GameManager) : void
+    - CreateNewInstance() : DialogueInstance
+    + StartDialogue(initatior : DialogueCharacter, interlocutor : DialogueCharacter) : void
+    + SelectRandomLine(batch : DialogueBatch) : string
+    + IndexAvailable(index : int, batch : DialogueBatch) : bool
+    - OnDisable() : void
+    - OnEnable() : void
+    + Hide() : void
+    + Show() : void
+}
+class DialogueBatchIndex {
+    - minLines : int
+    - maxLines : int
+    - delayBeforeDialogue : float
+    - delayBetweenLines : float
+    + Greetings : DialogueBatch
+    + Content : DialogueBatch
+    + Goodbyes : DialogueBatch
+    + Name : string
+    + UniqueBeforeRepeats : int
+    - Start() : void
+    + Init(gameManager : GameManager) : void
+    - CreateNewInstance() : DialogueInstance
+    + StartDialogue(initatior : DialogueCharacter, interlocutor : DialogueCharacter) : void
+    + SelectRandomLine(batch : DialogueBatch) : string
+    + IndexAvailable(index : int, batch : DialogueBatch) : bool
+    - OnDisable() : void
+    - OnEnable() : void
+    + Hide() : void
+    + Show() : void
+}
+class ButlerEngineUtilities {
+}
+class EventDependencyHunter {
+    + Owner : MonoBehaviour { get; set; }
+    + Event : UnityEventBase { get; set; }
+    + Listeners : List<MonoBehaviour> { get; set; }
+    + MethodNames : List<string> { get; set; }
+}
+class EventReferenceInfo {
+    + Owner : MonoBehaviour { get; set; }
+    + Event : UnityEventBase { get; set; }
+    + Listeners : List<MonoBehaviour> { get; set; }
+    + MethodNames : List<string> { get; set; }
+}
+class NavmeshUtilities {
+}
+class AudioManager {
+    + sounds : Sound[]
+    + AudioObject : GameObject
+    + Play(name : string) : void
+    + Play(name : string, point : Vector3) : void
+    + IsPlaying(name : string) : bool
+    + StopSound(name : string) : void
+    - Initialize(s : Sound) : GameObject
+}
+class AudioObject {
+    - audioSource : AudioSource
+    + SoundDone : Action
+    + SoundPlayed() : IEnumerator
+}
+class Sound {
+    + name : string
+    + clipReference : EventReference
+    + clip : AudioClip
+    + volume : float
+    + pitch : float
+    + loop : bool
+    + mixerLayer : string
+    + audioEmitter : StudioEventEmitter
+    + source : AudioSource
+}
+MonoBehaviour <|-- AddDialogue
+MonoBehaviour <|-- Bai
+MonoBehaviour <|-- BounceLight
+MonoBehaviour <|-- BuildSave
+MonoBehaviour <|-- CameraEffectManager
+MonoBehaviour <|-- CameraTickEvent
+MonoBehaviour <|-- ChapterDetector
+MonoBehaviour <|-- ChapterSelector
+MonoBehaviour <|-- Character
+MonoBehaviour <|-- CharacterStocker
+MonoBehaviour <|-- CinematicManager
+MonoBehaviour <|-- ClockMovement
+Manager <|-- CombatManager
+Interactable <|-- CommentInteractable
+MonoBehaviour <|-- CommentRandomizer
+MonoBehaviour <|-- CopyCamera
+MonoBehaviour <|-- CopyPlayerPos
+MonoBehaviour <|-- CopyPosRot
+MonoBehaviour <|-- CreditsManager
+MonoBehaviour <|-- CursorManager
+MonoBehaviour <|-- DangerZone
+MonoBehaviour <|-- DebugAudioSwap
+MonoBehaviour <|-- DebugChapterSelect
+MonoBehaviour <|-- DebugChapterSkip
+MonoBehaviour <|-- DebugCinematicSkipper
+MonoBehaviour <|-- DelegateBlock
+MonoBehaviour <|-- DemoFlashesScene
+MonoBehaviour <|-- DemoOverrider
+MonoBehaviour <|-- Demo_SecretKey
+MonoBehaviour <|-- Dialogue
+Interactable <|-- DialogueBox
+MonoBehaviour <|-- DialogueCinematic
+MonoBehaviour <|-- DialogueInstance
+MonoBehaviour <|-- DialogueManager
+MonoBehaviour <|-- DisclaimerManager
+Interactable <|-- Door
+HoldInteractable <|-- DoorHoldInteractable
+Tutorial <|-- EquipTutorial
+MonoBehaviour <|-- EventArea
+MonoBehaviour <|-- ExplosiveHead
+MonoBehaviour <|-- FastChapterLoader
+MonoBehaviour <|-- FastModeDetection
+MonoBehaviour <|-- FastModeScreen
+MonoBehaviour <|-- FightSceneManager
+MonoBehaviour <|-- Flasher
+MonoBehaviour <|-- Florp
+MonoBehaviour <|-- FovPulse
+MonoBehaviour <|-- GameManager
+MonoBehaviour <|-- Ghost
+Manager <|-- GhostManager
+MonoBehaviour <|-- Hitshape
+MonoBehaviour <|-- HitstopManager
+Interactable <|-- HoldInteractable
+MonoBehaviour <|-- ImagePulse
+MonoBehaviour <|-- InitRagdoll
+MonoBehaviour <|-- Interactable
+MonoBehaviour <|-- InterSceneTheme
+ChapterManagerGeneric <|-- IntroManager
+MonoBehaviour <|-- InventoryController
+Interactable <|-- InventoryItem
+MonoBehaviour <|-- InventoryManager
+Tutorial <|-- InventoryTutorial
+MonoBehaviour <|-- ItemUI
+PlayerController <|-- JerController
+MonoBehaviour <|-- Jukebox
+MonoBehaviour <|-- LastWillScene
+MonoBehaviour <|-- LimbChopper
+MonoBehaviour <|-- LimbShield
+MonoBehaviour <|-- LocalCinematic
+ChapterManagerGeneric <|-- LongestDayFirstManager
+ChapterManagerGeneric <|-- LongestDayFourthManager
+ChapterManagerGeneric <|-- LongestDaySecondManager
+ChapterManagerGeneric <|-- LongestDayThirdManager
+MonoBehaviour <|-- LookAtCamera
+MonoBehaviour <|-- Manager
+MonoBehaviour <|-- MaskManager
+MonoBehaviour <|-- MaterialRandomizer
+MonoBehaviour <|-- MenuChapterButton
+MonoBehaviour <|-- MultiTrigger
+MonoBehaviour <|-- ObjectSwapper
+Character <|-- OrderedCharacter
+MonoBehaviour <|-- PartnerManager
+Manager <|-- PauseManager
+Interactable <|-- PickupInteractable
+Character <|-- PlayerController
+MonoBehaviour <|-- PlayerFollower
+MonoBehaviour <|-- PlayerSwapper
+MonoBehaviour <|-- PlayerTeleporter
+HoldInteractable <|-- PointOfInterest
+ChapterManagerGeneric <|-- PreludeChapterManager
+MonoBehaviour <|-- ProximitySound
+MonoBehaviour <|-- RagdollHider
+MonoBehaviour <|-- RealityShifting
+MonoBehaviour <|-- ReleaseTheRuth
+MonoBehaviour <|-- RigToggler
+Tutorial <|-- RunTutorial
+PlayerController <|-- RuthController
+MonoBehaviour <|-- ScreenEffects
+MonoBehaviour <|-- SetupCameraCanvas
+MonoBehaviour <|-- Shaking
+Lifeform <|-- ShootableLock
+MonoBehaviour <|-- ShootTutorial
+MonoBehaviour <|-- Stepper
+MonoBehaviour <|-- Stroboscopic
+MonoBehaviour <|-- TendrilBatch
+MonoBehaviour <|-- ThemeManager
+MonoBehaviour <|-- Tutorial
+ChapterManagerGeneric <|-- TypewriterChapterManager
+MonoBehaviour <|-- WIPWarning
+MonoBehaviour <|-- FootManager
+MonoBehaviour <|-- CameraDetector
+MonoBehaviour <|-- CameraZone
+MonoBehaviour <|-- CustomCameraZone
+Character <|-- EnemyAI
+MonoBehaviour <|-- Lifeform
+MonoBehaviour <|-- TargetLimb
+ScriptableObject <|-- ChapterData
+ScriptableObject <|-- CharacterData
+ScriptableObject <|-- CinematicData
+ScriptableObject <|-- CommentData
+ScriptableObject <|-- ItemData
+ScriptableObject <|-- MusicData
+EditorWindow <|-- AllTextExporter
+MonoBehaviour <|-- EffectsManager
+MonoBehaviour <|-- RandomSeed
+MonoBehaviour <|-- VFXManager
+MonoBehaviour <|-- VfxObject
+ChapterManagerGeneric <|-- CeremonyAltChapterManager
+ChapterManagerGeneric <|-- CeremonyChapterManager
+ChapterManagerGeneric <|-- CeremonyLastChapterManager
+MonoBehaviour <|-- ChapterManagerGeneric
+MonoBehaviour <|-- MainMenuButton
+ISelectHandler <|.. MainMenuButton
+IDeselectHandler <|.. MainMenuButton
+MonoBehaviour <|-- MainMenuMaster
+MonoBehaviour <|-- PauseMenu
+MonoBehaviour <|-- PersistentData
+MonoBehaviour <|-- LegStepper
+MonoBehaviour <|-- StepperController
+ScriptableObject <|-- DialogueBatch
+Interactable <|-- DialogueCharacter
+MonoBehaviour <|-- ProceduralDialogueManager
+MonoBehaviour <|-- ButlerEngineUtilities
+MonoBehaviour <|-- EventDependencyHunter
+MonoBehaviour <|-- NavmeshUtilities
+MonoBehaviour <|-- AudioManager
+MonoBehaviour <|-- AudioObject
+BuildSave --> BuildSaveData : parameter
+CameraEffectManager --> GameManager : parameter
+Character --> Interactable : field
+Character --> Interactable : parameter
+CinematicManager --> CinematicData : field
+CinematicManager --> GameManager : parameter
+Cinematic --> CinematicData : field
+Cinematic --> GameManager : parameter
+CinematicPuppet --> CinematicData : field
+CinematicPuppet --> GameManager : parameter
+CreditsManager --> MainMenuMaster : parameter
+DialogueCinematic --> GameManager : parameter
+DialogueCinematicLine --> GameManager : parameter
+DialogueInstance --> DialogueCharacter : field
+DialogueInstance --> ProceduralDialogueManager : parameter
+DialogueInstance --> DialogueCharacter : parameter
+DialogueManager --> DialogueBox : field
+DialogueManager --> GameManager : parameter
+DialogueManager --> DialogueBox : parameter
+DialogueManager --> Dialogue : parameter
+Puppet --> DialogueBox : field
+Puppet --> GameManager : parameter
+Puppet --> DialogueBox : parameter
+Puppet --> Dialogue : parameter
+Conditions --> CharacterData : field
+Conditions --> ChapterData : field
+Conditions --> CameraZone : field
+Conditions --> Character : field
+Conditions --> PauseManager : field
+Conditions --> CursorManager : field
+Conditions --> GhostManager : field
+Conditions --> CinematicManager : field
+Conditions --> DialogueManager : field
+Conditions --> ScreenEffects : field
+Conditions --> HitstopManager : field
+Conditions --> InventoryManager : field
+Conditions --> CameraEffectManager : field
+Conditions --> PartnerManager : field
+Conditions --> Character : parameter
+Conditions --> CommentInteractable : parameter
+Conditions --> CameraZone : parameter
+Area --> CharacterData : field
+Area --> ChapterData : field
+Area --> CameraZone : field
+Area --> Character : field
+Area --> PauseManager : field
+Area --> CursorManager : field
+Area --> GhostManager : field
+Area --> CinematicManager : field
+Area --> DialogueManager : field
+Area --> ScreenEffects : field
+Area --> HitstopManager : field
+Area --> InventoryManager : field
+Area --> CameraEffectManager : field
+Area --> PartnerManager : field
+Area --> Character : parameter
+Area --> CommentInteractable : parameter
+Area --> CameraZone : parameter
+PlayableCharacter --> CharacterData : field
+PlayableCharacter --> ChapterData : field
+PlayableCharacter --> CameraZone : field
+PlayableCharacter --> Character : field
+PlayableCharacter --> PauseManager : field
+PlayableCharacter --> CursorManager : field
+PlayableCharacter --> GhostManager : field
+PlayableCharacter --> CinematicManager : field
+PlayableCharacter --> DialogueManager : field
+PlayableCharacter --> ScreenEffects : field
+PlayableCharacter --> HitstopManager : field
+PlayableCharacter --> InventoryManager : field
+PlayableCharacter --> CameraEffectManager : field
+PlayableCharacter --> PartnerManager : field
+PlayableCharacter --> Character : parameter
+PlayableCharacter --> CommentInteractable : parameter
+PlayableCharacter --> CameraZone : parameter
+GameManager --> CharacterData : field
+GameManager --> ChapterData : field
+GameManager --> CameraZone : field
+GameManager --> Character : field
+GameManager --> PauseManager : field
+GameManager --> CursorManager : field
+GameManager --> GhostManager : field
+GameManager --> CinematicManager : field
+GameManager --> DialogueManager : field
+GameManager --> ScreenEffects : field
+GameManager --> HitstopManager : field
+GameManager --> InventoryManager : field
+GameManager --> CameraEffectManager : field
+GameManager --> PartnerManager : field
+GameManager --> Character : parameter
+GameManager --> CommentInteractable : parameter
+GameManager --> CameraZone : parameter
+HoldInteractable --> Character : field
+Interactable --> Character : parameter
+IntroManager --> DialogueCinematic : field
+InventoryController --> InventoryItem : field
+InventoryController --> ItemUI : field
+InventoryController --> GameManager : parameter
+InventoryController --> InventoryItem : parameter
+InventoryController --> ItemData : parameter
+ItemSpot --> InventoryItem : field
+ItemSpot --> ItemUI : field
+ItemSpot --> GameManager : parameter
+ItemSpot --> InventoryItem : parameter
+ItemSpot --> ItemData : parameter
+InventoryItem --> ItemSpot : field
+InventoryItem --> ItemData : parameter
+InventoryItem --> ItemSpot : parameter
+InventoryManager --> ItemData : field
+InventoryManager --> GameManager : parameter
+InventoryManager --> InventoryItem : parameter
+Item --> ItemData : field
+Item --> GameManager : parameter
+Item --> InventoryItem : parameter
+ItemUI --> InventoryController : parameter
+LocalCinematic --> GameManager : parameter
+LocalCinematicLine --> GameManager : parameter
+Manager --> GameManager : field
+PartnerManager --> GameManager : parameter
+PartnerManager --> Character : parameter
+PlayerController --> CopyPosRot : field
+PlayerController --> InventoryController : field
+PlayerFollower --> PlayerController : parameter
+RuthController --> Character : parameter
+CameraDetector --> CameraZone : field
+CameraDetector --> CameraZone : parameter
+CustomCameraZone --> CameraZone : field
+EnemyAI --> Character : field
+EnemyAI --> Hitshape : field
+Lifeform --> Character : field
+TargetLimb --> Lifeform : field
+ChapterData --> CharacterData : field
+ChapterData --> CommentData : field
+AllTextExporter --> DataContainer : field
+AllTextContainer --> DataContainer : field
+MenuSceneTextContainer --> DataContainer : field
+SceneTextContainer --> DataContainer : field
+TextExporterTextMeshPro --> DataContainer : field
+TextExporterDelegateObject --> DataContainer : field
+TextExporterDialogue --> DataContainer : field
+TextExporterCinematic --> DataContainer : field
+TextExportObject --> DataContainer : field
+TextExportItem --> DataContainer : field
+TextExportDialogueBatch --> DataContainer : field
+EffectsManager --> AudioManager : field
+EffectsManager --> VFXManager : field
+VFXManager --> Vfx : parameter
+ChapterManagerGeneric --> GameManager : field
+DialogueCharacter --> Character : parameter
+ProceduralDialogueManager --> DialogueBatch : field
+ProceduralDialogueManager --> GameManager : parameter
+ProceduralDialogueManager --> DialogueCharacter : parameter
+ProceduralDialogueManager --> DialogueBatch : parameter
+DialogueBatchIndex --> DialogueBatch : field
+DialogueBatchIndex --> GameManager : parameter
+DialogueBatchIndex --> DialogueCharacter : parameter
+DialogueBatchIndex --> DialogueBatch : parameter
+AudioManager --> Sound : parameter
+@enduml
