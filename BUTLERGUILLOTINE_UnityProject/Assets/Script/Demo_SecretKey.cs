@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class Demo_SecretKey : MonoBehaviour
 {
+    [SerializeField] string hasKeyMessage;
+
     [Header("Standalone comment")]
     [SerializeField] private TextMeshProUGUI observationDialogue;
     [SerializeField] GameObject Specific, Blocker;
 
     [Header("References")]
-    [SerializeField] GameObject toHide;
-    [SerializeField] GameObject toShow;
+    [SerializeField] GameObject[] toHide;
+    [SerializeField] GameObject[] toShow;
     [SerializeField] RagdollHider alive, dead;
 
     bool writing, skip;
@@ -52,13 +54,22 @@ public class Demo_SecretKey : MonoBehaviour
         }
     }
 
+    public void GotKey()
+    {
+        WriteSpecific(hasKeyMessage);
+        PersistentData.Instance.HasKey = true;
+    }
+
     void ShowSecret()
     {
         alive.Hide();
         dead.Show();
 
-        toHide.SetActive(false);
-        toShow.SetActive(true);
+        foreach (var item in toHide)
+            item.SetActive(false);
+
+        foreach (var item in toShow)
+            item.SetActive(true);
     }
 
     void HideSecret()
@@ -66,8 +77,11 @@ public class Demo_SecretKey : MonoBehaviour
         alive.Show();
         dead.Hide();
 
-        toHide.SetActive(true); 
-        toShow.SetActive(false);
+        foreach (var item in toHide)
+            item.SetActive(true);
+
+        foreach (var item in toShow)
+            item.SetActive(false);
     }
 
     public void WriteSpecific(string text)

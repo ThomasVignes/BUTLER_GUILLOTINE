@@ -40,6 +40,7 @@ public class Lifeform : MonoBehaviour
             Character.Stun(stunDamage);
     }
 
+    [ContextMenu("Kill")]
     public virtual void Death()
     {
         if (dead)
@@ -59,7 +60,8 @@ public class Lifeform : MonoBehaviour
             InitRagdoll initRagdoll = go.GetComponent<InitRagdoll>();
             initRagdoll.TryMatchBones(transform);
 
-            GameManager.Instance.RemoveCharacter(Character);
+            if (Character != null)
+                GameManager.Instance.RemoveCharacter(Character);
 
             Destroy(gameObject);
         }

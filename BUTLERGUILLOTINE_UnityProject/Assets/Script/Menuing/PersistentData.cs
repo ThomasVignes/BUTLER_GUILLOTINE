@@ -15,6 +15,7 @@ public class PersistentData : MonoBehaviour
 
     [Header("Demo Specific")]
     public bool FinishedOnce;
+    public bool HasKey;
 
     string masterBusPath = "bus:/";
     string musicBusPath = "bus:/Music";

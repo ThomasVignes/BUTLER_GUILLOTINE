@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 using Whumpus;
 
 public class InitRagdoll : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] bool tryMatchBones;
+    [SerializeField] bool matchGlobal;
+    [SerializeField] bool matchAllLimbs;
 
     [Header("Freeze")]
     [SerializeField] bool freezeAfterDelay;
@@ -50,14 +53,22 @@ public class InitRagdoll : MonoBehaviour
 
         foreach (Transform item in parent.GetComponentsInChildren<Transform>())
         {
-            if (item.GetComponent<RagdollLimb>())
+            if (item.GetComponent<RagdollLimb>() || matchAllLimbs)
             {
                 foreach (var bone in bones)
                 {
                     if (bone.name == item.name)
                     {
-                        bone.localPosition = item.localPosition;
-                        bone.localRotation = item.localRotation;
+                        if (!matchGlobal)
+                        {
+                            bone.localPosition = item.localPosition;
+                            bone.localRotation = item.localRotation;
+                        }
+                        else
+                        {
+                            bone.position = item.position;
+                            bone.rotation = item.rotation;
+                        }
                     }
                 }
             }
