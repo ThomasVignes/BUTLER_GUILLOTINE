@@ -18,6 +18,12 @@ public class Demo_Murderer : MonoBehaviour
         var persistentData = PersistentData.Instance;
 
         if (persistentData != null && persistentData.DemoMode && persistentData.HasKey)
-            GameManager.Instance.InventoryManager.EquipItem(murdererKeyID);
+            GiveKey();
+    }
+
+    [ContextMenu("Give key")]
+    void GiveKey()
+    {
+        GameManager.Instance.InventoryManager.EquipItem(murdererKeyID);
     }
 }
