@@ -12,6 +12,7 @@ public class Demo_SecretKey : MonoBehaviour
     [SerializeField] GameObject Specific, Blocker;
 
     [Header("References")]
+    [SerializeField] GameObject[] done;
     [SerializeField] GameObject[] toHide;
     [SerializeField] GameObject[] toShow;
     [SerializeField] RagdollHider alive, dead;
@@ -26,6 +27,12 @@ public class Demo_SecretKey : MonoBehaviour
 
     private void Start()
     {
+        if (PersistentData.Instance.HasKey)
+        {
+            Done();
+            return;
+        }
+
         bool showSecret = PersistentData.Instance.FinishedOnce;
 
         if (showSecret)
@@ -58,6 +65,23 @@ public class Demo_SecretKey : MonoBehaviour
     {
         WriteSpecific(hasKeyMessage);
         PersistentData.Instance.HasKey = true;
+    }
+
+    void Done()
+    {
+        foreach (var item in done)
+        {
+            item.SetActive(true);
+        }
+
+        alive.Hide();
+        dead.Hide();
+
+        foreach (var item in toHide)
+            item.SetActive(false);
+
+        foreach (var item in toShow)
+            item.SetActive(false);
     }
 
     void ShowSecret()

@@ -10,6 +10,7 @@ public class PersistentData : MonoBehaviour
 {
     public static PersistentData Instance;
 
+    public bool SaveInEditor;
     public bool DemoMode;
 
     [Header("Data")]
@@ -53,6 +54,13 @@ public class PersistentData : MonoBehaviour
 
     private void Awake()
     {
+#if UNITY_EDITOR
+        if (SaveInEditor)
+            LoadData();
+#else
+        LoadData();
+#endif
+
         QuickInit();
     }
 
@@ -127,12 +135,17 @@ public class PersistentData : MonoBehaviour
     }
 
     [ContextMenu("Load Data")]
-    public void LoadFile()
+    public void LoadData()
     {
         string fullPath = Application.dataPath + savePath + "SaveData";
 
         if (!File.Exists(fullPath + ".txt"))
+        {
+            SaveData();
+            Debug.Log("Save not found, creating new save at " + savePath);
+
             return;
+        }
 
         SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(fullPath + ".txt"));
 
