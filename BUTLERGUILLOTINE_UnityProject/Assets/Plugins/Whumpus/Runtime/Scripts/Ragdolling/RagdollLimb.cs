@@ -240,5 +240,10 @@ namespace Whumpus
             if (constantForce != null)
                 constantForce.enabled = true;
         }
+
+        public void Hide()
+        {
+            transform.localScale = Vector3.zero;
+        }
     }
 }

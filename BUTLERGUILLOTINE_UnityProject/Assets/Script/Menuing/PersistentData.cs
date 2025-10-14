@@ -29,6 +29,8 @@ public class PersistentData : MonoBehaviour
     [Header("Saving")]
     public string savePath = @"\Resources\Saves\";
 
+    [HideInInspector] public BuildNavigator BuildNavigator;
+
     string masterBusPath = "bus:/";
     string musicBusPath = "bus:/Music";
     string sfxBusPath = "bus:/SFX";
@@ -77,6 +79,9 @@ public class PersistentData : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
+
+        BuildNavigator = GetComponent<BuildNavigator>();
+        BuildNavigator.Init(this);
 
         FullScreen = true;
         SoundOn = true;

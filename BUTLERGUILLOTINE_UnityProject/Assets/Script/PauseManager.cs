@@ -88,10 +88,6 @@ public class PauseManager : Manager
     {
         UnPause();
 
-        Application.Quit();
-
-    #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-    #endif
+        PersistentData.Instance.BuildNavigator.RequestQuit();
     }
 }

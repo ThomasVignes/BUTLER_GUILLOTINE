@@ -116,11 +116,7 @@ public class MainMenuMaster : MonoBehaviour
 
     public void QuitGame()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        PersistentData.Instance.BuildNavigator.RequestQuit();
     }
 
     public void ChangeSpots(int index)
