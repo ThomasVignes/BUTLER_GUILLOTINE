@@ -1,21 +1,32 @@
+using DG.Tweening.Plugins.Core.PathCore;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PersistentData : MonoBehaviour
 {
     public static PersistentData Instance;
 
-    public bool FullScreen;
-    public bool SoundOn;
-    public bool CopyrightFree;
-    public bool FastMode;
     public bool DemoMode;
 
-    [Header("Demo Specific")]
+    [Header("Data")]
+    public string CurrentScene;
+
+    [Header("Settings")]
+    public bool FullScreen;
+    public bool SoundOn;
+
+    [HideInInspector] public bool FastMode, CopyrightFree;
+
+    [Header("Demo Specific Data")]
     public bool FinishedOnce;
     public bool HasKey;
+
+    [Header("Saving")]
+    public string savePath = @"\Resources\Saves\";
 
     string masterBusPath = "bus:/";
     string musicBusPath = "bus:/Music";
@@ -88,4 +99,97 @@ public class PersistentData : MonoBehaviour
         musicMultiplier = 1;
         sfxMultiplier = 1;
     }
+
+    //Saving
+    [ContextMenu("Save Data")]
+    public void SaveData()
+    {
+        //int increment = 0;
+
+        CurrentScene = SceneManager.GetActiveScene().name;
+
+        var data = new SaveData(CurrentScene, FullScreen, SoundOn, FinishedOnce, HasKey);
+        var json = JsonUtility.ToJson(data, true);
+
+        string fullPath = Application.dataPath + savePath + "SaveData";
+
+        /*
+        while (File.Exists(fullPath + ".txt"))
+        {
+            increment++;
+            fullPath = Application.dataPath + savePath + "SaveData";
+        }
+        */
+
+        File.WriteAllText(fullPath + ".txt", json);
+
+        Debug.Log("Created " + "SaveData" + ".txt " + " at " + savePath);
+    }
+
+    [ContextMenu("Load Data")]
+    public void LoadFile()
+    {
+        string fullPath = Application.dataPath + savePath + "SaveData";
+
+        if (!File.Exists(fullPath + ".txt"))
+            return;
+
+        SaveData saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(fullPath + ".txt"));
+
+        ApplyData(saveData);
+
+        Debug.Log("Applied " + "SaveData" + ".txt " + " at " + savePath);
+    }
+
+    public void ApplyData(SaveData saveData)
+    {
+        FullScreen = saveData.Settings.FullScreen;
+        SoundOn = saveData.Settings.SoundOn;
+
+        FinishedOnce = saveData.DemoTriggers.FinishedOnce;
+        HasKey = saveData.DemoTriggers.HasKey;
+    }
+}
+
+[System.Serializable]
+public class SaveData
+{
+    public GeneralData GeneralData;
+    public Settings Settings;
+    public DemoTriggers DemoTriggers;
+
+    public SaveData(string currentScene, bool fullScreen, bool soundOn, bool finishedOnce, bool hasKey)
+    {
+        GeneralData = new GeneralData();
+        GeneralData.CurrentScene = currentScene;
+
+        Settings = new Settings();
+        Settings.FullScreen = fullScreen;
+        Settings.SoundOn = soundOn;
+
+        DemoTriggers = new DemoTriggers();
+        DemoTriggers.FinishedOnce = finishedOnce;
+        DemoTriggers.HasKey = hasKey;
+    }
+}
+
+[System.Serializable]
+public class Settings
+{
+    public bool FullScreen;
+    public bool SoundOn;
+}
+
+[System.Serializable]
+public class GeneralData
+{
+    public string CurrentScene;
+}
+
+
+[System.Serializable]
+public class DemoTriggers
+{
+    public bool FinishedOnce;
+    public bool HasKey;
 }
