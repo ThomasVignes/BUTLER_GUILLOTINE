@@ -2,6 +2,7 @@ using DG.Tweening;
 using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -29,6 +30,10 @@ public class MainMenuMaster : MonoBehaviour
     [SerializeField] StudioEventEmitter arriveSound;
     [SerializeField] GameObject eventSystem;
     [SerializeField] ChapterSelector chapterSelector;
+    [SerializeField] Animator startMenuAnimator;
+    [SerializeField] Button continueButton;
+
+    bool startMenuOpen;
 
     [Header("MainMenuing")]
     [SerializeField] private GameObject FirstMenuButton;
@@ -75,6 +80,14 @@ public class MainMenuMaster : MonoBehaviour
         Elevator.position = Spots[targetSpot].position;
         
         chapterSelector.Init();
+
+        bool canContinue = PersistentData.Instance.BuildNavigator.CanContinue();
+
+        if (!canContinue)
+        {
+            continueButton.interactable = false;
+            continueButton.GetComponentInChildren<TextMeshProUGUI>().color = Color.gray;
+        }
     }
 
     private void Update()
@@ -119,6 +132,20 @@ public class MainMenuMaster : MonoBehaviour
         PersistentData.Instance.BuildNavigator.RequestQuit();
     }
 
+    public void ToggleStartMenu()
+    {
+        startMenuOpen = !startMenuOpen;
+
+        startMenuAnimator.SetBool("Open", startMenuOpen);
+    }
+
+    public void HideStartMenu()
+    {
+        startMenuOpen = false;
+
+        startMenuAnimator.SetBool("Open", startMenuOpen);
+    }
+
     public void ChangeSpots(int index)
     {
         if (!CanInput)
@@ -126,6 +153,9 @@ public class MainMenuMaster : MonoBehaviour
 
         targetSpot = index;
         moving = true;
+
+        if (index > 0)
+            HideStartMenu();
     }
 
     public void UpdateVolume()
@@ -134,7 +164,7 @@ public class MainMenuMaster : MonoBehaviour
             PersistentData.Instance.MasterVolume = masterVolume.value;
     }
 
-    public void StartGame()
+    public void StartGame(bool loadSave)
     {
         if (!CanInput)
             return;
@@ -142,10 +172,10 @@ public class MainMenuMaster : MonoBehaviour
         CanInput = false;
         eventSystem.SetActive(false);
 
-        StartCoroutine(C_StartGame());
+        StartCoroutine(C_StartGame(loadSave));
     }
 
-    IEnumerator C_StartGame()
+    IEnumerator C_StartGame(bool loadSave)
     {
         BlackFadeTo(1, 4f);
 
@@ -155,7 +185,10 @@ public class MainMenuMaster : MonoBehaviour
 
         yield return new WaitForSeconds(silenceTime);
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (loadSave)
+            PersistentData.Instance.BuildNavigator.Continue();
+        else
+            PersistentData.Instance.BuildNavigator.NextScene();
     }
 
     IEnumerator C_ShowMenu()

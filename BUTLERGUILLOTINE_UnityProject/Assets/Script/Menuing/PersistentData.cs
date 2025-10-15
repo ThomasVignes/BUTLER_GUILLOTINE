@@ -146,7 +146,7 @@ public class PersistentData : MonoBehaviour
 
         if (!File.Exists(fullPath + ".txt"))
         {
-            SaveData();
+            SaveData(true);
             Debug.Log("Save not found, creating new save at " + savePath);
 
             return;
@@ -161,11 +161,40 @@ public class PersistentData : MonoBehaviour
 
     public void ApplyData(SaveData saveData)
     {
+        CurrentScene = saveData.GeneralData.CurrentScene;
+
         FullScreen = saveData.Settings.FullScreen;
         SoundOn = saveData.Settings.SoundOn;
 
         FinishedOnce = saveData.DemoTriggers.FinishedOnce;
         HasKey = saveData.DemoTriggers.HasKey;
+    }
+
+    public void SaveData(bool noScene)
+    {
+        //int increment = 0;
+
+        if (noScene)
+            CurrentScene = "";
+        else
+            CurrentScene = SceneManager.GetActiveScene().name;
+
+        var data = new SaveData(CurrentScene, FullScreen, SoundOn, FinishedOnce, HasKey);
+        var json = JsonUtility.ToJson(data, true);
+
+        string fullPath = Application.dataPath + savePath + "SaveData";
+
+        /*
+        while (File.Exists(fullPath + ".txt"))
+        {
+            increment++;
+            fullPath = Application.dataPath + savePath + "SaveData";
+        }
+        */
+
+        File.WriteAllText(fullPath + ".txt", json);
+
+        Debug.Log("Created " + "SaveData" + ".txt " + " at " + savePath);
     }
 }
 
