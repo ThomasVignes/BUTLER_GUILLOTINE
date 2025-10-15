@@ -7,6 +7,8 @@ public class BuildNavigator : MonoBehaviour
 {
     PersistentData persistentData;
 
+    bool menuRequested, quitRequested;
+
     public void Init(PersistentData persistentdata)
     {
         this.persistentData = persistentdata;
@@ -15,6 +17,26 @@ public class BuildNavigator : MonoBehaviour
     public void NextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void RequestMenu()
+    {
+        if (menuRequested)
+            return;
+
+        menuRequested = true;
+
+        persistentData.SaveData();
+
+        StartCoroutine(C_MenuDelay());
+    }
+
+    IEnumerator C_MenuDelay()
+    {
+        yield return new WaitForSeconds(1f);
+
+        menuRequested = false;
+        SceneManager.LoadScene(1);
     }
 
     public void Continue()
@@ -32,6 +54,11 @@ public class BuildNavigator : MonoBehaviour
 
     public void RequestQuit()
     {
+        if (quitRequested)
+            return;
+
+        quitRequested = true;
+
         persistentData.SaveData();
 
         StartCoroutine(C_QuitDelay());

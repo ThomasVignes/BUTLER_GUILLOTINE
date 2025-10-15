@@ -22,6 +22,7 @@ public class Stroboscopic : MonoBehaviour
 
     [Header("Events")]
     public UnityEvent OnFlash;
+    public UnityEvent OnEnd;
 
 
     float delayTimer;
@@ -88,6 +89,7 @@ public class Stroboscopic : MonoBehaviour
             {
                 if (finalTimer < Time.time)
                 {
+                    OnEnd?.Invoke();
                     finalCam.SetActive(false);
                     final = false;
                     active = false;

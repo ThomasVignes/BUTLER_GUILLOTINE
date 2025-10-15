@@ -81,7 +81,7 @@ public class PauseManager : Manager
 
         ButlerEngineUtilities.ClearAllInterScenes();
 
-        SceneManager.LoadScene(1);
+        PersistentData.Instance.BuildNavigator.RequestMenu();
     }
 
     public void QuitGame()
