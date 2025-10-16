@@ -12,6 +12,9 @@ public class FovPulse : MonoBehaviour
     [SerializeField] float minBonus;
     [SerializeField] float maxBonus;
 
+    [Header("Break")]
+    [SerializeField] Vector3 breakOffset;
+
     [Header("References")]
     [SerializeField] CinemachineVirtualCamera[] cameras;
 
@@ -23,6 +26,19 @@ public class FovPulse : MonoBehaviour
     public void Activate(bool active)
     {
         Active = active;
+    }
+
+    public void Break()
+    {
+        if (!Active)
+            return;
+
+        Active = false;
+
+        foreach (var item in cameras)
+        {
+            item.transform.localRotation *= Quaternion.Euler(breakOffset);
+        }
     }
 
     private void Start()

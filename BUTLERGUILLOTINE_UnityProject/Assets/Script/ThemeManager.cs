@@ -48,6 +48,14 @@ public class ThemeManager : MonoBehaviour
             NewArea(startAreaExperimental);
     }
 
+    public void SetParam(string name, float value)
+    {
+        if (overrideAmbiance)
+            currentOverrideInstance.setParameterByName(name, value);
+        else
+            currentInstance.setParameterByName(name, value);
+    }
+
     void SwapEvent(EventReference track)
     {
         currentInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);

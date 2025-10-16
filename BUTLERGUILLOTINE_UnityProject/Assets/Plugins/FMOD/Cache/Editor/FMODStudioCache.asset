@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9199584250111041818
+--- !u!114 &-9220166808851412426
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Samples/Der Leiermann, Schubert, Die Winterreise
-    ,no 24, High voice rehearsal track
+  m_Name: "event:/Music/Old/Raw/Direction1/Copyright Free/Meditation From Thais \u2014
+    Jesse Crawford (1960) EDITED"
   m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Samples/Der Leiermann, Schubert, Die Winterreise
-    ,no 24, High voice rehearsal track
+  Path: "event:/Music/Old/Raw/Direction1/Copyright Free/Meditation From Thais \u2014
+    Jesse Crawford (1960) EDITED"
   Guid:
-    Data1: -1608216572
-    Data2: 1192188663
-    Data3: -1903330382
-    Data4: 480505860
+    Data1: -1537950227
+    Data2: 1294721015
+    Data3: -1148116860
+    Data4: -1821163813
   Banks:
   - {fileID: -5632208867510917013}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 198896
+  Length: 398262
 --- !u!114 &-8748451219817880185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,7 +83,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 410
---- !u!114 &-8600547983351759247
+--- !u!114 &-7931097575911444758
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,84 +93,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/The Caretaker - Isolated lights
-    on the abyss of ignorance - Patience (After Sebald)
+  m_Name: "event:/Music/Old/Raw/Direction2/SmallCuts/[Pavel H\u016Fla+Praga Camerata]
+    Schubert Death and the Maiden Quartett for Strings (Cut)"
   m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Copyrighted/The Caretaker - Isolated lights
-    on the abyss of ignorance - Patience (After Sebald)
+  Path: "event:/Music/Old/Raw/Direction2/SmallCuts/[Pavel H\u016Fla+Praga Camerata]
+    Schubert Death and the Maiden Quartett for Strings (Cut)"
   Guid:
-    Data1: 1875382018
-    Data2: 1282952111
-    Data3: -839447408
-    Data4: 1520859909
+    Data1: 394120137
+    Data2: 1189293681
+    Data3: 1239038394
+    Data4: 2076996551
   Banks:
   - {fileID: -5632208867510917013}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 275095
---- !u!114 &-8472037648813472654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/Lies of P  Estella Opera House
-    Ambience BGMOST 4K
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Copyrighted/Lies of P  Estella Opera House
-    Ambience BGMOST 4K
-  Guid:
-    Data1: 1737868988
-    Data2: 1157017134
-    Data3: 950134660
-    Data4: -747519425
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 80143
---- !u!114 &-7448113856975874135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Music/Old/Raw/Direction1/Copyright Free/Meditation From Thais \u2014
-    Jesse Crawford (1960) Cut EDITED"
-  m_EditorClassIdentifier: 
-  Path: "event:/Music/Old/Raw/Direction1/Copyright Free/Meditation From Thais \u2014
-    Jesse Crawford (1960) Cut EDITED"
-  Guid:
-    Data1: 1420474003
-    Data2: 1130400900
-    Data3: 1310241962
-    Data4: 1921635885
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 217808
---- !u!114 &-7201481761245657326
+  Length: 7000
+--- !u!114 &-7721114402780244740
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,6 +141,64 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 319216
+--- !u!114 &-7560012355867611489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Old/Raw/Direction1/Copyright Free/Lullaby Of The Leaves (Instrumental)
+    - Layton & Johnstone EDITED
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Old/Raw/Direction1/Copyright Free/Lullaby Of The Leaves (Instrumental)
+    - Layton & Johnstone EDITED
+  Guid:
+    Data1: 1050646133
+    Data2: 1087411361
+    Data3: -1582700880
+    Data4: -1577665428
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 225567
+--- !u!114 &-7459345767496667135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Old/Raw/Direction1/Samples/Lullaby of the Leaves (Instrumental)
+    - Layton & Johnstone
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Old/Raw/Direction1/Samples/Lullaby of the Leaves (Instrumental)
+    - Layton & Johnstone
+  Guid:
+    Data1: -1820504076
+    Data2: 1181711703
+    Data3: 860011198
+    Data4: 758767158
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 180427
 --- !u!114 &-7184230577988995770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,12 +241,12 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638919190321646429
+  lastModified: 638962300666243512
   FileSizes:
   - Name: 
-    Value: 5484
+    Value: 5752
   Exists: 1
---- !u!114 &-7080253878821521677
+--- !u!114 &-6987686660711783685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -256,16 +256,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Music/Old/Raw/Direction2/Copyright Free/[Pavel H\u016Fla+Praga
-    Camerata] Schubert Death and the Maiden Quartett for Strings"
+  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/Leyland Kirby - We drink to
+    forget the coming storm Track 1
   m_EditorClassIdentifier: 
-  Path: "event:/Music/Old/Raw/Direction2/Copyright Free/[Pavel H\u016Fla+Praga Camerata]
-    Schubert Death and the Maiden Quartett for Strings"
+  Path: event:/Music/Old/Raw/Direction1/Copyrighted/Leyland Kirby - We drink to forget
+    the coming storm Track 1
   Guid:
-    Data1: 882467976
-    Data2: 1181090845
-    Data3: -348576105
-    Data4: -165165137
+    Data1: 1286975111
+    Data2: 1206283895
+    Data3: -570170701
+    Data4: 2072198734
   Banks:
   - {fileID: -5632208867510917013}
   IsStream: 1
@@ -274,107 +274,8 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2394697
---- !u!114 &-6581135114490080088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/ding-small-bell-sfx-233008
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/ding-small-bell-sfx-233008
-  Guid:
-    Data1: 279943699
-    Data2: 1288881596
-    Data3: -1676243813
-    Data4: -1738997037
-  Banks:
-  - {fileID: 7765557908467560066}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1848
---- !u!114 &-6044067284208267192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Steps/FabricStep
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Steps/FabricStep
-  Guid:
-    Data1: -1121630605
-    Data2: 1188002167
-    Data3: -425350242
-    Data4: 2090624715
-  Banks:
-  - {fileID: 7765557908467560066}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-5632208867510917013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Music.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank
-  Name: Music
-  StudioPath: bank:/Music
-  lastModified: 638919908509834167
-  FileSizes: []
-  Exists: 1
---- !u!114 &-5535506076535644234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/Harolds Theme
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Copyrighted/Harolds Theme
-  Guid:
-    Data1: -840209671
-    Data2: 1094449494
-    Data3: 1318329523
-    Data4: -716245293
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 236460
---- !u!114 &-4844110407744930826
+  Length: 456071
+--- !u!114 &-6979041618605573561
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -403,7 +304,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 209214
---- !u!114 &-4828196728775571965
+--- !u!114 &-6581135114490080088
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -413,16 +314,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/Leyland Kirby - No longer distance
-    than death
+  m_Name: event:/SFX/ding-small-bell-sfx-233008
   m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Copyrighted/Leyland Kirby - No longer distance
-    than death
+  Path: event:/SFX/ding-small-bell-sfx-233008
   Guid:
-    Data1: 1579344088
-    Data2: 1081853675
-    Data3: -1822834530
-    Data4: -1081418672
+    Data1: 279943699
+    Data2: 1288881596
+    Data3: -1676243813
+    Data4: -1738997037
+  Banks:
+  - {fileID: 7765557908467560066}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1848
+--- !u!114 &-6188542845749919054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Old/Raw/Direction1/Copyright Free/R1 - O Jesu Christ - Unknown
+    Choir - Short - EDITED
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Old/Raw/Direction1/Copyright Free/R1 - O Jesu Christ - Unknown
+    Choir - Short - EDITED
+  Guid:
+    Data1: -84185186
+    Data2: 1219639937
+    Data3: -119669313
+    Data4: 1932957714
   Banks:
   - {fileID: -5632208867510917013}
   IsStream: 1
@@ -431,7 +359,166 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 468976
+  Length: 280080
+--- !u!114 &-6044067284208267192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Steps/FabricStep
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Steps/FabricStep
+  Guid:
+    Data1: -1121630605
+    Data2: 1188002167
+    Data3: -425350242
+    Data4: 2090624715
+  Banks:
+  - {fileID: 7765557908467560066}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5832229507639074835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Old/Raw/Direction1/Copyright Free/R1 - O Jesu Christ - Unknown
+    Choir
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Old/Raw/Direction1/Copyright Free/R1 - O Jesu Christ - Unknown
+    Choir
+  Guid:
+    Data1: -1392092836
+    Data2: 1328748893
+    Data3: 1037717176
+    Data4: -1931037898
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 288192
+--- !u!114 &-5632208867510917013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638962282851979516
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-5323019933396141674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Old/BarDistant
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Old/BarDistant
+  Guid:
+    Data1: -1836212051
+    Data2: 1280677027
+    Data3: -260988743
+    Data4: 1260696681
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4726043814089117632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/The Caretaker-All You Are Going
+    to Want to do is Get Back There
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Old/Raw/Direction1/Copyrighted/The Caretaker-All You Are Going
+    to Want to do is Get Back There
+  Guid:
+    Data1: 1333756204
+    Data2: 1282063848
+    Data3: -140612693
+    Data4: -330287653
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 227317
+--- !u!114 &-4637081981127644544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Old/Raw/Direction1/Copyright Free/Hal Kemp And His Orchestra
+    - This Is Romance But It Never Starts EDITED
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Old/Raw/Direction1/Copyright Free/Hal Kemp And His Orchestra
+    - This Is Romance But It Never Starts EDITED
+  Guid:
+    Data1: -1658736864
+    Data2: 1300068069
+    Data3: -419284303
+    Data4: 1723610846
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 249417
 --- !u!114 &-4598862240807655831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513,120 +600,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6144
---- !u!114 &-3994410163403700543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Music/Old/Raw/Direction1/Copyright Free/Meditation From Thais \u2014
-    Jesse Crawford (1960) EDITED"
-  m_EditorClassIdentifier: 
-  Path: "event:/Music/Old/Raw/Direction1/Copyright Free/Meditation From Thais \u2014
-    Jesse Crawford (1960) EDITED"
-  Guid:
-    Data1: -1537950227
-    Data2: 1294721015
-    Data3: -1148116860
-    Data4: -1821163813
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 398262
---- !u!114 &-3842909222093950536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/Lies of P  OST - Misty ErA
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Copyrighted/Lies of P  OST - Misty ErA
-  Guid:
-    Data1: 395612530
-    Data2: 1236352615
-    Data3: 2096396455
-    Data4: 790757303
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 222328
---- !u!114 &-3662796549659614407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/The Caretaker - a stairway
-    to the stars
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Copyrighted/The Caretaker - a stairway to
-    the stars
-  Guid:
-    Data1: 706325479
-    Data2: 1191843775
-    Data3: -246202441
-    Data4: 1748491751
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 433658
---- !u!114 &-3552862987126765801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Copyright Free/Hal Kemp And His Orchestra
-    - This Is Romance But It Never Starts EDITED
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Copyright Free/Hal Kemp And His Orchestra
-    - This Is Romance But It Never Starts EDITED
-  Guid:
-    Data1: -1658736864
-    Data2: 1300068069
-    Data3: -419284303
-    Data4: 1723610846
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 249417
 --- !u!114 &-3346567643425602939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -642,9 +615,38 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638919190321636414
+  lastModified: 638962300666233507
   FileSizes: []
   Exists: 1
+--- !u!114 &-3043384895053143028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/Lies of P  Estella Opera House
+    Ambience BGMOST 4K
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Old/Raw/Direction1/Copyrighted/Lies of P  Estella Opera House
+    Ambience BGMOST 4K
+  Guid:
+    Data1: 1737868988
+    Data2: 1157017134
+    Data3: 950134660
+    Data4: -747519425
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 80143
 --- !u!114 &-2820307275378040168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -672,7 +674,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 783
---- !u!114 &-2495018075475375645
+--- !u!114 &-2284727997678323166
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -682,16 +684,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/The Caretaker - E4 - Libets
-    all joyful camaraderie
+  m_Name: event:/Music/Hell
   m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Copyrighted/The Caretaker - E4 - Libets all
-    joyful camaraderie
+  Path: event:/Music/Hell
   Guid:
-    Data1: -1561897323
-    Data2: 1156980797
-    Data3: 2090117040
-    Data4: -2113905556
+    Data1: 282192823
+    Data2: 1292566473
+    Data3: -1888484718
+    Data4: 475282899
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2019564581431727298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/Leyland Kirby - We drink to
+    forget the coming storm Track 15
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Old/Raw/Direction1/Copyrighted/Leyland Kirby - We drink to forget
+    the coming storm Track 15
+  Guid:
+    Data1: 1073973380
+    Data2: 1267695738
+    Data3: 2134429345
+    Data4: 474754641
   Banks:
   - {fileID: -5632208867510917013}
   IsStream: 1
@@ -700,7 +729,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 193697
+  Length: 370102
 --- !u!114 &-1325934893139448467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,7 +757,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
---- !u!114 &-1039245662683987404
+--- !u!114 &-886075586707616386
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -738,15 +767,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/The great hidden sea of the
-    unconscious
+  m_Name: event:/SFX/Steps/FabricStep2D
   m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Copyrighted/The great hidden sea of the unconscious
+  Path: event:/SFX/Steps/FabricStep2D
   Guid:
-    Data1: 2141347023
-    Data2: 1190021954
-    Data3: -762848585
-    Data4: 1495264493
+    Data1: 1008819372
+    Data2: 1237677898
+    Data3: -4538444
+    Data4: 1481716488
+  Banks:
+  - {fileID: 7765557908467560066}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-285140804520324959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Music/Old/Raw/Direction2/Copyright Free/[Pavel H\u016Fla+Praga
+    Camerata] Schubert Death and the Maiden Quartett for Strings"
+  m_EditorClassIdentifier: 
+  Path: "event:/Music/Old/Raw/Direction2/Copyright Free/[Pavel H\u016Fla+Praga Camerata]
+    Schubert Death and the Maiden Quartett for Strings"
+  Guid:
+    Data1: 882467976
+    Data2: 1181090845
+    Data3: -348576105
+    Data4: -165165137
   Banks:
   - {fileID: -5632208867510917013}
   IsStream: 1
@@ -755,8 +812,8 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 182282
---- !u!114 &-885162807186563252
+  Length: 2394697
+--- !u!114 &-228788287706414286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -766,54 +823,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/New/Mein Herze schwimmt im Blut, BWV 199 - 2. Stumme Seufzer,
-    stille Klagen (Soprano, Trumpet and Organ arr. - Rondeau)
+  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/The Caretaker - Isolated lights
+    on the abyss of ignorance - Patience (After Sebald)
   m_EditorClassIdentifier: 
-  Path: event:/Music/New/Mein Herze schwimmt im Blut, BWV 199 - 2. Stumme Seufzer,
-    stille Klagen (Soprano, Trumpet and Organ arr. - Rondeau)
+  Path: event:/Music/Old/Raw/Direction1/Copyrighted/The Caretaker - Isolated lights
+    on the abyss of ignorance - Patience (After Sebald)
   Guid:
-    Data1: 920608808
-    Data2: 1182498845
-    Data3: -1791643715
-    Data4: 1545656267
+    Data1: 1875382018
+    Data2: 1282952111
+    Data3: -839447408
+    Data4: 1520859909
   Banks:
   - {fileID: -5632208867510917013}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 512208
---- !u!114 &-128397739020455780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Samples/Lullaby of the Leaves - Layton
-    & Johnstone (Slower + Reverb)
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Samples/Lullaby of the Leaves - Layton &
-    Johnstone (Slower + Reverb)
-  Guid:
-    Data1: 1891571369
-    Data2: 1109394250
-    Data3: -887350907
-    Data4: 248396686
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 226089
+  Length: 275095
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -860,50 +888,53 @@ MonoBehaviour:
   - {fileID: 1183415352513314424}
   - {fileID: 8143309677218547436}
   - {fileID: 6203756437719978141}
-  - {fileID: -8600547983351759247}
-  - {fileID: -9199584250111041818}
-  - {fileID: -3552862987126765801}
-  - {fileID: 8309239968935706847}
-  - {fileID: 2972454930318478947}
-  - {fileID: 9115512400382327859}
-  - {fileID: 3180039313250484060}
-  - {fileID: -3842909222093950536}
-  - {fileID: 7638528395453613542}
-  - {fileID: 6296503562781155814}
-  - {fileID: 6644404910971260435}
-  - {fileID: 191293772766824878}
-  - {fileID: -7080253878821521677}
-  - {fileID: -7448113856975874135}
-  - {fileID: -2495018075475375645}
-  - {fileID: 8156343431462631243}
-  - {fileID: -4844110407744930826}
-  - {fileID: 4358835917908803305}
-  - {fileID: -128397739020455780}
-  - {fileID: 2155109383544119605}
-  - {fileID: 4887522213632553083}
-  - {fileID: -8472037648813472654}
-  - {fileID: 1167339418333726338}
-  - {fileID: 6804578654069408960}
-  - {fileID: -1039245662683987404}
-  - {fileID: 4321211888702978622}
-  - {fileID: -4828196728775571965}
-  - {fileID: -7201481761245657326}
-  - {fileID: -3662796549659614407}
-  - {fileID: -3994410163403700543}
-  - {fileID: 8992328822088973828}
-  - {fileID: -5535506076535644234}
   - {fileID: 5842602037318836236}
   - {fileID: 535194451511086927}
-  - {fileID: -885162807186563252}
-  - {fileID: 4262090142514657376}
-  - {fileID: 5969526685616598212}
-  - {fileID: 4554513153249514864}
+  - {fileID: -228788287706414286}
+  - {fileID: 6061752868105195946}
+  - {fileID: -4637081981127644544}
+  - {fileID: 4920650913218234499}
+  - {fileID: -4726043814089117632}
+  - {fileID: 1906757196126277050}
+  - {fileID: 4399239828930695237}
+  - {fileID: -5832229507639074835}
+  - {fileID: 5489036188400749726}
+  - {fileID: 6163270775656598494}
+  - {fileID: 5888401217880355080}
+  - {fileID: -7560012355867611489}
+  - {fileID: 4612464075465298926}
+  - {fileID: -2019564581431727298}
+  - {fileID: -6987686660711783685}
+  - {fileID: -285140804520324959}
+  - {fileID: 5570917472413096264}
+  - {fileID: 734101853009938868}
+  - {fileID: -6188542845749919054}
+  - {fileID: -6979041618605573561}
+  - {fileID: 6452563147440402338}
+  - {fileID: 4221875076549567282}
+  - {fileID: 3902901038636759486}
+  - {fileID: -5323019933396141674}
+  - {fileID: -2284727997678323166}
+  - {fileID: -3043384895053143028}
+  - {fileID: 8686505940964074694}
+  - {fileID: -7931097575911444758}
+  - {fileID: 1026704251925844671}
+  - {fileID: 2167231207867498532}
+  - {fileID: 9143283818079957264}
+  - {fileID: -7721114402780244740}
+  - {fileID: 925027748874099687}
+  - {fileID: -9220166808851412426}
+  - {fileID: -7459345767496667135}
+  - {fileID: 4318845052536326921}
+  - {fileID: 6277207913367939786}
+  - {fileID: 3005689688581531092}
+  - {fileID: -886075586707616386}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3346567643425602939}
   StringsBanks:
   - {fileID: -7100924490474363539}
-  cacheTime: 638919908509834167
+  cacheTime: 638962300666656130
   cacheVersion: 131617
 --- !u!114 &15166506345404804
 MonoBehaviour:
@@ -932,35 +963,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 104
---- !u!114 &191293772766824878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/Leyland Kirby - We drink to
-    forget the coming storm Track 1
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Copyrighted/Leyland Kirby - We drink to forget
-    the coming storm Track 1
-  Guid:
-    Data1: 1286975111
-    Data2: 1206283895
-    Data3: -570170701
-    Data4: 2072198734
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 456071
 --- !u!114 &535194451511086927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -988,6 +990,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &734101853009938868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/The Caretaker - E4 - Libets
+    all joyful camaraderie
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Old/Raw/Direction1/Copyrighted/The Caretaker - E4 - Libets all
+    joyful camaraderie
+  Guid:
+    Data1: -1561897323
+    Data2: 1156980797
+    Data3: 2090117040
+    Data4: -2113905556
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 193697
 --- !u!114 &803653886844739955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1015,7 +1046,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 522
---- !u!114 &1167339418333726338
+--- !u!114 &925027748874099687
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1025,16 +1056,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/I have become almost invisible,
-    to some extent like a dead man
+  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/The Caretaker - a stairway
+    to the stars
   m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Copyrighted/I have become almost invisible,
-    to some extent like a dead man
+  Path: event:/Music/Old/Raw/Direction1/Copyrighted/The Caretaker - a stairway to
+    the stars
   Guid:
-    Data1: 948523710
-    Data2: 1076372593
-    Data3: 1062298759
-    Data4: -1351697288
+    Data1: 706325479
+    Data2: 1191843775
+    Data3: -246202441
+    Data4: 1748491751
   Banks:
   - {fileID: -5632208867510917013}
   IsStream: 1
@@ -1043,7 +1074,35 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 239516
+  Length: 433658
+--- !u!114 &1026704251925844671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/The great hidden sea of the
+    unconscious
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Old/Raw/Direction1/Copyrighted/The great hidden sea of the unconscious
+  Guid:
+    Data1: 2141347023
+    Data2: 1190021954
+    Data3: -762848585
+    Data4: 1495264493
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 182282
 --- !u!114 &1183415352513314424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1152,7 +1211,115 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 130
---- !u!114 &2155109383544119605
+--- !u!114 &1906757196126277050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/Empty
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/Empty
+  Guid:
+    Data1: 25145901
+    Data2: 1219030397
+    Data3: 1479376552
+    Data4: -31230948
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &2166331156172758305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/bullet-hit-metal-84818 1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/bullet-hit-metal-84818 1
+  Guid:
+    Data1: 688447489
+    Data2: 1171028486
+    Data3: 1693259431
+    Data4: 2108390332
+  Banks:
+  - {fileID: 7765557908467560066}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 696
+--- !u!114 &2167231207867498532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/La sonnambula - Ah, non credea mirarti
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/La sonnambula - Ah, non credea mirarti
+  Guid:
+    Data1: -491996976
+    Data2: 1204966149
+    Data3: -140156483
+    Data4: 204586938
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 203572
+--- !u!114 &3005689688581531092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Alles nur nach Gottes Willen, BWV 72/Part2_Intense/Final1/Part2_InstrumentalTrack1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Alles nur nach Gottes Willen, BWV 72/Part2_Intense/Final1/Part2_InstrumentalTrack1
+  Guid:
+    Data1: -98979777
+    Data2: 1133862088
+    Data3: -1714628432
+    Data4: 988170652
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 78400
+--- !u!114 &3902901038636759486
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1181,7 +1348,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 198922
---- !u!114 &2166331156172758305
+--- !u!114 &4221875076549567282
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1191,24 +1358,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/bullet-hit-metal-84818 1
+  m_Name: event:/Music/Old/Raw/Direction1/Samples/Lullaby of the Leaves - Layton
+    & Johnstone (Slower + Reverb)
   m_EditorClassIdentifier: 
-  Path: event:/SFX/bullet-hit-metal-84818 1
+  Path: event:/Music/Old/Raw/Direction1/Samples/Lullaby of the Leaves - Layton &
+    Johnstone (Slower + Reverb)
   Guid:
-    Data1: 688447489
-    Data2: 1171028486
-    Data3: 1693259431
-    Data4: 2108390332
+    Data1: 1891571369
+    Data2: 1109394250
+    Data3: -887350907
+    Data4: 248396686
   Banks:
-  - {fileID: 7765557908467560066}
-  IsStream: 0
+  - {fileID: -5632208867510917013}
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 696
---- !u!114 &2972454930318478947
+  Length: 226089
+--- !u!114 &4318845052536326921
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1218,108 +1387,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Copyright Free/R1 - O Jesu Christ - Unknown
-    Choir
+  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/Harolds Theme
   m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Copyright Free/R1 - O Jesu Christ - Unknown
-    Choir
+  Path: event:/Music/Old/Raw/Direction1/Copyrighted/Harolds Theme
   Guid:
-    Data1: -1392092836
-    Data2: 1328748893
-    Data3: 1037717176
-    Data4: -1931037898
+    Data1: -840209671
+    Data2: 1094449494
+    Data3: 1318329523
+    Data4: -716245293
   Banks:
   - {fileID: -5632208867510917013}
   IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 288192
---- !u!114 &3180039313250484060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Music/Old/Raw/Direction1/Copyright Free/Meditation From Thais \u2014
-    Jesse Crawford (1960) Cut"
-  m_EditorClassIdentifier: 
-  Path: "event:/Music/Old/Raw/Direction1/Copyright Free/Meditation From Thais \u2014
-    Jesse Crawford (1960) Cut"
-  Guid:
-    Data1: -462652052
-    Data2: 1112178329
-    Data3: 1205330081
-    Data4: -1538075683
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 247510
---- !u!114 &4262090142514657376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/New/Empty
-  m_EditorClassIdentifier: 
-  Path: event:/Music/New/Empty
-  Guid:
-    Data1: 25145901
-    Data2: 1219030397
-    Data3: 1479376552
-    Data4: -31230948
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
---- !u!114 &4321211888702978622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/New/La sonnambula - Ah, non credea mirarti
-  m_EditorClassIdentifier: 
-  Path: event:/Music/New/La sonnambula - Ah, non credea mirarti
-  Guid:
-    Data1: -491996976
-    Data2: 1204966149
-    Data3: -140156483
-    Data4: 204586938
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 203572
+  Length: 236460
 --- !u!114 &4340679344291249202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1347,36 +1431,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 56
---- !u!114 &4358835917908803305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Samples/Piano Medley of Layton and Johnstone
-    Successes - Turner Layton (Slower + Reverb)
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Samples/Piano Medley of Layton and Johnstone
-    Successes - Turner Layton (Slower + Reverb)
-  Guid:
-    Data1: 1279678886
-    Data2: 1245225242
-    Data3: 203695535
-    Data4: 1760058831
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 654027
---- !u!114 &4554513153249514864
+--- !u!114 &4399239828930695237
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1403,7 +1458,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 102000
---- !u!114 &4887522213632553083
+--- !u!114 &4612464075465298926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1413,14 +1468,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/BarDistant
+  m_Name: event:/Music/Old/Raw/Direction1/Copyright Free/R1 - O Jesu Christ - Unknown
+    Choir - reversed
   m_EditorClassIdentifier: 
-  Path: event:/Music/Old/BarDistant
+  Path: event:/Music/Old/Raw/Direction1/Copyright Free/R1 - O Jesu Christ - Unknown
+    Choir - reversed
   Guid:
-    Data1: -1836212051
-    Data2: 1280677027
-    Data3: -260988743
-    Data4: 1260696681
+    Data1: 318453115
+    Data2: 1265743613
+    Data3: -614931044
+    Data4: -1277159528
   Banks:
   - {fileID: -5632208867510917013}
   IsStream: 1
@@ -1429,7 +1486,92 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 288216
+--- !u!114 &4920650913218234499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/Mein Herze schwimmt im Blut, BWV 199 - 2. Stumme Seufzer,
+    stille Klagen (Soprano, Trumpet and Organ arr. - Rondeau)
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/Mein Herze schwimmt im Blut, BWV 199 - 2. Stumme Seufzer,
+    stille Klagen (Soprano, Trumpet and Organ arr. - Rondeau)
+  Guid:
+    Data1: 920608808
+    Data2: 1182498845
+    Data3: -1791643715
+    Data4: 1545656267
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 512208
+--- !u!114 &5489036188400749726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/F2 - Drifting time misplaced
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Old/Raw/Direction1/Copyrighted/F2 - Drifting time misplaced
+  Guid:
+    Data1: 946631266
+    Data2: 1192052306
+    Data3: 1919633593
+    Data4: -2052729369
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 255869
+--- !u!114 &5570917472413096264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Music/Old/Raw/Direction1/Copyright Free/Meditation From Thais \u2014
+    Jesse Crawford (1960) Cut EDITED"
+  m_EditorClassIdentifier: 
+  Path: "event:/Music/Old/Raw/Direction1/Copyright Free/Meditation From Thais \u2014
+    Jesse Crawford (1960) Cut EDITED"
+  Guid:
+    Data1: 1420474003
+    Data2: 1130400900
+    Data3: 1310241962
+    Data4: 1921635885
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 217808
 --- !u!114 &5641395824796940472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1511,6 +1653,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5888401217880355080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/Lies of P  OST - Misty ErA
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Old/Raw/Direction1/Copyrighted/Lies of P  OST - Misty ErA
+  Guid:
+    Data1: 395612530
+    Data2: 1236352615
+    Data3: 2096396455
+    Data4: 790757303
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 222328
 --- !u!114 &5926909688275673257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1538,7 +1707,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 624
---- !u!114 &5969526685616598212
+--- !u!114 &6061752868105195946
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1548,23 +1717,54 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Hell
+  m_Name: event:/Music/Old/Raw/Direction1/Samples/Der Leiermann, Schubert, Die Winterreise
+    ,no 24, High voice rehearsal track
   m_EditorClassIdentifier: 
-  Path: event:/Music/Hell
+  Path: event:/Music/Old/Raw/Direction1/Samples/Der Leiermann, Schubert, Die Winterreise
+    ,no 24, High voice rehearsal track
   Guid:
-    Data1: 282192823
-    Data2: 1292566473
-    Data3: -1888484718
-    Data4: 475282899
+    Data1: -1608216572
+    Data2: 1192188663
+    Data3: -1903330382
+    Data4: 480505860
   Banks:
   - {fileID: -5632208867510917013}
-  IsStream: 0
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 198896
+--- !u!114 &6163270775656598494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Music/Old/Raw/Direction1/Copyright Free/Meditation From Thais \u2014
+    Jesse Crawford (1960) Cut"
+  m_EditorClassIdentifier: 
+  Path: "event:/Music/Old/Raw/Direction1/Copyright Free/Meditation From Thais \u2014
+    Jesse Crawford (1960) Cut"
+  Guid:
+    Data1: -462652052
+    Data2: 1112178329
+    Data3: 1205330081
+    Data4: -1538075683
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 247510
 --- !u!114 &6203756437719978141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1592,7 +1792,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &6296503562781155814
+--- !u!114 &6277207913367939786
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1602,16 +1802,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Copyright Free/R1 - O Jesu Christ - Unknown
-    Choir - reversed
+  m_Name: event:/Music/Alles nur nach Gottes Willen, BWV 72/Part2_Intense/Final1/Part2_Vocal_Track1
   m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Copyright Free/R1 - O Jesu Christ - Unknown
-    Choir - reversed
+  Path: event:/Music/Alles nur nach Gottes Willen, BWV 72/Part2_Intense/Final1/Part2_Vocal_Track1
   Guid:
-    Data1: 318453115
-    Data2: 1265743613
-    Data3: -614931044
-    Data4: -1277159528
+    Data1: -1387596794
+    Data2: 1332987349
+    Data3: 771273897
+    Data4: -565489441
   Banks:
   - {fileID: -5632208867510917013}
   IsStream: 1
@@ -1620,7 +1818,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 288216
+  Length: 106000
 --- !u!114 &6421340523860799897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1648,7 +1846,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 528
---- !u!114 &6644404910971260435
+--- !u!114 &6452563147440402338
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1658,45 +1856,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/Leyland Kirby - We drink to
-    forget the coming storm Track 15
+  m_Name: event:/Music/Old/Raw/Direction1/Samples/Piano Medley of Layton and Johnstone
+    Successes - Turner Layton (Slower + Reverb)
   m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Copyrighted/Leyland Kirby - We drink to forget
-    the coming storm Track 15
+  Path: event:/Music/Old/Raw/Direction1/Samples/Piano Medley of Layton and Johnstone
+    Successes - Turner Layton (Slower + Reverb)
   Guid:
-    Data1: 1073973380
-    Data2: 1267695738
-    Data3: 2134429345
-    Data4: 474754641
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 370102
---- !u!114 &6804578654069408960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Music/Old/Raw/Direction2/SmallCuts/[Pavel H\u016Fla+Praga Camerata]
-    Schubert Death and the Maiden Quartett for Strings (Cut)"
-  m_EditorClassIdentifier: 
-  Path: "event:/Music/Old/Raw/Direction2/SmallCuts/[Pavel H\u016Fla+Praga Camerata]
-    Schubert Death and the Maiden Quartett for Strings (Cut)"
-  Guid:
-    Data1: 394120137
-    Data2: 1189293681
-    Data3: 1239038394
-    Data4: 2076996551
+    Data1: 1279678886
+    Data2: 1245225242
+    Data3: 203695535
+    Data4: 1760058831
   Banks:
   - {fileID: -5632208867510917013}
   IsStream: 1
@@ -1705,7 +1874,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 7000
+  Length: 654027
 --- !u!114 &6832996403187336681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1787,35 +1956,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 64
---- !u!114 &7638528395453613542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Copyright Free/Lullaby Of The Leaves (Instrumental)
-    - Layton & Johnstone EDITED
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Copyright Free/Lullaby Of The Leaves (Instrumental)
-    - Layton & Johnstone EDITED
-  Guid:
-    Data1: 1050646133
-    Data2: 1087411361
-    Data3: -1582700880
-    Data4: -1577665428
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 225567
 --- !u!114 &7765557908467560066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1831,7 +1971,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638891430675487536
+  lastModified: 638962300666656130
   FileSizes: []
   Exists: 1
 --- !u!114 &8143309677218547436
@@ -1861,7 +2001,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 339
---- !u!114 &8156343431462631243
+--- !u!114 &8686505940964074694
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1871,16 +2011,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Copyright Free/R1 - O Jesu Christ - Unknown
-    Choir - Short - EDITED
+  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/I have become almost invisible,
+    to some extent like a dead man
   m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Copyright Free/R1 - O Jesu Christ - Unknown
-    Choir - Short - EDITED
+  Path: event:/Music/Old/Raw/Direction1/Copyrighted/I have become almost invisible,
+    to some extent like a dead man
   Guid:
-    Data1: -84185186
-    Data2: 1219639937
-    Data3: -119669313
-    Data4: 1932957714
+    Data1: 948523710
+    Data2: 1076372593
+    Data3: 1062298759
+    Data4: -1351697288
   Banks:
   - {fileID: -5632208867510917013}
   IsStream: 1
@@ -1889,65 +2029,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 280080
---- !u!114 &8309239968935706847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/The Caretaker-All You Are Going
-    to Want to do is Get Back There
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Copyrighted/The Caretaker-All You Are Going
-    to Want to do is Get Back There
-  Guid:
-    Data1: 1333756204
-    Data2: 1282063848
-    Data3: -140612693
-    Data4: -330287653
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 227317
---- !u!114 &8992328822088973828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Samples/Lullaby of the Leaves (Instrumental)
-    - Layton & Johnstone
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Samples/Lullaby of the Leaves (Instrumental)
-    - Layton & Johnstone
-  Guid:
-    Data1: -1820504076
-    Data2: 1181711703
-    Data3: 860011198
-    Data4: 758767158
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 180427
+  Length: 239516
 --- !u!114 &9039778167211205936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1975,7 +2057,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1848
---- !u!114 &9115512400382327859
+--- !u!114 &9143283818079957264
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1985,14 +2067,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/F2 - Drifting time misplaced
+  m_Name: event:/Music/Old/Raw/Direction1/Copyrighted/Leyland Kirby - No longer distance
+    than death
   m_EditorClassIdentifier: 
-  Path: event:/Music/Old/Raw/Direction1/Copyrighted/F2 - Drifting time misplaced
+  Path: event:/Music/Old/Raw/Direction1/Copyrighted/Leyland Kirby - No longer distance
+    than death
   Guid:
-    Data1: 946631266
-    Data2: 1192052306
-    Data3: 1919633593
-    Data4: -2052729369
+    Data1: 1579344088
+    Data2: 1081853675
+    Data3: -1822834530
+    Data4: -1081418672
   Banks:
   - {fileID: -5632208867510917013}
   IsStream: 1
@@ -2001,4 +2085,4 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 255869
+  Length: 468976
