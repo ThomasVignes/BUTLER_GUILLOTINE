@@ -3,6 +3,7 @@ using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Whumpus;
 
 public class StepSFX : MonoBehaviour
 {
@@ -16,10 +17,16 @@ public class StepSFX : MonoBehaviour
     [SerializeField] string FabricTag;
     [SerializeField] string FleshTag;
 
+    [Header("ScreenDetection")]
+    [SerializeField] float lenience = 0.1f;
+
     EventInstance currentInstance;
 
-    public void Step()
+    public void StepSound()
     {
+        if (!WhumpusUtilities.IsInScreen(transform, lenience))
+            return;
+
         Ray ray = new Ray(transform.position, -Vector3.up);
         RaycastHit hit;
 
@@ -38,7 +45,7 @@ public class StepSFX : MonoBehaviour
         else if (tag == FleshTag)
             PlaySound(Flesh);
         else
-            PlaySound(Hard);
+            PlaySound(Fabric);
     }
 
     void PlaySound(StudioEventEmitter emitter)

@@ -26344,15 +26344,15 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.23333333
-    functionName: Step
-    data: 
+    functionName: PlayEvent
+    data: Step
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.6666667
-    functionName: Step
-    data: 
+    functionName: PlayEvent
+    data: Step
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

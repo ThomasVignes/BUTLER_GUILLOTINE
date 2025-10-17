@@ -20341,7 +20341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2684108678752317791}
   - component: {fileID: 5744386048276620940}
-  - component: {fileID: 4691909940323134649}
+  - component: {fileID: 4532094516217541158}
   m_Layer: 0
   m_Name: AnimRef
   m_TagString: Untagged
@@ -20387,7 +20387,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4691909940323134649
+--- !u!114 &4532094516217541158
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20396,15 +20396,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 6625373384109527869}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7c91bd288dea4a41a0ed6a37f6d4388, type: 3}
+  m_Script: {fileID: 11500000, guid: 60bd83599e12a494585ba035a2eae68a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hard: {fileID: 628503607309715227}
-  Fabric: {fileID: 628503607309715227}
-  Flesh: {fileID: 628503607309715227}
-  HardTag: Hard
-  FabricTag: Fabric
-  FleshTag: Flesh
+  AnimatorEvents:
+  - Name: Step
+    Delegate:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8351470981541104999}
+          m_TargetAssemblyTypeName: StepSFX, Assembly-CSharp
+          m_MethodName: StepSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &6709520274549200424
 GameObject:
   m_ObjectHideFlags: 0
@@ -26307,38 +26318,6 @@ MonoBehaviour:
   rb: {fileID: 0}
   connectedRb: {fileID: 0}
   IsCut: 0
---- !u!1 &7531631353962103443
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1852555518276281417}
-  m_Layer: 0
-  m_Name: SFX
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1852555518276281417
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7531631353962103443}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8750141028076909551}
-  m_Father: {fileID: 1592393321878740252}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7539594709532590860
 GameObject:
   m_ObjectHideFlags: 0
@@ -27087,7 +27066,7 @@ Transform:
   - {fileID: 2684108678752317791}
   - {fileID: 6844812655302695601}
   - {fileID: 9028662305319115903}
-  - {fileID: 1852555518276281417}
+  - {fileID: 9176849152863821025}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27446,69 +27425,6 @@ Transform:
   m_Father: {fileID: 4383079522892929807}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 37.37547, y: -5.6486073, z: -5.396123}
---- !u!1 &8978667433944754415
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8750141028076909551}
-  - component: {fileID: 628503607309715227}
-  m_Layer: 0
-  m_Name: FabricStep
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8750141028076909551
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8978667433944754415}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1852555518276281417}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &628503607309715227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8978667433944754415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 1008819372
-      Data2: 1237677898
-      Data3: -4538444
-      Data4: 1481716488
-    Path: event:/SFX/Steps/FabricStep2D
-  Event: 
-  PlayEvent: 0
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &9033728342289783806
 GameObject:
   m_ObjectHideFlags: 0
@@ -28032,4 +27948,103 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6940568010354477028, guid: a744765c7f899764393e5fea908c4b90, type: 3}
   m_PrefabInstance: {fileID: 4446222851376352838}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6157127086264390043
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1592393321878740252}
+    m_Modifications:
+    - target: {fileID: 3037737152444321146, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037737152444321146, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037737152444321146, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037737152444321146, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037737152444321146, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037737152444321146, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037737152444321146, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037737152444321146, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037737152444321146, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037737152444321146, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037737152444321146, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186269154785881586, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
+      propertyPath: m_Name
+      value: StepSFX
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3186269154785881586, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4797727232901440480}
+  m_SourcePrefab: {fileID: 100100000, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
+--- !u!114 &8351470981541104999 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2780094168222145788, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
+  m_PrefabInstance: {fileID: 6157127086264390043}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8738501275918957673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c91bd288dea4a41a0ed6a37f6d4388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &8738501275918957673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3186269154785881586, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
+  m_PrefabInstance: {fileID: 6157127086264390043}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4797727232901440480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8738501275918957673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7193d10d5a6f348a34ec8f2f8559d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  original: {fileID: 3945290871031313862}
+  global: 1
+--- !u!4 &9176849152863821025 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3037737152444321146, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
+  m_PrefabInstance: {fileID: 6157127086264390043}
   m_PrefabAsset: {fileID: 0}

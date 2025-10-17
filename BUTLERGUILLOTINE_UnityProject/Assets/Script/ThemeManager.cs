@@ -155,7 +155,7 @@ public class ThemeManager : MonoBehaviour
         StopAmbiance();
 
         overrideAmbiance = true;
-        PersistentData.Instance.UpdateStepsVolume(0);
+        //PersistentData.Instance.UpdateStepsVolume(1);   why ?
 
         foreach (var item in areas)
         {
@@ -174,7 +174,7 @@ public class ThemeManager : MonoBehaviour
         StopAmbiance();
 
         overrideAmbiance = true;
-        PersistentData.Instance.UpdateStepsVolume(0);
+        //PersistentData.Instance.UpdateStepsVolume(0);    why ?
 
         foreach (var item in areas)
         {
