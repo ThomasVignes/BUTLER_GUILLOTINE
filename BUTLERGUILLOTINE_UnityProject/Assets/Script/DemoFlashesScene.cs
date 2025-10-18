@@ -10,14 +10,20 @@ public class DemoFlashesScene : MonoBehaviour
     [SerializeField] string NextSceneName;
     [SerializeField] bool hasFlash;
     [SerializeField] float TimeBeforeFlash, FlashDuration, TimeBeforeNext;
+    [SerializeField] float TimeBeforeButler, TimeBeforeGuillotine, TimebeforeDate;
     [SerializeField] Animator animator, animator2;
     [SerializeField] GameObject flash, flash2, blackScreen, direc;
+    [SerializeField] GameObject butler, guillotine, date;
 
 
 
     private void Start()
     {
         Cursor.visible = false;
+        butler.SetActive(false);
+        guillotine.SetActive(false);
+        date.SetActive(false);
+
         StartCoroutine(C_Wait());
     }
 
@@ -62,6 +68,18 @@ public class DemoFlashesScene : MonoBehaviour
             flash2.SetActive(false);
             direc.SetActive(true);
         }
+
+        yield return new WaitForSeconds(TimeBeforeButler);
+
+        butler.SetActive(true);
+
+        yield return new WaitForSeconds(TimeBeforeGuillotine);
+
+        guillotine.SetActive(true);
+
+        yield return new WaitForSeconds(TimebeforeDate);
+
+        date.SetActive(true);
 
         yield return new WaitForSeconds(TimeBeforeNext);
 
