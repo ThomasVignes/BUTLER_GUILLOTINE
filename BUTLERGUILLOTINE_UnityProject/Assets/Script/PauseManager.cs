@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class PauseManager : Manager
 {
-    [SerializeField] GameObject pauseUI;
-    [SerializeField] Slider masterVolume;
-    bool canPause;
+    [SerializeField] GameObject pauseUI, optionsUI;
+    [SerializeField] private Slider masterVolume, musicVolume, sfxVolume;
+    bool canPause, optionsOpen;
 
     float baseScale;
 
@@ -57,20 +57,33 @@ public class PauseManager : Manager
             Time.timeScale = 0;
         else
             Time.timeScale = baseScale;
+
+        if (!gm.Paused)
+        {
+            optionsOpen = false;
+            optionsUI.SetActive(optionsOpen);
+        }
     }
 
     public void UnPause()
     {
-        gm.Paused = false;
-        pauseUI.SetActive(false);
+        TogglePause(false);
+    }
 
-        Time.timeScale = baseScale;
+    public void ToggleOptions()
+    {
+        optionsOpen = !optionsOpen;
+        optionsUI.SetActive(optionsOpen);
     }
 
     public void UpdateVolume()
     {
         if (PersistentData.Instance != null)
+        {
             PersistentData.Instance.MasterVolume = masterVolume.value;
+            PersistentData.Instance.MusicVolume = musicVolume.value;
+            PersistentData.Instance.SFXVolume = sfxVolume.value;
+        }
     }
 
     public void MainMenu()

@@ -40,7 +40,7 @@ public class MainMenuMaster : MonoBehaviour
 
     [Header("OptionsMenuing")]
     [SerializeField] private GameObject FirstOptionsButton;
-    [SerializeField] private Slider masterVolume;
+    [SerializeField] private Slider masterVolume, musicVolume, sfxVolume;
 
     [Header("Credits")]
     [SerializeField] CreditsManager creditsManager;
@@ -166,7 +166,11 @@ public class MainMenuMaster : MonoBehaviour
     public void UpdateVolume()
     {
         if (PersistentData.Instance != null)
+        {
             PersistentData.Instance.MasterVolume = masterVolume.value;
+            PersistentData.Instance.MusicVolume = musicVolume.value;
+            PersistentData.Instance.SFXVolume = sfxVolume.value;
+        }
     }
 
     public void StartGame(bool loadSave)
