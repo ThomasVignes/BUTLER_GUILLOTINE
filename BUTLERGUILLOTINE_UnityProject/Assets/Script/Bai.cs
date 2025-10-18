@@ -11,6 +11,11 @@ public class Bai : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
+    private void Start()
+    {
+        TryToUpdateData();
+    }
+
     void TryToUpdateData()
     {
         if (PersistentData.Instance != null)
