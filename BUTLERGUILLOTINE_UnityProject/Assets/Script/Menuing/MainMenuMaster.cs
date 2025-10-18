@@ -109,6 +109,11 @@ public class MainMenuMaster : MonoBehaviour
         }
     }
 
+    public void OpenSite()
+    {
+        Application.OpenURL("https://store.steampowered.com/app/3617650/BUTLER_GUILLOTINE/");
+    }
+
     public void RollCredits()
     {
         CanInput = false;
