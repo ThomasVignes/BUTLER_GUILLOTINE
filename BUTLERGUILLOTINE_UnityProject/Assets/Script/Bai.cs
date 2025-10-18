@@ -32,7 +32,7 @@ public class Bai : MonoBehaviour
 
         ButlerEngineUtilities.ClearAllInterScenes();
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
     public void OpenURL(string url)

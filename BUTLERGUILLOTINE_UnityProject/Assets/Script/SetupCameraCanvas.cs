@@ -14,14 +14,19 @@ public class SetupCameraCanvas : MonoBehaviour
 
     IEnumerator C_StartDelay()
     {
-        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(0.1f);
 
-        Camera cam = Camera.main.transform.GetChild(0).GetComponent<Camera>();
+        var target = Camera.main.gameObject.GetComponentInChildren<UICameraTarget>();
 
-        if (cam == null)
-            cam = Camera.main;
+        if (target != null)
+        {
+            var UICam = target.gameObject.GetComponent<Camera>();
 
-        canvas.worldCamera = cam;
-        canvas.planeDistance = planeDistance;
+            if (UICam == null)
+                UICam = Camera.main;
+
+            canvas.worldCamera = UICam;
+            canvas.planeDistance = planeDistance;
+        }
     }
 }

@@ -36,7 +36,7 @@ public class BuildNavigator : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         menuRequested = false;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
     public void Continue()

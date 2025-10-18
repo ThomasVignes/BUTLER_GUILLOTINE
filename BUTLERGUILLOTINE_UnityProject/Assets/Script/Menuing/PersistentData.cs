@@ -27,7 +27,7 @@ public class PersistentData : MonoBehaviour
     public bool HasKey;
 
     [Header("Saving")]
-    public string savePath = @"\Resources\Saves\";
+    string savePath = @"\Resources\";
 
     [HideInInspector] public BuildNavigator BuildNavigator;
 
@@ -117,9 +117,6 @@ public class PersistentData : MonoBehaviour
     [ContextMenu("Save Data")]
     public void SaveData()
     {
-        if (!SaveInEditor)
-            return;
-
         //int increment = 0;
 
         CurrentScene = SceneManager.GetActiveScene().name;
@@ -145,9 +142,6 @@ public class PersistentData : MonoBehaviour
     [ContextMenu("Load Data")]
     public void LoadData()
     {
-        if (!SaveInEditor)
-            return;
-
         string fullPath = Application.dataPath + savePath + "SaveData";
 
         if (!File.Exists(fullPath + ".txt"))
