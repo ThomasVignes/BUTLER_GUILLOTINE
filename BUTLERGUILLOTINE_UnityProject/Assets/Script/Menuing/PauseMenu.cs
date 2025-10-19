@@ -101,25 +101,6 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void ToggleFullScreen()
-    {
-        if (GameIsPaused)
-        {
-            Screen.fullScreen = !Screen.fullScreen;
-            PersistentData.Instance.FullScreen = Screen.fullScreen;
-        }
-    }
-
-    public void ToggleSound()
-    {
-        if (GameIsPaused)
-        {
-            AudioListener.pause = !AudioListener.pause;
-            PersistentData.Instance.SoundOn = !AudioListener.pause;
-        }
-    }
-
-
     public void OnClickQuit()
     {
         if (GameIsPaused)

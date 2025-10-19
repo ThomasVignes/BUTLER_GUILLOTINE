@@ -48,13 +48,16 @@ MonoBehaviour:
   SaveInEditor: 0
   DemoMode: 0
   CurrentScene: 
-  FullScreen: 0
-  SoundOn: 0
+  Screen: 2
+  Stereo: 1
+  Framerate: 0
+  Vsync: 1
+  PostProcessAffectsUI: 1
   FastMode: 0
   CopyrightFree: 0
   FinishedOnce: 0
   HasKey: 0
-  savePath: \Resources\Saves\
+  BuildNavigator: {fileID: 0}
 --- !u!114 &8285861165429566241
 MonoBehaviour:
   m_ObjectHideFlags: 0

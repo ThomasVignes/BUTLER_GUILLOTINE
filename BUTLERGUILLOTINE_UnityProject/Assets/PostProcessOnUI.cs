@@ -2,26 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CanvasChecker : MonoBehaviour
+public class PostProcessOnUI : MonoBehaviour
 {
-    [SerializeField] float checkDelay = 0.1f;
+    [SerializeField] bool on;
+    float checkDelay = 0.2f;
 
     Camera UICamera;
 
-    void Start()
+    public void Init()
     {
         UICamera = Camera.main.gameObject.GetComponentInChildren<Camera>();
 
         if (UICamera == null)
             return;
 
+        on = true;
+
+        if (PersistentData.Instance != null)
+            on = PersistentData.Instance.PostProcessAffectsUI;
+
         if (checkDelay > 0)
-            StartCoroutine(C_Delay());
+            StartCoroutine(C_Delay(on));
         else
-            CheckAllCanvases();
+            ToggleAllCanvases(on);
     }
 
-    void CheckAllCanvases()
+    public void ToggleAllCanvases(bool on)
     {
         Canvas[] canvases = FindObjectsOfType<Canvas>();
         List<Canvas> cameraCanvases = new List<Canvas>();
@@ -36,22 +42,29 @@ public class CanvasChecker : MonoBehaviour
 
         foreach (Canvas c in cameraCanvases)
         {
-            InitCanvas(c);
+            InitCanvas(c, on);
         }
+
+        if (PersistentData.Instance != null)
+            if (PersistentData.Instance.PostProcessAffectsUI != on)
+                PersistentData.Instance.PostProcessAffectsUI = on;
     }
 
-    IEnumerator C_Delay()
+    IEnumerator C_Delay(bool on)
     {
         yield return new WaitForSeconds(checkDelay);
 
-        CheckAllCanvases();
+        ToggleAllCanvases(on);
     }
 
-    void InitCanvas(Canvas c)
+    void InitCanvas(Canvas c, bool on)
     {
         if (c.worldCamera != null)
             return;
 
-        c.worldCamera = UICamera;
+        if (on)
+            c.worldCamera = UICamera;
+        else
+            c.worldCamera = null;
     }
 }

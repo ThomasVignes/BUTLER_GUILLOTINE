@@ -22,6 +22,7 @@ public class MainMenuMaster : MonoBehaviour
     [SerializeField] StudioEventEmitter emitter;
 
     [Header("References")]
+    [SerializeField] SettingsManager settingsManager;
     [SerializeField] Texture2D BaseCursor;
     [SerializeField] GameObject chapterSelect;
     [SerializeField] private Image BlackScreen;
@@ -34,13 +35,6 @@ public class MainMenuMaster : MonoBehaviour
     [SerializeField] Button continueButton;
 
     bool startMenuOpen;
-
-    [Header("MainMenuing")]
-    [SerializeField] private GameObject FirstMenuButton;
-
-    [Header("OptionsMenuing")]
-    [SerializeField] private GameObject FirstOptionsButton;
-    [SerializeField] private Slider masterVolume, musicVolume, sfxVolume;
 
     [Header("Credits")]
     [SerializeField] CreditsManager creditsManager;
@@ -59,13 +53,12 @@ public class MainMenuMaster : MonoBehaviour
         Cursor.SetCursor(BaseCursor, new Vector2(18, 13), CursorMode.Auto);
 
         creditsManager.Init(this);
-
-        if (PersistentData.Instance != null)
-            masterVolume.value = PersistentData.Instance.MasterVolume;
     }
 
     private void Start()
     {
+        settingsManager.Init();
+
         StartCoroutine(C_ShowMenu());
 
         /*
@@ -161,16 +154,6 @@ public class MainMenuMaster : MonoBehaviour
 
         if (index > 0)
             HideStartMenu();
-    }
-
-    public void UpdateVolume()
-    {
-        if (PersistentData.Instance != null)
-        {
-            PersistentData.Instance.MasterVolume = masterVolume.value;
-            PersistentData.Instance.MusicVolume = musicVolume.value;
-            PersistentData.Instance.SFXVolume = sfxVolume.value;
-        }
     }
 
     public void StartGame(bool loadSave)

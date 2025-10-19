@@ -49,7 +49,7 @@ public class BuildNavigator : MonoBehaviour
 
     public bool CanContinue()
     {
-        return persistentData.CurrentScene != "";
+        return persistentData.CurrentScene != "" && SceneManager.GetSceneByName(persistentData.CurrentScene).buildIndex > 0;
     }
 
     public void RequestQuit()

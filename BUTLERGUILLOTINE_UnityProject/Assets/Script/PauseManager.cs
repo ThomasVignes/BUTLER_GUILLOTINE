@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class PauseManager : Manager
 {
+    [SerializeField] SettingsManager settingsManager;
     [SerializeField] GameObject pauseUI, optionsUI;
-    [SerializeField] private Slider masterVolume, musicVolume, sfxVolume;
     bool canPause, optionsOpen;
 
     float baseScale;
@@ -23,8 +23,7 @@ public class PauseManager : Manager
 
         canPause = true;
 
-        if (PersistentData.Instance != null)
-            masterVolume.value = PersistentData.Instance.MasterVolume;
+        settingsManager.Init();
     }
 
     public override void Step()
@@ -74,16 +73,6 @@ public class PauseManager : Manager
     {
         optionsOpen = !optionsOpen;
         optionsUI.SetActive(optionsOpen);
-    }
-
-    public void UpdateVolume()
-    {
-        if (PersistentData.Instance != null)
-        {
-            PersistentData.Instance.MasterVolume = masterVolume.value;
-            PersistentData.Instance.MusicVolume = musicVolume.value;
-            PersistentData.Instance.SFXVolume = sfxVolume.value;
-        }
     }
 
     public void MainMenu()

@@ -17,8 +17,11 @@ public class PersistentData : MonoBehaviour
     public string CurrentScene;
 
     [Header("Settings")]
-    public bool FullScreen;
-    public bool SoundOn;
+    public FullScreenMode Screen;
+    public bool Stereo = true;
+    public int Framerate = 0;
+    public bool Vsync = true;
+    public bool PostProcessAffectsUI = true;
 
     [HideInInspector] public bool FastMode, CopyrightFree;
 
@@ -78,13 +81,13 @@ public class PersistentData : MonoBehaviour
         if (Instance == null)
             Instance = this;
         else
+        {
             Destroy(gameObject);
+            return;
+        }
 
         BuildNavigator = GetComponent<BuildNavigator>();
         BuildNavigator.Init(this);
-
-        FullScreen = true;
-        SoundOn = true;
 
         masterBus = FMODUnity.RuntimeManager.GetBus(masterBusPath);
         musicBus = FMODUnity.RuntimeManager.GetBus(musicBusPath);
@@ -121,7 +124,7 @@ public class PersistentData : MonoBehaviour
 
         CurrentScene = SceneManager.GetActiveScene().name;
 
-        var data = new SaveData(CurrentScene, FullScreen, SoundOn, FinishedOnce, HasKey);
+        var data = new SaveData(CurrentScene, FinishedOnce, HasKey, Screen, Stereo, Framerate, Vsync, PostProcessAffectsUI);
         var json = JsonUtility.ToJson(data, true);
 
         string fullPath = Application.dataPath + savePath + "SaveData";
@@ -163,11 +166,16 @@ public class PersistentData : MonoBehaviour
     {
         CurrentScene = saveData.GeneralData.CurrentScene;
 
-        FullScreen = saveData.Settings.FullScreen;
-        SoundOn = saveData.Settings.SoundOn;
-
         FinishedOnce = saveData.DemoTriggers.FinishedOnce;
         HasKey = saveData.DemoTriggers.HasKey;
+
+        Settings settings = saveData.Settings;
+
+        Screen = settings.Screen;
+        Stereo = settings.Stereo;
+        Framerate = settings.Framerate;
+        Vsync = settings.Vsync;
+        PostProcessAffectsUI = settings.PostProcessAffectsUI;
     }
 
     public void SaveData(bool noScene)
@@ -179,7 +187,7 @@ public class PersistentData : MonoBehaviour
         else
             CurrentScene = SceneManager.GetActiveScene().name;
 
-        var data = new SaveData(CurrentScene, FullScreen, SoundOn, FinishedOnce, HasKey);
+        var data = new SaveData(CurrentScene, FinishedOnce, HasKey, Screen, Stereo, Framerate, Vsync, PostProcessAffectsUI);
         var json = JsonUtility.ToJson(data, true);
 
         string fullPath = Application.dataPath + savePath + "SaveData";
@@ -205,26 +213,33 @@ public class SaveData
     public Settings Settings;
     public DemoTriggers DemoTriggers;
 
-    public SaveData(string currentScene, bool fullScreen, bool soundOn, bool finishedOnce, bool hasKey)
+    public SaveData(string currentScene, bool finishedOnce, bool hasKey, FullScreenMode screen, bool stereo, int framerate, bool vsync,bool postprocessui)
     {
         GeneralData = new GeneralData();
         GeneralData.CurrentScene = currentScene;
 
-        Settings = new Settings();
-        Settings.FullScreen = fullScreen;
-        Settings.SoundOn = soundOn;
-
         DemoTriggers = new DemoTriggers();
         DemoTriggers.FinishedOnce = finishedOnce;
         DemoTriggers.HasKey = hasKey;
+
+        Settings = new Settings();
+
+        Settings.Screen = screen;
+        Settings.Stereo = stereo;
+        Settings.Framerate = framerate;
+        Settings.Vsync = vsync;
+        Settings.PostProcessAffectsUI = postprocessui;
     }
 }
 
 [System.Serializable]
 public class Settings
 {
-    public bool FullScreen;
-    public bool SoundOn;
+    public FullScreenMode Screen;
+    public bool Stereo = true;
+    public int Framerate = 0;
+    public bool Vsync = true;
+    public bool PostProcessAffectsUI = true;
 }
 
 [System.Serializable]
