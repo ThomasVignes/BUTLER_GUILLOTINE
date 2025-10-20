@@ -46,6 +46,8 @@ public class EnemyAI : Character
     bool attacking, recovering;
     float attackTimer, recoveryTimer, chainTimer;
 
+    int walkStateHash;
+
     public override void Init()
     {
         base.Init();
@@ -157,6 +159,10 @@ public class EnemyAI : Character
             return;
 
         aggroed = true;
+
+        walkStateHash = Animator.StringToHash("Base Layer.Walk");
+
+        animator.Play(walkStateHash, 0, Random.Range(0, 1));
     }
 
     public void HeavyLoop()

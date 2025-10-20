@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,7 @@ public class Door : Interactable
 
     [Header("References")]
     [SerializeField] private Animator animator;
+    [SerializeField] private StudioEventEmitter audioEmitter;
 
     [Header("Events")]
     public UnityEvent OnOpen;
@@ -90,7 +92,12 @@ public class Door : Interactable
             obstacle.enabled = !open;
 
         if (open)
-            OnOpen?.Invoke(); 
+        {
+            if (audioEmitter != null)
+                audioEmitter.Play();
+
+            OnOpen?.Invoke();
+        }
     }
 
     public void ToggleDoorNoEvent(bool open)

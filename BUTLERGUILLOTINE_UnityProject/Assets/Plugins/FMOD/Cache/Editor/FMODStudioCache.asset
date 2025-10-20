@@ -141,6 +141,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 319216
+--- !u!114 &-7567025820600511340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/Intense/LastGoodbye2
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/Intense/LastGoodbye2
+  Guid:
+    Data1: 2104054748
+    Data2: 1183257819
+    Data3: 1749338241
+    Data4: -544365573
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 189000
 --- !u!114 &-7560012355867611489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,10 +268,10 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638963295050215233
+  lastModified: 638965843217075175
   FileSizes:
   - Name: 
-    Value: 5964
+    Value: 6520
   Exists: 1
 --- !u!114 &-6987686660711783685
 MonoBehaviour:
@@ -404,7 +431,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638963295061173390
+  lastModified: 638965843225100075
   FileSizes: []
   Exists: 1
 --- !u!114 &-5323019933396141674
@@ -434,6 +461,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4940650082214669028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/Intense/LastGoodbye2Short
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/Intense/LastGoodbye2Short
+  Guid:
+    Data1: 1598889567
+    Data2: 1206723735
+    Data3: 168431260
+    Data4: -1672861860
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 96777
 --- !u!114 &-4726043814089117632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,8 +646,8 @@ MonoBehaviour:
     Data3: -771157089
     Data4: -631467166
   Banks:
-  - {fileID: 7765557908467560066}
   - {fileID: 5676317880556428072}
+  - {fileID: 7765557908467560066}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -616,7 +670,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638963295050206337
+  lastModified: 638965843217069978
   FileSizes: []
   Exists: 1
 --- !u!114 &-3043384895053143028
@@ -750,8 +804,8 @@ MonoBehaviour:
     Data3: -1085554285
     Data4: -1050354676
   Banks:
-  - {fileID: 7765557908467560066}
   - {fileID: 5676317880556428072}
+  - {fileID: 7765557908467560066}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -786,6 +840,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &-966093920851632932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/Test
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/Test
+  Guid:
+    Data1: -840413029
+    Data2: 1313613375
+    Data3: 341678217
+    Data4: 2111522134
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 493314
 --- !u!114 &-285140804520324959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -898,7 +979,6 @@ MonoBehaviour:
   - {fileID: 4920650913218234499}
   - {fileID: -4726043814089117632}
   - {fileID: 1906757196126277050}
-  - {fileID: 4399239828930695237}
   - {fileID: -5832229507639074835}
   - {fileID: 5489036188400749726}
   - {fileID: 6163270775656598494}
@@ -935,12 +1015,23 @@ MonoBehaviour:
   - {fileID: 8912220036585496265}
   - {fileID: 3459845258699859328}
   - {fileID: 4586053305355445141}
+  - {fileID: 5943812110036471492}
+  - {fileID: -966093920851632932}
+  - {fileID: 1856348249537186720}
+  - {fileID: 8252258648611289975}
+  - {fileID: 1467571873654400557}
+  - {fileID: -7567025820600511340}
+  - {fileID: -4940650082214669028}
+  - {fileID: 7796144585923797825}
+  - {fileID: 1020291324083952633}
+  - {fileID: 6986688408429638164}
+  - {fileID: 7377717984411668057}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3346567643425602939}
   StringsBanks:
   - {fileID: -7100924490474363539}
-  cacheTime: 638963295061173390
+  cacheTime: 638965843225100075
   cacheVersion: 131617
 --- !u!114 &15166506345404804
 MonoBehaviour:
@@ -1081,6 +1172,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 433658
+--- !u!114 &1020291324083952633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/doors/OpenHeavy
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/doors/OpenHeavy
+  Guid:
+    Data1: 917554336
+    Data2: 1225673961
+    Data3: -490956399
+    Data4: 508092842
+  Banks:
+  - {fileID: 7765557908467560066}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 25
+  Length: 750
 --- !u!114 &1026704251925844671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1128,8 +1246,8 @@ MonoBehaviour:
     Data3: 1563365258
     Data4: 387401393
   Banks:
-  - {fileID: 7765557908467560066}
   - {fileID: 5676317880556428072}
+  - {fileID: 7765557908467560066}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1191,6 +1309,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 130
+--- !u!114 &1467571873654400557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/Intense/LastGoodbye1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/Intense/LastGoodbye1
+  Guid:
+    Data1: -1752536204
+    Data2: 1259568582
+    Data3: 1899025031
+    Data4: 1760301479
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 49077
 --- !u!114 &1737028276939143540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1218,6 +1363,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 130
+--- !u!114 &1856348249537186720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/Intense/Lamento della ninfa
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/Intense/Lamento della ninfa
+  Guid:
+    Data1: 1990552130
+    Data2: 1133492274
+    Data3: -1790137697
+    Data4: 303839789
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 102000
 --- !u!114 &1906757196126277050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1345,8 +1517,8 @@ MonoBehaviour:
     Data3: -4538444
     Data4: 1481716488
   Banks:
-  - {fileID: 7765557908467560066}
   - {fileID: 5676317880556428072}
+  - {fileID: 7765557908467560066}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1466,33 +1638,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 56
---- !u!114 &4399239828930695237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/New/Lamento della ninfa
-  m_EditorClassIdentifier: 
-  Path: event:/Music/New/Lamento della ninfa
-  Guid:
-    Data1: 1990552130
-    Data2: 1133492274
-    Data3: -1790137697
-    Data4: 303839789
-  Banks:
-  - {fileID: -5632208867510917013}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 102000
 --- !u!114 &4586053305355445141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1676,7 +1821,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Steps.bank
   Name: Steps
   StudioPath: bank:/Steps
-  lastModified: 638963290074784812
+  lastModified: 638965824487243142
   FileSizes: []
   Exists: 1
 --- !u!114 &5727153469415056767
@@ -1698,8 +1843,8 @@ MonoBehaviour:
     Data3: 1718452354
     Data4: -1742792521
   Banks:
-  - {fileID: 7765557908467560066}
   - {fileID: 5676317880556428072}
+  - {fileID: 7765557908467560066}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1788,6 +1933,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 624
+--- !u!114 &5943812110036471492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/Opera house/Violin Partita no. 2, BWV 1004 - 5. Chaconne
+    [Piano arrangement]
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/Opera house/Violin Partita no. 2, BWV 1004 - 5. Chaconne
+    [Piano arrangement]
+  Guid:
+    Data1: -1847061353
+    Data2: 1217385666
+    Data3: -1176825415
+    Data4: 1055585801
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 169856
 --- !u!114 &6061752868105195946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1983,6 +2157,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 408
+--- !u!114 &6986688408429638164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/doors/Open
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/doors/Open
+  Guid:
+    Data1: -806488066
+    Data2: 1121324940
+    Data3: -252664435
+    Data4: -1505951847
+  Banks:
+  - {fileID: 7765557908467560066}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 25
+  Length: 600
 --- !u!114 &7007666216886172421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2010,6 +2211,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 496
+--- !u!114 &7377717984411668057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/Menu/Violin Partita no. 2, BWV 1004 - 6. Chaconne [Piano
+    arrangement]
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/Menu/Violin Partita no. 2, BWV 1004 - 6. Chaconne [Piano
+    arrangement]
+  Guid:
+    Data1: -844712791
+    Data2: 1109634232
+    Data3: -226235494
+    Data4: 1668836442
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 169856
 --- !u!114 &7437799826123776192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2052,9 +2282,36 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638963290074508748
+  lastModified: 638965829462524872
   FileSizes: []
   Exists: 1
+--- !u!114 &7796144585923797825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/Intense/LastGoodbye3
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/Intense/LastGoodbye3
+  Guid:
+    Data1: -2140767855
+    Data2: 1279650518
+    Data3: -202819198
+    Data4: -1375538401
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 115170
 --- !u!114 &8143309677218547436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2074,8 +2331,8 @@ MonoBehaviour:
     Data3: -1053693785
     Data4: -2137811560
   Banks:
-  - {fileID: 7765557908467560066}
   - {fileID: 5676317880556428072}
+  - {fileID: 7765557908467560066}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2083,6 +2340,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 339
+--- !u!114 &8252258648611289975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/Intense/LastGoodbye
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/Intense/LastGoodbye
+  Guid:
+    Data1: -959292841
+    Data2: 1248287934
+    Data3: 801799611
+    Data4: -1092325161
+  Banks:
+  - {fileID: -5632208867510917013}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 196220
 --- !u!114 &8686505940964074694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2131,8 +2415,8 @@ MonoBehaviour:
     Data3: -425350242
     Data4: 2090624715
   Banks:
-  - {fileID: 7765557908467560066}
   - {fileID: 5676317880556428072}
+  - {fileID: 7765557908467560066}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1

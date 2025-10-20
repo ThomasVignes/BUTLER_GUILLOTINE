@@ -16,6 +16,7 @@ public class MainMenuMaster : MonoBehaviour
     public bool CanInput;
     public bool AutoQuit;
     [SerializeField] float travelSpeed;
+    [SerializeField] float fadeOutSpeed;
 
     [Header("Modularity")]
     [SerializeField] float silenceTime;
@@ -42,6 +43,10 @@ public class MainMenuMaster : MonoBehaviour
 
     bool disclaimerMode, moving;
     int targetSpot;
+
+    bool fadeOut;
+    float themeVolume;
+
 
     private void Awake()
     {
@@ -81,10 +86,26 @@ public class MainMenuMaster : MonoBehaviour
             continueButton.interactable = false;
             continueButton.GetComponentInChildren<TextMeshProUGUI>().color = Color.gray;
         }
+
+
+        emitter.EventInstance.getVolume(out themeVolume);
     }
 
     private void Update()
     {
+        if (fadeOut)
+        {
+            if (themeVolume > 0)
+            {
+                themeVolume -= Time.deltaTime * fadeOutSpeed;
+
+                if (themeVolume > 0)
+                    emitter.EventInstance.setVolume(themeVolume);
+                else
+                    emitter.Stop();
+            }
+        }
+
         if (!CanInput)
             return;
 
@@ -171,9 +192,9 @@ public class MainMenuMaster : MonoBehaviour
     {
         BlackFadeTo(1, 4f);
 
-        yield return new WaitForSeconds(9f);
+        fadeOut = true;
 
-        emitter.Stop();
+        yield return new WaitForSeconds(9f);
 
         yield return new WaitForSeconds(silenceTime);
 

@@ -16,7 +16,10 @@ public class BuildNavigator : MonoBehaviour
 
     public void NextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (persistentData.DemoMode && persistentData.HasKey)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        else
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void RequestMenu()
