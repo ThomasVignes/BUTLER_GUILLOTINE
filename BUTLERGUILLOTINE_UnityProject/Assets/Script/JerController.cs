@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
@@ -8,6 +9,7 @@ public class JerController : PlayerController
 {
     [SerializeField] float shootCD, drawDelay;
     [SerializeField] Rig legIK;
+    [SerializeField] StudioEventEmitter gunshotEmitter;
     [SerializeField] GameObject hipGun, handGun, muzzle;
     [SerializeField] GameObject shootParticle, bloodParticle, muzzleParticle, bloodDecal;
     LayerMask ignoreLayers;
@@ -68,7 +70,8 @@ public class JerController : PlayerController
 
         animator.SetTrigger("Shoot");
 
-        EffectsManager.Instance.audioManager.Play("JerGun");
+        gunshotEmitter.Play();
+
         GameManager.Instance.HitstopManager.StartHitstop();
 
         GameObject go = Instantiate(muzzleParticle, muzzle.transform.position, muzzle.transform.rotation);

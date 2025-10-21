@@ -160,9 +160,15 @@ public class EnemyAI : Character
 
         aggroed = true;
 
-        walkStateHash = Animator.StringToHash("Base Layer.Walk");
+        StartCoroutine(C_RewindAnimator());
+    }
 
-        animator.Play(walkStateHash, 0, Random.Range(0, 1));
+    IEnumerator C_RewindAnimator()
+    {
+        animator.enabled = false;
+        yield return new WaitForSeconds(Random.Range(0, 0.3f));
+
+        animator.enabled = true;
     }
 
     public void HeavyLoop()

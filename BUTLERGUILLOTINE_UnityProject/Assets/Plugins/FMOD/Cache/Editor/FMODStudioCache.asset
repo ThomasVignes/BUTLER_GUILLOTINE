@@ -268,10 +268,10 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638965843217075175
+  lastModified: 638966549006742651
   FileSizes:
   - Name: 
-    Value: 6520
+    Value: 6564
   Exists: 1
 --- !u!114 &-6987686660711783685
 MonoBehaviour:
@@ -670,7 +670,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638965843217069978
+  lastModified: 638966549006732560
   FileSizes: []
   Exists: 1
 --- !u!114 &-3043384895053143028
@@ -806,6 +806,33 @@ MonoBehaviour:
   Banks:
   - {fileID: 5676317880556428072}
   - {fileID: 7765557908467560066}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 25
+  Length: 0
+--- !u!114 &-1592288102609095315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Steps/Hard/HardHeelStepLow
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Steps/Hard/HardHeelStepLow
+  Guid:
+    Data1: 953642257
+    Data2: 1122320296
+    Data3: 188655028
+    Data4: 1612267064
+  Banks:
+  - {fileID: 5676317880556428072}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1026,12 +1053,13 @@ MonoBehaviour:
   - {fileID: 1020291324083952633}
   - {fileID: 6986688408429638164}
   - {fileID: 7377717984411668057}
+  - {fileID: -1592288102609095315}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3346567643425602939}
   StringsBanks:
   - {fileID: -7100924490474363539}
-  cacheTime: 638965856269644683
+  cacheTime: 638966569161068053
   cacheVersion: 131617
 --- !u!114 &15166506345404804
 MonoBehaviour:
@@ -1142,7 +1170,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 522
+  Length: 467
 --- !u!114 &925027748874099687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1438,11 +1466,11 @@ MonoBehaviour:
   Banks:
   - {fileID: 7765557908467560066}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 25
   Length: 696
 --- !u!114 &2167231207867498532
 MonoBehaviour:
@@ -1821,7 +1849,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Steps.bank
   Name: Steps
   StudioPath: bank:/Steps
-  lastModified: 638965824487243142
+  lastModified: 638966549007052705
   FileSizes: []
   Exists: 1
 --- !u!114 &5727153469415056767
@@ -2282,7 +2310,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638965829462524872
+  lastModified: 638966569161068053
   FileSizes: []
   Exists: 1
 --- !u!114 &7796144585923797825
