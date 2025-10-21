@@ -9,6 +9,9 @@ using UnityEditor.Experimental.SceneManagement;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+#if UNITY_INPUTSYSTEM_EXIST
+using UnityEngine.InputSystem;
+#endif
 
 namespace FMODUnity
 {
@@ -681,17 +684,50 @@ namespace FMODUnity
                 foreach (FieldInfo subObjectField in subObjectFields)
                 {
                     object value = subObjectField.GetValue(target);
-
-                    if (value != null && !parents.Contains(value))
+                    if (value == null || (value is UnityEngine.Object && !(value as UnityEngine.Object)))
                     {
-                        if (value is System.Collections.IEnumerable)
+                        continue;
+                    }
+
+                    if (subObjectField.FieldType.IsValueType || !parents.Contains(value))
+                    {
+                        if (value is System.Collections.IEnumerable && !(value is string))
                         {
                             int index = 0;
-                            foreach (object item in value as System.Collections.IEnumerable)
+                            System.Collections.IEnumerator valueEnumerator = null;
+
+                            try
                             {
-                                foreach (Task t in GetGenericUpdateTasks(item, FieldPath(subObjectPath, subObjectField.Name, index), parents))
+                                valueEnumerator = (value as System.Collections.IEnumerable).GetEnumerator();
+                            }
+                            catch (Exception ex)
+                            {
+                                RuntimeUtils.DebugLogWarningFormat("[FMOD] Failed to get enumerator for value in field '{0}': {1}", subObjectField.Name, ex.Message);
+                                continue;
+                            }
+
+                            for (;;)
+                            {
+                                object item = null;
+                                try
                                 {
-                                    yield return t;
+                                    if (!valueEnumerator.MoveNext())
+                                    {
+                                        break;
+                                    }
+                                    item = valueEnumerator.Current;
+                                }
+                                catch (Exception)
+                                {
+                                    break;
+                                }
+                                if (item != null && !item.GetType().IsPrimitive && !parents.Contains(item)
+                                    && item.GetType().Namespace != "UnityEngine.InputSystem")
+                                {
+                                    foreach (Task t in GetGenericUpdateTasks(item, FieldPath(subObjectPath, subObjectField.Name, index), parents))
+                                    {
+                                        yield return t;
+                                    }
                                 }
                                 index++;
                             }
@@ -1266,12 +1302,12 @@ namespace FMODUnity
                         if (!string.IsNullOrEmpty(targetName))
                         {
                             return string.Format(
-                                "Add an <b>EventReference</b> field named <b>{0}</b> to hold <b>'{1}'</b> from <b>{2}</b>",
+                                "Add an <b>FMODUnity.EventReference</b> field named <b>{0}</b> to hold <b>'{1}'</b> from <b>{2}</b>",
                                 targetName, value, fieldPath);
                         }
                         else
                         {
-                            return string.Format("Add an <b>EventReference</b> field to hold <b>'{0}'</b> from <b>{1}</b>",
+                            return string.Format("Add an <b>FMODUnity.EventReference</b> field to hold <b>'{0}'</b> from <b>{1}</b>",
                                 value, fieldPath);
                         }
                     },
@@ -1295,22 +1331,22 @@ namespace FMODUnity
                         if (!string.IsNullOrEmpty(targetName))
                         {
                             return string.Format(
-                                "The {0} field on component {1} has an [EventRef(MigrateTo=\"{2}\")] " +
+                                "The {0} field on component {1} has an [FMODUnity.EventRef(MigrateTo=\"{2}\")] " +
                                 "attribute, but the {2} field doesn't exist.\n" +
                                 "* Edit {3} and add an EventReference field named {2}:\n" +
-                                "    public EventReference {2};\n" +
+                                "    public FMODUnity.EventReference {2};\n" +
                                 "* Re-scan your project",
                                 fieldPath, component.Type, targetName, script);
                         }
                         else
                         {
                             return string.Format(
-                                "The {0} field on component {1} has an [EventRef] " +
+                                "The {0} field on component {1} has an [FMODUnity.EventRef] " +
                                 "attribute with no migration target specified.\n" +
                                 "* Edit {2} and add an EventReference field:\n" +
-                                "    public EventReference <fieldname>;\n" +
-                                "* Change the [EventRef] attribute on the {3} field to:\n" +
-                                "    [EventRef(MigrateTo=\"<fieldname>\")]\n" +
+                                "    public FMODUnity.EventReference yourNewFieldName;\n" +
+                                "* Change the [FMODUnity.EventRef] attribute on the {3} field to:\n" +
+                                "    [FMODUnity.EventRef(MigrateTo=\"yourNewFieldName\")]\n" +
                                 "* Re-scan your project.",
                                 fieldPath, component.Type, script, fieldName);
                         }
@@ -1411,8 +1447,8 @@ namespace FMODUnity
                     },
                     ManualInstructions: (data, component) => {
                         return string.Format(
-                            "Fields {0} on the {1} type have [EventRef] attributes with the same MigrateTo value.\n" +
-                            "* Edit the definition of the {1} type and make sure all [EventRef] attributes have " +
+                            "Fields {0} on the {1} type have [FMODUnity.EventRef] attributes with the same MigrateTo value.\n" +
+                            "* Edit the definition of the {1} type and make sure all [FMODUnity.EventRef] attributes have " +
                             "different MigrateTo values\n" +
                             "* Re-scan your project",
                             EditorUtils.SeriesString(", ", " and ", data.Skip(2)), data[1]);

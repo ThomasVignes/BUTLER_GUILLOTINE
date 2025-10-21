@@ -627,7 +627,13 @@ MonoBehaviour:
   - Music
   - SFX
   - Steps
-  BanksToLoad: []
+  BanksToLoad:
+  - Master
+  - Master.strings
+  - Music
+  - MusicTemp
+  - SFX
+  - Steps
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
   AndroidUseOBB: 0
@@ -638,7 +644,7 @@ MonoBehaviour:
   EnableErrorCallback: 0
   SharedLibraryUpdateStage: 0
   SharedLibraryTimeSinceStart: 0
-  CurrentVersion: 131617
+  CurrentVersion: 131632
   HideSetupWizard: 1
   LastEventReferenceScanVersion: 131617
   Platforms:

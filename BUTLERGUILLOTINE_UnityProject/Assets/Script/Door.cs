@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using Whumpus;
 
 public class Door : Interactable
 {
@@ -94,7 +95,10 @@ public class Door : Interactable
         if (open)
         {
             if (audioEmitter != null)
-                audioEmitter.Play();
+            {
+                if (WhumpusUtilities.IsInScreen(transform, 0f))
+                    audioEmitter.Play();
+            }
 
             OnOpen?.Invoke();
         }
