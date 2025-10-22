@@ -7272,12 +7272,12 @@ MonoBehaviour:
     Path: event:/Music/New/Menu/Violin Partita no. 2, BWV 1004 - 6. Chaconne [Piano
       arrangement]
   Event: 
-  PlayEvent: 1
-  StopEvent: 2
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  AllowNonRigidbodyDoppler: 0
+  NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
@@ -11729,12 +11729,12 @@ MonoBehaviour:
       Data4: 1454542896
     Path: event:/SFX/Item
   Event: 
-  PlayEvent: 0
-  StopEvent: 0
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  AllowNonRigidbodyDoppler: 0
+  NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
@@ -30635,28 +30635,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5671502352436786873, guid: 887f71d1c8f391145bd4542e71b034aa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1025382594}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 887f71d1c8f391145bd4542e71b034aa, type: 3}
---- !u!1 &1025382593 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5671502352436786873, guid: 887f71d1c8f391145bd4542e71b034aa, type: 3}
-  m_PrefabInstance: {fileID: 1025382592}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1025382594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025382593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b446386b9b0d874cb27ed8f4557bbd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1026764677
 GameObject:
   m_ObjectHideFlags: 0
@@ -35835,12 +35815,12 @@ MonoBehaviour:
     Path: event:/Music/Old/Raw/Direction1/Copyright Free/R1 - O Jesu Christ - Unknown
       Choir - Short - EDITED
   Event: 
-  PlayEvent: 1
-  StopEvent: 2
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  AllowNonRigidbodyDoppler: 0
+  NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
@@ -37440,12 +37420,12 @@ MonoBehaviour:
       Data4: -187465849
     Path: event:/SFX/Menu Cuts/clickCut
   Event: 
-  PlayEvent: 0
-  StopEvent: 0
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  AllowNonRigidbodyDoppler: 0
+  NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
@@ -44171,12 +44151,12 @@ MonoBehaviour:
       Data4: -181323701
     Path: event:/SFX/Menu Cuts/tickCut
   Event: 
-  PlayEvent: 0
-  StopEvent: 0
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  AllowNonRigidbodyDoppler: 0
+  NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
@@ -59031,6 +59011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
 --- !u!43 &2044770997
 Mesh:
