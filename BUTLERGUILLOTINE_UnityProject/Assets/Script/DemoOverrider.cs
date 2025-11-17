@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class DemoOverrider : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class DemoOverrider : MonoBehaviour
     public string EndScene;
     public GameObject CinematicThing;
 
+    bool ruth;
 
     private void Awake()
     {
@@ -36,6 +38,25 @@ public class DemoOverrider : MonoBehaviour
         CinematicThing.SetActive(false);
         GameManager.Instance.End = true;
         StartCoroutine(C_EndScene());
+    }
+
+
+
+    public void SetAchievement()
+    {
+        if (!ruth)
+            PersistentData.Instance.SteamAchievementManager.TriggerAchievement("FIRSTDEATH", true);
+    }
+
+    public void SetRuthAchievement()
+    {
+        if (ruth)
+            PersistentData.Instance.SteamAchievementManager.TriggerAchievement("UNREACHABLE", true);
+    }
+
+    public void SetRuth(bool yes)
+    {
+        ruth = yes;
     }
 
     IEnumerator C_EndScene()

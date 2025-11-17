@@ -25,6 +25,11 @@ public class Demo_SecretKey : MonoBehaviour
     float lightPuncWait = 0.07f;
 
 
+    private void Awake()
+    {
+        Screen.SetResolution(1920, 1080, FullScreenMode.ExclusiveFullScreen);
+    }
+
     private void Start()
     {
         if (PersistentData.Instance.HasKey)

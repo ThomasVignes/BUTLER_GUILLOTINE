@@ -28,6 +28,7 @@ public class Tutorial : MonoBehaviour
     {
         active = false;
 
+        tutorialText.DOKill();
         tutorialText.DOFade(0, 0.2f);
     }
 

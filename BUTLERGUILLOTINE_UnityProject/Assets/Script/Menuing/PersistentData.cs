@@ -33,6 +33,7 @@ public class PersistentData : MonoBehaviour
     string savePath = @"\Resources\";
 
     [HideInInspector] public BuildNavigator BuildNavigator;
+    [HideInInspector] public SteamAchievementManager SteamAchievementManager;
 
     string masterBusPath = "bus:/";
     string musicBusPath = "bus:/Music";
@@ -88,6 +89,8 @@ public class PersistentData : MonoBehaviour
 
         BuildNavigator = GetComponent<BuildNavigator>();
         BuildNavigator.Init(this);
+
+        SteamAchievementManager = GetComponent<SteamAchievementManager>();  
 
         masterBus = FMODUnity.RuntimeManager.GetBus(masterBusPath);
         musicBus = FMODUnity.RuntimeManager.GetBus(musicBusPath);

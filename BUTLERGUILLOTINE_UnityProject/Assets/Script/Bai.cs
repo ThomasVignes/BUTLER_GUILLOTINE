@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Bai : MonoBehaviour
 {
+    [SerializeField] string achievement;
+
     private void Awake()
     {
         Cursor.visible = true;
@@ -19,11 +21,16 @@ public class Bai : MonoBehaviour
     void TryToUpdateData()
     {
         if (PersistentData.Instance != null)
+        {
             if (!PersistentData.Instance.FinishedOnce)
             {
                 PersistentData.Instance.FinishedOnce = true;
                 PersistentData.Instance.SaveData();
             }
+
+            PersistentData.Instance.SteamAchievementManager.TriggerAchievement(achievement, true);
+
+        }
     }
 
     public void Baiii()

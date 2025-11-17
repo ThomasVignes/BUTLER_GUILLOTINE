@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class CeremonyChapterManager : ChapterManagerGeneric
 {
@@ -12,6 +14,7 @@ public class CeremonyChapterManager : ChapterManagerGeneric
     [SerializeField] private TextMeshProUGUI endText, introText;
     [SerializeField] GameObject introUi;
     [SerializeField] GameObject introTitle;
+    public UnityEvent OnWakeUp, OnRestart;
     bool gettingUp;
     float introTimer;
 
@@ -48,6 +51,8 @@ public class CeremonyChapterManager : ChapterManagerGeneric
 
             gameManager.WriteComment("Ugh. My head.");
             gameManager.PlayerReady();
+
+            OnWakeUp?.Invoke();
         }
     }
 
@@ -183,6 +188,7 @@ public class CeremonyChapterManager : ChapterManagerGeneric
         gameManager.ScreenEffects.StartFade();
         Intro = true;
         gameManager.Ready = true;
+        OnRestart?.Invoke();
 
         if (introUi.activeSelf)
         {

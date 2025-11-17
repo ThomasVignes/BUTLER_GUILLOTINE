@@ -194,6 +194,9 @@ public class MainMenuMaster : MonoBehaviour
 
         fadeOut = true;
 
+        //Test
+        PersistentData.Instance.SteamAchievementManager.TriggerAchievement("BLANK", true);
+
         yield return new WaitForSeconds(9f);
 
         yield return new WaitForSeconds(silenceTime);

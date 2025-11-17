@@ -16,14 +16,14 @@ public class SettingsManager : MonoBehaviour
         var data = PersistentData.Instance;
 
         if (data == null)
-            return;
-
-        InitValues(data);
+            Defaults();
+        else
+            InitValues(data);
     }
 
     void InitValues(PersistentData data)
     {
-        switch (Screen.fullScreenMode)
+        switch (data.Screen)
         {
             case FullScreenMode.FullScreenWindow:
                 screen.value = 0;
@@ -72,24 +72,36 @@ public class SettingsManager : MonoBehaviour
         postProcessOnUI.Init();
     }
 
+    public void Defaults()
+    {
+        Screen.SetResolution(1920, 1080, FullScreenMode.FullScreenWindow);
+        MasterStereo();
+        Application.targetFrameRate = 0;
+        QualitySettings.vSyncCount = 1;
+    }
+
     public void UpdateScreen()
     {
+        FullScreenMode mode = FullScreenMode.FullScreenWindow;
+
         switch (screen.value)
         {
             case 0:
-                Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+                mode = FullScreenMode.FullScreenWindow;
                 break;
 
             case 1:
-                Screen.fullScreenMode = FullScreenMode.Windowed;
+                mode = FullScreenMode.Windowed;
                 break;
 
             case 2:
-                Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+                mode = FullScreenMode.ExclusiveFullScreen;
                 break;
         }
 
-        PersistentData.Instance.Screen = Screen.fullScreenMode;
+        Screen.SetResolution(1920, 1080, mode);
+
+        PersistentData.Instance.Screen = mode;
     }
 
     public void UpdateSound()

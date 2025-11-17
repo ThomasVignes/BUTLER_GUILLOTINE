@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6079689053585860778}
   - component: {fileID: 2885308185542490130}
   - component: {fileID: 8285861165429566241}
+  - component: {fileID: 7270572131635487257}
+  - component: {fileID: 3896786097451404113}
   m_Layer: 0
   m_Name: _PersistentData
   m_TagString: Untagged
@@ -58,6 +60,7 @@ MonoBehaviour:
   FinishedOnce: 0
   HasKey: 0
   BuildNavigator: {fileID: 0}
+  SteamAchievementManager: {fileID: 0}
 --- !u!114 &8285861165429566241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,3 +73,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f329aac9f64d944f84854f04bce7e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7270572131635487257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5671502352436786873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4bffeda13d7a748973ff9204401c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3896786097451404113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5671502352436786873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc3b67222280c94498c6818bff1ba9e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  achievements:
+  - Name: DELUSIONAL
+    SteamID: DELUSIONAL
+  - Name: FIRSTDEATH
+    SteamID: FIRSTDEATH
+  - Name: NOSTALGIC
+    SteamID: NOSTALGIC
+  - Name: UNREACHABLE
+    SteamID: UNREACHABLE
+  - Name: BLANK
+    SteamID: BLANK
