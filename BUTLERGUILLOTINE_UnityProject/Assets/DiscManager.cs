@@ -10,6 +10,10 @@ public class DiscManager : MonoBehaviour
 {
     [Header("Data")]
     [SerializeField] List<DiscSong> songs = new List<DiscSong>();
+    [SerializeField] StudioEventEmitter crackle;
+
+    [Header("Music playing")]
+    [SerializeField] float fadeOutSpeed;
 
     [Header("References")]
     [SerializeField] Animator ruthAnimator;
@@ -23,7 +27,11 @@ public class DiscManager : MonoBehaviour
     bool hasDisc, playing;
     bool edited, hasEdited;
 
+    bool fadeOut;
+    float themeVolume;
+
     EventInstance currentInstance;
+    Coroutine playSong;
 
     private void Start()
     {
@@ -31,6 +39,22 @@ public class DiscManager : MonoBehaviour
         UpdateTitles();
 
         discPlayerAnimator.SetFloat("SpinSpeed", 1);
+    }
+
+    private void Update()
+    {
+        if (fadeOut)
+        {
+            if (themeVolume > 0)
+            {
+                themeVolume -= Time.deltaTime * fadeOutSpeed;
+
+                if (themeVolume > 0)
+                    crackle.EventInstance.setVolume(themeVolume/2);
+                else
+                    crackle.Stop();
+            }
+        }
     }
 
     public void PlaySong(bool edited)
@@ -42,6 +66,22 @@ public class DiscManager : MonoBehaviour
         if (edited && !songs[currentIndex].edited.IsNull)
             reference = songs[currentIndex].edited;
 
+        playSong = StartCoroutine(C_PlaySong(reference));
+    }
+
+    IEnumerator C_PlaySong(EventReference reference)
+    {
+        fadeOut = false;
+        themeVolume = 1;
+        crackle.EventInstance.setVolume(themeVolume / 2);
+
+        crackle.Stop();
+        crackle.Play();
+
+        yield return new WaitForSeconds(2.5f);
+
+        fadeOut = true;
+
         currentInstance = RuntimeManager.CreateInstance(reference);
 
         currentInstance.start();
@@ -50,6 +90,9 @@ public class DiscManager : MonoBehaviour
 
     public void StopSong()
     {
+        if (playSong != null) StopCoroutine(playSong);
+
+        crackle.Stop();
         currentInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
@@ -61,10 +104,10 @@ public class DiscManager : MonoBehaviour
 
         playing = true;
 
-        StartCoroutine(C_PlaySong());
+        StartCoroutine(C_Play());
     }
 
-    IEnumerator C_PlaySong()
+    IEnumerator C_Play()
     {
         ruthAnimator.SetTrigger("Play");
 
@@ -75,6 +118,7 @@ public class DiscManager : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
 
         discPlayerAnimator.SetTrigger("Start");
+        discPlayerAnimator.SetFloat("SpinSpeed", 1);
 
         yield return new WaitForSeconds(1.4f);
 

@@ -9,6 +9,7 @@ public class IntroManager : ChapterManagerGeneric
 {
     [Header("Settings")]
     public bool Skip;
+    public string InterSceneName;
     public DialogueCinematic startCinematic;
     [SerializeField] Animator animator;
     [SerializeField] GameObject fixedCam;
@@ -25,7 +26,7 @@ public class IntroManager : ChapterManagerGeneric
 
     public override void StartGame()
     {
-        gameManager.ThemeManager.CreateInterScene("LaSonnambula");
+        gameManager.ThemeManager.CreateInterScene(InterSceneName);
 
         if (!Skip)
         {
