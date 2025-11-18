@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638966692556349820
+  lastModified: 638990626624433720
   FileSizes: []
   Exists: 1
 --- !u!114 &-9055472500416064339
@@ -182,6 +182,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 130
+--- !u!114 &-8095388125163459007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/Lamento della ninfa - Original
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/Lamento della ninfa - Original
+  Guid:
+    Data1: 110935948
+    Data2: 1241294757
+    Data3: 1019847575
+    Data4: 1128027442
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 153025
 --- !u!114 &-8051242196866547866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,6 +487,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 169856
+--- !u!114 &-7011517472084996576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/Waltz in A flat major Farewell/Waltz in A
+    flat major 'Farewell', Op. 69 no. 1_SLOWED
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/Waltz in A flat major Farewell/Waltz in A flat
+    major 'Farewell', Op. 69 no. 1_SLOWED
+  Guid:
+    Data1: 714712343
+    Data2: 1140003997
+    Data3: -464388689
+    Data4: 1504289300
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 385011
 --- !u!114 &-6996890319490044041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -679,33 +735,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 239516
---- !u!114 &-5200876415776848498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/New/Test
-  m_EditorClassIdentifier: 
-  Path: event:/Music/New/Test
-  Guid:
-    Data1: -840413029
-    Data2: 1313613375
-    Data3: 341678217
-    Data4: 2111522134
-  Banks:
-  - {fileID: -9072090894377937510}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 493314
 --- !u!114 &-5166682845834815447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1009,6 +1038,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 18102
+--- !u!114 &-3575811796443829714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/FiveSharakan/Five sharakan of Saak Partev
+    - Edited
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/FiveSharakan/Five sharakan of Saak Partev -
+    Edited
+  Guid:
+    Data1: -840413029
+    Data2: 1313613375
+    Data3: 341678217
+    Data4: 2111522134
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 493314
 --- !u!114 &-3485661312770802844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1310,6 +1368,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 288192
+--- !u!114 &-2006629683417097575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/When you say your last goodbye - Original
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/When you say your last goodbye - Original
+  Guid:
+    Data1: -1820718197
+    Data2: 1321420608
+    Data3: -959045745
+    Data4: 2078116021
+  Banks:
+  - {fileID: 6000090139453766909}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 198720
 --- !u!114 &-1665567614815600494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1408,10 +1493,10 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638966670116911200
+  lastModified: 638990626616378575
   FileSizes:
   - Name: 
-    Value: 7344
+    Value: 8086
   Exists: 1
 --- !u!114 &-575617319912871658
 MonoBehaviour:
@@ -1469,6 +1554,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 385011
+--- !u!114 &-219288176790398998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/Violin Partita/Violin Partita no. 2, BWV 1004
+    - 5. Chaconne [Piano arrangement] - Edited
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/Violin Partita/Violin Partita no. 2, BWV 1004
+    - 5. Chaconne [Piano arrangement] - Edited
+  Guid:
+    Data1: 1776946303
+    Data2: 1182166609
+    Data3: 728305061
+    Data4: 112466287
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 924072
 --- !u!114 &-26183002695675112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1549,7 +1663,6 @@ MonoBehaviour:
   - {fileID: 4796881860190678382}
   - {fileID: 8803980249239179180}
   - {fileID: -7873727874517504826}
-  - {fileID: -5200876415776848498}
   - {fileID: 3031316582463818888}
   - {fileID: 1781065426126278649}
   - {fileID: 7846762779212262181}
@@ -1615,12 +1728,21 @@ MonoBehaviour:
   - {fileID: -3485661312770802844}
   - {fileID: 810302364487412670}
   - {fileID: -7648581628803763296}
+  - {fileID: 7384167532115958095}
+  - {fileID: -3575811796443829714}
+  - {fileID: -2006629683417097575}
+  - {fileID: 3857108615686787570}
+  - {fileID: -8095388125163459007}
+  - {fileID: 2275362959707124511}
+  - {fileID: -7011517472084996576}
+  - {fileID: 651870057520133404}
+  - {fileID: -219288176790398998}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6000090139453766909}
   StringsBanks:
   - {fileID: -786783328031392545}
-  cacheTime: 638966692556349820
+  cacheTime: 638990626624433720
   cacheVersion: 131632
 --- !u!114 &22184083051153766
 MonoBehaviour:
@@ -1678,6 +1800,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 247510
+--- !u!114 &651870057520133404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/Violin Partita/Violin Partita no. 2, BWV 1004
+    - 5. Chaconne [Piano arrangement] - Original
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/Violin Partita/Violin Partita no. 2, BWV 1004
+    - 5. Chaconne [Piano arrangement] - Original
+  Guid:
+    Data1: -1180097032
+    Data2: 1249640973
+    Data3: -1725461351
+    Data4: -1131179427
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 924072
 --- !u!114 &770953797004677913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1809,6 +1960,35 @@ MonoBehaviour:
     Data2: 1182498845
     Data3: -1791643715
     Data4: 1545656267
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 512208
+--- !u!114 &2275362959707124511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/Mein Herze schwimmt im Blut, BWV 199 - 2.
+    Stumme Seufzer, stille Klagen (Soprano, Trumpet and Organ arr. - Rondeau) - Original
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/Mein Herze schwimmt im Blut, BWV 199 - 2. Stumme
+    Seufzer, stille Klagen (Soprano, Trumpet and Organ arr. - Rondeau) - Original
+  Guid:
+    Data1: -1543765433
+    Data2: 1340654207
+    Data3: 1671366017
+    Data4: -782853176
   Banks:
   - {fileID: -9072090894377937510}
   IsStream: 1
@@ -2038,6 +2218,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 140750
+--- !u!114 &3857108615686787570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/Waltz in A flat major Farewell/Waltz in A
+    flat major 'Farewell', Op. 69 no. 1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/Waltz in A flat major Farewell/Waltz in A flat
+    major 'Farewell', Op. 69 no. 1
+  Guid:
+    Data1: 657250402
+    Data2: 1185665384
+    Data3: 1296413585
+    Data4: -1955394443
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 289462
 --- !u!114 &4131524869300673816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2437,7 +2646,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638966670116901200
+  lastModified: 638990626616368577
   FileSizes: []
   Exists: 1
 --- !u!114 &6003941878807412242
@@ -2654,6 +2863,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 696
+--- !u!114 &7384167532115958095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/FiveSharakan/Five sharakan of Saak Partev
+    - Original
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/FiveSharakan/Five sharakan of Saak Partev -
+    Original
+  Guid:
+    Data1: 573381488
+    Data2: 1185735027
+    Data3: -22105942
+    Data4: 374883681
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 583314
 --- !u!114 &7460157398373637624
 MonoBehaviour:
   m_ObjectHideFlags: 0

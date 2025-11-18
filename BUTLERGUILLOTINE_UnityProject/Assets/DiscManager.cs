@@ -1,7 +1,10 @@
+using FMOD.Studio;
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DiscManager : MonoBehaviour
 {
@@ -11,15 +14,43 @@ public class DiscManager : MonoBehaviour
     [Header("References")]
     [SerializeField] Animator ruthAnimator;
     [SerializeField] Animator discPlayerAnimator, cameraAnimator;
-    [SerializeField] TextMeshProUGUI title;
+
+    [Header("Text references")]
+    [SerializeField] TextMeshProUGUI jerTitle;
+    [SerializeField] TextMeshProUGUI tableTitle;
 
     public int currentIndex;
     bool hasDisc, playing;
+    bool edited, hasEdited;
+
+    EventInstance currentInstance;
 
     private void Start()
     {
-        title.text = "";
         currentIndex = -1;
+        UpdateTitles();
+
+        discPlayerAnimator.SetFloat("SpinSpeed", 1);
+    }
+
+    public void PlaySong(bool edited)
+    {
+        StopSong();
+
+        EventReference reference = songs[currentIndex].original;
+
+        if (edited && !songs[currentIndex].edited.IsNull)
+            reference = songs[currentIndex].edited;
+
+        currentInstance = RuntimeManager.CreateInstance(reference);
+
+        currentInstance.start();
+        currentInstance.release();
+    }
+
+    public void StopSong()
+    {
+        currentInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
     public void Play()
@@ -45,9 +76,11 @@ public class DiscManager : MonoBehaviour
 
         discPlayerAnimator.SetTrigger("Start");
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.4f);
 
         discPlayerAnimator.SetTrigger("Spin");
+
+        PlaySong(false);
     }
 
     public void Stop()
@@ -61,6 +94,7 @@ public class DiscManager : MonoBehaviour
 
     IEnumerator C_StopSong()
     {
+        StopSong();
         discPlayerAnimator.SetTrigger("Stop");
 
         yield return new WaitForSeconds(0.5f);
@@ -69,8 +103,11 @@ public class DiscManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.45f);
 
-
         ruthAnimator.SetTrigger("Stop");
+
+        discPlayerAnimator.SetBool("Edited", false);
+        discPlayerAnimator.SetTrigger("ResetButton");
+        edited = false;
     }
 
     public void NextDisc()
@@ -83,10 +120,29 @@ public class DiscManager : MonoBehaviour
         UpdateDisc(false);
     }
 
+    public void ToggleEdited()
+    {
+        if (hasEdited)
+        {
+            edited = !edited;
+
+            PlaySong(edited);
+
+            float spinValue = 1;
+
+            if (edited)
+                spinValue = -1;
+
+            discPlayerAnimator.SetFloat("SpinSpeed", spinValue);
+            discPlayerAnimator.SetBool("Edited", edited);
+        }
+        else
+            discPlayerAnimator.SetTrigger("NoEdited");
+    }
+
     void UpdateDisc(bool increment)
     {
         bool hadDisc = hasDisc;
-
 
         if (currentIndex == -1)
         {
@@ -94,13 +150,16 @@ public class DiscManager : MonoBehaviour
                 currentIndex = songs.Count;
         }
 
-
         if (increment)
             currentIndex++;
         else
             currentIndex--;
 
+        if (currentIndex >= 0 && currentIndex < songs.Count)
+            hasEdited = !songs[currentIndex].edited.IsNull;
 
+
+        //Animation logic
         if (currentIndex < 0 || currentIndex >= songs.Count)
         {
             currentIndex = -1;
@@ -114,7 +173,7 @@ public class DiscManager : MonoBehaviour
             return;
         }
 
-        IncrementDisc();
+        SwitchDisc();
     }
 
     void ToggleDisc(bool active)
@@ -124,19 +183,47 @@ public class DiscManager : MonoBehaviour
         if (hasDisc)
         {
             ruthAnimator.SetTrigger("GrabDisc");
-            title.text = currentIndex.ToString();
+            UpdateTitles();
         }
         else
         {
             ruthAnimator.SetTrigger("HideDisc");
-            title.text = "";
+            UpdateTitles();
         }
     }
 
-    void IncrementDisc()
+    void UpdateTitles()
     {
-        title.text = currentIndex.ToString();
+        string content = "Select a song";
+        string jerAdditional = "";
+        string tableAdditionnal = "";
+        string description = "description";
+
+        if (currentIndex > -1)
+        {
+            content = songs[currentIndex].Name;
+
+            string composer = songs[currentIndex].Composer;
+            string performer = songs[currentIndex].Performer;
+
+            jerAdditional = "\n\n" + composer + "\n" + performer;
+            if (composer == performer) jerAdditional = "\n\n" + composer;
+
+            tableAdditionnal = "\n\nComposition: " + composer + "\nPerformance: " + performer;
+
+            description = "\n\n" + songs[currentIndex].Description;
+        }
+
+
+
+        jerTitle.text = content + jerAdditional;
+        tableTitle.text = content + tableAdditionnal + description;
+    }
+
+    void SwitchDisc()
+    {
         ruthAnimator.SetTrigger("SwitchDisc");
+        UpdateTitles();
     }
 }
 
@@ -144,4 +231,9 @@ public class DiscManager : MonoBehaviour
 public class DiscSong
 {
     public string Name;
+    public string Composer;
+    public string Performer;
+    public string Description;
+    public EventReference original;
+    public EventReference edited;
 }
