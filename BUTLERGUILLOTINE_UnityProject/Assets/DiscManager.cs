@@ -10,12 +10,14 @@ public class DiscManager : MonoBehaviour
 {
     [Header("Data")]
     [SerializeField] List<DiscSong> songs = new List<DiscSong>();
-    [SerializeField] StudioEventEmitter crackle;
+    [SerializeField] StudioEventEmitter crackle, ambient;
 
     [Header("Music playing")]
     [SerializeField] float fadeOutSpeed;
 
     [Header("References")]
+    [SerializeField] ScreenEffects screenEffects;
+    [SerializeField] GameObject raycastBlocker;
     [SerializeField] Animator ruthAnimator;
     [SerializeField] Animator discPlayerAnimator, cameraAnimator;
 
@@ -26,6 +28,7 @@ public class DiscManager : MonoBehaviour
     public int currentIndex;
     bool hasDisc, playing;
     bool edited, hasEdited;
+    bool canStop;
 
     bool fadeOut;
     float themeVolume;
@@ -39,6 +42,10 @@ public class DiscManager : MonoBehaviour
         UpdateTitles();
 
         discPlayerAnimator.SetFloat("SpinSpeed", 1);
+
+        ambient.Play();
+
+        StartCoroutine(C_Start());
     }
 
     private void Update()
@@ -57,6 +64,21 @@ public class DiscManager : MonoBehaviour
         }
     }
 
+    IEnumerator C_Start()
+    {
+        raycastBlocker.SetActive(true);
+        screenEffects.SetBlackScreenAlpha(1);
+
+        yield return new WaitForSeconds(2f);
+
+        screenEffects.FadeTo(0, 3);
+
+        yield return new WaitForSeconds(2f);
+
+        raycastBlocker.SetActive(false);
+    }
+
+
     public void PlaySong(bool edited)
     {
         StopSong();
@@ -72,6 +94,8 @@ public class DiscManager : MonoBehaviour
     IEnumerator C_PlaySong(EventReference reference)
     {
         fadeOut = false;
+        ambient.Stop();
+
         themeVolume = 1;
         crackle.EventInstance.setVolume(themeVolume / 2);
 
@@ -93,6 +117,7 @@ public class DiscManager : MonoBehaviour
         if (playSong != null) StopCoroutine(playSong);
 
         crackle.Stop();
+        ambient.Play();
         currentInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
@@ -114,6 +139,7 @@ public class DiscManager : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
 
         cameraAnimator.SetBool("Playing", true);
+        EffectsManager.Instance.audioManager.Play("PutVinyl");
 
         yield return new WaitForSeconds(0.05f);
 
@@ -125,21 +151,28 @@ public class DiscManager : MonoBehaviour
         discPlayerAnimator.SetTrigger("Spin");
 
         PlaySong(false);
+
+        canStop = true;
     }
 
     public void Stop()
     {
         if (!playing) return;
 
-        playing = false;
+        if (!canStop) return;
 
-        StartCoroutine(C_StopSong());
+        playing = false;
+        canStop = false;
+
+        StartCoroutine(C_Stop());
     }
 
-    IEnumerator C_StopSong()
+    IEnumerator C_Stop()
     {
         StopSong();
         discPlayerAnimator.SetTrigger("Stop");
+        discPlayerAnimator.SetTrigger("PressedStop");
+        EffectsManager.Instance.audioManager.Play("VinylStop");
 
         yield return new WaitForSeconds(0.5f);
 

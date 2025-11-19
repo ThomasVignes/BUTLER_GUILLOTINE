@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638990898069505091
+  lastModified: 638991683317475711
   FileSizes: []
   Exists: 1
 --- !u!114 &-9055472500416064339
@@ -619,6 +619,33 @@ MonoBehaviour:
   lastModified: 638966654328410732
   FileSizes: []
   Exists: 1
+--- !u!114 &-6234989871147884156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Menu Cuts/VinylStop
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Menu Cuts/VinylStop
+  Guid:
+    Data1: 173429615
+    Data2: 1314076469
+    Data3: 1452793785
+    Data4: -252492101
+  Banks:
+  - {fileID: 7964605896639709159}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 210
 --- !u!114 &-6012191334215899956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,33 +816,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 43200
---- !u!114 &-5137541852674163647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/New/Menu/TEstla
-  m_EditorClassIdentifier: 
-  Path: event:/Music/New/Menu/TEstla
-  Guid:
-    Data1: -1915631143
-    Data2: 1140236223
-    Data3: 8614067
-    Data4: -1653805616
-  Banks:
-  - {fileID: -9072090894377937510}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-4931858796957986875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1031,6 +1031,7 @@ MonoBehaviour:
     Data4: -1711876676
   Banks:
   - {fileID: 7964605896639709159}
+  - {fileID: -9072090894377937510}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1285,6 +1286,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6144
+--- !u!114 &-2247778513448605416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/Menu/DiscAmbience
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/Menu/DiscAmbience
+  Guid:
+    Data1: -1915631143
+    Data2: 1140236223
+    Data3: 8614067
+    Data4: -1653805616
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 385011
 --- !u!114 &-2211948620988919227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1449,6 +1477,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1848
+--- !u!114 &-1631003658308494850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Menu Cuts/VerySmallclick
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Menu Cuts/VerySmallclick
+  Guid:
+    Data1: -135219485
+    Data2: 1230165191
+    Data3: -132466007
+    Data4: -2086938780
+  Banks:
+  - {fileID: 7964605896639709159}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 56
 --- !u!114 &-1564297019713798126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1493,10 +1548,10 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638990626616378575
+  lastModified: 638991680168943014
   FileSizes:
   - Name: 
-    Value: 8086
+    Value: 8270
   Exists: 1
 --- !u!114 &-575617319912871658
 MonoBehaviour:
@@ -1554,6 +1609,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 385011
+--- !u!114 &-395896314932623101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Menu Cuts/PutVinyl
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Menu Cuts/PutVinyl
+  Guid:
+    Data1: 699000411
+    Data2: 1145344256
+    Data3: 1722387073
+    Data4: 887916326
+  Banks:
+  - {fileID: 7964605896639709159}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 960
 --- !u!114 &-219288176790398998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1680,7 +1762,6 @@ MonoBehaviour:
   - {fileID: 5146346235577532976}
   - {fileID: 3184742974640948883}
   - {fileID: 5548816508054205023}
-  - {fileID: -5137541852674163647}
   - {fileID: 6050664664386552528}
   - {fileID: 8220398745391023416}
   - {fileID: -7744527036979439645}
@@ -1737,12 +1818,17 @@ MonoBehaviour:
   - {fileID: -7011517472084996576}
   - {fileID: 651870057520133404}
   - {fileID: -219288176790398998}
+  - {fileID: -2247778513448605416}
+  - {fileID: -6234989871147884156}
+  - {fileID: -395896314932623101}
+  - {fileID: 7668076105319184831}
+  - {fileID: -1631003658308494850}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6000090139453766909}
   StringsBanks:
   - {fileID: -786783328031392545}
-  cacheTime: 638990898069505091
+  cacheTime: 638991683317475711
   cacheVersion: 131632
 --- !u!114 &22184083051153766
 MonoBehaviour:
@@ -2646,7 +2732,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638990626616368577
+  lastModified: 638991680168933012
   FileSizes: []
   Exists: 1
 --- !u!114 &6003941878807412242
@@ -2891,7 +2977,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 583314
+  Length: 492991
 --- !u!114 &7460157398373637624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2947,6 +3033,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1141688
+--- !u!114 &7668076105319184831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Menu Cuts/GetVinylBack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Menu Cuts/GetVinylBack
+  Guid:
+    Data1: 494995099
+    Data2: 1091668654
+    Data3: -889463645
+    Data4: -514497202
+  Banks:
+  - {fileID: 7964605896639709159}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 170
 --- !u!114 &7846762779212262181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2991,7 +3104,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638966675737104435
+  lastModified: 638991680169503343
   FileSizes: []
   Exists: 1
 --- !u!114 &8220398745391023416

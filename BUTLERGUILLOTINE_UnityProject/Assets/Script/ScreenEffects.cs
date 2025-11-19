@@ -6,12 +6,11 @@ using DG.Tweening;
 
 public class ScreenEffects : MonoBehaviour
 {
-    [SerializeField] private Image blackScreen, oumuamua;
+    [SerializeField] private Image blackScreen;
 
     public void StartFade()
     {
         blackScreen.DOKill();
-        oumuamua.DOFade(0, 0.01f);
         FadeTo(1, 0.001f);
         FadeTo(0, 3.3f);
     }
@@ -28,11 +27,6 @@ public class ScreenEffects : MonoBehaviour
     {
         blackScreen.DOKill();
         blackScreen.DOFade(amount, duration);
-    }
-
-    public void OumuamuaFade()
-    {
-        oumuamua.DOFade(0.8f, 7);
     }
 
     public void FadeInOut(float delayWait)
