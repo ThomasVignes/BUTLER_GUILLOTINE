@@ -78,6 +78,25 @@ public class DiscManager : MonoBehaviour
         raycastBlocker.SetActive(false);
     }
 
+    public void ToMenu()
+    { 
+        StartCoroutine(C_ToMenu());
+    }
+
+    IEnumerator C_ToMenu()
+    {
+        raycastBlocker.SetActive(true);
+        screenEffects.SetBlackScreenAlpha(0);
+
+        screenEffects.FadeTo(1, 3);
+
+        yield return new WaitForSeconds(3.5f);
+
+        ambient.Stop();
+
+        PersistentData.Instance.BuildNavigator.RequestMenu();
+    }
+
 
     public void PlaySong(bool edited)
     {
@@ -302,6 +321,14 @@ public class DiscManager : MonoBehaviour
         ruthAnimator.SetTrigger("SwitchDisc");
         UpdateTitles();
     }
+
+    public void OpenUrl()
+    {
+        if (currentIndex == -1)
+            return;
+
+        Application.OpenURL(songs[currentIndex].URL);
+    }
 }
 
 [System.Serializable]
@@ -310,7 +337,9 @@ public class DiscSong
     public string Name;
     public string Composer;
     public string Performer;
+    [TextArea(3, 20)]
     public string Description;
+    public string URL;
     public EventReference original;
     public EventReference edited;
 }

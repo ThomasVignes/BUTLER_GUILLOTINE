@@ -185,10 +185,21 @@ public class MainMenuMaster : MonoBehaviour
         CanInput = false;
         eventSystem.SetActive(false);
 
-        StartCoroutine(C_StartGame(loadSave));
+        StartCoroutine(C_StartGame(loadSave, false));
     }
 
-    IEnumerator C_StartGame(bool loadSave)
+    public void GoToDiscs()
+    {
+        if (!CanInput)
+            return;
+
+        CanInput = false;
+        eventSystem.SetActive(false);
+
+        StartCoroutine(C_StartGame(false, true));
+    }
+
+    IEnumerator C_StartGame(bool loadSave, bool toDiscs)
     {
         BlackFadeTo(1, 4f);
 
@@ -197,14 +208,23 @@ public class MainMenuMaster : MonoBehaviour
         //Test
         PersistentData.Instance.SteamAchievementManager.TriggerAchievement("BLANK", true);
 
-        yield return new WaitForSeconds(9f);
-
-        yield return new WaitForSeconds(silenceTime);
-
-        if (loadSave)
-            PersistentData.Instance.BuildNavigator.Continue();
+        if (!toDiscs)
+            yield return new WaitForSeconds(9f);
         else
-            PersistentData.Instance.BuildNavigator.NextScene();
+            yield return new WaitForSeconds(7f);
+
+        if (!toDiscs)
+            yield return new WaitForSeconds(silenceTime);
+
+        if (toDiscs)
+            SceneManager.LoadScene("Discs");
+        else
+        {
+            if (loadSave)
+                PersistentData.Instance.BuildNavigator.Continue();
+            else
+                PersistentData.Instance.BuildNavigator.NextScene();
+        }
     }
 
     IEnumerator C_ShowMenu()
