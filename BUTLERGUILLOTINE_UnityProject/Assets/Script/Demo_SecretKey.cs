@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Demo_SecretKey : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Demo_SecretKey : MonoBehaviour
 
     [Header("Standalone comment")]
     [SerializeField] private TextMeshProUGUI observationDialogue;
-    [SerializeField] GameObject Specific, Blocker;
+    [SerializeField] GameObject Specific, Blocker, ResetProgressObject;
 
     [Header("References")]
     [SerializeField] GameObject[] done;
@@ -19,6 +20,7 @@ public class Demo_SecretKey : MonoBehaviour
 
     bool writing, skip;
     private bool specific, endSpecific;
+    bool resetting;
 
     float delayBetweenLetters = 0.02f;
     float strongPuncWait = 0.4f;
@@ -190,4 +192,28 @@ public class Demo_SecretKey : MonoBehaviour
         Blocker.SetActive(false);
     }
 
+    public void ShowResetProgress(bool show)
+    {
+        Blocker.SetActive(show);
+        ResetProgressObject.SetActive(show);
+    }
+
+    public void ResetProgress()
+    {
+        if (resetting)
+            return;
+
+        resetting = true;
+
+        StartCoroutine(C_ResetProgress());
+    }
+
+    IEnumerator C_ResetProgress()
+    {
+        PersistentData.Instance.ResetProgress();
+
+        yield return new WaitForSeconds(1f);
+
+        SceneManager.LoadScene(0);
+    }
 }

@@ -22,6 +22,11 @@ public class BuildNavigator : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void NoSaveToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void RequestMenu()
     {
         if (menuRequested)
@@ -47,12 +52,12 @@ public class BuildNavigator : MonoBehaviour
         if (!CanContinue())
             NextScene();
 
-        SceneManager.LoadScene(persistentData.CurrentScene);
+        SceneManager.LoadScene(persistentData.CurrentSceneIndex);
     }
 
     public bool CanContinue()
     {
-        return persistentData.CurrentScene != "" && SceneManager.GetSceneByName(persistentData.CurrentScene).buildIndex > 0;
+        return persistentData.CurrentSceneIndex > 0;
     }
 
     public void RequestQuit()
@@ -62,7 +67,7 @@ public class BuildNavigator : MonoBehaviour
 
         quitRequested = true;
 
-        persistentData.SaveData();
+        persistentData.SaveData(false);
 
         StartCoroutine(C_QuitDelay());
     }

@@ -94,7 +94,7 @@ public class DiscManager : MonoBehaviour
 
         ambient.Stop();
 
-        PersistentData.Instance.BuildNavigator.RequestMenu();
+        PersistentData.Instance.BuildNavigator.NoSaveToMenu();
     }
 
 

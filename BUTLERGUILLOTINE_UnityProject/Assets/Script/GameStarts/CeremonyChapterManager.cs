@@ -85,7 +85,7 @@ public class CeremonyChapterManager : ChapterManagerGeneric
     
     IEnumerator C_Start()
     {
-        gameManager.ScreenEffects.FadeTo(1, 0.01f);
+        gameManager.ScreenEffects.SetBlackScreenAlpha(1);
         PersistentData.Instance.MusicVolume = 0;
 
         yield return new WaitForSeconds(2f);

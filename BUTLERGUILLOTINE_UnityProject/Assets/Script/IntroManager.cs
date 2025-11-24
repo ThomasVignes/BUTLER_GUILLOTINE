@@ -50,8 +50,8 @@ public class IntroManager : ChapterManagerGeneric
     {
         Intro = true;
 
-        
-        gameManager.ScreenEffects.FadeTo(1, 0.01f);
+
+        gameManager.ScreenEffects.SetBlackScreenAlpha(1);
 
         yield return new WaitForSeconds(2.3f);
 

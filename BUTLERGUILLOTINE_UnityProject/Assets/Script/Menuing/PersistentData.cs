@@ -15,6 +15,7 @@ public class PersistentData : MonoBehaviour
 
     [Header("Data")]
     public string CurrentScene;
+    public int CurrentSceneIndex;
 
     [Header("Settings")]
     public FullScreenMode Screen;
@@ -63,10 +64,13 @@ public class PersistentData : MonoBehaviour
 #if UNITY_EDITOR
         if (SaveInEditor)
             LoadData();
-#else
-        LoadData();
+
+        QuickInit();
+
+        return;
 #endif
 
+        LoadData();
         QuickInit();
     }
 
@@ -119,30 +123,21 @@ public class PersistentData : MonoBehaviour
         sfxMultiplier = 1;
     }
 
+    public void ResetProgress()
+    {
+        CurrentScene = "";
+        CurrentSceneIndex = 0;
+        FinishedOnce = false;
+        HasKey = false;
+
+        SaveData(true);
+    }
+
     //Saving
     [ContextMenu("Save Data")]
     public void SaveData()
     {
-        //int increment = 0;
-
-        CurrentScene = SceneManager.GetActiveScene().name;
-
-        var data = new SaveData(CurrentScene, FinishedOnce, HasKey, Screen, Stereo, Framerate, Vsync, PostProcessAffectsUI);
-        var json = JsonUtility.ToJson(data, true);
-
-        string fullPath = Application.dataPath + savePath + "SaveData";
-
-        /*
-        while (File.Exists(fullPath + ".txt"))
-        {
-            increment++;
-            fullPath = Application.dataPath + savePath + "SaveData";
-        }
-        */
-
-        File.WriteAllText(fullPath + ".txt", json);
-
-        Debug.Log("Created " + "SaveData" + ".txt " + " at " + savePath);
+        SaveData(true);
     }
 
     [ContextMenu("Load Data")]
@@ -168,6 +163,7 @@ public class PersistentData : MonoBehaviour
     public void ApplyData(SaveData saveData)
     {
         CurrentScene = saveData.GeneralData.CurrentScene;
+        CurrentSceneIndex = saveData.GeneralData.CurrentSceneIndex;
 
         FinishedOnce = saveData.DemoTriggers.FinishedOnce;
         HasKey = saveData.DemoTriggers.HasKey;
@@ -181,16 +177,17 @@ public class PersistentData : MonoBehaviour
         PostProcessAffectsUI = settings.PostProcessAffectsUI;
     }
 
-    public void SaveData(bool noScene)
+    public void SaveData(bool saveCurrentScene)
     {
         //int increment = 0;
 
-        if (noScene)
-            CurrentScene = "";
-        else
+        if (saveCurrentScene)
+        {
             CurrentScene = SceneManager.GetActiveScene().name;
+            CurrentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        }
 
-        var data = new SaveData(CurrentScene, FinishedOnce, HasKey, Screen, Stereo, Framerate, Vsync, PostProcessAffectsUI);
+        var data = new SaveData(CurrentScene, CurrentSceneIndex, FinishedOnce, HasKey, Screen, Stereo, Framerate, Vsync, PostProcessAffectsUI);
         var json = JsonUtility.ToJson(data, true);
 
         string fullPath = Application.dataPath + savePath + "SaveData";
@@ -216,10 +213,11 @@ public class SaveData
     public Settings Settings;
     public DemoTriggers DemoTriggers;
 
-    public SaveData(string currentScene, bool finishedOnce, bool hasKey, FullScreenMode screen, bool stereo, int framerate, bool vsync,bool postprocessui)
+    public SaveData(string currentScene, int currentSceneIndex, bool finishedOnce, bool hasKey, FullScreenMode screen, bool stereo, int framerate, bool vsync,bool postprocessui)
     {
         GeneralData = new GeneralData();
         GeneralData.CurrentScene = currentScene;
+        GeneralData.CurrentSceneIndex = currentSceneIndex;
 
         DemoTriggers = new DemoTriggers();
         DemoTriggers.FinishedOnce = finishedOnce;
@@ -249,6 +247,7 @@ public class Settings
 public class GeneralData
 {
     public string CurrentScene;
+    public int CurrentSceneIndex;
 }
 
 
