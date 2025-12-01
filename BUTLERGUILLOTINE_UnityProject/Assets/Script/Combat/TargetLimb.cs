@@ -4,15 +4,14 @@ using UnityEngine;
 using UnityEngine.Events;
 using Whumpus;
 
-public class TargetLimb : MonoBehaviour
+public class TargetLimb : Hurtbox
 {
+    [Header("Limb Settings")]
     public Lifeform Owner;
     public int Multiplier = 1;
     public float StunMultiplier = 1;
     public float ForceMultiplier = 1;
     public RagdollLimb limb;
-    public UnityEvent OnHit;
-    public bool NoBlood;
 
     [Header("Immunity")]
     public bool Immune;
@@ -46,7 +45,7 @@ public class TargetLimb : MonoBehaviour
             shield.Absorb(damage * Multiplier);
         }
 
-        OnHit.Invoke();
+        Hit();
     }
 
     public void MakeVulnerable()

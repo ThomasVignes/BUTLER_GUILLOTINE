@@ -19,7 +19,7 @@ public class Lifeform : MonoBehaviour
         Hurt(1);
     }
 
-    public void Hurt(int damage)
+    public virtual void Hurt(int damage)
     {
         if (dead)
             return;
@@ -28,7 +28,6 @@ public class Lifeform : MonoBehaviour
 
         if (HP <= 0)
             Death();
-
     }
 
     public void Stun(float stunDamage)

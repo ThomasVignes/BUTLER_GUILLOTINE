@@ -42,10 +42,49 @@ public class JerController : PlayerController
 
         base.Special(spot, hitObject);
 
+        animator.SetTrigger("Shoot");
+
+        gunshotEmitter.Play();
+
+        GameManager.Instance.HitstopManager.StartHitstop();
+
+        Hurtbox hurtbox = hitObject.GetComponent<Hurtbox>();
+        TargetLimb targetLimb = hitObject.GetComponent<TargetLimb>();
+
+        GameObject go = Instantiate(muzzleParticle, muzzle.transform.position, muzzle.transform.rotation);
+
+        if (targetLimb != null)
+            HitLimb(spot, hitObject, targetLimb);
+        else if (hurtbox != null)
+            HitHurtbox(spot, hurtbox);
+
+    }
+
+    private void HitHurtbox(Vector3 spot, Hurtbox hurtbox)
+    {
+        hurtbox.Hit();
+
+        GameObject particle = null;
+
+        if (hurtbox.NoBlood)
+        {
+            particle = Instantiate(shootParticle, spot, Quaternion.identity);
+            EffectsManager.Instance.audioManager.Play("Surface");
+        }
+        else
+        {
+            particle = Instantiate(bloodParticle, spot, Quaternion.identity);
+            EffectsManager.Instance.audioManager.Play("Blood");
+        }
+
+        particle.transform.LookAt(transform.position + Vector3.up * 2f);
+    }
+
+    private void HitLimb(Vector3 spot, GameObject hitObject, TargetLimb targetLimb)
+    {
         var shotLifeform = false;
         var shielded = false;
-
-        TargetLimb targetLimb = hitObject.GetComponent<TargetLimb>();
+        GameObject particle = null;
 
         if (targetLimb != null && targetLimb.Owner != lifeform)
         {
@@ -68,17 +107,9 @@ public class JerController : PlayerController
             shotLifeform = true;
         }
 
-        animator.SetTrigger("Shoot");
-
-        gunshotEmitter.Play();
-
-        GameManager.Instance.HitstopManager.StartHitstop();
-
-        GameObject go = Instantiate(muzzleParticle, muzzle.transform.position, muzzle.transform.rotation);
-
         if (shielded)
         {
-            go = Instantiate(shootParticle, spot, Quaternion.identity);
+            particle = Instantiate(shootParticle, spot, Quaternion.identity);
             EffectsManager.Instance.audioManager.Play("Shield");
         }
         else
@@ -87,22 +118,22 @@ public class JerController : PlayerController
             {
                 if (targetLimb.NoBlood)
                 {
-                    go = Instantiate(shootParticle, spot, Quaternion.identity);
+                    particle = Instantiate(shootParticle, spot, Quaternion.identity);
                     EffectsManager.Instance.audioManager.Play("Shield");
                 }
                 else
                 {
-                    go = Instantiate(bloodParticle, spot, Quaternion.identity);
+                    particle = Instantiate(bloodParticle, spot, Quaternion.identity);
                     EffectsManager.Instance.audioManager.Play("Blood");
                 }
 
-                go.transform.LookAt(transform.position + Vector3.up * 2f);
+                particle.transform.LookAt(transform.position + Vector3.up * 2f);
 
-               
+
             }
             else
             {
-                go = Instantiate(shootParticle, spot, Quaternion.identity);
+                particle = Instantiate(shootParticle, spot, Quaternion.identity);
                 EffectsManager.Instance.audioManager.Play("Surface");
             }
         }
