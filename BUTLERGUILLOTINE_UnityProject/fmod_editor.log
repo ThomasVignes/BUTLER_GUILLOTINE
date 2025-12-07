@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001414AAF1BC8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000014049FBBD48 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -19,187 +19,78 @@
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001420D131488, queue head = 000001424A2A01F8, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001420D131488
-[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 172052640
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 102048
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001420D5AA680
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='[ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling', format=5, channels=2, frequency=48000, lengthbytes=297504, lengthpcm=868937, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.922546.
-[LOG] SystemI::createSound                     :     filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001420D12BB18, queue head = 000001424A2A01F8, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001420D131488
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001420D12BB18
-[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 172052640
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 102048
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001420D5AA040
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1000
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Waltz in A flat major 'Farewell', Op. 69 no. 1_SLOWED', format=5, channels=2, frequency=48000, lengthbytes=3568800, lengthpcm=18528548, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.504608.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001420D12BB18
-[LOG] SoundI::release                          : Five sharakan of Saak Partev (000001420D13A908)
-[LOG] SoundI::release                          :     Five sharakan of Saak Partev (0000014254D74498)
-[LOG] SoundI::release                          :     Five sharakan of Saak Partev (000001420D1394C8)
-[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/SFX.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000014219B959F8, queue head = 000001424A2A01F8, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000014219B959F8
-[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/SFX.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1092352
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 49216
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001420D5AA540
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3946
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='gramophone-starts-plays-and-stops-27493', format=5, channels=2, frequency=48000, lengthbytes=350112, lengthpcm=1310976, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.870239.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000014219B959F8
-[LOG] SoundI::release                          : gramophone-starts-plays-and-stops-27493 (0000014219B959F8)
-[LOG] SoundI::release                          :     gramophone-starts-plays-and-stops-27493 (0000014254D73FB8)
-[LOG] SoundI::release                          :     gramophone-starts-plays-and-stops-27493 (0000014219B95F08)
-[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/SFX.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000014219B959F8, queue head = 000001424A2A01F8, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000014219B959F8
-[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/SFX.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1092352
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 49216
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001420D5AA180
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3946
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='gramophone-starts-plays-and-stops-27493', format=5, channels=2, frequency=48000, lengthbytes=350112, lengthpcm=1310976, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.870239.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000014219B959F8
-[LOG] SoundI::release                          : gramophone-starts-plays-and-stops-27493 (0000014219B959F8)
-[LOG] SoundI::release                          :     gramophone-starts-plays-and-stops-27493 (0000014254D78738)
-[LOG] SoundI::release                          :     gramophone-starts-plays-and-stops-27493 (0000014219B976A8)
-[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/SFX.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000014219B95848, queue head = 000001424A2A01F8, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000014219B95848
-[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/SFX.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1092352
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 49216
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001420D5AA180
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3946
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='gramophone-starts-plays-and-stops-27493', format=5, channels=2, frequency=48000, lengthbytes=350112, lengthpcm=1310976, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.870239.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000014219B95848
-[LOG] SoundI::release                          : gramophone-starts-plays-and-stops-27493 (0000014219B95848)
-[LOG] SoundI::release                          :     gramophone-starts-plays-and-stops-27493 (0000014254D74B18)
-[LOG] SoundI::release                          :     gramophone-starts-plays-and-stops-27493 (0000014219B959F8)
-[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000014219B976A8, queue head = 000001424A2A01F8, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000014219B976A8
-[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 172052640
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 102048
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001420D5AA180
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='[ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling', format=5, channels=2, frequency=48000, lengthbytes=297504, lengthpcm=868937, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.922546.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000014219B976A8
-[LOG] SoundI::release                          : [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (000001420D131488)
-[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000014254D73C78)
-[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (000001420D12B968)
-[LOG] SoundI::release                          : [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000014219B976A8)
-[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000014254D78258)
-[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000014219B95848)
-[LOG] SoundI::release                          : Waltz in A flat major 'Farewell', Op. 69 no. 1_SLOWED (000001420D12BB18)
-[LOG] SoundI::release                          :     Waltz in A flat major 'Farewell', Op. 69 no. 1_SLOWED (0000014254D78F58)
-[LOG] SoundI::release                          :     Waltz in A flat major 'Farewell', Op. 69 no. 1_SLOWED (000001420D12C538)
-[LOG] SoundI::release                          :  (00000142554A24E8)
-[LOG] SoundI::release                          :     Lamento della ninfa -note (0000014254D720D8)
-[LOG] SoundI::release                          :  (00000142554A3BE8)
-[LOG] SoundI::release                          :     Hell (0000014254D70D58)
-[LOG] SoundI::release                          :  (0000014249DCFB18)
-[LOG] SoundI::release                          :     bullet-hit-metal-84818 (0000014254D6E318)
-[LOG] SoundI::release                          :  (00000142554A2658)
-[LOG] SoundI::release                          :     bullet-hit-metal-84818 1 (0000014254D6E658)
-[LOG] SoundI::release                          :  (0000014249DCF9A8)
-[LOG] SoundI::release                          :     clickCut (0000014254D77218)
-[LOG] SoundI::release                          :  (0000014249DCF108)
-[LOG] SoundI::release                          :     dingCut (0000014254D6E178)
-[LOG] SoundI::release                          :  (00000142554A3EC8)
-[LOG] SoundI::release                          :     ding-small-bell-sfx-233008 (0000014254D72C38)
-[LOG] SoundI::release                          :  (0000014249DCF6C8)
-[LOG] SoundI::release                          :     Click (0000014254D76518)
-[LOG] SoundI::release                          :  (00000142554A3908)
-[LOG] SoundI::release                          :     Shield (0000014254D70058)
-[LOG] SoundI::release                          :  (00000142554A2208)
-[LOG] SoundI::release                          :     clank1-91862 (0000014254D70A18)
-[LOG] SoundI::release                          :  (0000014249DCE588)
-[LOG] SoundI::release                          :     SFX_Assault Single Shot (0000014254D6DE38)
-[LOG] SoundI::release                          :  (00000142554A2C18)
-[LOG] SoundI::release                          :     tickCut (0000014254D72DD8)
-[LOG] SoundI::release                          :  (00000142554A2378)
-[LOG] SoundI::release                          :     Item (0000014254D6CF98)
-[LOG] SoundI::release                          :  (00000142554A3068)
-[LOG] SoundI::release                          :     vinyl-record-stop-lift-needle-08-35959 (0000014254D728F8)
-[LOG] SoundI::release                          :  (00000142554A2098)
-[LOG] SoundI::release                          :     Flesh (0000014254D6F838)
-[LOG] SoundI::release                          :  (00000142554A31D8)
-[LOG] SoundI::release                          :     Impact (0000014254D6F9D8)
-[LOG] SoundI::release                          :  (0000014249DCDCE8)
-[LOG] SoundI::release                          :     LeftStepSolid (0000014254D701F8)
-[LOG] SoundI::release                          :  (00000142554A27C8)
-[LOG] SoundI::release                          :     closing-large-metal-door-001-326819 (0000014254D6D958)
-[LOG] SoundI::release                          :  (0000014249DCF558)
-[LOG] SoundI::release                          :     Hit (0000014254D71BF8)
-[LOG] SoundI::release                          :  (0000014249DCF838)
-[LOG] SoundI::release                          :     SFX_Equip Assault Rifle (0000014254D6F018)
-[LOG] SoundI::release                          :  (00000142554A3A78)
-[LOG] SoundI::release                          :     Bloodsplash (0000014254D706D8)
-[LOG] SoundI::release                          :  (00000142554A2D88)
-[LOG] SoundI::release                          :     RightStepSolid (0000014254D70EF8)
-[LOG] SoundI::release                          :  (0000014249DCE6F8)
-[LOG] SoundI::release                          :     exploding-building-1-185114 (0000014254D713D8)
-[LOG] SoundI::release                          :  (0000014249DCF3E8)
-[LOG] SoundI::release                          :     unlock-padlock-deadbolt-on-door-001-8441 (0000014254D6E4B8)
-[LOG] SoundI::release                          :  (0000014249DCDFC8)
-[LOG] SoundI::release                          :     SmallClick (0000014254D6E998)
-[LOG] SoundI::release                          :  (00000142554A3628)
-[LOG] SoundI::release                          :     Polaroid (0000014254D70BB8)
-[LOG] SoundI::release                          :  (0000014249DCEE28)
-[LOG] SoundI::release                          :     SmallClickLoop (0000014254D6DFD8)
-[LOG] SoundI::release                          :  (00000142554A2938)
-[LOG] SoundI::release                          :     ticking-clock_1-27477 (0000014254D6D618)
-[LOG] SoundI::release                          :  (0000014249DCF278)
-[LOG] SoundI::release                          :     DoorOpen (0000014254D6F358)
-[LOG] SoundI::release                          :  (00000142554A2EF8)
-[LOG] SoundI::release                          :     Flesh1 (0000014254D6D2D8)
-[LOG] SoundI::release                          :  (00000142554A3798)
-[LOG] SoundI::release                          :     Flesh2 (0000014254D6E7F8)
-[LOG] SoundI::release                          :  (00000142554A3D58)
-[LOG] SoundI::release                          :     walking-upstairs-in-heels_light-step-40874 (0000014254D6D478)
-[LOG] SoundI::release                          :  (00000142554A3348)
-[LOG] SoundI::release                          :     LeftStepFabric (0000014254D71238)
+[LOG] SoundI::release                          : rain_heavy (00000140ED20CB58)
+[LOG] SoundI::release                          :     rain_heavy (00000141399FF938)
+[LOG] SoundI::release                          :     rain_heavy (00000140ED20E2F8)
+[LOG] SoundI::release                          : Lament (00000140ED20FFA8)
+[LOG] SoundI::release                          :     Lament (00000141399FF798)
+[LOG] SoundI::release                          :     Lament (00000140ED2109C8)
+[LOG] SoundI::release                          :  (0000014139FFF968)
+[LOG] SoundI::release                          :     Lamento della ninfa -note (0000014129586608)
+[LOG] SoundI::release                          :  (000001413A000AA8)
+[LOG] SoundI::release                          :     Hell (00000141295862C8)
+[LOG] SoundI::release                          :  (0000014139FFD9C8)
+[LOG] SoundI::release                          :     bullet-hit-metal-84818 (000001413A79AD18)
+[LOG] SoundI::release                          :  (0000014139FFE268)
+[LOG] SoundI::release                          :     bullet-hit-metal-84818 1 (000001412F10D588)
+[LOG] SoundI::release                          :  (0000014139FFE998)
+[LOG] SoundI::release                          :     clickCut (000001412EE1A748)
+[LOG] SoundI::release                          :  (0000014139FFCFB8)
+[LOG] SoundI::release                          :     dingCut (000001413A79AB78)
+[LOG] SoundI::release                          :  (0000014139FFDB38)
+[LOG] SoundI::release                          :     ding-small-bell-sfx-233008 (000001404AB476D8)
+[LOG] SoundI::release                          :  (0000014139FFE828)
+[LOG] SoundI::release                          :     Click (000001412EE1AF68)
+[LOG] SoundI::release                          :  (000001413A0004E8)
+[LOG] SoundI::release                          :     Shield (000001404AB48098)
+[LOG] SoundI::release                          :  (000001413A002038)
+[LOG] SoundI::release                          :     clank1-91862 (000001412F10DC08)
+[LOG] SoundI::release                          :  (0000014139FFCB68)
+[LOG] SoundI::release                          :     SFX_Assault Single Shot (000001412F0B6588)
+[LOG] SoundI::release                          :  (000001413A000D88)
+[LOG] SoundI::release                          :     tickCut (000001412F0B6D78)
+[LOG] SoundI::release                          :  (000001413A0007C8)
+[LOG] SoundI::release                          :     Item (000001412F10C8B8)
+[LOG] SoundI::release                          :  (0000014139FFD408)
+[LOG] SoundI::release                          :     vinyl-record-stop-lift-needle-08-35959 (000001412F10D8C8)
+[LOG] SoundI::release                          :  (0000014139FFD298)
+[LOG] SoundI::release                          :     Flesh (000001404AB47EF8)
+[LOG] SoundI::release                          :  (000001413A001798)
+[LOG] SoundI::release                          :     Impact (000001412F0B6F18)
+[LOG] SoundI::release                          :  (000001413A0014B8)
+[LOG] SoundI::release                          :     LeftStepSolid (000001412F0B5BC8)
+[LOG] SoundI::release                          :  (0000014139FFC718)
+[LOG] SoundI::release                          :     closing-large-metal-door-001-326819 (000001412F10CBF8)
+[LOG] SoundI::release                          :  (0000014139FFDE18)
+[LOG] SoundI::release                          :     Hit (000001413A79A838)
+[LOG] SoundI::release                          :  (0000014139FFE3D8)
+[LOG] SoundI::release                          :     SFX_Equip Assault Rifle (000001412EE1ADC8)
+[LOG] SoundI::release                          :  (0000014139FFD128)
+[LOG] SoundI::release                          :     Bloodsplash (000001412F10C718)
+[LOG] SoundI::release                          :  (0000014139FFC888)
+[LOG] SoundI::release                          :     RightStepSolid (000001412F0B73F8)
+[LOG] SoundI::release                          :  (0000014139FFCE48)
+[LOG] SoundI::release                          :     exploding-building-1-185114 (000001413A79B1F8)
+[LOG] SoundI::release                          :  (0000014139FFC9F8)
+[LOG] SoundI::release                          :     unlock-padlock-deadbolt-on-door-001-8441 (000001412F0B5D68)
+[LOG] SoundI::release                          :  (0000014139FFCCD8)
+[LOG] SoundI::release                          :     SmallClick (000001413A79AEB8)
+[LOG] SoundI::release                          :  (000001413A000C18)
+[LOG] SoundI::release                          :     Polaroid (000001412F10E288)
+[LOG] SoundI::release                          :  (0000014139FFF518)
+[LOG] SoundI::release                          :     SmallClickLoop (000001412F0B63E8)
+[LOG] SoundI::release                          :  (0000014139FFF688)
+[LOG] SoundI::release                          :     ticking-clock_1-27477 (000001412F0B7738)
+[LOG] SoundI::release                          :  (0000014139FFF7F8)
+[LOG] SoundI::release                          :     DoorOpen (000001412EE1AC28)
+[LOG] SoundI::release                          :  (000001413A001068)
+[LOG] SoundI::release                          :     Flesh1 (000001412F10DF48)
+[LOG] SoundI::release                          :  (0000014139FFE0F8)
+[LOG] SoundI::release                          :     Flesh2 (000001412F10CF38)
+[LOG] SoundI::release                          :  (000001413A000658)
+[LOG] SoundI::release                          :     walking-upstairs-in-heels_light-step-40874 (000001404AB47BB8)
+[LOG] SoundI::release                          :  (0000014139FFD578)
+[LOG] SoundI::release                          :     LeftStepFabric (000001412F0B6A38)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -210,4 +101,12 @@
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
-[ERR] assert                                   : assertion: 'gSystemInitCount == 0' failed
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.

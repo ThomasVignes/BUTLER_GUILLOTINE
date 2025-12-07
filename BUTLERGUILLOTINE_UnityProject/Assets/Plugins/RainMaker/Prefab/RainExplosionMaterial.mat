@@ -24,11 +24,10 @@ Material:
   m_Shader: {fileID: 4800000, guid: b7839dad95683814aa64166edc107ae2, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _EMISSION
+  m_ValidKeywords: []
   m_InvalidKeywords:
   - _FLIPBOOKBLENDING_OFF
-  m_LightmapFlags: 1
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -125,10 +124,10 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.3882353, g: 0.12914418, b: 0.011764695, a: 1}
+    - _BaseColor: {r: 0.1509434, g: 0.06430224, b: 0.024919897, a: 1}
     - _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.3882353, g: 0.12914418, b: 0.011764695, a: 1}
+    - _Color: {r: 0.1509434, g: 0.06430224, b: 0.024919897, a: 1}
     - _DirectionalLightDirection: {r: 80, g: 0, b: 0, a: 0}
     - _EmisColor: {r: 0.2, g: 0.2, b: 0.2, a: 0}
     - _EmissionColor: {r: 0.3882353, g: 0.011764706, b: 0.078431375, a: 1}

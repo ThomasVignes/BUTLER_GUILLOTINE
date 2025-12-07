@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638991683317475711
+  lastModified: 639007487066351881
   FileSizes: []
   Exists: 1
 --- !u!114 &-9055472500416064339
@@ -601,6 +601,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 96777
+--- !u!114 &-6673682438068313791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Lament - Loop1 with rain
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Lament - Loop1 with rain
+  Guid:
+    Data1: -1091683433
+    Data2: 1251576606
+    Data3: 809765266
+    Data4: 223000781
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 108042
 --- !u!114 &-6633441026754162406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,6 +673,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 210
+--- !u!114 &-6020787268622745379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/Yucem/Lament - Original
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/Yucem/Lament - Original
+  Guid:
+    Data1: 1017532869
+    Data2: 1316067808
+    Data3: 667049898
+    Data4: 1439960259
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 108042
 --- !u!114 &-6012191334215899956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -956,6 +1010,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 104
+--- !u!114 &-4364515167018662019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/Yucem/I want out - Original
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/Yucem/I want out - Original
+  Guid:
+    Data1: 1437898229
+    Data2: 1117433517
+    Data3: 1641341326
+    Data4: 1750871991
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 136071
 --- !u!114 &-4272062016179541531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1205,6 +1286,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 288962
+--- !u!114 &-2691028523600717783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/I want out - Loop1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/I want out - Loop1
+  Guid:
+    Data1: 1756116851
+    Data2: 1338718690
+    Data3: 1687479483
+    Data4: 330179705
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 136071
+--- !u!114 &-2668408937425968933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Lament - Loop1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Lament - Loop1
+  Guid:
+    Data1: -1499975185
+    Data2: 1268550221
+    Data3: -468445807
+    Data4: -1118550186
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 108042
 --- !u!114 &-2539943976003986179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1396,33 +1531,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 288192
---- !u!114 &-2006629683417097575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/New/FullSamples/When you say your last goodbye - Original
-  m_EditorClassIdentifier: 
-  Path: event:/Music/New/FullSamples/When you say your last goodbye - Original
-  Guid:
-    Data1: -1820718197
-    Data2: 1321420608
-    Data3: -959045745
-    Data4: 2078116021
-  Banks:
-  - {fileID: 6000090139453766909}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 198720
 --- !u!114 &-1665567614815600494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1548,10 +1656,10 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638991680168943014
+  lastModified: 639007486308522071
   FileSizes:
   - Name: 
-    Value: 8270
+    Value: 8568
   Exists: 1
 --- !u!114 &-575617319912871658
 MonoBehaviour:
@@ -1811,7 +1919,6 @@ MonoBehaviour:
   - {fileID: -7648581628803763296}
   - {fileID: 7384167532115958095}
   - {fileID: -3575811796443829714}
-  - {fileID: -2006629683417097575}
   - {fileID: 3857108615686787570}
   - {fileID: -8095388125163459007}
   - {fileID: 2275362959707124511}
@@ -1823,12 +1930,19 @@ MonoBehaviour:
   - {fileID: -395896314932623101}
   - {fileID: 7668076105319184831}
   - {fileID: -1631003658308494850}
+  - {fileID: 3038654970404732280}
+  - {fileID: -2691028523600717783}
+  - {fileID: -6020787268622745379}
+  - {fileID: -2668408937425968933}
+  - {fileID: -4364515167018662019}
+  - {fileID: 7461939213468632012}
+  - {fileID: -6673682438068313791}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6000090139453766909}
   StringsBanks:
   - {fileID: -786783328031392545}
-  cacheTime: 638991683317475711
+  cacheTime: 639007487066351881
   cacheVersion: 131632
 --- !u!114 &22184083051153766
 MonoBehaviour:
@@ -2167,6 +2281,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 280080
+--- !u!114 &3038654970404732280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/Yucem/When you say your last goodbye - Original
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/Yucem/When you say your last goodbye - Original
+  Guid:
+    Data1: -1820718197
+    Data2: 1321420608
+    Data3: -959045745
+    Data4: 2078116021
+  Banks:
+  - {fileID: 6000090139453766909}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 198720
 --- !u!114 &3119421329380199781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2732,7 +2873,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638991680168933012
+  lastModified: 639007486308502073
   FileSizes: []
   Exists: 1
 --- !u!114 &6003941878807412242
@@ -3006,6 +3147,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 25
   Length: 0
+--- !u!114 &7461939213468632012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Rain
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Rain
+  Guid:
+    Data1: -1611814600
+    Data2: 1337884667
+    Data3: 462837905
+    Data4: 788421580
+  Banks:
+  - {fileID: 7964605896639709159}
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 54706
 --- !u!114 &7552557879596262747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3104,7 +3273,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638991680169503343
+  lastModified: 639007486321049269
   FileSizes: []
   Exists: 1
 --- !u!114 &8220398745391023416
