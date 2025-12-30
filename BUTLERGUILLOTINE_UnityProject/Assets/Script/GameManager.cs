@@ -1009,6 +1009,25 @@ public class GameManager : MonoBehaviour
         player.ResetState();
     }
 
+    Transform playerLockObject;
+
+    public void LockPlayerToObject(Transform transform)
+    {
+        player.LockToObject(transform);
+
+        playerLockObject = transform;
+    }
+
+    public void UnlockPlayerFromObject()
+    {
+        if (playerLockObject == null)
+            return;
+
+        player.UnlockFromObject();
+
+        playerLockObject = null;
+    }
+
     public void TeleportPlayer(Vector3 pos, Quaternion rot)
     {
         player.Freeze(true);

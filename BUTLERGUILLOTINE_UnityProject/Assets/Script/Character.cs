@@ -51,8 +51,9 @@ public class Character : MonoBehaviour
     public bool Running { get { return running; } }
     public CursorType CursorType { get { return cursorType; } }
 
-    public bool Initialized {  get { return init; } }  
+    public bool Initialized {  get { return init; } }
 
+    protected Transform originalParent;
 
     public virtual void Init()
     {
@@ -357,6 +358,54 @@ public class Character : MonoBehaviour
     public void HoldAnim()
     {
 
+    }
+
+    public void LockToObject(Transform targetTransform)
+    {
+        Freeze(true);
+        Vector3 originalPos = transform.position;
+        Quaternion originalRot = transform.rotation;
+
+        originalParent = transform.parent;
+
+        transform.SetParent(targetTransform);
+
+        transform.position = originalPos;
+        transform.rotation = originalRot;
+    }
+
+    public void UnlockFromObject()
+    {
+        transform.SetParent(null);
+        Freeze(false);
+
+        Vector3 originalPos = transform.position;
+        Quaternion originalRot = transform.rotation;
+
+        transform.SetParent(originalParent);
+
+        transform.position = originalPos;
+        transform.rotation = originalRot;
+    }
+
+    public void Freeze(bool frozen)
+    {
+        /*
+        if (rb != null) 
+            rb.isKinematic = frozen;
+        */
+
+        if (agent != null)
+            agent.enabled = !frozen;
+
+        /*
+        if (frozen)
+        {
+            copyPosRot.enabled = true;
+            copyPosRot.Step();
+            copyPosRot.enabled = false;
+        }
+        */
     }
 
     public void TeleportCharacter(Transform transform)
