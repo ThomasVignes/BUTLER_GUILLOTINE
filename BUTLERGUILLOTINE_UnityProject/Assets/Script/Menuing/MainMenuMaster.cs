@@ -112,6 +112,7 @@ public class MainMenuMaster : MonoBehaviour
         if (!moving)
             return;
 
+
         var spot = Spots[targetSpot].position;
 
         if (Vector3.Distance(Elevator.position, spot) > Time.deltaTime)

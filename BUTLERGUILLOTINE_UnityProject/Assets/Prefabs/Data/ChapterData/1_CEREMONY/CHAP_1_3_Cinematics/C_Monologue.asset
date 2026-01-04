@@ -78,13 +78,6 @@ MonoBehaviour:
     cameraEffect: 0
     newAmbience: 
     soundEffects: []
-  - Text: That killed Raymond.
-    Duration: 8
-    PuppetActions: []
-    cameraIndex: 0
-    cameraEffect: 0
-    newAmbience: 
-    soundEffects: []
   - Text: And didn't stop anything.
     Duration: 8
     PuppetActions: []
@@ -165,4 +158,8 @@ MonoBehaviour:
     newAmbience: 
     soundEffects: []
   EndBlackScreenDuration: 1
+  HidePlayer: 0
+  NoEndBlackscreen: 0
+  NoFadeOut: 0
+  OverrideKeepsGoing: 0
   ResumeTheme: Despair
