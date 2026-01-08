@@ -65,4 +65,19 @@ public class Lifeform : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void DeathNoRagdoll()
+    {
+        if (dead)
+            return;
+
+        OnDeath?.Invoke();
+
+        dead = true;
+
+        if (Character != null)
+            GameManager.Instance.RemoveCharacter(Character);
+
+        Destroy(gameObject);
+    }
 }

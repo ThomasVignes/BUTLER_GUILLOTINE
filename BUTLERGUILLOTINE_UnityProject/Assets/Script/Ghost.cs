@@ -7,6 +7,8 @@ using UnityEngine.Rendering.Universal;
 
 public class Ghost : MonoBehaviour
 {
+    public bool Manual;
+    public bool StartVanished;
     [SerializeField] LayerMask PlayerMask;
     [SerializeField] List<SkinnedMeshRenderer> skinnedMeshRenderer = new List<SkinnedMeshRenderer>();
     [SerializeField] List<MeshRenderer> meshRenderer = new List<MeshRenderer>();
@@ -14,11 +16,31 @@ public class Ghost : MonoBehaviour
     [SerializeField] Animator animator;
 
     bool fading;
-    
+
+    private void Start()
+    {
+        if (StartVanished)
+        {
+            foreach (var renderer in skinnedMeshRenderer)
+            {
+                renderer.material.DOFade(0, 0.005f);
+            }
+
+            foreach (var renderer in meshRenderer)
+            {
+                renderer.material.DOFade(0, 0.005f);
+            }
+
+            decal.gameObject.SetActive(false);
+        }
+    }
 
 
     private void OnEnable()
     {
+        if (Manual)
+            return;
+
         fading = false;
         foreach (var renderer in skinnedMeshRenderer)
         {
@@ -36,7 +58,10 @@ public class Ghost : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-    { 
+    {
+        if (Manual)
+            return;
+
         if (other.gameObject.layer == WhumpusUtilities.ToLayer(PlayerMask) && !fading)
         {
             fading = true;
@@ -52,5 +77,41 @@ public class Ghost : MonoBehaviour
 
             decal.gameObject.SetActive(false);
         }
+    }
+
+    public void ManualAppear()
+    {
+        if (!Manual)
+            return;
+
+        foreach (var renderer in skinnedMeshRenderer)
+        {
+            renderer.material.DOFade(1, 0.4f);
+        }
+
+        foreach (var renderer in meshRenderer)
+        {
+            renderer.material.DOFade(1, 0.4f);
+        }
+
+        decal.gameObject.SetActive(true);
+    }
+
+    public void ManualVanish()
+    {
+        if (!Manual)
+            return;
+
+        foreach (var renderer in skinnedMeshRenderer)
+        {
+            renderer.material.DOFade(0, 0.4f);
+        }
+
+        foreach (var renderer in meshRenderer)
+        {
+            renderer.material.DOFade(0, 0.4f);
+        }
+
+        decal.gameObject.SetActive(false);
     }
 }

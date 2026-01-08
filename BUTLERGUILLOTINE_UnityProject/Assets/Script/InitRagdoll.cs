@@ -16,6 +16,9 @@ public class InitRagdoll : MonoBehaviour
     [SerializeField] bool freezeAfterDelay;
     [SerializeField] float secondsBeforeFreeze;
 
+    [Header("Utility")]
+    public Rigidbody torsoRb;
+
     bool done;
     float timer;
 

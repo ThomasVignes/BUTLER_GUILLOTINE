@@ -5,12 +5,12 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Animations.Rigging;
 using Whumpus;
-using static Cinemachine.CinemachineOrbitalTransposer;
 
 public class RuthController : PlayerController
 {
     [Header("Ruth Settings")]
-    [SerializeField] LayerMask orderableLayer;
+    [SerializeField] LayerMask targetLayer;
+    [SerializeField] LayerMask portalLayer, enemyLayer;
     [SerializeField] LayerMask ignoreLayer;
     [SerializeField] float drawDelay;
     [SerializeField] float castTime;
@@ -20,6 +20,11 @@ public class RuthController : PlayerController
     [SerializeField] ParticleSystem snapFx;
     [SerializeField] Rig rig;
     [SerializeField] Transform aimTarg;
+
+    [Header("Orderables")]
+    [SerializeField] OrderedCharacter photographer;
+    [SerializeField] OrderableFighter fighter;
+    [SerializeField] Transform orderableSpawn;
 
     
     LayerMask moveLayer;
@@ -42,6 +47,9 @@ public class RuthController : PlayerController
         moveLayer = GameManager.Instance.MoveLayer;
         interactLayer = GameManager.Instance.InteractLayer;
         wallLayer = GameManager.Instance.WallLayer;
+
+        photographer.Init(transform);
+        fighter.Init(transform);
     }
 
     public override void Step()
@@ -91,6 +99,17 @@ public class RuthController : PlayerController
                 recovery = false;
             }
         }
+
+        photographer.Step();
+        fighter.Step();
+    }
+
+    public override void ConstantStep()
+    {
+        base.ConstantStep();
+
+        photographer.ConstantStep();
+        fighter.ConstantStep();
     }
 
     public override void Special(Vector3 spot, GameObject hitObject)
@@ -103,44 +122,35 @@ public class RuthController : PlayerController
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, orderableLayer))
+        bool hitSomething = false;
+
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, enemyLayer) && !hitSomething)
         {
-            OrderedCharacter ord = hit.transform.gameObject.GetComponent<OrderedCharacter>();
+            TargetLimb targetLimb = hit.transform.GetComponent<TargetLimb>();
 
-            if (ord != null)
+            if (targetLimb != null && targetLimb.Owner.gameObject.GetComponent<EnemyAI>() != null)
             {
-                if (!ord.Selected)
-                    ord.Select(true);
-
-                ord.Pause();
-
-                if (orderedCharacter != null && orderedCharacter != ord)
-                    orderedCharacter.Select(false);
-
-                orderedCharacter = ord;
+                fighter.Summon(orderableSpawn.position, targetLimb.Owner.transform);
+                hitSomething = true;
             }
+        }
 
+        //Add portal layer here
+
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, targetLayer) && !hitSomething)
+        {
+            photographer.SummonNoTarget(orderableSpawn.position, hit.point);
+            hitSomething = true;
+        }
+
+        if (hitSomething)
+        {
             animator.SetTrigger("Snap");
             snapFx.Play();
+
+            castTimer = Time.time + castTime;
+            recovery = true;
         }
-        else
-        {
-            if (orderedCharacter != null)
-            {
-                if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~ignoreLayer))
-                {
-                    orderedCharacter.ToggleRun(true);
-                    //orderedCharacter.SetDestination(hit.point);
-                    TryOrder(orderedCharacter);
-
-                    animator.SetTrigger("Clap");
-                }
-            }
-        }
-
-        castTimer = Time.time + castTime;
-        recovery = true;
-
     }
 
     public override void ToggleSpecial(bool active)
@@ -220,7 +230,7 @@ public class RuthController : PlayerController
 
         if (orderedCharacter == null)
         {
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, orderableLayer))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, targetLayer))
                 cursorType = CursorType.AimLook;
             else
                 cursorType = CursorType.Aim;
@@ -235,7 +245,7 @@ public class RuthController : PlayerController
             return;
         }
 
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, orderableLayer))
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, targetLayer))
         {
             cursorType = CursorType.AimLook;
             return;

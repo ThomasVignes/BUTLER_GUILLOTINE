@@ -36,10 +36,10 @@ public class PlayerSwapper : MonoBehaviour
     [ContextMenu("Manual Swap")]
     public void Swap()
     {
-        StartCoroutine(C_SwapDelay());
+        SwapTo(targetPos);
     }
 
-    IEnumerator C_SwapDelay()
+    IEnumerator C_SwapDelay(Transform targetPos)
     {
         yield return new WaitForSeconds(swapDelay);
 
@@ -50,15 +50,25 @@ public class PlayerSwapper : MonoBehaviour
 
     public void SwapBack()
     {
-        StartCoroutine(C_SwapBackDelay());
+        SwapBackTo(originalTargetPos);
     }
 
-    IEnumerator C_SwapBackDelay()
+    IEnumerator C_SwapBackDelay(Transform targetPos)
     {
         yield return new WaitForSeconds(swapDelay);
 
-        GameManager.Instance.SwapPlayer(original, originalTargetPos, hideOriginal);
+        GameManager.Instance.SwapPlayer(original, targetPos, hideOriginal);
 
         onBack?.Invoke();
+    }
+
+    public void SwapTo(Transform targetPos)
+    {
+        StartCoroutine(C_SwapDelay(targetPos));
+    }
+
+    public void SwapBackTo(Transform targetPos)
+    {
+        StartCoroutine(C_SwapBackDelay(targetPos));
     }
 }
