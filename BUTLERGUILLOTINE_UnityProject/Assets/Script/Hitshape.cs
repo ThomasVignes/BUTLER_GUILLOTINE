@@ -13,6 +13,8 @@ public class Hitshape : MonoBehaviour
     [SerializeField] float linger;
     [SerializeField] GameObject hitFx;
     [SerializeField] string hitSound;
+    public bool projectile;
+    public InitRagdoll linkedRagdoll;
 
     bool active;
     float lingerTimer;
@@ -21,11 +23,18 @@ public class Hitshape : MonoBehaviour
     private void Awake()
     {
         col = GetComponent<Collider>();
-        Disable();
+
+        if (projectile)
+            Trigger();
+        else
+            Disable();
     }
 
     private void Update()
     {
+        if (projectile)
+            return;
+
         if (active && lingerTimer < Time.time)
             Disable();
     }
@@ -52,15 +61,25 @@ public class Hitshape : MonoBehaviour
 
             if (targetLimb != null && targetLimb.Owner != owner)
             {
-                targetLimb.Hit(damage, stun, force, owner.transform.forward.normalized);
+                Vector3 dir = transform.forward.normalized;
+
+                if (!projectile)
+                    dir = owner.transform.forward.normalized;
+
+                targetLimb.Hit(damage, stun, force, dir);
 
                 Instantiate(hitFx, other.ClosestPoint(transform.position), Quaternion.identity);
 
+                if (projectile && linkedRagdoll != null)
+                {
+                    linkedRagdoll.Redirect(Vector3.Normalize(transform.position - targetLimb.Owner.transform.position), 3000);
+                }
 
                 if (hitSound != null) 
                     EffectsManager.Instance.audioManager.Play(hitSound);
                 
-                Disable();
+                if (!projectile)
+                    Disable();
             }
         }
     }

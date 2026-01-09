@@ -49,7 +49,7 @@ public class OrderedCharacter : MonoBehaviour
 
             if (!character.Moving && !character.Rotating)
             {
-                Vanish();
+                //Vanish();
             }
         }
     }

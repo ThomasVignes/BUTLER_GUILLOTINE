@@ -22,7 +22,7 @@ public class RuthController : PlayerController
     [SerializeField] Transform aimTarg;
 
     [Header("Orderables")]
-    [SerializeField] OrderedCharacter photographer;
+    [SerializeField] OrderablePhotographer photographer;
     [SerializeField] OrderableFighter fighter;
     [SerializeField] Transform orderableSpawn;
 
@@ -135,7 +135,16 @@ public class RuthController : PlayerController
             }
         }
 
-        //Add portal layer here
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, portalLayer) && !hitSomething)
+        {
+            Portal portal = hit.transform.GetComponent<Portal>();
+
+            if (portal != null)
+            {
+                photographer.Summon(orderableSpawn.position, portal.transform);
+                hitSomething = true;
+            }
+        }
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, targetLayer) && !hitSomething)
         {

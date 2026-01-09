@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 
@@ -10,12 +11,17 @@ public class OrderableFighter : OrderedCharacter
     [SerializeField] float grabPause;
     [SerializeField] float aimTime;
     [SerializeField] float throwForce;
+    [SerializeField] float autoAimRange;
+    [SerializeField] float rotationSpeed;
+    [SerializeField] LayerMask targetLayer;
     [SerializeField] Animator animator;
     [SerializeField] GameObject ragdoll;
     [SerializeField] ConfigurableJoint grabJoint;
     [SerializeField] Transform spawnPoint;
 
     bool aiming;
+
+    Transform targetEnemy;
 
     public override void Step()
     {
@@ -44,6 +50,17 @@ public class OrderableFighter : OrderedCharacter
             {
                 //Vanish();
             }
+        }
+
+        if (targetEnemy != null && aiming)
+        {
+            Vector3 targetPos = targetEnemy.position;
+
+            targetPos.y = character.transform.position.y;
+
+            var targetDir = Vector3.Normalize(targetPos - character.transform.position);
+
+            character.transform.forward = Vector3.Lerp(character.transform.forward, targetDir, rotationSpeed * Time.deltaTime);
         }
     }
     public override void TryAction()
@@ -84,6 +101,10 @@ public class OrderableFighter : OrderedCharacter
         aiming = true;
         animator.SetTrigger("Windup");
 
+        Collider[] cols = Physics.OverlapSphere(character.transform.position, autoAimRange, targetLayer);
+
+        targetEnemy = GetClosestEnemy(cols);
+
         yield return new WaitForSeconds(aimTime);
 
         aiming = false;
@@ -100,5 +121,22 @@ public class OrderableFighter : OrderedCharacter
 
 
         Vanish();
+    }
+
+    Transform GetClosestEnemy(Collider[] enemies)
+    {
+        Transform tMin = null;
+        float minDist = Mathf.Infinity;
+        Vector3 currentPos = character.transform.position;
+        foreach (Collider t in enemies)
+        {
+            float dist = Vector3.Distance(t.transform.position, currentPos);
+            if (dist < minDist)
+            {
+                tMin = t.transform;
+                minDist = dist;
+            }
+        }
+        return tMin;
     }
 }

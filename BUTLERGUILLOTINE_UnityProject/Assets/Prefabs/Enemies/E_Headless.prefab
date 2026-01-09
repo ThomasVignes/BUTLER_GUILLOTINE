@@ -717,15 +717,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1217c74f3d16d44bd759f5fd0adec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoBlood: 0
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
   Owner: {fileID: 5058911763272365292}
   Multiplier: 1
   StunMultiplier: 0.1
   ForceMultiplier: 3
   limb: {fileID: 2490655055501066039}
-  OnHit:
-    m_PersistentCalls:
-      m_Calls: []
-  NoBlood: 0
   Immune: 0
   ImmuneMessage: 
 --- !u!1 &220303725140135430
@@ -10119,6 +10119,7 @@ Transform:
   - {fileID: 4179895725682990649}
   - {fileID: 4552744031078884149}
   - {fileID: 7895119884513658623}
+  - {fileID: 8536263551691427273}
   m_Father: {fileID: 7739865424339407369}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18178,6 +18179,7 @@ MonoBehaviour:
   linger: 0.5
   hitFx: {fileID: 1336949550903370, guid: e3d4b96e27f004546ab7a8bc4fe37290, type: 3}
   hitSound: Impact
+  projectile: 0
 --- !u!135 &1478417668206942625
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -18601,15 +18603,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1217c74f3d16d44bd759f5fd0adec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoBlood: 0
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
   Owner: {fileID: 5058911763272365292}
   Multiplier: 1
   StunMultiplier: 0.1
   ForceMultiplier: 0.8
   limb: {fileID: 4481083525900844196}
-  OnHit:
-    m_PersistentCalls:
-      m_Calls: []
-  NoBlood: 0
   Immune: 0
   ImmuneMessage: 
 --- !u!1 &5435454460794439520
@@ -21727,6 +21729,59 @@ Transform:
   m_Father: {fileID: 5563972186008220453}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -56.851143, y: -144.99577, z: 125.08074}
+--- !u!1 &7475010801348442597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8536263551691427273}
+  - component: {fileID: 2307235361204104290}
+  m_Layer: 21
+  m_Name: Targ
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8536263551691427273
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7475010801348442597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.103, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6072582344177657825}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &2307235361204104290
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7475010801348442597}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.12
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7579982138660797342
 GameObject:
   m_ObjectHideFlags: 0
@@ -23699,15 +23754,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1217c74f3d16d44bd759f5fd0adec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoBlood: 0
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
   Owner: {fileID: 5058911763272365292}
   Multiplier: 10
   StunMultiplier: 1
   ForceMultiplier: 0.8
   limb: {fileID: 5924504070273111750}
-  OnHit:
-    m_PersistentCalls:
-      m_Calls: []
-  NoBlood: 0
   Immune: 0
   ImmuneMessage: 
 --- !u!114 &2922365027819364201
@@ -23820,15 +23875,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1217c74f3d16d44bd759f5fd0adec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoBlood: 0
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
   Owner: {fileID: 5058911763272365292}
   Multiplier: 1
   StunMultiplier: 0.1
   ForceMultiplier: 0.5
   limb: {fileID: 1412609391262793405}
-  OnHit:
-    m_PersistentCalls:
-      m_Calls: []
-  NoBlood: 0
   Immune: 0
   ImmuneMessage: 
 --- !u!1 &8223006406972986622
@@ -24347,15 +24402,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1217c74f3d16d44bd759f5fd0adec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoBlood: 0
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
   Owner: {fileID: 5058911763272365292}
   Multiplier: 1
   StunMultiplier: 0.1
   ForceMultiplier: 3
   limb: {fileID: 4146270794246473328}
-  OnHit:
-    m_PersistentCalls:
-      m_Calls: []
-  NoBlood: 0
   Immune: 0
   ImmuneMessage: 
 --- !u!1 &8501168665749806728
@@ -24654,15 +24709,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1217c74f3d16d44bd759f5fd0adec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoBlood: 0
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
   Owner: {fileID: 5058911763272365292}
   Multiplier: 1
   StunMultiplier: 0.1
   ForceMultiplier: 0.5
   limb: {fileID: 7461497164171418285}
-  OnHit:
-    m_PersistentCalls:
-      m_Calls: []
-  NoBlood: 0
   Immune: 0
   ImmuneMessage: 
 --- !u!1 &8602787212562012063

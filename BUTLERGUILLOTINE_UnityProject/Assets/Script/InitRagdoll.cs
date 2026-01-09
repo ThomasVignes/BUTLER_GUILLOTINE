@@ -77,4 +77,17 @@ public class InitRagdoll : MonoBehaviour
             }
         }
     }
+
+    public void Redirect(Vector3 dir, float force)
+    {
+        foreach (Transform item in transform.gameObject.GetComponentsInChildren<Transform>())
+        {
+            var rb = item.GetComponent<Rigidbody>();
+
+            if (rb)
+                rb.velocity = Vector3.zero;
+        }
+
+        torsoRb.AddForce(dir * force);
+    }
 }

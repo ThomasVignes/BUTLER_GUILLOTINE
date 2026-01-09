@@ -6,7 +6,7 @@ using DG.Tweening;
 
 public class ScreenEffects : MonoBehaviour
 {
-    [SerializeField] private Image blackScreen;
+    [SerializeField] private Image blackScreen, whiteScreen;
 
     public void StartFade()
     {
@@ -42,5 +42,19 @@ public class ScreenEffects : MonoBehaviour
         yield return new WaitForSeconds(delayWait + 1f);
 
         blackScreen.DOFade(0, 1f);
+    }
+
+    public void WhiteFadeInOut(float fadeInSpeed, float fadeOutSpeed, float delayWait)
+    {
+        StartCoroutine(C_WhiteFadeInOut(fadeInSpeed, fadeOutSpeed, delayWait));
+    }
+
+    IEnumerator C_WhiteFadeInOut(float fadeInSpeed, float fadeOutSpeed, float delayWait)
+    {
+        whiteScreen.DOFade(1, fadeInSpeed);
+
+        yield return new WaitForSeconds(delayWait);
+
+        whiteScreen.DOFade(0, fadeOutSpeed);
     }
 }

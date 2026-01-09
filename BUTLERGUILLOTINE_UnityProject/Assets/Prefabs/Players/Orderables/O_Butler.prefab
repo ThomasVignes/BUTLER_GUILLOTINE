@@ -2433,7 +2433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4876591654360299837}
-  - component: {fileID: 1853018146127224027}
+  - component: {fileID: 4351297371653068485}
   - component: {fileID: 9022230897775351983}
   m_Layer: 0
   m_Name: O_Butler
@@ -2458,7 +2458,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &1853018146127224027
+--- !u!114 &4351297371653068485
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2467,16 +2467,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7338391182415154023}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36a46f6eb6bcce140aaa1ca3ec2750e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 57e1da4b25c4b494aa8303144016122c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   role: 0
   runs: 1
   appearDuration: 0.7
-  timeBeforeAction: 0
-  timeBeforeFadeout: 0
+  timeBeforeAction: 1
+  timeBeforeFadeout: 0.8
   timeBeforeDeactivated: 1
-  actionDistance: 0.5
+  actionDistance: 2
   spawnDistanceFromTarget: 1.5
   character: {fileID: 6165016950517081190}
   ghostParams: {fileID: 9022230897775351983}

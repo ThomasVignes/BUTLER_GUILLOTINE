@@ -10667,6 +10667,11 @@ MonoBehaviour:
   grabPause: 1
   aimTime: 1.5
   throwForce: 30000
+  autoAimRange: 6
+  rotationSpeed: 10
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 2097152
   animator: {fileID: 127664176909336278}
   ragdoll: {fileID: 8321215766403675945, guid: 3affa3b35401e4b47b01ba2b98c598e8, type: 3}
   grabJoint: {fileID: 6864135275521611202}
