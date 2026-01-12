@@ -37,9 +37,20 @@ public class PortalDoor : Interactable
 
         base.InteractEffects(character);
 
+        StartCoroutine(C_Swap());
+    }
+
+    IEnumerator C_Swap()
+    {
+        GameManager.Instance.ScreenEffects.FadeTo(1, 0.1f);
+
+        yield return new WaitForSeconds(0.1f);
+
         if (isLinked)
             playerSwapper.SwapBackTo(target);
         else
             playerSwapper.SwapTo(target);
+
+        GameManager.Instance.ScreenEffects.FadeTo(0, 0.1f);
     }
 }
