@@ -10,6 +10,8 @@ namespace DigitalRuby.RainMaker
 {
     public class RainScript : BaseRainScript
     {
+        public bool Ready;
+
         [Tooltip("The height above the camera that the rain will start falling from")]
         public float RainHeight = 25.0f;
 
@@ -60,6 +62,8 @@ namespace DigitalRuby.RainMaker
         protected override void Start()
         {
             base.Start();
+
+            Ready = true;
         }
 
         protected override void Update()

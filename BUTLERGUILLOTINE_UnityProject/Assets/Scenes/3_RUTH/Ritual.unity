@@ -10364,6 +10364,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6151732730619191571, guid: f60f7466c4cba314694fe45576d22023, type: 3}
   m_PrefabInstance: {fileID: 2036401729}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &251015172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 160098, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 3}
+  m_PrefabInstance: {fileID: 1676903221}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &251015175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251015172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d50d0ea71aada0b4db7c344158673a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &267509423
 GameObject:
   m_ObjectHideFlags: 0
@@ -10444,6 +10461,7 @@ MonoBehaviour:
   ShotSpecificHide: []
   PathDamping: 1
   Offset: {x: 0, y: 0, z: 0}
+  Rain: 0
   switchObject: {fileID: 0}
   Vcam: {fileID: 0}
   active: 0
@@ -13847,6 +13865,7 @@ MonoBehaviour:
   ShotSpecificHide: []
   PathDamping: 1
   Offset: {x: 0, y: 0, z: 0}
+  Rain: 0
   switchObject: {fileID: 0}
   Vcam: {fileID: 0}
   active: 0
@@ -21739,6 +21758,7 @@ MonoBehaviour:
   ShotSpecificHide: []
   PathDamping: 1
   Offset: {x: 0, y: 0, z: 0}
+  Rain: 1
   switchObject: {fileID: 0}
   Vcam: {fileID: 0}
   active: 0
@@ -21853,6 +21873,7 @@ MonoBehaviour:
   ShotSpecificHide: []
   PathDamping: 1
   Offset: {x: 0, y: 0, z: 0}
+  Rain: 1
   switchObject: {fileID: 0}
   Vcam: {fileID: 0}
   active: 0
@@ -26356,6 +26377,7 @@ MonoBehaviour:
   ShotSpecificHide: []
   PathDamping: 1
   Offset: {x: 0, y: 0, z: 0}
+  Rain: 1
   switchObject: {fileID: 0}
   Vcam: {fileID: 0}
   active: 0
@@ -30350,31 +30372,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 847496669300740580, guid: d2b86dc0fb97f0346a2080a4fa1279e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.05278
+      value: 22.010015
       objectReference: {fileID: 0}
     - target: {fileID: 847496669300740580, guid: d2b86dc0fb97f0346a2080a4fa1279e6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -115.31875
+      value: 3.4299998
       objectReference: {fileID: 0}
     - target: {fileID: 847496669300740580, guid: d2b86dc0fb97f0346a2080a4fa1279e6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24.709751
+      value: -25.110004
       objectReference: {fileID: 0}
     - target: {fileID: 847496669300740580, guid: d2b86dc0fb97f0346a2080a4fa1279e6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.0228616
+      value: 0.26265776
       objectReference: {fileID: 0}
     - target: {fileID: 847496669300740580, guid: d2b86dc0fb97f0346a2080a4fa1279e6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.00031330436
+      value: 0.1881435
       objectReference: {fileID: 0}
     - target: {fileID: 847496669300740580, guid: d2b86dc0fb97f0346a2080a4fa1279e6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9994576
+      value: 0.7619417
       objectReference: {fileID: 0}
     - target: {fileID: 847496669300740580, guid: d2b86dc0fb97f0346a2080a4fa1279e6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.023702651
+      value: -0.56130016
       objectReference: {fileID: 0}
     - target: {fileID: 847496669300740580, guid: d2b86dc0fb97f0346a2080a4fa1279e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -30486,6 +30508,7 @@ MonoBehaviour:
   ShotSpecificHide: []
   PathDamping: 1
   Offset: {x: 0, y: 0, z: 0}
+  Rain: 1
   switchObject: {fileID: 0}
   Vcam: {fileID: 0}
   active: 0
@@ -31112,6 +31135,7 @@ MonoBehaviour:
   ShotSpecificHide: []
   PathDamping: 1
   Offset: {x: 0, y: 0, z: 0}
+  Rain: 1
   switchObject: {fileID: 0}
   Vcam: {fileID: 0}
   active: 0
@@ -33781,7 +33805,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 160098, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 251015175}
   m_SourcePrefab: {fileID: 100100000, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 3}
 --- !u!1 &1693893166
 GameObject:
@@ -38083,7 +38110,7 @@ MonoBehaviour:
     m_Bits: 512
   ignoreLayers:
     serializedVersion: 2
-    m_Bits: 14655
+    m_Bits: 4208959
   hitboxLayer:
     serializedVersion: 2
     m_Bits: 4096
@@ -40974,6 +41001,7 @@ MonoBehaviour:
   ShotSpecificHide: []
   PathDamping: 1
   Offset: {x: 0, y: 0, z: 0}
+  Rain: 1
   switchObject: {fileID: 0}
   Vcam: {fileID: 0}
   active: 0
