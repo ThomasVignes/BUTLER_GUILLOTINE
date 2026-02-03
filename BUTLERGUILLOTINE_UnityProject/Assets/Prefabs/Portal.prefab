@@ -83,37 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &1443683251856966891
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 281265834299437654}
-  m_Layer: 7
-  m_Name: Spot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &281265834299437654
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443683251856966891}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.52, y: -0.03, z: -0.23}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7575612173523347644}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2496371657727524677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,7 +1302,6 @@ Transform:
   m_Children:
   - {fileID: 773088358967553378}
   - {fileID: 6290144003384846168}
-  - {fileID: 281265834299437654}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1350,12 +1318,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portalDoor: {fileID: 7635372339858386911}
+  linkedDoor: {fileID: 0}
   swapper: {fileID: 0}
-  origin: {fileID: 281265834299437654}
-  target: {fileID: 0}
   body: {fileID: 5692670631928429575}
   door: {fileID: 4798522017351326451}
-  spot: {fileID: 281265834299437654}
+  spot: {fileID: 2298534756008882107}
 --- !u!65 &9117493079159590039
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1700,7 +1667,7 @@ PrefabInstance:
     - target: {fileID: 4824765598187108604, guid: c4d281d7b0c302f4e823cce046f65a96, type: 3}
       propertyPath: interactionSpot
       value: 
-      objectReference: {fileID: 281265834299437654}
+      objectReference: {fileID: 2298534756008882107}
     - target: {fileID: 7607862171534380496, guid: c4d281d7b0c302f4e823cce046f65a96, type: 3}
       propertyPath: m_Name
       value: PortalDoor
@@ -1763,6 +1730,11 @@ PrefabInstance:
       addedObject: {fileID: 3990516035932044743}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4d281d7b0c302f4e823cce046f65a96, type: 3}
+--- !u!4 &2298534756008882107 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3811524271417718936, guid: c4d281d7b0c302f4e823cce046f65a96, type: 3}
+  m_PrefabInstance: {fileID: 3099400201470580515}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4798522017351326451 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7607862171534380496, guid: c4d281d7b0c302f4e823cce046f65a96, type: 3}

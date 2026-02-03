@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5644401093365900433}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: C_ButlerGold_NoPhysics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,15 +23,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54505059535019754}
-  m_LocalRotation: {x: -0, y: -0.17976196, z: -0, w: 0.98371017}
+  m_LocalRotation: {x: 0, y: -0.17976373, z: 0, w: 0.9837098}
   m_LocalPosition: {x: 15.707, y: -3.815, z: -35.011}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6210416590438707472}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -85, z: 0}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: -20.712, z: 0}
 --- !u!1 &184912826230855445
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 3858698761503850882}
   - component: {fileID: 1024328660182269684}
   - component: {fileID: 7846772762450121656}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: eyee_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8498544313765809908}
   - component: {fileID: 1646072696932358379}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Outfit (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +618,7 @@ GameObject:
   - component: {fileID: 4895358953933271990}
   - component: {fileID: 1300944919022318256}
   - component: {fileID: 8137548353866041918}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2974,7 +2974,7 @@ GameObject:
   - component: {fileID: 1780437552025995026}
   - component: {fileID: 914153545313965525}
   - component: {fileID: 5535953166233120858}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Flesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4722,7 +4722,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 4753
+  m_VersionIndex: 4777
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -4882,7 +4882,7 @@ GameObject:
   - component: {fileID: 8010414896465622445}
   - component: {fileID: 8486524864807564361}
   - component: {fileID: 4120077631817919468}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4966,7 +4966,7 @@ GameObject:
   - component: {fileID: 2631326069102809}
   - component: {fileID: 3833018262973375231}
   - component: {fileID: 1025057926413520384}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8089,7 +8089,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 952
+  m_VersionIndex: 976
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -8105,7 +8105,7 @@ GameObject:
   - component: {fileID: 3495894708293869428}
   - component: {fileID: 5709804038740724280}
   - component: {fileID: 5951257191049823259}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: eyee_low001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8188,7 +8188,7 @@ GameObject:
   - component: {fileID: 6622287418170414340}
   - component: {fileID: 8066608849134394233}
   - component: {fileID: 4969638284544455569}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TSilindr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8367,7 +8367,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6457860446290353266}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Scaler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8464,7 +8464,7 @@ GameObject:
   - component: {fileID: 7906723155452003622}
   - component: {fileID: 1570435746069749122}
   - component: {fileID: 684805604598343948}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: glass_low001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8672,7 +8672,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1259428233544346566}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: hat (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8990,7 +8990,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5821841727918751138}
   - component: {fileID: 3069423455349421452}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pasted__EyesOpen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9078,7 +9078,7 @@ GameObject:
   - component: {fileID: 6574318760972304710}
   - component: {fileID: 1110175298284627895}
   - component: {fileID: 4115442012939931951}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TSilindr2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9161,7 +9161,7 @@ GameObject:
   - component: {fileID: 8082006015575554148}
   - component: {fileID: 8674514581357026506}
   - component: {fileID: 3377819156905756985}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: glass_low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9338,7 +9338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6974467463863098833}
   - component: {fileID: 2825757678011973766}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: suit_Presenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9561,7 +9561,7 @@ GameObject:
   - component: {fileID: 5924129427033803508}
   - component: {fileID: 3585457375643608644}
   - component: {fileID: 1013056160844562607}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TSilindr2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9643,7 +9643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7303425122924854277}
   - component: {fileID: 7161794673310891303}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FlippedOutfit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9810,7 +9810,7 @@ GameObject:
   - component: {fileID: 3886181300958487256}
   - component: {fileID: 8289957012754880814}
   - component: {fileID: 3905439650970393024}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: 3d-model (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9954,7 +9954,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5588383175468822042}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Goldmask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9994,7 +9994,7 @@ GameObject:
   - component: {fileID: 2334672256045451298}
   - component: {fileID: 37202077934310178}
   - component: {fileID: 7985762286904315283}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: corbatin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10203,7 +10203,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6373450810375813916}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10300,7 +10300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5450699301594881848}
   - component: {fileID: 4112100345331625752}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: tie_Cube_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10742,7 +10742,7 @@ GameObject:
   - component: {fileID: 3572071187329467595}
   - component: {fileID: 7843328955210898568}
   - component: {fileID: 8902526517280630815}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TSilindr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10823,7 +10823,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 173434784694761402}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Gold_Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11047,7 +11047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 458217465283224308}
   - component: {fileID: 5871546021033123703}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ZDAZD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11137,7 +11137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3229996691242901384}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11232,7 +11232,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5969955075560994079}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}

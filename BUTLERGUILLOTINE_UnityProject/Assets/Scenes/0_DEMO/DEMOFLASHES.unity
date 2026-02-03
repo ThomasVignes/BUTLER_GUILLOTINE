@@ -1074,6 +1074,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6203304af865d8041a72b4a8c397d097, type: 2}
+    - target: {fileID: 8487167654232718067, guid: 1e083df8bf721a241a6932f519902af2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8509722215188012327, guid: 1e083df8bf721a241a6932f519902af2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -19451,7 +19455,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh71782
+  m_Name: pb_Mesh361378
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

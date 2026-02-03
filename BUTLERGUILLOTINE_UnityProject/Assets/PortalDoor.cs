@@ -44,7 +44,7 @@ public class PortalDoor : Interactable
     {
         GameManager.Instance.ScreenEffects.FadeTo(1, 0.1f);
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.15f);
 
         if (isLinked)
             playerSwapper.SwapBackTo(target);
