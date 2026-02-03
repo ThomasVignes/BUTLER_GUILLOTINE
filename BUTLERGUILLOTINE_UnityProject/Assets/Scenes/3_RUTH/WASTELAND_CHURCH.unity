@@ -8920,15 +8920,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204103672}
-  m_LocalRotation: {x: 0.06499636, y: 0.52942497, z: 0.14604801, w: -0.8331594}
-  m_LocalPosition: {x: 9.678077, y: 0.5419975, z: -2.4310064}
+  m_LocalRotation: {x: -0.05276428, y: 0.53328997, z: 0.07009289, w: -0.8413708}
+  m_LocalPosition: {x: 9.990081, y: 1.1300073, z: -2.1700134}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2147168703}
   m_Father: {fileID: 1392193728}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: -15.245, y: -63.469, z: -10.423}
+  m_LocalEulerAnglesHint: {x: 0.804, y: -64.806, z: -10.035}
 --- !u!114 &204103674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9847,6 +9847,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6202460194585898646, guid: 2798278ecdfe0a04a94bc7b40e07054b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e463f2eb98eec8e4e9c1121c88c3afaf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10492,6 +10496,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6202460194585898646, guid: 2798278ecdfe0a04a94bc7b40e07054b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e463f2eb98eec8e4e9c1121c88c3afaf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14184,7 +14192,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh157452
+  m_Name: pb_Mesh33214
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -14520,6 +14528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6202460194585898646, guid: 2798278ecdfe0a04a94bc7b40e07054b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e463f2eb98eec8e4e9c1121c88c3afaf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14728,6 +14740,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6202460194585898646, guid: 2798278ecdfe0a04a94bc7b40e07054b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e463f2eb98eec8e4e9c1121c88c3afaf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18153,6 +18169,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6202460194585898646, guid: 2798278ecdfe0a04a94bc7b40e07054b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e463f2eb98eec8e4e9c1121c88c3afaf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18495,6 +18515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6202460194585898646, guid: 2798278ecdfe0a04a94bc7b40e07054b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e463f2eb98eec8e4e9c1121c88c3afaf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21152,6 +21176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench
       objectReference: {fileID: 0}
+    - target: {fileID: 6202460194585898646, guid: 2798278ecdfe0a04a94bc7b40e07054b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e463f2eb98eec8e4e9c1121c88c3afaf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22391,8 +22419,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.1993403, y: 5.14609, z: 10.282378}
-  m_Center: {x: 4.283398, y: 2.0730445, z: 0.9035318}
+  m_Size: {x: 4.9967866, y: 5.14609, z: 10.282378}
+  m_Center: {x: 5.182127, y: 2.0730445, z: 0.903532}
 --- !u!114 &1392193730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23055,6 +23083,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bench (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6202460194585898646, guid: 2798278ecdfe0a04a94bc7b40e07054b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e463f2eb98eec8e4e9c1121c88c3afaf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23977,8 +24009,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756139835}
-  m_LocalRotation: {x: 0.06499637, y: 0.52942497, z: 0.14604802, w: -0.8331594}
-  m_LocalPosition: {x: 12.074846, y: 0.5419975, z: -2.4286137}
+  m_LocalRotation: {x: -0.052764274, y: 0.53328997, z: 0.07009288, w: -0.8413707}
+  m_LocalPosition: {x: 12.38685, y: 1.1300073, z: -2.1676207}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25110,8 +25142,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 7.6897326, y: 5.14609, z: 10.758626}
-  m_Center: {x: 1.2479486, y: 2.0730445, z: 0.6654034}
+  m_Size: {x: 6.1129856, y: 5.14609, z: 10.758626}
+  m_Center: {x: 2.036322, y: 2.0730445, z: 0.66540337}
 --- !u!114 &2001332016
 MonoBehaviour:
   m_ObjectHideFlags: 0
