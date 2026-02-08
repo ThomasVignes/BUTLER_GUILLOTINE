@@ -876,32 +876,38 @@ public class GameManager : MonoBehaviour
         List<GameObject> next = zone.ShotSpecificObjects;
         foreach (var item in previous)
         {
-            if (!next.Contains(item))
+            if (item != null)
             {
-                RagdollHider hider = item.GetComponent<RagdollHider>();
-                if (hider != null)
+                if (!next.Contains(item))
                 {
-                    hider.Hide();
-                }
-                else
-                {
-                    if (item.activeSelf)
-                        item.SetActive(false);
+                    RagdollHider hider = item.GetComponent<RagdollHider>();
+                    if (hider != null)
+                    {
+                        hider.Hide();
+                    }
+                    else
+                    {
+                        if (item.activeSelf)
+                            item.SetActive(false);
+                    }
                 }
             }
         }
 
         foreach (var item in next)
         {
-            RagdollHider hider = item.GetComponent<RagdollHider>();
-            if (hider != null)
+            if (item != null)
             {
-                hider.Show();
-            }
-            else
-            {
-                if (!item.activeSelf)
-                    item.SetActive(true);
+                RagdollHider hider = item.GetComponent<RagdollHider>();
+                if (hider != null)
+                {
+                    hider.Show();
+                }
+                else
+                {
+                    if (!item.activeSelf)
+                        item.SetActive(true);
+                }
             }
         }
 
@@ -910,10 +916,11 @@ public class GameManager : MonoBehaviour
         next = zone.ShotSpecificHide;
         foreach (var item in previous)
         {
-            if (!next.Contains(item))
+            if (item != null)
             {
-                if (item != null)
+                if (!next.Contains(item))
                 {
+
                     RagdollHider hider = item.GetComponent<RagdollHider>();
                     if (hider != null)
                     {
