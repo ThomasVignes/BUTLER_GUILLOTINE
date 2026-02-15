@@ -160,6 +160,17 @@ namespace Whumpus
             }
         }
 
+
+        public void SetKinematic(bool kinematic)
+        {
+            mainRb.isKinematic = kinematic;
+
+            foreach (var limb in limbs)
+            {
+                limb.rb.isKinematic = kinematic;
+            }
+        }
+
         public void Explode()
         {
             EnableForces(false);

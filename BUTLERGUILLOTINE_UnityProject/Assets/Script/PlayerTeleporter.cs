@@ -5,20 +5,22 @@ using UnityEngine.Events;
 
 public class PlayerTeleporter : MonoBehaviour
 {
+    [SerializeField] bool blackScreen = true;
     [SerializeField] float teleportDelay;
     [SerializeField] Transform up, down;
+    [SerializeField] Transform upTargetMove, downTargetMove;
     public UnityEvent OnTeleportUp, OnTeleportDown;
 
     public void TeleportUp()
     {
-        GameManager.Instance.TeleportPlayer(up, teleportDelay, true);
+        GameManager.Instance.TeleportPlayer(up, teleportDelay, blackScreen);
 
         StartCoroutine(C_TeleportUpEffects());
     }
 
     public void TeleportDown()
     {
-        GameManager.Instance.TeleportPlayer(down, teleportDelay, true);
+        GameManager.Instance.TeleportPlayer(down, teleportDelay, blackScreen);
 
         StartCoroutine(C_TeleportDownEffects());
     }

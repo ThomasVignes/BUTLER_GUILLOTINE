@@ -13613,6 +13613,9 @@ MonoBehaviour:
   moveStateLerp: 4
   minDistanceToMove: 0.1
   animator: {fileID: 1735109562235365949}
+  unparented: {fileID: 8152001701432785329}
+  limbs: {fileID: 8301896293009519217}
+  ragdoll: {fileID: 7051419865140233157}
   InventoryController: {fileID: 0}
   resetPos: {x: 0, y: 0, z: 0}
   Choppers: []
@@ -30160,7 +30163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7938330859930989623, guid: 6a47bd760270e3449a71fd2229140625, type: 3}
       propertyPath: m_VersionIndex
-      value: 901
+      value: 910
       objectReference: {fileID: 0}
     - target: {fileID: 8630205526008207988, guid: 6a47bd760270e3449a71fd2229140625, type: 3}
       propertyPath: m_Name

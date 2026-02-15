@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Whumpus;
 
 public class Character : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class Character : MonoBehaviour
     [SerializeField] protected float moveStateLerp;
     [SerializeField] protected float minDistanceToMove;
     [SerializeField] protected Animator animator;
+    [SerializeField] protected Transform unparented, limbs;
+    [SerializeField] protected DiversuitRagdoll ragdoll;
     protected NavMeshAgent agent;
 
     protected bool rotating, running, willPickUp, willHold;
@@ -399,6 +402,9 @@ public class Character : MonoBehaviour
         if (agent != null)
             agent.enabled = !frozen;
 
+        if (ragdoll != null)
+            ragdoll.SetKinematic(frozen);
+
         /*
         if (frozen)
         {
@@ -426,5 +432,31 @@ public class Character : MonoBehaviour
         }
 
         agent.Warp(pos);
+    }
+
+    public void Teleport(Vector3 pos, Quaternion rot)
+    {
+        if (unparented != null && limbs != null)
+        {
+            Vector3 limbsPos = limbs.position;
+            limbs.SetParent(null);
+            limbs.position = limbsPos;
+
+            unparented.position = transform.position;
+            unparented.rotation = transform.rotation;
+
+            limbs.SetParent(unparented);
+            limbs.position = limbsPos;
+        }
+
+        transform.position = pos;
+        transform.rotation = rot;
+
+
+        if (unparented != null)
+        {
+            unparented.position = pos;
+            unparented.rotation = rot;
+        }
     }
 }
