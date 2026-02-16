@@ -53,16 +53,16 @@ MonoBehaviour:
       Data4: -1050354676
     Path: event:/SFX/Steps/Flesh/Flesh
   Event: 
-  PlayEvent: 0
-  StopEvent: 0
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  AllowNonRigidbodyDoppler: 0
+  NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  OverrideMaxDistance: 25
 --- !u!1 &3186269154785881586
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,8 +95,9 @@ Transform:
   - {fileID: 5506537659071217013}
   - {fileID: 604150417544829820}
   - {fileID: 8916390002893372773}
+  - {fileID: 1106814622542890133}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2780094168222145788
 MonoBehaviour:
@@ -113,9 +114,12 @@ MonoBehaviour:
   Hard: {fileID: 6964227563791453826}
   Fabric: {fileID: 8234744757260036799}
   Flesh: {fileID: 8492697050993363229}
+  Ash: {fileID: 5089951839873102494}
   HardTag: Hard
   FabricTag: Fabric
   FleshTag: Flesh
+  AshTag: Ash
+  lenience: 0.1
 --- !u!1 &5457123765758950343
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,16 +173,16 @@ MonoBehaviour:
       Data4: -631467166
     Path: event:/SFX/Steps/Hard/HardHeelStep
   Event: 
-  PlayEvent: 0
-  StopEvent: 0
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  AllowNonRigidbodyDoppler: 0
+  NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  OverrideMaxDistance: 25
 --- !u!1 &5980828247048321144
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,12 +236,75 @@ MonoBehaviour:
       Data4: 2090624715
     Path: event:/SFX/Steps/Fabric/FabricStep
   Event: 
-  PlayEvent: 0
-  StopEvent: 0
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  AllowNonRigidbodyDoppler: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 25
+--- !u!1 &7560069260765567930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1106814622542890133}
+  - component: {fileID: 5089951839873102494}
+  m_Layer: 0
+  m_Name: AshStep
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1106814622542890133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7560069260765567930}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3037737152444321146}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5089951839873102494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7560069260765567930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -809305479
+      Data2: 1084255190
+      Data3: -1895924067
+      Data4: 582946538
+    Path: event:/SFX/Steps/Ashes/AshesLow
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1

@@ -13221,6 +13221,9 @@ MonoBehaviour:
   moveStateLerp: 4
   minDistanceToMove: 0.1
   animator: {fileID: 4715092489704500273}
+  unparented: {fileID: 0}
+  limbs: {fileID: 0}
+  ragdoll: {fileID: 0}
 --- !u!54 &7116657620865451578
 Rigidbody:
   m_ObjectHideFlags: 0

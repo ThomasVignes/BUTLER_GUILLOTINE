@@ -30198,6 +30198,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 974558630886115723}
     m_Modifications:
+    - target: {fileID: 2780094168222145788, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
+      propertyPath: AshTag
+      value: Ash
+      objectReference: {fileID: 0}
     - target: {fileID: 3037737152444321146, guid: 800e1c1860610584085e8c10f074a28e, type: 3}
       propertyPath: m_RootOrder
       value: 0

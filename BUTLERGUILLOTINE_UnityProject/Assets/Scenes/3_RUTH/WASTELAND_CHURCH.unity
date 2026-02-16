@@ -8346,7 +8346,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh199138
+  m_Name: pb_Mesh527350
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -8748,7 +8748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7956c3e44129ebf4fbe8624006bb18aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ambiance: Corridors
+  Ambiance: Wasteland
   ChangeVolume: 0
   NewVolume: 1
   BlackAndWhite: 0
@@ -8887,7 +8887,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh199178
+  m_Name: pb_Mesh527390
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -10509,7 +10509,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh199134
+  m_Name: pb_Mesh527346
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -11875,7 +11875,7 @@ GameObject:
   - component: {fileID: 647697223}
   m_Layer: 6
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -16932,7 +16932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7956c3e44129ebf4fbe8624006bb18aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ambiance: Corridors
+  Ambiance: Wasteland
   ChangeVolume: 0
   NewVolume: 1
   BlackAndWhite: 0
@@ -16957,7 +16957,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh198572
+  m_Name: pb_Mesh526754
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -17737,7 +17737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7956c3e44129ebf4fbe8624006bb18aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ambiance: Corridors
+  Ambiance: Wasteland
   ChangeVolume: 0
   NewVolume: 1
   BlackAndWhite: 0
@@ -25127,6 +25127,18 @@ PrefabInstance:
       propertyPath: InitialModule.startSize.scalar
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 1827289014352117042, guid: e10ee63b5e5a72541a17b42645241680, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.6103151
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827289014352117042, guid: e10ee63b5e5a72541a17b42645241680, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.6119679
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827289014352117042, guid: e10ee63b5e5a72541a17b42645241680, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.6132076
+      objectReference: {fileID: 0}
     - target: {fileID: 2401889130827943661, guid: e10ee63b5e5a72541a17b42645241680, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -25179,9 +25191,33 @@ PrefabInstance:
       propertyPath: InitialModule.startSize.scalar
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 4437509294123990333, guid: e10ee63b5e5a72541a17b42645241680, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.6103151
+      objectReference: {fileID: 0}
+    - target: {fileID: 4437509294123990333, guid: e10ee63b5e5a72541a17b42645241680, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.6119679
+      objectReference: {fileID: 0}
+    - target: {fileID: 4437509294123990333, guid: e10ee63b5e5a72541a17b42645241680, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.6132076
+      objectReference: {fileID: 0}
     - target: {fileID: 9219636099038149113, guid: e10ee63b5e5a72541a17b42645241680, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219636099038149113, guid: e10ee63b5e5a72541a17b42645241680, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.6103151
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219636099038149113, guid: e10ee63b5e5a72541a17b42645241680, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.6119679
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219636099038149113, guid: e10ee63b5e5a72541a17b42645241680, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.6132076
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27257,7 +27293,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh199184
+  m_Name: pb_Mesh527396
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -29019,7 +29055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7956c3e44129ebf4fbe8624006bb18aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ambiance: Corridors
+  Ambiance: Wasteland
   ChangeVolume: 0
   NewVolume: 1
   BlackAndWhite: 0
@@ -29843,7 +29879,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh198496
+  m_Name: pb_Mesh526636
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -30146,7 +30182,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh198666
+  m_Name: pb_Mesh526868
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -30752,8 +30788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ClearInterScenes: 1
   themes:
-  - {fileID: 11400000, guid: a7de4c51314da9940a38d92486b9fe60, type: 2}
-  - {fileID: 11400000, guid: 2c3bde549bc8423498b55d9c85a72a6d, type: 2}
+  - {fileID: 11400000, guid: e4af4baffc8a60947b1add171e6cd50c, type: 2}
   areas:
   - Name: Corridors
     Music: {fileID: 1823988150}
@@ -31310,7 +31345,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh199194
+  m_Name: pb_Mesh527406
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -31879,7 +31914,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh199158
+  m_Name: pb_Mesh527370
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -32315,7 +32350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7956c3e44129ebf4fbe8624006bb18aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ambiance: Corridors
+  Ambiance: Wasteland
   ChangeVolume: 0
   NewVolume: 1
   BlackAndWhite: 0
@@ -33207,7 +33242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7956c3e44129ebf4fbe8624006bb18aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ambiance: Corridors
+  Ambiance: Wasteland
   ChangeVolume: 0
   NewVolume: 1
   BlackAndWhite: 0

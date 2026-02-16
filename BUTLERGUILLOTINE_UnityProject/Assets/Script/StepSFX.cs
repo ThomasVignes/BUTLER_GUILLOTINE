@@ -11,11 +11,13 @@ public class StepSFX : MonoBehaviour
     [SerializeField] StudioEventEmitter Hard;
     [SerializeField] StudioEventEmitter Fabric;
     [SerializeField] StudioEventEmitter Flesh;
+    [SerializeField] StudioEventEmitter Ash;
 
     [Header("Tags")]
     [SerializeField] string HardTag;
     [SerializeField] string FabricTag;
     [SerializeField] string FleshTag;
+    [SerializeField] string AshTag;
 
     [Header("ScreenDetection")]
     [SerializeField] float lenience = 0.1f;
@@ -44,6 +46,8 @@ public class StepSFX : MonoBehaviour
             PlaySound(Fabric);
         else if (tag == FleshTag)
             PlaySound(Flesh);
+        else if (tag == AshTag)
+            PlaySound(Ash);
         else
             PlaySound(Fabric);
     }
