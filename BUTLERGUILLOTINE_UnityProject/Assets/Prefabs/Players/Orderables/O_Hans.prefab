@@ -220,6 +220,9 @@ MonoBehaviour:
   moveStateLerp: 4
   minDistanceToMove: 0.1
   animator: {fileID: 127664176909336278}
+  unparented: {fileID: 0}
+  limbs: {fileID: 0}
+  ragdoll: {fileID: 0}
 --- !u!195 &3074450130722196366
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10639,7 +10642,7 @@ Transform:
   m_Children:
   - {fileID: 7316850982477700232}
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4905662440984741643
 MonoBehaviour:

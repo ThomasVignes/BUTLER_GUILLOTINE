@@ -57,4 +57,19 @@ public class ScreenEffects : MonoBehaviour
 
         whiteScreen.DOFade(0, fadeOutSpeed);
     }
+
+    public void FlashInOut(float delayWait)
+    {
+        blackScreen.DOKill();
+        StartCoroutine(C_FlashInOut(delayWait));
+    }
+
+    IEnumerator C_FlashInOut(float delayWait)
+    {
+        blackScreen.DOFade(1, 0.1f);
+
+        yield return new WaitForSeconds(delayWait);
+
+        blackScreen.DOFade(0, 0.1f);
+    }
 }

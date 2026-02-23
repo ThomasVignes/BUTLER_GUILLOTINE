@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class CeremonyAltChapterManager : ChapterManagerGeneric
 {
     public bool Skip;
     [SerializeField] private string startCinematic;
+    public UnityEvent OnStart;
 
     public override void Init(GameManager gameManager)
     {
@@ -20,6 +22,8 @@ public class CeremonyAltChapterManager : ChapterManagerGeneric
 
     public override void StartGame()
     {
+        OnStart?.Invoke();
+
         if (Skip)
         {
             gameManager.Ready = true;
