@@ -7818,6 +7818,7 @@ Transform:
   - {fileID: 1532101565392246848}
   - {fileID: 4626524865330840395}
   - {fileID: 3826452508837519155}
+  - {fileID: 4471491259046584014}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -19762,7 +19763,10 @@ MonoBehaviour:
   moveStateLerp: 4
   minDistanceToMove: 0.1
   animator: {fileID: 1905257296327965078}
-  InventoryController: {fileID: 0}
+  unparented: {fileID: 0}
+  limbs: {fileID: 0}
+  ragdoll: {fileID: 0}
+  InventoryController: {fileID: 7720394497629951927}
   resetPos: {x: -0.00009011149, y: 0.9111375, z: 0.04616464}
   Choppers: []
   Maskables: []
@@ -31726,3 +31730,80 @@ Transform:
   m_Father: {fileID: 1555805830736106778}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -41.38824, y: 4.5267367, z: 23.082142}
+--- !u!1001 &3810843100954998403
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 203908263241725552}
+    m_Modifications:
+    - target: {fileID: 787910066297104461, guid: 375cb9d0ee3e7d94c8392d7f3cfccc94, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 787910066297104461, guid: 375cb9d0ee3e7d94c8392d7f3cfccc94, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 787910066297104461, guid: 375cb9d0ee3e7d94c8392d7f3cfccc94, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -89.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 787910066297104461, guid: 375cb9d0ee3e7d94c8392d7f3cfccc94, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 13.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 787910066297104461, guid: 375cb9d0ee3e7d94c8392d7f3cfccc94, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 787910066297104461, guid: 375cb9d0ee3e7d94c8392d7f3cfccc94, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 787910066297104461, guid: 375cb9d0ee3e7d94c8392d7f3cfccc94, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 787910066297104461, guid: 375cb9d0ee3e7d94c8392d7f3cfccc94, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 787910066297104461, guid: 375cb9d0ee3e7d94c8392d7f3cfccc94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 787910066297104461, guid: 375cb9d0ee3e7d94c8392d7f3cfccc94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 787910066297104461, guid: 375cb9d0ee3e7d94c8392d7f3cfccc94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623022116192739393, guid: 375cb9d0ee3e7d94c8392d7f3cfccc94, type: 3}
+      propertyPath: m_Name
+      value: RUTHCHANGED_INVENTORY
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 375cb9d0ee3e7d94c8392d7f3cfccc94, type: 3}
+--- !u!4 &4471491259046584014 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 787910066297104461, guid: 375cb9d0ee3e7d94c8392d7f3cfccc94, type: 3}
+  m_PrefabInstance: {fileID: 3810843100954998403}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7720394497629951927 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6901357926724051252, guid: 375cb9d0ee3e7d94c8392d7f3cfccc94, type: 3}
+  m_PrefabInstance: {fileID: 3810843100954998403}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efac4342186ce264a9ebc0995ccf3a2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

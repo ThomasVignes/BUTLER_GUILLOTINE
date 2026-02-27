@@ -15,9 +15,13 @@ public class ItemUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI itemName;
     [SerializeField] Button equipButton;
     [SerializeField] TextMeshProUGUI equipText;
+    [SerializeField] TextMeshProUGUI examineText;
     [SerializeField] Color disabledTextColor;
 
     InventoryController controller;
+
+    bool corrupted;
+    string corruptedText;
 
     Color originalColor;
 
@@ -33,6 +37,9 @@ public class ItemUI : MonoBehaviour
 
     public void UpdateName(string name)
     {
+        if (corrupted)
+            name = Corrupt(name);
+
         itemName.text = name;
     }
 
@@ -68,5 +75,31 @@ public class ItemUI : MonoBehaviour
 
         if (!equippable)
             equipText.color = disabledTextColor;
+    }
+
+
+    public void CorruptText(string corruptedText)
+    {
+        corrupted = true;
+        this.corruptedText = corruptedText;
+
+        UnequipText = Corrupt(UnequipText);
+        EquipText = Corrupt(EquipText);
+        examineText.text = Corrupt(examineText.text);
+    }
+
+    string Corrupt(string text)
+    {
+        string toCorrupt = text;
+
+        int count = toCorrupt.Length;
+        toCorrupt = "";
+
+        for (int i = 0; i < count; i++)
+        {
+            toCorrupt += corruptedText;
+        }
+
+        return toCorrupt;
     }
 }

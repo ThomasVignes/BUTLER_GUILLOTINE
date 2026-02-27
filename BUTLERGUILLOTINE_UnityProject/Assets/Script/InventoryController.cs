@@ -25,6 +25,8 @@ public class InventoryController : MonoBehaviour
     [SerializeField] float delayBetweenLetters;
     [SerializeField] GameObject textUI;
     [SerializeField] TextMeshProUGUI dialogue;
+    [SerializeField] bool corrupted;
+    [SerializeField] string corruptedText;
 
     float strongPuncWait, lightPuncWait;
 
@@ -43,6 +45,12 @@ public class InventoryController : MonoBehaviour
         originalRotation = transform.rotation;
         textUI.SetActive(false);
 
+        foreach (var item in itemSpots)
+        {
+            if (corrupted)
+                item.ItemUI.CorruptText(corruptedText);
+        }
+
         foreach (var item in startItems)
         {
             AddItem(item);
@@ -58,6 +66,7 @@ public class InventoryController : MonoBehaviour
             item.ItemUI.Init(this);
         }
     }
+
     private void Start()
     {
         strongPuncWait = GameManager.Instance.StrongPunctuationWait;
@@ -314,6 +323,9 @@ public class InventoryController : MonoBehaviour
 
         var text = line.Text;
 
+        if (corrupted)
+            text = Corrupt(text);
+
         dialogue.text = "";
 
         char last = 'a';
@@ -406,6 +418,21 @@ public class InventoryController : MonoBehaviour
                 item.Occupied = false;
             }
         }
+    }
+
+    string Corrupt(string text)
+    {
+        string toCorrupt = text;
+
+        int count = toCorrupt.Length;
+        toCorrupt = "";
+
+        for (int i = 0; i < count; i++)
+        {
+            toCorrupt += corruptedText;
+        }
+
+        return toCorrupt;
     }
 }
 
