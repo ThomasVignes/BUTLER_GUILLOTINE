@@ -25753,6 +25753,9 @@ MonoBehaviour:
   Intro: 0
   Skip: 1
   startCinematic: 
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1400545965
 Transform:
   m_ObjectHideFlags: 0
@@ -33074,7 +33077,7 @@ MonoBehaviour:
       m_Calls: []
   playerFollower: {fileID: 0}
   startGameManager: {fileID: 1400545964}
-  characterStart: {fileID: 2088170820}
+  characterStart: {fileID: 1019480297}
   inventoryCanvas: {fileID: 564045968}
   themeManager: {fileID: 764900722}
   genericManagers:
@@ -45638,7 +45641,7 @@ MonoBehaviour:
   delayBeforeDialogue: 1.3
   delayBetweenLetters: 0.02
   originalFOV: 0
-  Canvas: {fileID: 0}
+  Canvas: {fileID: 1656527984796434087}
   puppets: []
   dialogues: []
   VNInterface: {fileID: 2309589860055518873}

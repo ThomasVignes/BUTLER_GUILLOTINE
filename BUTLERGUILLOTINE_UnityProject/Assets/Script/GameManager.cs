@@ -187,7 +187,6 @@ public class GameManager : MonoBehaviour
 
         PersistentData.Instance.ResetMultipliers();
 
-
         PlayableCharacters.Clear();
 
         var startCharacter = new PlayableCharacter(ChapterData.StartCharacter.Name, ChapterData.StartCharacter);
@@ -284,6 +283,9 @@ public class GameManager : MonoBehaviour
             else
                 ready = true;
         }
+
+        //Failsafe
+        PersistentData.Instance.SaveData();
     }
 
     public void SwapPlayer(string playerName)
