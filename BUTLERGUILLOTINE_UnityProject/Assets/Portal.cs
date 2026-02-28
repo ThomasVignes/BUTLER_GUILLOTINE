@@ -16,8 +16,12 @@ public class Portal : MonoBehaviour
 
     bool open;
 
+    Collider collider;
+
     private void Start()
     {
+        collider = GetComponent<Collider>();
+
         body.SetActive(!open);
         door.SetActive(open);
     }
@@ -38,10 +42,11 @@ public class Portal : MonoBehaviour
 
         yield return new WaitForSeconds(0.15f);
 
+        collider.enabled = !open;
         body.SetActive(!open);
         door.SetActive(open);
 
-        if (open)
+        if (open && portalDoor != null)
             portalDoor.Init(linkedDoor, swapper, false);
     }
 }

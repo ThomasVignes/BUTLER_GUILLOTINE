@@ -11,8 +11,6 @@ public class RuthTruthManager : ChapterManagerGeneric
     public bool Skip;
     public string InterSceneName;
     public DialogueCinematic startCinematic;
-    [SerializeField] Animator animator;
-    [SerializeField] GameObject fixedCam;
     public UnityEvent OnStart;
 
     public override void Init(GameManager gameManager)

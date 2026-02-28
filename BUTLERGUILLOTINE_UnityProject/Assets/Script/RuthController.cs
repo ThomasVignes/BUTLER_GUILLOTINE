@@ -26,6 +26,8 @@ public class RuthController : PlayerController
     [SerializeField] OrderableFighter fighter;
     [SerializeField] Transform orderableSpawn;
 
+    [Header("Dropdown")]
+    [SerializeField] Vector3 dropdownOffset;
     
     LayerMask moveLayer;
     LayerMask interactLayer;
@@ -273,6 +275,35 @@ public class RuthController : PlayerController
             cursorType = CursorType.AimMove;
             return;
         }
+    }
+
+    public override void Dropdown(Vector3 pointTowards)
+    {
+        agent.enabled = false;
+
+        Vector3 dir = Vector3.Normalize(pointTowards - transform.position);
+        dir.y = 0;
+
+        transform.forward = dir;
+
+
+        StartCoroutine(C_Dropdown());
+    }
+
+    IEnumerator C_Dropdown()
+    {
+        animator.SetTrigger("Dropdown");
+
+        if (ragdoll != null)
+            ragdoll.SetKinematic(true);
+
+        transform.position += dropdownOffset;
+
+        yield return new WaitForSeconds(0.12f);
+
+        if (ragdoll != null)
+            ragdoll.SetKinematic(false);
+
     }
 
 }

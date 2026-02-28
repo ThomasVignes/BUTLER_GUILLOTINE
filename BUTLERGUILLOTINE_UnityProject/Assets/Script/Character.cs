@@ -459,4 +459,9 @@ public class Character : MonoBehaviour
             unparented.rotation = rot;
         }
     }
+
+    public virtual void Dropdown(Vector3 pointTowards)
+    {
+
+    }
 }

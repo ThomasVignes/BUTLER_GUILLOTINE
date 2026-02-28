@@ -22,12 +22,13 @@ public class PortalDoor : Interactable
         playerSwapper = swapper;
 
         this.linkedDoor = linkedDoor;
-
-        target = linkedDoor.Spot;
-
         this.isLinked = isLinked;
 
-        linkedDoor.Init(this, swapper, true);
+        if (linkedDoor != null)
+        {
+            target = linkedDoor.Spot;
+            linkedDoor.Init(this, swapper, true);
+        }
     }
 
     protected override void InteractEffects(Character character)
@@ -46,10 +47,13 @@ public class PortalDoor : Interactable
 
         yield return new WaitForSeconds(0.15f);
 
-        if (isLinked)
-            playerSwapper.SwapBackTo(target);
-        else
-            playerSwapper.SwapTo(target);
+        if (playerSwapper != null)
+        {
+            if (isLinked)
+                playerSwapper.SwapBackTo(target);
+            else
+                playerSwapper.SwapTo(target);
+        }
 
         GameManager.Instance.ScreenEffects.FadeTo(0, 0.1f);
     }
