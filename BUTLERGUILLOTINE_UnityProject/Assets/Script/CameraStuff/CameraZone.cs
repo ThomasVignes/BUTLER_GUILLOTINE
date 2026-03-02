@@ -39,7 +39,6 @@ public class CameraZone : MonoBehaviour
     [Header("Behaviour Specific Params")]
     [SerializeField] float PathDamping = 1f;
     public Vector3 Offset;
-    public bool Rain;
     [SerializeField] private GameObject switchObject;
 
     private GameObject target;
@@ -154,19 +153,7 @@ public class CameraZone : MonoBehaviour
             }
 
             if (!Vcam.gameObject.activeInHierarchy)
-            {
-                /*
-                RainManager rain = RainManager.Instance;
-
-                if (rain != null)
-                {
-                    if (Rain)
-                        rain.Resume();
-                    else
-                        rain.Pause();
-                }
-                */
-                
+            { 
                 Vcam.gameObject.SetActive(true);
             }
 
