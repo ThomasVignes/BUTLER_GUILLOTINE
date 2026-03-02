@@ -7,98 +7,17 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000016D49546828 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000239185C3B78 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] SoundI::release                          : freesound_community-footsteps-in-the-deep-snow-66269 (0000016E1C115C18)
-[LOG] SoundI::release                          :     freesound_community-footsteps-in-the-deep-snow-66269 (0000016E4F86F218)
-[LOG] SoundI::release                          :     freesound_community-footsteps-in-the-deep-snow-66269 (0000016E1C117208)
-[LOG] SoundI::release                          : Preludes, Op. 28 - No. 6 'Tolling bells' (0000016E1C114118)
-[LOG] SoundI::release                          :     Preludes, Op. 28 - No. 6 'Tolling bells' (0000016E1BD4F218)
-[LOG] SoundI::release                          :     Preludes, Op. 28 - No. 6 'Tolling bells' (0000016E1C1116E8)
-[LOG] SoundI::release                          :  (0000016DE3C44C68)
-[LOG] SoundI::release                          :     Lamento della ninfa -note (0000016E46BAD998)
-[LOG] SoundI::release                          :  (0000016DE3C44F48)
-[LOG] SoundI::release                          :     Hell (0000016E46BACFD8)
-[LOG] SoundI::release                          :  (0000016E3F46AAA8)
-[LOG] SoundI::release                          :     bullet-hit-metal-84818 (0000016B4CD7F458)
-[LOG] SoundI::release                          :  (0000016D14DE2ED8)
-[LOG] SoundI::release                          :     bullet-hit-metal-84818 1 (0000016D111D2CA8)
-[LOG] SoundI::release                          :  (0000016E4743A3F8)
-[LOG] SoundI::release                          :     clickCut (0000016E2305B8D8)
-[LOG] SoundI::release                          :  (0000016E3F46A938)
-[LOG] SoundI::release                          :     dingCut (0000016B4CD7FE18)
-[LOG] SoundI::release                          :  (0000016DE3C446A8)
-[LOG] SoundI::release                          :     ding-small-bell-sfx-233008 (0000016D111D2B08)
-[LOG] SoundI::release                          :  (0000016E3F46B348)
-[LOG] SoundI::release                          :     Click (0000016E2305B3F8)
-[LOG] SoundI::release                          :  (0000016DE3C450B8)
-[LOG] SoundI::release                          :     Shield (0000016D111D2628)
-[LOG] SoundI::release                          :  (0000016D14DE2A88)
-[LOG] SoundI::release                          :     clank1-91862 (0000016D111D2968)
-[LOG] SoundI::release                          :  (0000016E3F46A7C8)
-[LOG] SoundI::release                          :     SFX_Assault Single Shot (0000016E4DB403B8)
-[LOG] SoundI::release                          :  (0000016D11256678)
-[LOG] SoundI::release                          :     tickCut (0000016E46781B98)
-[LOG] SoundI::release                          :  (0000016D11256508)
-[LOG] SoundI::release                          :     Item (0000016D12388C08)
-[LOG] SoundI::release                          :  (0000016D14DE3328)
-[LOG] SoundI::release                          :     vinyl-record-stop-lift-needle-08-35959 (0000016D14CB0A38)
-[LOG] SoundI::release                          :  (0000016DE3C44538)
-[LOG] SoundI::release                          :     Flesh (0000016E46BAD178)
-[LOG] SoundI::release                          :  (0000016D11256C38)
-[LOG] SoundI::release                          :     Impact (0000016D12388DA8)
-[LOG] SoundI::release                          :  (0000016D112567E8)
-[LOG] SoundI::release                          :     LeftStepSolid (0000016E46782558)
-[LOG] SoundI::release                          :  (0000016D11256AC8)
-[LOG] SoundI::release                          :     closing-large-metal-door-001-326819 (0000016D12388A68)
-[LOG] SoundI::release                          :  (0000016E3F46A658)
-[LOG] SoundI::release                          :     Hit (0000016B4CD7FC78)
-[LOG] SoundI::release                          :  (0000016E3F46B068)
-[LOG] SoundI::release                          :     SFX_Equip Assault Rifle (0000016B4CD80158)
-[LOG] SoundI::release                          :  (0000016D11256958)
-[LOG] SoundI::release                          :     Bloodsplash (0000016D14CB0F18)
-[LOG] SoundI::release                          :  (0000016D112560B8)
-[LOG] SoundI::release                          :     RightStepSolid (0000016E46782078)
-[LOG] SoundI::release                          :  (0000016E3F46AC18)
-[LOG] SoundI::release                          :     exploding-building-1-185114 (0000016E4DB40558)
-[LOG] SoundI::release                          :  (0000016E3F46AD88)
-[LOG] SoundI::release                          :     unlock-padlock-deadbolt-on-door-001-8441 (0000016E4DB406F8)
-[LOG] SoundI::release                          :  (0000016E3F46AEF8)
-[LOG] SoundI::release                          :     SmallClick (0000016E4DB40218)
-[LOG] SoundI::release                          :  (0000016D14DE31B8)
-[LOG] SoundI::release                          :     Polaroid (0000016D14CB0558)
-[LOG] SoundI::release                          :  (0000016D11256398)
-[LOG] SoundI::release                          :     SmallClickLoop (0000016E46782218)
-[LOG] SoundI::release                          :  (0000016D11256DA8)
-[LOG] SoundI::release                          :     ticking-clock_1-27477 (0000016D12388248)
-[LOG] SoundI::release                          :  (0000016E3F46B1D8)
-[LOG] SoundI::release                          :     DoorOpen (0000016B4CD7FAD8)
-[LOG] SoundI::release                          :  (0000016D14DE2BF8)
-[LOG] SoundI::release                          :     Flesh1 (0000016D14CB06F8)
-[LOG] SoundI::release                          :  (0000016D14DE27A8)
-[LOG] SoundI::release                          :     Flesh2 (0000016D14CB0BD8)
-[LOG] SoundI::release                          :  (0000016DE3C44818)
-[LOG] SoundI::release                          :     walking-upstairs-in-heels_light-step-40874 (0000016E46BAD658)
-[LOG] SoundI::release                          :  (0000016D11256228)
-[LOG] SoundI::release                          :     LeftStepFabric (0000016E467826F8)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
-[ERR] assert                                   : assertion: 'gSystemInitCount == 0' failed

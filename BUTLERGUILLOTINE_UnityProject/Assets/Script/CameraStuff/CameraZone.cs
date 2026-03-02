@@ -155,6 +155,7 @@ public class CameraZone : MonoBehaviour
 
             if (!Vcam.gameObject.activeInHierarchy)
             {
+                /*
                 RainManager rain = RainManager.Instance;
 
                 if (rain != null)
@@ -164,6 +165,7 @@ public class CameraZone : MonoBehaviour
                     else
                         rain.Pause();
                 }
+                */
                 
                 Vcam.gameObject.SetActive(true);
             }
