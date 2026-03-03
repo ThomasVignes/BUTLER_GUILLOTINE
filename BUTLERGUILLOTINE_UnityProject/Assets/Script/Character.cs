@@ -366,7 +366,9 @@ public class Character : MonoBehaviour
 
     public void LockToObject(Transform targetTransform)
     {
-        Freeze(true);
+        if (agent != null)
+            agent.enabled = false;
+
         Vector3 originalPos = transform.position;
         Quaternion originalRot = transform.rotation;
 
@@ -381,7 +383,9 @@ public class Character : MonoBehaviour
     public void UnlockFromObject()
     {
         transform.SetParent(null);
-        Freeze(false);
+
+        if (agent != null)
+            agent.enabled = true;
 
         Vector3 originalPos = transform.position;
         Quaternion originalRot = transform.rotation;
