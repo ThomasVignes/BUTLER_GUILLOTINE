@@ -642,6 +642,7 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: '...I need more time. '
@@ -653,8 +654,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &2794148722177942952
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,7 +843,7 @@ MonoBehaviour:
     Action: Look
     cameraEffect: 0
     Answers:
-    - Text: 'No. We''re done here. '
+    - Text: 'No. I''m done here. '
       ConditionNeeded: 
       DialogueEnd: 1
       HideLeavePrompt: 0
@@ -848,8 +852,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &3236417487552200253
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,9 +955,10 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
-    - Text: We got your damn masks.
+    - Text: I got your damn mask.
       ConditionNeeded: HasMask
       DialogueEnd: 0
       HideLeavePrompt: 0
@@ -959,6 +967,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: 'I''m afraid I can''t let you through. '
@@ -974,6 +983,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: C-calm down ! I just need you to get a mask. It's necessary for the play.
@@ -989,6 +999,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Well, enjoy the play, madam.
@@ -1052,8 +1063,11 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &3738357873882991997
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,6 +1263,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Would you like a demonstration ? These masks are a bit peculiar.
@@ -1264,13 +1279,14 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Alright. Enjoy your play.
     Action: Speak
     cameraEffect: 0
     Answers:
-    - Text: Come on Raymond, let's go.
+    - Text: 'Thank you. '
       ConditionNeeded: 
       DialogueEnd: 1
       HideLeavePrompt: 0
@@ -1303,8 +1319,11 @@ MonoBehaviour:
               m_StringArgument: HasMask
               m_BoolArgument: 1
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &4469896676834948052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,6 +1618,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: ...No worries. Just let me know.
@@ -1614,8 +1634,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &5141340200336780155
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,6 +2262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeDialogue: 1.3
   delayBetweenLetters: 0.02
+  originalFOV: 0
+  Canvas: {fileID: 3830047469560376101}
   puppets:
   - Name: Ruth
     VNPuppet: {fileID: 0}
@@ -2295,6 +2320,7 @@ MonoBehaviour:
   - {fileID: 33041724900885937}
   - {fileID: 1507941145754531910}
   - {fileID: 3453061190780317033}
+  VNCam: {fileID: 0}
 --- !u!114 &9050554755146169694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2309,6 +2335,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cinematics:
   - Data: {fileID: 11400000, guid: 6bc84523b8053be42bf8894aad3e5512, type: 2}
+    OnStart:
+      m_PersistentCalls:
+        m_Calls: []
+    OnStartAfterBlackScreen:
+      m_PersistentCalls:
+        m_Calls: []
     OnEndBeforeBlackScreen:
       m_PersistentCalls:
         m_Calls: []
@@ -2328,6 +2360,8 @@ MonoBehaviour:
             m_BoolArgument: 1
           m_CallState: 2
     ChainCinematic: 
+    NoCamera: 0
+    NoBounce: 1
     CinematicPuppets:
     - Name: Jer
       Puppet: {fileID: 0}
@@ -2342,6 +2376,7 @@ MonoBehaviour:
   Camera: {fileID: 0}
   Interface: {fileID: 5964679712008039896}
   dialogue: {fileID: 7744623721857899121}
+  lastCinematic: 0
 --- !u!1 &6659417379072690998
 GameObject:
   m_ObjectHideFlags: 0

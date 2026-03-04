@@ -24,7 +24,8 @@ public class RuthTruthManager : ChapterManagerGeneric
 
     public override void StartGame()
     {
-        gameManager.ThemeManager.CreateInterScene(InterSceneName);
+        if (InterSceneName != "")
+            gameManager.ThemeManager.CreateInterScene(InterSceneName);
 
         if (!Skip)
         {
