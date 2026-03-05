@@ -137,6 +137,11 @@ public class InventoryManager : MonoBehaviour
 
     public void EquipItem(string name)
     {
+        EquipItem(name, true);
+    }
+
+    public void EquipItem(string name, bool withSound)
+    {
         Item item = Array.Find(items, e => e.ID == name);
 
         if (item == null || item.InInventory)
@@ -148,7 +153,8 @@ public class InventoryManager : MonoBehaviour
 
         //ShowNotification(item.Name);
 
-        EffectsManager.Instance.audioManager.Play("Item");
+        if (withSound)
+            EffectsManager.Instance.audioManager.Play("Item");
     }
 
     public void TrueRemoveItem(string name)
