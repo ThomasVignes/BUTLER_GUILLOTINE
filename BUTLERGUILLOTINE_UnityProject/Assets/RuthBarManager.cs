@@ -23,6 +23,8 @@ public class RuthBarManager : ChapterManagerGeneric
 
     public override void StartGame()
     {
+        OnStart?.Invoke();
+
         if (!Skip)
         {
             Intro = false;
