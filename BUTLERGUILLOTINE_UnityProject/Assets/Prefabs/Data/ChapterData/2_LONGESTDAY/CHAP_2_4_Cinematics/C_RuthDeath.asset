@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C_RuthDeath
   m_EditorClassIdentifier: 
   ID: RuthDeath
-  Ambience: JesuChristFast
+  Ambience: Sinfonia
   BlackScreenDuration: 4
   lines:
   - Text: 
@@ -73,7 +73,7 @@ MonoBehaviour:
     cameraEffect: 0
     newAmbience: 
     soundEffects: []
-  - Text: Huh ?
+  - Text: Tell me !
     Duration: 7
     PuppetActions: []
     cameraIndex: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
     cameraEffect: 0
     newAmbience: 
     soundEffects: []
-  - Text: So wrong.
+  - Text: So very wrong.
     Duration: 7
     PuppetActions: []
     cameraIndex: 1
@@ -181,7 +181,7 @@ MonoBehaviour:
     cameraEffect: 0
     newAmbience: 
     soundEffects: []
-  - Text: 'I was selfish. Cruel, even. For hoping. '
+  - Text: I was selfish. Cruel, even.
     Duration: 7
     PuppetActions: []
     cameraIndex: 2
@@ -220,7 +220,7 @@ MonoBehaviour:
     cameraEffect: 0
     newAmbience: 
     soundEffects: []
-  - Text: 'It''s okay. '
+  - Text: It's alright.
     Duration: 7
     PuppetActions: []
     cameraIndex: 0
@@ -448,6 +448,7 @@ MonoBehaviour:
     soundEffects: []
   EndBlackScreenDuration: 1
   HidePlayer: 1
+  CutOnStart: 0
   NoEndBlackscreen: 0
   NoFadeOut: 0
   OverrideKeepsGoing: 0

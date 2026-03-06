@@ -127,7 +127,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639082396184284234
+  lastModified: 639083568803867992
   FileSizes: []
   Exists: 1
 --- !u!114 &-8883446772827240880
@@ -271,6 +271,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7000
+--- !u!114 &-8227937711542542515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/Sinfonia/Sinfonia - Original
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/Sinfonia/Sinfonia - Original
+  Guid:
+    Data1: 1411836924
+    Data2: 1188557758
+    Data3: -685682261
+    Data4: -784807971
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 262138
 --- !u!114 &-8148365631203872731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,6 +593,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 193697
+--- !u!114 &-6245904775599048402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/Waltz in B minor/Waltz in B minor, Op. 69
+    no. 2 - Edited Loud
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/Waltz in B minor/Waltz in B minor, Op. 69 no.
+    2 - Edited Loud
+  Guid:
+    Data1: 986816232
+    Data2: 1170128764
+    Data3: 2102832526
+    Data4: 1942436827
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 216876
 --- !u!114 &-6234989871147884156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,6 +790,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 165000
+--- !u!114 &-5469382584746088574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/Waltz in B minor/Waltz in B minor, Op. 69
+    no. 4 - Original
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/Waltz in B minor/Waltz in B minor, Op. 69 no.
+    4 - Original
+  Guid:
+    Data1: 1504196309
+    Data2: 1316157200
+    Data3: -386221419
+    Data4: 1665380466
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 216876
 --- !u!114 &-5166682845834815447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1551,6 +1636,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 56
+--- !u!114 &-1269371888755087178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/Waltz in B minor/Waltz in B minor, Op. 69
+    no. 3 - Edited Soft
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/Waltz in B minor/Waltz in B minor, Op. 69 no.
+    3 - Edited Soft
+  Guid:
+    Data1: 1752047953
+    Data2: 1258479040
+    Data3: 765549955
+    Data4: -1611861487
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 216876
 --- !u!114 &-1033050410105668964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1647,10 +1761,10 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639068598601195831
+  lastModified: 639083544354141597
   FileSizes:
   - Name: 
-    Value: 8958
+    Value: 9276
   Exists: 1
 --- !u!114 &-735843984859671838
 MonoBehaviour:
@@ -1964,12 +2078,17 @@ MonoBehaviour:
   - {fileID: 3021344018837587911}
   - {fileID: -9218882984718901386}
   - {fileID: -418906177545599106}
+  - {fileID: -8227937711542542515}
+  - {fileID: 5103166148079802968}
+  - {fileID: -1269371888755087178}
+  - {fileID: -5469382584746088574}
+  - {fileID: -6245904775599048402}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6000090139453766909}
   StringsBanks:
   - {fileID: -786783328031392545}
-  cacheTime: 639082396184284234
+  cacheTime: 639083568803867992
   cacheVersion: 131632
 --- !u!114 &770953797004677913
 MonoBehaviour:
@@ -2746,6 +2865,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 385011
+--- !u!114 &5103166148079802968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/Sinfonia - Edited
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/Sinfonia - Edited
+  Guid:
+    Data1: -501420106
+    Data2: 1226849845
+    Data3: 1532905619
+    Data4: -410770468
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 262138
 --- !u!114 &5481067768880744543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2897,7 +3043,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639068598601175828
+  lastModified: 639083544354117936
   FileSizes: []
   Exists: 1
 --- !u!114 &6003941878807412242

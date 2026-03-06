@@ -11,6 +11,7 @@ public class CinematicData : ScriptableObject
     public CinematicLine[] lines;
     public float EndBlackScreenDuration;
     public bool HidePlayer;
+    public bool CutOnStart;
     public bool NoEndBlackscreen, NoFadeOut;
     public bool OverrideKeepsGoing;
     public string ResumeTheme;

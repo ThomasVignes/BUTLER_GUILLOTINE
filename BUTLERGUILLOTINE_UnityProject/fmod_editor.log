@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000242CA962378 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000025D5AC475F8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -19,6 +19,103 @@
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000025E30BA3E48, queue head = 0000025E3C388D28, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000025E30BA3E48
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 189280736
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 126496
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000025D30B973A0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Mein Herze schwimmt im Blut, BWV 199 - 2. Stumme Seufzer, stille Klagen (Soprano, Trumpet and Organ arr. - Rondeau)', format=5, channels=2, frequency=48000, lengthbytes=6115680, lengthpcm=24586031, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.990417.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000025E30BA3E48
+[LOG] SoundI::release                          : Waltz in B minor, Op. 69 no. 2 (0000025E3C10DF88)
+[LOG] SoundI::release                          :     Waltz in B minor, Op. 69 no. 2 (0000025E36DAE2A8)
+[LOG] SoundI::release                          :     Waltz in B minor, Op. 69 no. 2 (0000025E3C0FC768)
+[LOG] SoundI::release                          : Mein Herze schwimmt im Blut, BWV 199 - 2. Stumme Seufzer, stille Klagen (Soprano, Trumpet and Organ arr. - Rondeau) (0000025E30BA3E48)
+[LOG] SoundI::release                          :     Mein Herze schwimmt im Blut, BWV 199 - 2. Stumme Seufzer, stille Klagen (Soprano, Trumpet and Organ arr. - Rondeau) (0000025E36DADC28)
+[LOG] SoundI::release                          :     Mein Herze schwimmt im Blut, BWV 199 - 2. Stumme Seufzer, stille Klagen (Soprano, Trumpet and Organ arr. - Rondeau) (0000025E30BA5288)
+[LOG] SoundI::release                          :  (0000025D137F76A8)
+[LOG] SoundI::release                          :     Lamento della ninfa -note (0000025E36DA94A8)
+[LOG] SoundI::release                          :  (0000025D137F73C8)
+[LOG] SoundI::release                          :     Hell (0000025E36DAB1E8)
+[LOG] SoundI::release                          :  (0000025B992B4368)
+[LOG] SoundI::release                          :     bullet-hit-metal-84818 (0000025E36DAB6C8)
+[LOG] SoundI::release                          :  (0000025E4A4B4918)
+[LOG] SoundI::release                          :     bullet-hit-metal-84818 1 (0000025E36DAA688)
+[LOG] SoundI::release                          :  (0000025B992B4648)
+[LOG] SoundI::release                          :     clickCut (0000025E36DAC088)
+[LOG] SoundI::release                          :  (0000025B992B44D8)
+[LOG] SoundI::release                          :     dingCut (0000025E36DA9168)
+[LOG] SoundI::release                          :  (0000025E4A4B4358)
+[LOG] SoundI::release                          :     ding-small-bell-sfx-233008 (0000025E36DA5F08)
+[LOG] SoundI::release                          :  (0000025B992B4088)
+[LOG] SoundI::release                          :     Click (0000025E36DAC8A8)
+[LOG] SoundI::release                          :  (0000025D137F7F48)
+[LOG] SoundI::release                          :     Shield (0000025E36DAAEA8)
+[LOG] SoundI::release                          :  (0000025E4A4B4BF8)
+[LOG] SoundI::release                          :     clank1-91862 (0000025E36DAB388)
+[LOG] SoundI::release                          :  (0000025E3C680C78)
+[LOG] SoundI::release                          :     SFX_Assault Single Shot (0000025E36DA7F88)
+[LOG] SoundI::release                          :  (0000025E3C6810C8)
+[LOG] SoundI::release                          :     tickCut (0000025E36DA70E8)
+[LOG] SoundI::release                          :  (0000025E4A4B4638)
+[LOG] SoundI::release                          :     Item (0000025E36DA75C8)
+[LOG] SoundI::release                          :  (0000025E4A4B47A8)
+[LOG] SoundI::release                          :     vinyl-record-stop-lift-needle-08-35959 (0000025E36DAB528)
+[LOG] SoundI::release                          :  (0000025D137F7C68)
+[LOG] SoundI::release                          :     Flesh (0000025E36DAA4E8)
+[LOG] SoundI::release                          :  (0000025E3C680F58)
+[LOG] SoundI::release                          :     Impact (0000025E36DA5888)
+[LOG] SoundI::release                          :  (0000025E3C681518)
+[LOG] SoundI::release                          :     LeftStepSolid (0000025E36DA7288)
+[LOG] SoundI::release                          :  (0000025E4A4B4078)
+[LOG] SoundI::release                          :     closing-large-metal-door-001-326819 (0000025E36DA5548)
+[LOG] SoundI::release                          :  (0000025B992B4928)
+[LOG] SoundI::release                          :     Hit (0000025E36DA8E28)
+[LOG] SoundI::release                          :  (0000025B992B41F8)
+[LOG] SoundI::release                          :     SFX_Equip Assault Rifle (0000025E36DAD408)
+[LOG] SoundI::release                          :  (0000025E4A4B4D68)
+[LOG] SoundI::release                          :     Bloodsplash (0000025E36DA60A8)
+[LOG] SoundI::release                          :  (0000025E3C681238)
+[LOG] SoundI::release                          :     RightStepSolid (0000025E36DA6C08)
+[LOG] SoundI::release                          :  (0000025B992B4A98)
+[LOG] SoundI::release                          :     exploding-building-1-185114 (0000025E36DA8AE8)
+[LOG] SoundI::release                          :  (0000025E3C6817F8)
+[LOG] SoundI::release                          :     unlock-padlock-deadbolt-on-door-001-8441 (0000025E36DA87A8)
+[LOG] SoundI::release                          :  (0000025E3C680DE8)
+[LOG] SoundI::release                          :     SmallClick (0000025E36DA7DE8)
+[LOG] SoundI::release                          :  (0000025E4A4B41E8)
+[LOG] SoundI::release                          :     Polaroid (0000025E36DA53A8)
+[LOG] SoundI::release                          :  (0000025E3C6813A8)
+[LOG] SoundI::release                          :     SmallClickLoop (0000025E36DA9B28)
+[LOG] SoundI::release                          :  (0000025E3C681688)
+[LOG] SoundI::release                          :     ticking-clock_1-27477 (0000025E36DA8608)
+[LOG] SoundI::release                          :  (0000025B992B3F18)
+[LOG] SoundI::release                          :     DoorOpen (0000025E36DAE108)
+[LOG] SoundI::release                          :  (0000025E4A4B44C8)
+[LOG] SoundI::release                          :     Flesh1 (0000025E36DA9648)
+[LOG] SoundI::release                          :  (0000025E4A4B4A88)
+[LOG] SoundI::release                          :     Flesh2 (0000025E36DA5BC8)
+[LOG] SoundI::release                          :  (0000025D137F7DD8)
+[LOG] SoundI::release                          :     walking-upstairs-in-heels_light-step-40874 (0000025E36DAAB68)
+[LOG] SoundI::release                          :  (0000025E3C680B08)
+[LOG] SoundI::release                          :     LeftStepFabric (0000025E36DA7C48)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
@@ -26,3 +123,5 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.

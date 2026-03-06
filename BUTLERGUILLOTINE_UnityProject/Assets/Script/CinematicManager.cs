@@ -134,7 +134,10 @@ public class CinematicManager : MonoBehaviour
 
         yield return new WaitForSeconds(current.Data.BlackScreenDuration);
 
-        gameManager.ScreenEffects.FadeTo(0, 1f);
+        if (current.Data.CutOnStart)
+            gameManager.ScreenEffects.FadeTo(0f, 0.001f);
+        else
+            gameManager.ScreenEffects.FadeTo(0, 1f);
 
         foreach (var line in current.Data.lines)
         {
