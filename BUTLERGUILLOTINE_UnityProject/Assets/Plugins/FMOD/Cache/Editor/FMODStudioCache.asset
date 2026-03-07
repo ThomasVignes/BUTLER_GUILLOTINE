@@ -127,7 +127,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639084015229751254
+  lastModified: 639085020311018639
   FileSizes: []
   Exists: 1
 --- !u!114 &-8883446772827240880
@@ -1220,8 +1220,8 @@ MonoBehaviour:
     Data3: -665384041
     Data4: -1711876676
   Banks:
-  - {fileID: -9072090894377937510}
   - {fileID: 7964605896639709159}
+  - {fileID: -9072090894377937510}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1528,6 +1528,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 96777
+--- !u!114 &-1728723569316255644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/SixteenWaltzes/SixteenWaltzes - SLOWED
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/SixteenWaltzes/SixteenWaltzes - SLOWED
+  Guid:
+    Data1: 5426560
+    Data2: 1302461129
+    Data3: -2106235509
+    Data4: 1159524492
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 104706
 --- !u!114 &-1703971141531991751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1761,10 +1788,10 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639083544354141597
+  lastModified: 639085019831944464
   FileSizes:
   - Name: 
-    Value: 9276
+    Value: 9356
   Exists: 1
 --- !u!114 &-735843984859671838
 MonoBehaviour:
@@ -2083,12 +2110,13 @@ MonoBehaviour:
   - {fileID: -1269371888755087178}
   - {fileID: -5469382584746088574}
   - {fileID: -6245904775599048402}
+  - {fileID: -1728723569316255644}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6000090139453766909}
   StringsBanks:
   - {fileID: -786783328031392545}
-  cacheTime: 639084015232044575
+  cacheTime: 639085020311018639
   cacheVersion: 131632
 --- !u!114 &770953797004677913
 MonoBehaviour:
@@ -3043,7 +3071,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639083544354117936
+  lastModified: 639085019831934459
   FileSizes: []
   Exists: 1
 --- !u!114 &6003941878807412242
@@ -3456,8 +3484,8 @@ MonoBehaviour:
     Data3: 462837905
     Data4: 788421580
   Banks:
-  - {fileID: -9072090894377937510}
   - {fileID: 7964605896639709159}
+  - {fileID: -9072090894377937510}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0

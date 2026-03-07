@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000028630699758 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000021A4EFDE298 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -19,8 +19,915 @@
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021900C05E98, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021900C05E98
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021949A5F430
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Waltz in B minor, Op. 69 no. 2', format=5, channels=2, frequency=48000, lengthbytes=2548608, lengthpcm=10539648, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.585693.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021900C05E98
+[LOG] SoundI::release                          : Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (000002194978A118)
+[LOG] SoundI::release                          :     Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (0000021A46053E88)
+[LOG] SoundI::release                          :     Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (00000219159BFAF8)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021900C063A8, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021900C063A8
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021949A5F570
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2500
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED', format=5, channels=2, frequency=48000, lengthbytes=1358304, lengthpcm=5145913, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.344818.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021900C063A8
+[LOG] SoundI::release                          : Waltz in B minor, Op. 69 no. 2 (0000021900C05E98)
+[LOG] SoundI::release                          :     Waltz in B minor, Op. 69 no. 2 (0000021A3A899A68)
+[LOG] SoundI::release                          :     Waltz in B minor, Op. 69 no. 2 (0000021A710DC0F8)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000219158F71C8, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000219158F71C8
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A4C7AEE70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2500
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED', format=5, channels=2, frequency=48000, lengthbytes=1358304, lengthpcm=5145913, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.344818.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000219158F71C8
+[LOG] SoundI::release                          : Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (0000021900C063A8)
+[LOG] SoundI::release                          :     Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (0000021A3AB77618)
+[LOG] SoundI::release                          :     Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (00000219158F7A38)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A4F1AC1E8, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A4F1AC1E8
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000217314CF490
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='[ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling', format=5, channels=2, frequency=48000, lengthbytes=297504, lengthpcm=868937, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.922546.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A4F1AC1E8
+[LOG] SoundI::release                          : Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (00000219158F71C8)
+[LOG] SoundI::release                          :     Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (000002191365F988)
+[LOG] SoundI::release                          :     Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (0000021949789F68)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000219158F7A38, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000219158F7A38
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A4C7AF370
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='[ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling', format=5, channels=2, frequency=48000, lengthbytes=297504, lengthpcm=868937, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.922546.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000219158F7A38
+[LOG] SoundI::release                          : [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A4F1AC1E8)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A3A899A68)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A710D5D68)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000219158F7378, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000219158F7378
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A4C7AE830
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2500
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED', format=5, channels=2, frequency=48000, lengthbytes=1358304, lengthpcm=5145913, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.344818.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000219158F7378
+[LOG] SoundI::release                          : [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (00000219158F7A38)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A0DBEB7A8)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A46092408)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021900C06048, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021900C06048
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021949A5F2F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Waltz in B minor, Op. 69 no. 2', format=5, channels=2, frequency=48000, lengthbytes=2548608, lengthpcm=10539648, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.585693.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021900C06048
+[LOG] SoundI::release                          : Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (00000219158F7378)
+[LOG] SoundI::release                          :     Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (0000021A46053E88)
+[LOG] SoundI::release                          :     Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (0000021A4F3309D8)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021900C068B8, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021900C068B8
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021949A5ECB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Leyland Kirby - We drink to forget the coming storm Track 1', format=5, channels=2, frequency=48000, lengthbytes=5565088, lengthpcm=21891448, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.715973.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021900C068B8
+[LOG] SoundI::release                          : Waltz in B minor, Op. 69 no. 2 (0000021900C06048)
+[LOG] SoundI::release                          :     Waltz in B minor, Op. 69 no. 2 (0000021A460541C8)
+[LOG] SoundI::release                          :     Waltz in B minor, Op. 69 no. 2 (0000021A4F330D38)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A714E6DB8, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A714E6DB8
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219158B2EB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2500
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED', format=5, channels=2, frequency=48000, lengthbytes=1358304, lengthpcm=5145913, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.344818.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A714E6DB8
+[LOG] SoundI::release                          : Leyland Kirby - We drink to forget the coming storm Track 1 (0000021900C068B8)
+[LOG] SoundI::release                          :     Leyland Kirby - We drink to forget the coming storm Track 1 (0000021A46053E88)
+[LOG] SoundI::release                          :     Leyland Kirby - We drink to forget the coming storm Track 1 (0000021A4F330678)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A714E97E8, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A714E97E8
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219158B2AF0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='[ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling', format=5, channels=2, frequency=48000, lengthbytes=297504, lengthpcm=868937, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.922546.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A714E97E8
+[LOG] SoundI::release                          : Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (0000021A714E6DB8)
+[LOG] SoundI::release                          :     Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (0000021A3A899A68)
+[LOG] SoundI::release                          :     Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (0000021A710DA7A8)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A714E9998, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A714E9998
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219158B2C30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='[ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling', format=5, channels=2, frequency=48000, lengthbytes=297504, lengthpcm=868937, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.922546.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A714E9998
+[LOG] SoundI::release                          : [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A714E97E8)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A0E249828)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A71573EB8)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A714E9CF8, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A714E9CF8
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219158B29B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='[ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling', format=5, channels=2, frequency=48000, lengthbytes=297504, lengthpcm=868937, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.922546.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A714E9CF8
+[LOG] SoundI::release                          : [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A714E9998)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A0DBEC308)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A46092918)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A714E6F68, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A714E6F68
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219158B2EB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='[ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling', format=5, channels=2, frequency=48000, lengthbytes=297504, lengthpcm=868937, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.922546.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A714E6F68
+[LOG] SoundI::release                          : [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A714E9CF8)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A0E2491A8)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A71574218)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A714EA718, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A714EA718
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219158B29B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='R1 - O Jesu Christ - Unknown Choir - reversed', format=5, channels=2, frequency=48000, lengthbytes=3283104, lengthpcm=13834368, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.919922.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A714EA718
+[LOG] SoundI::release                          : [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A714E6F68)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A0E24A6C8)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A715743C8)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A714E6F68, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A714E6F68
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219158B2C30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='[ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling', format=5, channels=2, frequency=48000, lengthbytes=297504, lengthpcm=868937, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.922546.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A714E6F68
+[LOG] SoundI::release                          : R1 - O Jesu Christ - Unknown Choir - reversed (0000021A714EA718)
+[LOG] SoundI::release                          :     R1 - O Jesu Christ - Unknown Choir - reversed (0000021A0E24B708)
+[LOG] SoundI::release                          :     R1 - O Jesu Christ - Unknown Choir - reversed (0000021A715737F8)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A714E6DB8, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A714E6DB8
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219158B29B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='[ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling', format=5, channels=2, frequency=48000, lengthbytes=297504, lengthpcm=868937, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.922546.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A714E6DB8
+[LOG] SoundI::release                          : [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A714E6F68)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A0E2499C8)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A71573138)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A714EAA78, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A714EAA78
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000021A714E9998, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219158B2C30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='[ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling', format=5, channels=2, frequency=48000, lengthbytes=297504, lengthpcm=868937, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.922546.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A714EAA78
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A714E9998
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219158B2EB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 4702
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='[ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling', format=5, channels=2, frequency=48000, lengthbytes=297504, lengthpcm=868937, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.922546.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A714E9998
+[LOG] SoundI::release                          : [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A714EAA78)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A0DBEB7A8)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A46092918)
+[LOG] SoundI::release                          : [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A714E6DB8)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A0E24A1E8)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A715732E8)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A714EA718, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A714EA718
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219158B29B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2500
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED', format=5, channels=2, frequency=48000, lengthbytes=1358304, lengthpcm=5145913, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.344818.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A714EA718
+[LOG] SoundI::release                          : [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A714E9998)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A0DBEBAE8)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A46092AC8)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A714EA058, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A714EA058
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219158B2AF0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Leyland Kirby - We drink to forget the coming storm Track 1', format=5, channels=2, frequency=48000, lengthbytes=5565088, lengthpcm=21891448, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.715973.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A714EA058
+[LOG] SoundI::release                          : Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (0000021A714EA718)
+[LOG] SoundI::release                          :     Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (0000021A0DBEB7A8)
+[LOG] SoundI::release                          :     Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (0000021A46092408)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A714E6038, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A714E6038
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219158B2EB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Waltz in B minor, Op. 69 no. 2', format=5, channels=2, frequency=48000, lengthbytes=2548608, lengthpcm=10539648, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.585693.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A714E6038
+[LOG] SoundI::release                          : Leyland Kirby - We drink to forget the coming storm Track 1 (0000021A714EA058)
+[LOG] SoundI::release                          :     Leyland Kirby - We drink to forget the coming storm Track 1 (00000218DEFFF198)
+[LOG] SoundI::release                          :     Leyland Kirby - We drink to forget the coming storm Track 1 (0000021A4EB9D038)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A714E6DB8, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A714E6DB8
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219158B2D70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2500
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED', format=5, channels=2, frequency=48000, lengthbytes=1358304, lengthpcm=5145913, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.344818.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A714E6DB8
+[LOG] SoundI::release                          : Waltz in B minor, Op. 69 no. 2 (0000021A714E6038)
+[LOG] SoundI::release                          :     Waltz in B minor, Op. 69 no. 2 (000002191365F648)
+[LOG] SoundI::release                          :     Waltz in B minor, Op. 69 no. 2 (000002194978A2C8)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A714E97E8, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A714E97E8
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219158B2EB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Waltz in B minor, Op. 69 no. 2', format=5, channels=2, frequency=48000, lengthbytes=2548608, lengthpcm=10539648, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.585693.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A714E97E8
+[LOG] SoundI::release                          : Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (0000021A714E6DB8)
+[LOG] SoundI::release                          :     Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (000002191365C588)
+[LOG] SoundI::release                          :     Sixteen Waltzes, Op. 39 - 9. Waltz in D minor - SLOWED (000002194978A478)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000219158F7528, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000219158F7528
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A4C7AEAB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='[ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling', format=5, channels=2, frequency=48000, lengthbytes=297504, lengthpcm=868937, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.922546.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000219158F7528
+[LOG] SoundI::release                          : Waltz in B minor, Op. 69 no. 2 (0000021A714E97E8)
+[LOG] SoundI::release                          :     Waltz in B minor, Op. 69 no. 2 (000002191365EE28)
+[LOG] SoundI::release                          :     Waltz in B minor, Op. 69 no. 2 (0000021949789F68)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000219158F7378, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000219158F7378
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A4C7AE830
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Waltz in B minor, Op. 69 no. 2', format=5, channels=2, frequency=48000, lengthbytes=2548608, lengthpcm=10539648, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.585693.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000219158F7378
+[LOG] SoundI::release                          : [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (00000219158F7528)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A3A899728)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A710D71A8)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000219158F7018, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000219158F7018
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A4C7AE970
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Leyland Kirby - We drink to forget the coming storm Track 1', format=5, channels=2, frequency=48000, lengthbytes=5565088, lengthpcm=21891448, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.715973.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000219158F7018
+[LOG] SoundI::release                          : Waltz in B minor, Op. 69 no. 2 (00000219158F7378)
+[LOG] SoundI::release                          :     Waltz in B minor, Op. 69 no. 2 (00000219159BCAC8)
+[LOG] SoundI::release                          :     Waltz in B minor, Op. 69 no. 2 (0000021A710D91B8)
+[LOG] SoundI::release                          : Leyland Kirby - We drink to forget the coming storm Track 1 (00000219158F7018)
+[LOG] SoundI::release                          :     Leyland Kirby - We drink to forget the coming storm Track 1 (00000219159BC928)
+[LOG] SoundI::release                          :     Leyland Kirby - We drink to forget the coming storm Track 1 (0000021A710D9368)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A710D8CA8, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A710D8CA8
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021911C3FF60
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Waltz in B minor, Op. 69 no. 2', format=5, channels=2, frequency=48000, lengthbytes=2548608, lengthpcm=10539648, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.585693.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A710D8CA8
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021949750D18, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021949750D18
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219042C5060
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='The great hidden sea of the unconscious', format=5, channels=2, frequency=48000, lengthbytes=2282784, lengthpcm=8749557, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.961914.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021949750D18
+[LOG] SoundI::release                          : Waltz in B minor, Op. 69 no. 2 (0000021A710D8CA8)
+[LOG] SoundI::release                          :     Waltz in B minor, Op. 69 no. 2 (0000021949D63688)
+[LOG] SoundI::release                          :     Waltz in B minor, Op. 69 no. 2 (0000021900C068B8)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000219158F7018, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000219158F7018
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 00000219158F6E68, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A4C7AE830
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='The great hidden sea of the unconscious', format=5, channels=2, frequency=48000, lengthbytes=2282784, lengthpcm=8749557, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.961914.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000219158F7018
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000219158F6E68
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A4C7AE970
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 22506
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='The great hidden sea of the unconscious', format=5, channels=2, frequency=48000, lengthbytes=2282784, lengthpcm=8749557, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.961914.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000219158F6E68
+[LOG] SoundI::release                          : The great hidden sea of the unconscious (00000219158F7018)
+[LOG] SoundI::release                          :     The great hidden sea of the unconscious (0000021A0E2484A8)
+[LOG] SoundI::release                          :     The great hidden sea of the unconscious (0000021A551515E8)
+[LOG] SoundI::release                          : The great hidden sea of the unconscious (0000021949750D18)
+[LOG] SoundI::release                          :     The great hidden sea of the unconscious (0000021949D63348)
+[LOG] SoundI::release                          :     The great hidden sea of the unconscious (0000021900C05E98)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000219158F7A38, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000219158F7A38
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A4C7AF0F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Waltz in B minor, Op. 69 no. 2', format=5, channels=2, frequency=48000, lengthbytes=2548608, lengthpcm=10539648, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.585693.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000219158F7A38
+[LOG] SoundI::release                          : The great hidden sea of the unconscious (00000219158F6E68)
+[LOG] SoundI::release                          :     The great hidden sea of the unconscious (0000021A0E2487E8)
+[LOG] SoundI::release                          :     The great hidden sea of the unconscious (0000021A551537A8)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A71610588, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A71610588
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002190417E200
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='The great hidden sea of the unconscious', format=5, channels=2, frequency=48000, lengthbytes=2282784, lengthpcm=8749557, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.961914.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A71610588
+[LOG] SoundI::release                          : Waltz in B minor, Op. 69 no. 2 (00000219158F7A38)
+[LOG] SoundI::release                          :     Waltz in B minor, Op. 69 no. 2 (000002191365B3A8)
+[LOG] SoundI::release                          :     Waltz in B minor, Op. 69 no. 2 (0000021949751078)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A71610C48, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A71610C48
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000021A71610A98, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002190417E0C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='The great hidden sea of the unconscious', format=5, channels=2, frequency=48000, lengthbytes=2282784, lengthpcm=8749557, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.961914.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A71610C48
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A71610A98
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002190417DD00
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 22506
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='The great hidden sea of the unconscious', format=5, channels=2, frequency=48000, lengthbytes=2282784, lengthpcm=8749557, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.961914.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A71610A98
+[LOG] SoundI::release                          : The great hidden sea of the unconscious (0000021A71610C48)
+[LOG] SoundI::release                          :     The great hidden sea of the unconscious (0000021A460541C8)
+[LOG] SoundI::release                          :     The great hidden sea of the unconscious (00000219159BFCA8)
+[LOG] SoundI::release                          : The great hidden sea of the unconscious (0000021A71610588)
+[LOG] SoundI::release                          :     The great hidden sea of the unconscious (0000021A46053E88)
+[LOG] SoundI::release                          :     The great hidden sea of the unconscious (00000219159BFAF8)
+[LOG] SoundI::release                          : The great hidden sea of the unconscious (0000021A71610A98)
+[LOG] SoundI::release                          :     The great hidden sea of the unconscious (0000021A4F74CD48)
+[LOG] SoundI::release                          :     The great hidden sea of the unconscious (00000219159BF798)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A697E0508, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A697E0508
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021949704220
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='[ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling', format=5, channels=2, frequency=48000, lengthbytes=297504, lengthpcm=868937, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.922546.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A697E0508
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A68AE54D8, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A68AE54D8
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021A3A318E20
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Waltz in A flat major 'Farewell', Op. 69 no. 1_SLOWED', format=5, channels=2, frequency=48000, lengthbytes=3568800, lengthpcm=18528548, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.504608.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A68AE54D8
+[LOG] SoundI::release                          : [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A697E0508)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (000002191365CA68)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (00000219497518E8)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000219128503F8, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000219128503F8
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021949A5EB70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Partita no. 2, BWV 826 - I. Sinfonia', format=5, channels=2, frequency=48000, lengthbytes=2963520, lengthpcm=12582661, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.686859.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000219128503F8
+[LOG] SoundI::release                          : Waltz in A flat major 'Farewell', Op. 69 no. 1_SLOWED (0000021A68AE54D8)
+[LOG] SoundI::release                          :     Waltz in A flat major 'Farewell', Op. 69 no. 1_SLOWED (000002191365FE68)
+[LOG] SoundI::release                          :     Waltz in A flat major 'Farewell', Op. 69 no. 1_SLOWED (0000021949750D18)
+[LOG] SoundI::release                          : Partita no. 2, BWV 826 - I. Sinfonia (00000219128503F8)
+[LOG] SoundI::release                          :     Partita no. 2, BWV 826 - I. Sinfonia (0000021A3A899A68)
+[LOG] SoundI::release                          :     Partita no. 2, BWV 826 - I. Sinfonia (0000021A710DB378)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A714AED28, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A714AED28
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219158B29B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='[ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling', format=5, channels=2, frequency=48000, lengthbytes=297504, lengthpcm=868937, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.922546.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A714AED28
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000219128505A8, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000219128505A8
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000021949A5F430
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='[ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling', format=5, channels=2, frequency=48000, lengthbytes=297504, lengthpcm=868937, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.922546.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000219128505A8
+[LOG] SoundI::release                          : [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A714AED28)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A0E248308)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A68AE5838)
+[LOG] SoundI::release                          : [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (00000219128505A8)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (00000219136604E8)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (00000219497513D8)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A4EBA0CF8, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A4EBA0CF8
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000218B6AE60C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='R1 - O Jesu Christ - Unknown Choir - reversed', format=5, channels=2, frequency=48000, lengthbytes=3283104, lengthpcm=13834368, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.919922.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A4EBA0CF8
+[LOG] SoundI::release                          : R1 - O Jesu Christ - Unknown Choir - reversed (0000021A4EBA0CF8)
+[LOG] SoundI::release                          :     R1 - O Jesu Christ - Unknown Choir - reversed (0000021A0DBEBAE8)
+[LOG] SoundI::release                          :     R1 - O Jesu Christ - Unknown Choir - reversed (0000021A4F3AEAB8)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A714AF088, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A714AF088
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219158B29B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='[ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling', format=5, channels=2, frequency=48000, lengthbytes=297504, lengthpcm=868937, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.922546.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A714AF088
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A68AE4E18, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A68AE4E18
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219053AF000
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Preludes, Op. 28 - No. 20 'Funeral march'', format=5, channels=2, frequency=48000, lengthbytes=1095456, lengthpcm=4344685, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.521271.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A68AE4E18
+[LOG] SoundI::release                          : [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A714AF088)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021A0E247C88)
+[LOG] SoundI::release                          :     [ASMR] Vinyl Crackle  Record Player White Noise  Vinyl Crackling (0000021902FA2548)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A68AE5688, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A68AE5688
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219053AEB00
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Preludes, Op. 28 - No. 20 'Funeral march'', format=5, channels=2, frequency=48000, lengthbytes=1095456, lengthpcm=4344685, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.521271.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A68AE5688
+[LOG] SoundI::release                          : Preludes, Op. 28 - No. 20 'Funeral march' (0000021A68AE4E18)
+[LOG] SoundI::release                          :     Preludes, Op. 28 - No. 20 'Funeral march' (0000021949D634E8)
+[LOG] SoundI::release                          :     Preludes, Op. 28 - No. 20 'Funeral march' (0000021912850248)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A68AE4AB8, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A68AE4AB8
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219053AED80
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 90000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Five sharakan of Saak Partev', format=5, channels=2, frequency=48000, lengthbytes=7977088, lengthpcm=27999085, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999481.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A68AE4AB8
+[LOG] SoundI::release                          : Preludes, Op. 28 - No. 20 'Funeral march' (0000021A68AE5688)
+[LOG] SoundI::release                          :     Preludes, Op. 28 - No. 20 'Funeral march' (0000021A0DBEB7A8)
+[LOG] SoundI::release                          :     Preludes, Op. 28 - No. 20 'Funeral march' (0000021A46092C78)
+[LOG] SystemI::createSound                     : filename = ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000021A68AE4C68, queue head = 0000021A3A062BA8, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000021A68AE4C68
+[LOG] SystemI::createSoundInternal             :     Create name='../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 190639968
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 128448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000219053AEB00
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='F2 - Drifting time misplaced', format=5, channels=2, frequency=48000, lengthbytes=3509184, lengthpcm=12281730, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.962067.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000021A68AE4C68
+[LOG] SoundI::release                          : Five sharakan of Saak Partev (0000021A68AE4AB8)
+[LOG] SoundI::release                          :     Five sharakan of Saak Partev (0000021A0DBEBAE8)
+[LOG] SoundI::release                          :     Five sharakan of Saak Partev (0000021A46092408)
+[LOG] SoundI::release                          : F2 - Drifting time misplaced (0000021A68AE4C68)
+[LOG] SoundI::release                          :     F2 - Drifting time misplaced (0000021A0E24A868)
+[LOG] SoundI::release                          :     F2 - Drifting time misplaced (0000021A71A761C8)
+[LOG] SoundI::release                          :  (000002190298B7B8)
+[LOG] SoundI::release                          :     Lamento della ninfa -note (00000219E7FD0A38)
+[LOG] SoundI::release                          :  (000002190298B928)
+[LOG] SoundI::release                          :     Hell (00000219E7FD0D78)
+[LOG] SoundI::release                          :  (000002191098EEB8)
+[LOG] SoundI::release                          :     bullet-hit-metal-84818 (000002190307F898)
+[LOG] SoundI::release                          :  (000002190298B368)
+[LOG] SoundI::release                          :     bullet-hit-metal-84818 1 (00000219498A9C08)
+[LOG] SoundI::release                          :  (000002191098F308)
+[LOG] SoundI::release                          :     clickCut (0000021A460546A8)
+[LOG] SoundI::release                          :  (000002191098FBA8)
+[LOG] SoundI::release                          :     dingCut (000002190307F078)
+[LOG] SoundI::release                          :  (000002190298BC08)
+[LOG] SoundI::release                          :     ding-small-bell-sfx-233008 (00000219498A93E8)
+[LOG] SoundI::release                          :  (000002191098F198)
+[LOG] SoundI::release                          :     Click (0000021A46054508)
+[LOG] SoundI::release                          :  (000002190298B088)
+[LOG] SoundI::release                          :     Shield (00000219498A9A68)
+[LOG] SoundI::release                          :  (0000021A39D0CD28)
+[LOG] SoundI::release                          :     clank1-91862 (00000219498A9F48)
+[LOG] SoundI::release                          :  (0000021A537D56B8)
+[LOG] SoundI::release                          :     SFX_Assault Single Shot (0000021912B26BE8)
+[LOG] SoundI::release                          :  (0000021A537D5828)
+[LOG] SoundI::release                          :     tickCut (00000218DF048D28)
+[LOG] SoundI::release                          :  (0000021A39D0C8D8)
+[LOG] SoundI::release                          :     Item (0000021A4F541438)
+[LOG] SoundI::release                          :  (0000021A39D0C318)
+[LOG] SoundI::release                          :     vinyl-record-stop-lift-needle-08-35959 (0000021A69345788)
+[LOG] SoundI::release                          :  (000002190298BD78)
+[LOG] SoundI::release                          :     Flesh (00000219E7FD0558)
+[LOG] SoundI::release                          :  (0000021A39D0CA48)
+[LOG] SoundI::release                          :     Impact (0000021A4F541778)
+[LOG] SoundI::release                          :  (0000021A537D5548)
+[LOG] SoundI::release                          :     LeftStepSolid (0000021912B26D88)
+[LOG] SoundI::release                          :  (0000021A39D0C768)
+[LOG] SoundI::release                          :     closing-large-metal-door-001-326819 (0000021A4F541C58)
+[LOG] SoundI::release                          :  (0000021A537D53D8)
+[LOG] SoundI::release                          :     Hit (000002190307FBD8)
+[LOG] SoundI::release                          :  (000002191098F478)
+[LOG] SoundI::release                          :     SFX_Equip Assault Rifle (000002190307F218)
+[LOG] SoundI::release                          :  (0000021A39D0C5F8)
+[LOG] SoundI::release                          :     Bloodsplash (0000021A4F5410F8)
+[LOG] SoundI::release                          :  (0000021A537D50F8)
+[LOG] SoundI::release                          :     RightStepSolid (00000218DF0493A8)
+[LOG] SoundI::release                          :  (0000021A537D5268)
+[LOG] SoundI::release                          :     exploding-building-1-185114 (0000021912B26228)
+[LOG] SoundI::release                          :  (0000021A537D4CA8)
+[LOG] SoundI::release                          :     unlock-padlock-deadbolt-on-door-001-8441 (0000021912B26A48)
+[LOG] SoundI::release                          :  (0000021A537D4F88)
+[LOG] SoundI::release                          :     SmallClick (0000021912B263C8)
+[LOG] SoundI::release                          :  (0000021A39D0C038)
+[LOG] SoundI::release                          :     Polaroid (0000021A69345108)
+[LOG] SoundI::release                          :  (0000021A537D5998)
+[LOG] SoundI::release                          :     SmallClickLoop (00000218DF049068)
+[LOG] SoundI::release                          :  (0000021A39D0CBB8)
+[LOG] SoundI::release                          :     ticking-clock_1-27477 (0000021A4F541AB8)
+[LOG] SoundI::release                          :  (000002191098F5E8)
+[LOG] SoundI::release                          :     DoorOpen (0000021A46054368)
+[LOG] SoundI::release                          :  (0000021A39D0C1A8)
+[LOG] SoundI::release                          :     Flesh1 (0000021A693455E8)
+[LOG] SoundI::release                          :  (0000021A39D0C488)
+[LOG] SoundI::release                          :     Flesh2 (0000021A693452A8)
+[LOG] SoundI::release                          :  (000002190298B1F8)
+[LOG] SoundI::release                          :     walking-upstairs-in-heels_light-step-40874 (00000219498A9728)
+[LOG] SoundI::release                          :  (0000021A537D4E18)
+[LOG] SoundI::release                          :     LeftStepFabric (00000218DF048848)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
@@ -28,3 +935,5 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
