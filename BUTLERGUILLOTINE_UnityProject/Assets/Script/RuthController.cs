@@ -26,6 +26,11 @@ public class RuthController : PlayerController
     [SerializeField] OrderableFighter fighter;
     [SerializeField] Transform orderableSpawn;
 
+    [Header("Blasting")]
+    [SerializeField] LayerMask blastLayer;
+    [SerializeField] float blastRange;
+    bool secondary;
+
     [Header("Dropdown")]
     [SerializeField] Vector3 dropdownOffset;
     
@@ -62,9 +67,6 @@ public class RuthController : PlayerController
             crossTimer += Time.deltaTime;
         else
             crossTimer = 0;
-
-        if (Input.GetKeyDown(KeyCode.G))
-            animator.SetTrigger("Clap");
 
         animator.SetBool("ArmsCrossed", crossTimer > delayBeforeArmCross);
 
@@ -193,6 +195,52 @@ public class RuthController : PlayerController
                 agent.ResetPath();
             }
         }
+    }
+
+    public override void Secondary()
+    {
+        if (secondary)
+            return;
+
+        base.Secondary();
+
+        StartCoroutine(C_Secondary());
+    }
+
+    IEnumerator C_Secondary()
+    {
+        secondary = true;
+        animator.SetBool("Secondary", true);
+        GameManager.Instance.SecondaryActive = secondary;
+
+        yield return new WaitForSeconds(2);
+
+        animator.SetTrigger("Snap");
+
+        yield return new WaitForSeconds(0.05f);
+
+        Collider[] col = Physics.OverlapSphere(transform.position, blastRange, blastLayer);
+
+        foreach (var item in col)
+        {
+            var blastable = item.gameObject.GetComponent<Blastable>();
+
+            if (blastable != null)
+            {
+                blastable.Death();
+                break;
+            }
+        }
+
+        yield return new WaitForSeconds(1f);
+
+        animator.SetBool("Secondary", false);
+
+        yield return new WaitForSeconds(0.3f);
+
+        secondary = false;
+        GameManager.Instance.SecondaryActive = secondary;
+        crossTimer = 0;
     }
 
 

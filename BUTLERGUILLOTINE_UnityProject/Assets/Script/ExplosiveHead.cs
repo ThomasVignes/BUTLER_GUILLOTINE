@@ -8,6 +8,7 @@ public class ExplosiveHead : MonoBehaviour
     [SerializeField] float speedModifier;
     [SerializeField] float startBlastSpeed, endBlastSpeed;
     [SerializeField] float freezeDelay;
+    [SerializeField] bool physicsOnFreeze;
     [SerializeField] GameObject[] headPieces;
     [SerializeField] Transform center;
     [SerializeField] GameObject[] hideThese;
@@ -63,13 +64,19 @@ public class ExplosiveHead : MonoBehaviour
 
         move = false;
 
-        /*
-        foreach (var item in headPieces)
+        if (physicsOnFreeze)
         {
-            Rigidbody rb = item.GetComponent<Rigidbody>();
+            foreach (var item in headPieces)
+            {
+                Rigidbody rb = item.AddComponent<Rigidbody>();
+                BoxCollider box = item.AddComponent<BoxCollider>();
 
-            rb.isKinematic = true;
+                box.size = Vector3.one * 0.00046f;
+
+                rb.AddExplosionForce(100f, center.position, 10f);
+
+                item.AddComponent<FreezeRb>();
+            }
         }
-        */
     }
 }

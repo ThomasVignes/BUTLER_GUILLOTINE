@@ -13644,6 +13644,10 @@ MonoBehaviour:
   photographer: {fileID: 1891565054623542912}
   fighter: {fileID: 8782478760395944029}
   orderableSpawn: {fileID: 247121852615811102}
+  blastLayer:
+    serializedVersion: 2
+    m_Bits: 16
+  blastRange: 3
   dropdownOffset: {x: 0, y: -0.914, z: 0}
 --- !u!54 &5030443471988108844
 Rigidbody:

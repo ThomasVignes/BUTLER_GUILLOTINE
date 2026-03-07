@@ -30,6 +30,11 @@ public class PlayerController : Character
         animator.SetTrigger("WakeUp");
     }
 
+    public virtual void Secondary()
+    {
+
+    }
+
     public virtual void Ready()
     {
         /*

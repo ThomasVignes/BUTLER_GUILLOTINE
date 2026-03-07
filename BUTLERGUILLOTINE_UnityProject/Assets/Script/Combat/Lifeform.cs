@@ -12,8 +12,8 @@ public class Lifeform : MonoBehaviour
     public GameObject DeathRagdoll;
     public bool Unstunnable;
 
-
     bool dead;
+
     public void Hurt()
     {
         Hurt(1);

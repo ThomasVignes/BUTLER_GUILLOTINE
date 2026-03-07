@@ -94,6 +94,7 @@ public class GameManager : MonoBehaviour
     [Header("Scene Settings")]
     public bool Paused;
     public bool SpecialActive;
+    public bool SecondaryActive;
     public bool ManualPlayerSpawn;
     public bool LockSpecial;
     public string LockSpecialComment;
@@ -478,6 +479,9 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+        if (SecondaryActive)
+            return;
+
         if (Input.GetMouseButtonDown(0))
         {
             TryClick();
@@ -587,6 +591,12 @@ public class GameManager : MonoBehaviour
     public void EndGame(string message)
     {
         startGameManager.Death(message.ToUpper());
+    }
+
+    [ContextMenu("Secondary")]
+    public void PlayerSecondary()
+    {
+        player.Secondary();
     }
 
 
