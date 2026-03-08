@@ -232,6 +232,9 @@ public class RuthController : PlayerController
             }
         }
 
+        EffectsManager.Instance.audioManager.Play("Impact");
+        EffectsManager.Instance.audioManager.Play("Blood");
+
         yield return new WaitForSeconds(1f);
 
         animator.SetBool("Secondary", false);

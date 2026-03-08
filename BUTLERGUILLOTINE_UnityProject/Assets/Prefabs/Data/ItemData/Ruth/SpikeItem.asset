@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870ef87f60ae6494b88efe3f0d2fc09b, type: 3}
+  m_Name: SpikeItem
+  m_EditorClassIdentifier: 
+  ID: SpikeItem
+  Name: Goring Spike
+  Sprite: {fileID: 0}
+  Equippable: 0
+  LimitedUses: 0
+  Uses: 0
+  Equipped: 0
+  Icon: {fileID: 0}
+  Inspect:
+  - Text: A sturdy, blood-covered spike.
+    Duration: 3
+  - Text: Perfect for piercing and ripping flesh.
+    Duration: 3
+  InteractableObject: {fileID: 6299031528122252290, guid: a9cf4f1ffcd8fe44083b2f93d686e892, type: 3}

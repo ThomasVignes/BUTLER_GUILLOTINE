@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870ef87f60ae6494b88efe3f0d2fc09b, type: 3}
+  m_Name: EricMemento
+  m_EditorClassIdentifier: 
+  ID: EricMemento
+  Name: Eric's Memento
+  Sprite: {fileID: 0}
+  Equippable: 0
+  LimitedUses: 0
+  Uses: 0
+  Equipped: 0
+  Icon: {fileID: 0}
+  Inspect:
+  - Text: He never put the prosthesis on.
+    Duration: 2
+  - Text: Said things happen for a reason.
+    Duration: 2
+  - Text: I couldn't agree more if I wanted to.
+    Duration: 2
+  InteractableObject: {fileID: 3796212870173977541, guid: f5601d1a190668342b752a801b05d460, type: 3}
