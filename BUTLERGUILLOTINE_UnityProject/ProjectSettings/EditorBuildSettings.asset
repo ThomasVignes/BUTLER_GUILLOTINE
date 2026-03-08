@@ -6,14 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/_Menuing/CopyrightWarning.unity
+    path: Assets/Scenes/_Menuing/Outdated/CopyrightWarning.unity
     guid: d3eef5a6860846e4fac5647220a14fa7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/0_DEMO/DemoMenu.unity
     guid: c650821ce0f90194dbb75d5b4148e535
-  - enabled: 0
-    path: Assets/Scenes/_Menuing/NewMenu.unity
-    guid: 1fc78bb93b9862d4cafed0c8cc6e9d4f
+  - enabled: 1
+    path: Assets/Scenes/_Menuing/MainMenu.unity
+    guid: efa38601d4924d44abd91807f1ac608c
   - enabled: 1
     path: Assets/Scenes/0_INTRO/KEY.unity
     guid: 5af60e0c3ede1a94d8ceb29edcef92df
@@ -80,6 +80,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/3_RUTH/WASTELAND_CHURCH.unity
     guid: 74c43573bb70053439219b932c2f6fef
+  - enabled: 1
+    path: Assets/Scenes/_Menuing/Credits.unity
+    guid: f9d8698d57de11d4e9948dd8da9c6f79
   - enabled: 0
     path: Assets/Scenes/_Menuing/Outdated/EndDemoMenu.unity
     guid: 59f9eb12373e4694eafdd59d963738c9

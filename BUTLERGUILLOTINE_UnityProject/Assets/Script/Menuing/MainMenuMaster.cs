@@ -37,9 +37,6 @@ public class MainMenuMaster : MonoBehaviour
 
     bool startMenuOpen;
 
-    [Header("Credits")]
-    [SerializeField] CreditsManager creditsManager;
-
 
     bool disclaimerMode, moving;
     int targetSpot;
@@ -56,8 +53,6 @@ public class MainMenuMaster : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
 
         Cursor.SetCursor(BaseCursor, new Vector2(18, 13), CursorMode.Auto);
-
-        creditsManager.Init(this);
     }
 
     private void Start()
@@ -131,20 +126,12 @@ public class MainMenuMaster : MonoBehaviour
 
     public void RollCredits()
     {
-        CanInput = false;
 
-        BlackFadeTo(1, 1);
-
-        creditsManager.Roll();
     }
 
     public void EndCredits()
     {
-        creditsManager.ResetCredits();
 
-        BlackFadeTo(0, 1);
-
-        CanInput = true;
     }
 
     public void QuitGame()
