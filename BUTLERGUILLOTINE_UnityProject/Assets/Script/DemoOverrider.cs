@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 
@@ -9,17 +10,22 @@ public class DemoOverrider : MonoBehaviour
     public bool Active;
     public string EndScene;
     public GameObject CinematicThing;
+    public UnityEvent IfNoDemo;
 
     bool ruth;
 
     private void Awake()
     {
-        if (PersistentData.Instance != null) 
+        if (PersistentData.Instance != null)
         {
             if (PersistentData.Instance.DemoMode)
                 Active = true;
+            else
+                Active = false;
 
         }
+        else
+            Active = false;
     }
 
     public void Part1()
@@ -33,7 +39,10 @@ public class DemoOverrider : MonoBehaviour
     public void Part2()
     {
         if (!Active)
+        {
+            IfNoDemo?.Invoke();
             return;
+        }
 
         CinematicThing.SetActive(false);
         GameManager.Instance.End = true;

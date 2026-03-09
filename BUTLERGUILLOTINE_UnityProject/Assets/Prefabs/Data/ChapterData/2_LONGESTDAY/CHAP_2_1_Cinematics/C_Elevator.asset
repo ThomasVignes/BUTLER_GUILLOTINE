@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: C_Elevator
   m_EditorClassIdentifier: 
   ID: Elevator
-  Ambience: Elevator
+  Ambience: Empty
   BlackScreenDuration: 1
   lines:
   - Text: 
@@ -25,6 +25,7 @@ MonoBehaviour:
     soundEffects: []
   EndBlackScreenDuration: 1000
   HidePlayer: 0
+  CutOnStart: 0
   NoEndBlackscreen: 0
   NoFadeOut: 1
   OverrideKeepsGoing: 0

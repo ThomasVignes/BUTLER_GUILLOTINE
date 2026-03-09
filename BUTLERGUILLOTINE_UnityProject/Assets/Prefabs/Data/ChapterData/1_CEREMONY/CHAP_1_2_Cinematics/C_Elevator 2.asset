@@ -17,7 +17,7 @@ MonoBehaviour:
   BlackScreenDuration: 1
   lines:
   - Text: 
-    Duration: 6
+    Duration: 8
     PuppetActions: []
     cameraIndex: 0
     cameraEffect: 0
@@ -25,6 +25,7 @@ MonoBehaviour:
     soundEffects: []
   EndBlackScreenDuration: 2
   HidePlayer: 0
+  CutOnStart: 0
   NoEndBlackscreen: 0
   NoFadeOut: 0
   OverrideKeepsGoing: 0
