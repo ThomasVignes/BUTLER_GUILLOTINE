@@ -8,8 +8,9 @@ public class LimbChopper : MonoBehaviour
     [SerializeField] GameObject previous, replacement;
     [SerializeField] Animator animator;
     [SerializeField] string chopTrigger;
-    [SerializeField] GameObject additionalPrevious, additionalReplacement; 
+    [SerializeField] GameObject additionalPrevious, additionalReplacement;
 
+    [ContextMenu("Chop")]
     public void Chop()
     {
         previous.transform.localScale = Vector3.zero;

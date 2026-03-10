@@ -75,6 +75,8 @@ public class ItemUI : MonoBehaviour
 
         if (!equippable)
             equipText.color = disabledTextColor;
+        else
+            equipText.color = originalColor;
     }
 
 

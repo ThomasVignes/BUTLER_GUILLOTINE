@@ -2695,12 +2695,12 @@ MonoBehaviour:
       Data4: 2108390332
     Path: event:/SFX/bullet-hit-metal-84818 1
   Event: 
-  PlayEvent: 0
-  StopEvent: 0
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  AllowNonRigidbodyDoppler: 0
+  NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
@@ -9621,15 +9621,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1217c74f3d16d44bd759f5fd0adec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoBlood: 0
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
   Owner: {fileID: 3074778397852717127}
   Multiplier: 1
   StunMultiplier: 0.8
   ForceMultiplier: 2
   limb: {fileID: 5699123370003286821}
-  OnHit:
-    m_PersistentCalls:
-      m_Calls: []
-  NoBlood: 0
   Immune: 0
   ImmuneMessage: 
 --- !u!136 &6792912230463905472
@@ -12458,6 +12458,9 @@ MonoBehaviour:
   moveStateLerp: 4
   minDistanceToMove: 0.1
   animator: {fileID: 1681250086735525950}
+  unparented: {fileID: 0}
+  limbs: {fileID: 0}
+  ragdoll: {fileID: 0}
   InventoryController: {fileID: 3771773596903086661}
   resetPos: {x: -0.00009011149, y: 0.9111375, z: 0.04616464}
   Choppers: []
@@ -12541,7 +12544,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mask: {fileID: 1393711293628346218}
   toRemove: []
-  toAdd: []
+  toAdd:
+  - {fileID: 8352152032940371931}
 --- !u!114 &3074778397852717127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14709,6 +14713,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8646234827200456356}
     m_Modifications:
+    - target: {fileID: 432415768526196194, guid: 461bdd53ce9bf2a4f91a65eb25f2f849, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 508524161348968483, guid: 461bdd53ce9bf2a4f91a65eb25f2f849, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.17882551
@@ -14897,6 +14905,14 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -0.005257344
       objectReference: {fileID: 0}
+    - target: {fileID: 8201951067736108109, guid: 461bdd53ce9bf2a4f91a65eb25f2f849, type: 3}
+      propertyPath: m_VersionIndex
+      value: 886
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445958383483427970, guid: 461bdd53ce9bf2a4f91a65eb25f2f849, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8548791811084650592, guid: 461bdd53ce9bf2a4f91a65eb25f2f849, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -14989,7 +15005,8 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: -0.047047168
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8445958383483427970, guid: 461bdd53ce9bf2a4f91a65eb25f2f849, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15010,6 +15027,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efac4342186ce264a9ebc0995ccf3a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8352152032940371931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 432415768526196194, guid: 461bdd53ce9bf2a4f91a65eb25f2f849, type: 3}
+  m_PrefabInstance: {fileID: 8496306624485368377}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8788139444081247509
 PrefabInstance:
   m_ObjectHideFlags: 0
