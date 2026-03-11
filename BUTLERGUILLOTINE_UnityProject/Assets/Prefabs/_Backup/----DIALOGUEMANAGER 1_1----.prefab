@@ -275,13 +275,14 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
-  - Text: '"Eric and Ruth, discovery of the true entropy" '
+  - Text: '"Eric and Ruth, musings on entropy and the self." '
     Action: 
     cameraEffect: 0
     Answers:
-    - Text: '"The" true entropy ? Isn''t it supposed to be a concept ?'
+    - Text: Seems like a poster for some kind of play.
       ConditionNeeded: 
       DialogueEnd: 0
       HideLeavePrompt: 0
@@ -290,13 +291,14 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
-  - Text: '"Let''s welcome this new age, together."'
+  - Text: '"A one-time performance like no other."'
     Action: 
     cameraEffect: 0
     Answers:
-    - Text: 'This sounds really bad. '
+    - Text: 'I don''t recall this at all. '
       ConditionNeeded: 
       DialogueEnd: 1
       HideLeavePrompt: 0
@@ -317,8 +319,11 @@ MonoBehaviour:
               m_StringArgument: Picture_Newspaper
               m_BoolArgument: 0
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &1044690110882527930
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,6 +383,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: How can anyone even open this thing.
@@ -389,6 +395,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Opening it from the inside is very impractical... Maybe I'll just leave
@@ -405,6 +412,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: Hello ?
@@ -416,6 +424,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: I was thinking out loud ! Not everything is about you.
@@ -431,8 +440,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &1089045160015535832
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +504,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: (Leave)
@@ -503,6 +516,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: ...
@@ -517,7 +531,20 @@ MonoBehaviour:
       BranchIndex: 1
       Delegate:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_MethodName: SetActive
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: ...
@@ -549,42 +576,6 @@ MonoBehaviour:
             m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
             m_MethodName: WriteComment
             m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: Well... That's a lot of keys.
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 0}
-            m_TargetAssemblyTypeName: Door, Assembly-CSharp
-            m_MethodName: Unlock
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: Well... That's a lot of keys.
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 0}
-            m_TargetAssemblyTypeName: Door, Assembly-CSharp
-            m_MethodName: Unlock
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: Well... That's a lot of keys.
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 0}
-            m_TargetAssemblyTypeName: Door, Assembly-CSharp
-            m_MethodName: Unlock
-            m_Mode: 1
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -689,8 +680,11 @@ MonoBehaviour:
               m_StringArgument: GotSideRoom
               m_BoolArgument: 1
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &1245021940068145580
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,8 +744,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &1267724163006126142
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,8 +808,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 17
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &1525239104522944601
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,6 +924,7 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 1
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: ...Need a reminder ?
@@ -939,6 +940,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: I'm good.
@@ -950,6 +952,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 1
       DialogueIndex: 6
   - Text: Basically, you are going on set in about 30 minutes.
@@ -965,6 +968,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: And unlike your predecessors, I'll make sure that this performance is the
@@ -981,6 +985,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: I'm not doing this again. Neither me or my butlers made you come.
@@ -996,6 +1001,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: You must trust me. It is not my first time, far from it.
@@ -1011,6 +1017,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: 'Fine, I''m listening. '
@@ -1022,6 +1029,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: ...
@@ -1037,6 +1045,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Thank you.
@@ -1052,8 +1061,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 1
       DialogueIndex: 6
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &1624806060858411144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,6 +1259,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Oh, sorry sir. I was absorbed in thought. Are you in need of assistance
@@ -1263,6 +1276,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: 'Nope, not really. '
@@ -1274,6 +1288,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: These ? They are for our guests. They're expressive, and anonymous.
@@ -1289,6 +1304,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: Anonymous ?
@@ -1300,6 +1316,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Check this out.
@@ -1315,6 +1332,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: I could give you one early, if you so wish.
@@ -1330,6 +1348,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: No way !  Stop that !
@@ -1341,6 +1360,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: There you go, sir.
@@ -1416,6 +1436,19 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+            m_MethodName: EquipItem
+            m_Mode: 5
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: Mask
+              m_BoolArgument: 0
+            m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Pretty nice, huh ?
@@ -1431,6 +1464,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Anonymity is of a staple for our performances. It helps the public take
@@ -1447,6 +1481,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Definetly.
@@ -1462,8 +1497,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &1656527983067524533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1659,6 +1697,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: Wow. Rude.
@@ -1670,6 +1709,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: You literally left the door open.
@@ -1681,6 +1721,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: 'Are you ready, at least ? We have less than an hour left ! '
@@ -1696,6 +1737,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: I don't even know what you are talking about.
@@ -1707,6 +1749,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Right. Let's start.
@@ -1722,6 +1765,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 1
       DialogueIndex: 4
   - Text: At least you still have some honesty left in you. That's something.
@@ -1737,6 +1781,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: You can't even recall what you ate during lunch, have some humility.
@@ -1752,6 +1797,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 1
       DialogueIndex: 4
     - Text: Fuck you !
@@ -1763,6 +1809,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 1
       DialogueIndex: 4
   - Text: Shit.
@@ -1778,8 +1825,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &2199486479085494902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,6 +1956,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: ...
@@ -1921,6 +1972,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: ...
@@ -1932,6 +1984,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: '*HACK*'
@@ -1947,6 +2000,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: '*HACK*'
@@ -1958,9 +2012,10 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
-  - Text: Sorry, almost lost my breath there
+  - Text: Sorry, almost lost my breath there.
     Action: HeadTurn
     cameraEffect: 0
     Answers:
@@ -1973,8 +2028,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &2309589860702690699
 GameObject:
   m_ObjectHideFlags: 0
@@ -2073,6 +2131,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: Could I enjoy a quick refresher on the current situation, just to be
@@ -2085,6 +2144,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Madame will fill in on any missing gaps, for now, patience is your only
@@ -2101,6 +2161,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Exactly, be ready for the next hour, Madame shall receive you then.
@@ -2116,8 +2177,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &2502187734137908031
 GameObject:
   m_ObjectHideFlags: 0
@@ -2177,6 +2241,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: Nope, just strolling by, don't mind me. (Leave)
@@ -2188,6 +2253,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: 'Right, let''s do this again. '
@@ -2203,8 +2269,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 1
       DialogueIndex: 4
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &2994010709158306485
 GameObject:
   m_ObjectHideFlags: 0
@@ -2295,6 +2364,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: There's glue in the lock.
@@ -2310,8 +2380,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &3242927000275882988
 GameObject:
   m_ObjectHideFlags: 0
@@ -2808,6 +2881,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: ...Me.
@@ -2823,6 +2897,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: ...You clearly hanged yourself. Unless it is staged, or a murder masked
@@ -2839,14 +2914,16 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
-  - Text: 'The one who forgets barely possesses a "self" anymore... the flesh never
-      forgets, but you... '
+  - Text: Free will is fragmented, just as much as what "self" means to you. We haven't
+      been able to answer these questions for a long, long time.
     Action: 
     cameraEffect: 0
     Answers:
-    - Text: Nonsense. You mean that I would've lost my mind ?
+    - Text: On the contrary, I haven't felt this clear-minded in what seems to be
+        decades.
       ConditionNeeded: 
       DialogueEnd: 0
       HideLeavePrompt: 0
@@ -2855,9 +2932,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
-  - Text: You've lost your mind, and I stand now in your place, searching for peace.
+  - Text: What made you whole has shattered,  and I stand now in your place, searching
+      for peace.
     Action: 
     cameraEffect: 0
     Answers:
@@ -2870,8 +2949,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &3690564210047983354
 GameObject:
   m_ObjectHideFlags: 0
@@ -3002,6 +3084,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Feels damp.
@@ -3017,6 +3100,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: ...
@@ -3032,6 +3116,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: ...
@@ -3047,6 +3132,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: ...
@@ -3062,6 +3148,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: ...
@@ -3125,8 +3212,11 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &4162596712135244024
 GameObject:
   m_ObjectHideFlags: 0
@@ -3393,6 +3483,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: '...Better leave it alone. '
@@ -3404,6 +3495,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Feels warm.
@@ -3419,6 +3511,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: No... come back...
@@ -3434,8 +3527,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 1
       DialogueIndex: 17
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &5312815731770340700
 GameObject:
   m_ObjectHideFlags: 0
@@ -3495,6 +3591,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: You really saw, a extremely suspicious hole, and decided to stick your
@@ -3511,6 +3608,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: I felt drawn to it.
@@ -3522,6 +3620,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: ...These walls are not normal. Steer clear from them from now on.
@@ -3537,8 +3636,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &5789269368886168945
 GameObject:
   m_ObjectHideFlags: 0
@@ -3635,8 +3737,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &5949741974694517935
 GameObject:
   m_ObjectHideFlags: 0
@@ -3763,6 +3868,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: Half of the doors around here are completely locked.
@@ -3774,6 +3880,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: One of the guests hung themselves ! Right up in room 4 !
@@ -3785,6 +3892,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: On direct order from madame, no, I'm afraid I cannot. Risks have proven...
@@ -3801,6 +3909,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: ...Huh.
@@ -3816,6 +3925,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 1
   - Text: Absolutely. None of them are being used by anyone other than the staff,
@@ -3832,6 +3942,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Naturally, I've left the room keys in the backstage. One of my colleagues
@@ -3896,6 +4007,7 @@ MonoBehaviour:
               m_StringArgument: One of the butlers must have the key.
               m_BoolArgument: 1
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: That's not possible sir. There are no guests here. Maybe you got scared
@@ -3912,6 +4024,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: 'I beg to differ. '
@@ -3927,8 +4040,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &6300141925017820564
 GameObject:
   m_ObjectHideFlags: 0
@@ -3988,6 +4104,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Anonymity is of a staple for our performances. It helps the public take
@@ -4004,9 +4121,10 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
-  - Text: Definitly.
+  - Text: Definetly.
     Action: Speak
     cameraEffect: 0
     Answers:
@@ -4019,8 +4137,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &6426552902461840023
 GameObject:
   m_ObjectHideFlags: 0
@@ -4081,6 +4202,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: Yup. Well done.
@@ -4092,6 +4214,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Oh, welcome again, sir. If you have any luggage, I'll be happy to take
@@ -4108,6 +4231,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: I got told that I could get the backstage key off you.
@@ -4119,6 +4243,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: 'I''m fine, thanks for asking. '
@@ -4130,6 +4255,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Not yet, but there are a lot of guests coming pretty soon.
@@ -4145,6 +4271,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: ...Wait. Who's suitcases are these then ?
@@ -4156,6 +4283,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 1
       DialogueIndex: 16
   - Text: No can tell, sorry. But you'll see for yourself soon enough.
@@ -4171,6 +4299,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Indeed. Here it is, sir.
@@ -4210,32 +4339,11 @@ MonoBehaviour:
               m_StringArgument: StageClosed
               m_BoolArgument: 0
             m_CallState: 2
-          - m_Target: {fileID: 0}
-            m_TargetAssemblyTypeName: Door, Assembly-CSharp
-            m_MethodName: Unlock
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: StageClosed
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 0}
-            m_TargetAssemblyTypeName: Door, Assembly-CSharp
-            m_MethodName: Unlock
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: StageClosed
-              m_BoolArgument: 0
-            m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &6486642794640131001
 GameObject:
   m_ObjectHideFlags: 0
@@ -4295,6 +4403,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Please don't do this.
@@ -4323,6 +4432,7 @@ MonoBehaviour:
                 AGAINST YOUR TEMPLE  ONCE AGAIN.
               m_BoolArgument: 0
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: '... '
@@ -4334,8 +4444,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &6625535365630827803
 GameObject:
   m_ObjectHideFlags: 0
@@ -4395,6 +4508,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: I got the key.
@@ -4406,6 +4520,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: You too.
@@ -4417,6 +4532,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: I've never taken enough time to admire these statues, they are really well
@@ -4433,6 +4549,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: Who are they depicting ?
@@ -4444,6 +4561,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Anyways. I know madame forbid it, but I urge you to go check out the hole
@@ -4460,6 +4578,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Hah ! Very funny Sir, I'm glad to see that your sense of humor is intact.
@@ -4475,6 +4594,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: "I'm 100% serious, gar\xE7on."
@@ -4486,6 +4606,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Heavens. That's... concerning. Guess madame wasn't exaggerating.
@@ -4501,6 +4622,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Amazing. Have fun looking around, sir.
@@ -4516,8 +4638,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &6788082440739690464
 GameObject:
   m_ObjectHideFlags: 0
@@ -4590,6 +4715,7 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Stop pushing it ! I'm doing you a favour here.
@@ -4617,6 +4743,7 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: If you say so. (Leave)
@@ -4652,6 +4779,7 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Fine.
@@ -4691,6 +4819,7 @@ MonoBehaviour:
               m_StringArgument: DiedToRuth
               m_BoolArgument: 0
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: "\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1"
@@ -4718,6 +4847,7 @@ MonoBehaviour:
               m_StringArgument: 0.3
               m_BoolArgument: 0
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: "\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1"
@@ -4745,6 +4875,7 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: "\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1\u25A1"
@@ -4773,8 +4904,24 @@ MonoBehaviour:
                 I cannot accept such reality. Never.
               m_BoolArgument: 0
             m_CallState: 2
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: DemoOverrider, Assembly-CSharp
+            m_MethodName: SetRuth
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0.1
+              m_StringArgument: Oh Invisible truth. Laid bare and still unreadable.
+                I cannot accept such reality. Never.
+              m_BoolArgument: 1
+            m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &7145822010878299629
 GameObject:
   m_ObjectHideFlags: 0
@@ -4865,6 +5012,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: I'm almost sure there's a prosthesis for you somewhere in these cases...
@@ -4880,8 +5028,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &7264922581884894605
 GameObject:
   m_ObjectHideFlags: 0
@@ -5077,6 +5228,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: "Punctuality, gar\xE7on, is the key to success ! "
@@ -5088,6 +5240,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Let's not worry about such trivial matters, allow me to escort you to your
@@ -5104,6 +5257,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Wouldn't have said it better myself, sir. Allow me to escort you to your
@@ -5120,8 +5274,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &7566872069693063951
 GameObject:
   m_ObjectHideFlags: 0
@@ -5212,6 +5369,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: '...Guess they don''t. '
@@ -5223,6 +5381,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Not really. They can be decor too. Plants, of sorts, its better then not
@@ -5239,6 +5398,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Exactly. They can be decor too. Plants, of sorts, its better then not 
@@ -5255,6 +5415,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Madame's orders. She wants a particular type of decor. Not suitcases everywhere.
@@ -5270,8 +5431,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &7837152648360960604
 GameObject:
   m_ObjectHideFlags: 0
@@ -5528,6 +5692,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: 'Okay. '
@@ -5539,6 +5704,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: I need to make sure you can actually put a foot in front of the other.
@@ -5554,6 +5720,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Mhm.
@@ -5569,8 +5736,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &8332454822620013543
 GameObject:
   m_ObjectHideFlags: 0
@@ -5630,6 +5800,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: Why aren't you wearing one ?
@@ -5641,6 +5812,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: They are strictly reserved to guests. You are not a guest.
@@ -5656,6 +5828,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: An actor. You are an actor and we have business.
@@ -5671,6 +5844,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: You're right. (Remove It)
@@ -5694,6 +5868,7 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Just know that you look idiotic.
@@ -5709,6 +5884,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Great.
@@ -5724,8 +5900,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &8350288738384707360
 GameObject:
   m_ObjectHideFlags: 0
@@ -5861,6 +6040,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: I got the key.
@@ -5872,6 +6052,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: You too.
@@ -5883,6 +6064,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: I've never taken enough time to admire these statues, they are really well
@@ -5899,6 +6081,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: Who are they depicting ?
@@ -5910,6 +6093,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Anyways. I know madame forbid it, but I urge you to go check out the hole
@@ -5926,6 +6110,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Hah ! Very funny Sir, I'm glad to see that your sense of humor is intact.
@@ -5941,6 +6126,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: "I'm 100% serious, gar\xE7on."
@@ -5952,6 +6138,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Heavens. That's... concerning. Guess madame wasn't exaggerating.
@@ -5967,6 +6154,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Amazing. Have fun looking around, sir.
@@ -5982,8 +6170,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &8397818970172308302
 GameObject:
   m_ObjectHideFlags: 0
@@ -6054,6 +6245,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeDialogue: 1.3
   delayBetweenLetters: 0.02
+  originalFOV: 0
+  Canvas: {fileID: 1656527983067524533}
   puppets:
   - Name: Butler
     VNPuppet: {fileID: 0}
@@ -6165,6 +6358,7 @@ MonoBehaviour:
   - {fileID: 1861579159794102085}
   - {fileID: 3496689164851659815}
   - {fileID: 747585535768997078}
+  VNCam: {fileID: 0}
 --- !u!114 &5102825383125975285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6178,33 +6372,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinematics:
-  - Data: {fileID: 11400000, guid: 2a0c0e6ab3743734183ca132e9b39ba4, type: 2}
-    OnStart:
-      m_PersistentCalls:
-        m_Calls: []
-    OnStartAfterBlackScreen:
-      m_PersistentCalls:
-        m_Calls: []
-    OnEndBeforeBlackScreen:
-      m_PersistentCalls:
-        m_Calls: []
-    OnEnd:
-      m_PersistentCalls:
-        m_Calls: []
-    ChainCinematic: LostHand
-    CinematicPuppets:
-    - Name: Ruth
-      Puppet: {fileID: 0}
-      Animator: {fileID: 0}
-    - Name: Eric
-      Puppet: {fileID: 0}
-      Animator: {fileID: 0}
-    - Name: Lamps
-      Puppet: {fileID: 0}
-      Animator: {fileID: 0}
-    CinematicCameraPivots:
-    - {fileID: 1763478653673361454}
-    - {fileID: 1489411515945308168}
   - Data: {fileID: 11400000, guid: d2b5a1cf918d2514aae1d444985258d2, type: 2}
     OnStart:
       m_PersistentCalls:
@@ -6495,6 +6662,8 @@ MonoBehaviour:
             m_BoolArgument: 1
           m_CallState: 2
     ChainCinematic: 
+    NoCamera: 0
+    NoBounce: 1
     CinematicPuppets:
     - Name: Camera
       Puppet: {fileID: 0}
@@ -6507,11 +6676,65 @@ MonoBehaviour:
       Animator: {fileID: 0}
     CinematicCameraPivots:
     - {fileID: 0}
+  - Data: {fileID: 11400000, guid: 2a0c0e6ab3743734183ca132e9b39ba4, type: 2}
+    OnStart:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: DemoOverrider, Assembly-CSharp
+          m_MethodName: Part1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnStartAfterBlackScreen:
+      m_PersistentCalls:
+        m_Calls: []
+    OnEndBeforeBlackScreen:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: DemoOverrider, Assembly-CSharp
+          m_MethodName: Part2
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    OnEnd:
+      m_PersistentCalls:
+        m_Calls: []
+    ChainCinematic: LostHand
+    NoCamera: 0
+    NoBounce: 1
+    CinematicPuppets:
+    - Name: Ruth
+      Puppet: {fileID: 0}
+      Animator: {fileID: 0}
+    - Name: Eric
+      Puppet: {fileID: 0}
+      Animator: {fileID: 0}
+    - Name: Lamps
+      Puppet: {fileID: 0}
+      Animator: {fileID: 0}
+    CinematicCameraPivots:
+    - {fileID: 1763478653673361454}
+    - {fileID: 1489411515945308168}
   delayBeforeDialogue: 0.3
   delayBetweenLetters: 0.02
   Camera: {fileID: 0}
   Interface: {fileID: 3833441143396747807}
   dialogue: {fileID: 3861409010190760615}
+  lastCinematic: 0
 --- !u!1 &8580737100509652258
 GameObject:
   m_ObjectHideFlags: 0
@@ -6705,6 +6928,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 1
       DialogueIndex: 24
     - Text: 'You too, man. '
@@ -6716,8 +6940,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
 --- !u!1 &8761724724527855969
 GameObject:
   m_ObjectHideFlags: 0
@@ -7026,6 +7253,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: Wait, give me a minute. (leave)
@@ -7037,6 +7265,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: This is worthless. Please leave.
@@ -7064,6 +7293,7 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: You've already given up on me ?
@@ -7075,6 +7305,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: 'I... '
@@ -7090,6 +7321,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Look. Please just... just wander around or something, I need to think.
@@ -7117,6 +7349,7 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: No ! You're going to tell me what's going on !
@@ -7128,6 +7361,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 1
       DialogueIndex: 7
   - Text: Who are you ?
@@ -7143,6 +7377,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: Myself. There's no need to go deeper than that.
@@ -7154,6 +7389,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: Eric. An artist.
@@ -7165,6 +7401,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Who am I ?
@@ -7180,6 +7417,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: You are the director of this place, probably.
@@ -7191,6 +7429,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: Your name is Ruth, we knew eachother.
@@ -7201,19 +7440,8 @@ MonoBehaviour:
       BranchIndex: 0
       Delegate:
         m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 0}
-            m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-            m_MethodName: StopAmbiance
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
+          m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: ...
@@ -7230,18 +7458,6 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls:
           - m_Target: {fileID: 0}
-            m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-            m_MethodName: OverrideAmbiance
-            m_Mode: 5
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: Reality
-              m_BoolArgument: 0
-            m_CallState: 2
-          - m_Target: {fileID: 0}
             m_TargetAssemblyTypeName: MultiTrigger, Assembly-CSharp
             m_MethodName: Disable
             m_Mode: 1
@@ -7253,6 +7469,7 @@ MonoBehaviour:
               m_StringArgument: Reality
               m_BoolArgument: 0
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Oh thank god.
@@ -7268,6 +7485,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: ...
@@ -7283,6 +7501,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: We're actually getting somewhere, we can do this !
@@ -7298,6 +7517,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Your eyes deceive you.
@@ -7313,6 +7533,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: I'm sorry, for, not knowing, I guess.
@@ -7324,10 +7545,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
-  - Text: Its not your fault. Without any memory, I can't really ask anything of
-      you. It can be argued that you are a completely different person.
+  - Text: Its not your fault, I can't really ask anything of you. It can be argued
+      that you are a completely different person.
     Action: ArmsCrossed
     cameraEffect: 0
     Answers:
@@ -7340,10 +7562,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
-  - Text: You... keep coming back. The last version of you killed himself once I
-      told him the truth.
+  - Text: You keep coming back. The last few versions of you killed themselves once
+      I told them the truth.
     Action: Idle
     cameraEffect: 0
     Answers:
@@ -7356,6 +7579,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: Reality is often terrifying, I'm starting to catch on.
@@ -7367,6 +7591,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: Hanged ? No, you shot yourself. But it is plausible, I've stopped counting
@@ -7383,9 +7608,10 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
-  - Text: Look.  We caused something.
+  - Text: Look. Something is very wrong.
     Action: ArmsCrossed3
     cameraEffect: 0
     Answers:
@@ -7398,10 +7624,11 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: On stage... reality... shattered. I can't really explain it. You disappeared,
-      kept coming back and dying again, losing parts of your memory as you did.
+      kept coming back and dying again, growing more and more distant each time.
     Action: ArmsCrossed
     cameraEffect: 0
     Answers:
@@ -7414,6 +7641,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: 'And the more terryfing it became, the easier it was for you to die. True
@@ -7430,6 +7658,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
     - Text: It must've been hard, terrible.
@@ -7441,6 +7670,7 @@ MonoBehaviour:
       Delegate:
         m_PersistentCalls:
           m_Calls: []
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
   - Text: No matter. This time is different. I have a plan.
@@ -7468,5 +7698,8 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
+      OverrideSound: 
       JumpDialogue: 0
       DialogueIndex: 0
+  overrideFOV: 0
+  FOV: 0
