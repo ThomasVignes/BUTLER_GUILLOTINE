@@ -34,7 +34,7 @@ public class SteamAchievementManager : MonoBehaviour
 
         foreach (var item in achievements)
         {
-            if (item.Name == Name)
+            if (item.SteamID == Name)
             {
                 bool done;
                 SteamUserStats.GetAchievement(item.SteamID, out done);
@@ -54,6 +54,5 @@ public class SteamAchievementManager : MonoBehaviour
 [System.Serializable]
 class SteamAchievement
 {
-    public string Name;
     public string SteamID;
 }

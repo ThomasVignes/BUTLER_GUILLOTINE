@@ -50,6 +50,7 @@ MonoBehaviour:
   SaveInEditor: 0
   DemoMode: 0
   CurrentScene: 
+  CurrentSceneIndex: 0
   Screen: 2
   Stereo: 1
   Framerate: 0
@@ -98,13 +99,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   achievements:
-  - Name: DELUSIONAL
-    SteamID: DELUSIONAL
-  - Name: FIRSTDEATH
-    SteamID: FIRSTDEATH
-  - Name: NOSTALGIC
-    SteamID: NOSTALGIC
-  - Name: UNREACHABLE
-    SteamID: UNREACHABLE
-  - Name: BLANK
-    SteamID: BLANK
+  - SteamID: PERFORMER
+  - SteamID: MURDERER
+  - SteamID: MASTER
+  - SteamID: COMPLIANT
+  - SteamID: UNREACHABLE
+  - SteamID: STUPID
+  - SteamID: MOUTHRUNNER
+  - SteamID: STYLISH
+  - SteamID: MINDFUL
+  - SteamID: PRO_MINGLER
+  - SteamID: COMBO
+  - SteamID: WORST_DAY
+  - SteamID: STILL_NOTHING
+  - SteamID: ITS_OVER
+  - SteamID: THANK_YOU
+  - SteamID: RIGOROUS_CREDITING
+  - SteamID: BELLBOY
