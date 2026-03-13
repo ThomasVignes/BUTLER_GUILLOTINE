@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Portal : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class Portal : MonoBehaviour
     [SerializeField] GameObject body;
     [SerializeField] GameObject door;
     public Transform spot;
+
+    [Header("Events")]
+    public UnityEvent OnToggle;
 
     bool open;
 
@@ -48,5 +52,7 @@ public class Portal : MonoBehaviour
 
         if (open && portalDoor != null)
             portalDoor.Init(linkedDoor, swapper, false);
+
+        OnToggle?.Invoke();
     }
 }

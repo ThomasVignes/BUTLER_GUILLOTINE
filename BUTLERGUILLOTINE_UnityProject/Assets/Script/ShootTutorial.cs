@@ -40,4 +40,10 @@ public class ShootTutorial : MonoBehaviour
 
         tutorialText.DOFade(0, 0.2f);
     }
+
+    public void Vanish()
+    {
+        if (!active)
+            gameObject.SetActive(false);
+    }
 }

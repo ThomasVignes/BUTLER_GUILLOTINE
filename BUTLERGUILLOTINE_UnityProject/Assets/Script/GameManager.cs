@@ -1131,4 +1131,9 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    public void ToggleSpecial(bool active)
+    {
+        SpecialActive = active;
+    }
 }
