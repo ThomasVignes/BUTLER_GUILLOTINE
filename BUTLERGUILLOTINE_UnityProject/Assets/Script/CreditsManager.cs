@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -11,6 +12,7 @@ public class CreditsManager : MonoBehaviour
 {
     [SerializeField] float scrollSpeed, creditsDuration, stillDuration;
     [SerializeField] RectTransform scroller;
+    public UnityEvent OnStart;
     /*
     [SerializeField] Button skipButton;
     [SerializeField] Image skipButtonImage;
@@ -50,6 +52,7 @@ public class CreditsManager : MonoBehaviour
         yield return new WaitForSeconds(2.3f);
 
         blackScreen.DOFade(0, 0.4f);
+        OnStart?.Invoke();
 
         yield return new WaitForSeconds(2.6f);
 

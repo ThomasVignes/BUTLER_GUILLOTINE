@@ -53,14 +53,18 @@ public class DemoOverrider : MonoBehaviour
 
     public void SetAchievement()
     {
+        /*
         if (!ruth)
             PersistentData.Instance.SteamAchievementManager.TriggerAchievement("FIRSTDEATH", true);
+        */
     }
 
     public void SetRuthAchievement()
     {
+        /*
         if (ruth)
             PersistentData.Instance.SteamAchievementManager.TriggerAchievement("UNREACHABLE", true);
+        */
     }
 
     public void SetRuth(bool yes)

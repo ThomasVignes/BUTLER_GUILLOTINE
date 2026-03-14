@@ -26,10 +26,11 @@ public class LongestDayFirstManager : ChapterManagerGeneric
 
     [Header("Restart")]
     [SerializeField] private float introDelay;
-    bool gettingUp;
+    bool gettingUp, restarting;
     float introTimer;
     [SerializeField] TextMeshProUGUI deathText;
     [SerializeField] GameObject deathUI;
+    public UnityEvent OnRestart;
 
 
     public override void Init(GameManager gameManager)
@@ -56,6 +57,12 @@ public class LongestDayFirstManager : ChapterManagerGeneric
 
             gameManager.WriteComment("My head's killing me. Ugh.");
             gameManager.PlayerReady();
+
+            if (restarting)
+            {
+                OnRestart?.Invoke();
+                restarting = false;
+            }
         }
     }
 
@@ -236,5 +243,6 @@ public class LongestDayFirstManager : ChapterManagerGeneric
         gameManager.Ready = true;
 
         Intro = true;
+        restarting = true;
     }
 }

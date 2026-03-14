@@ -28,7 +28,7 @@ public class Bai : MonoBehaviour
                 PersistentData.Instance.SaveData();
             }
 
-            PersistentData.Instance.SteamAchievementManager.TriggerAchievement(achievement, true);
+            //PersistentData.Instance.SteamAchievementManager.TriggerAchievement(achievement, true);
 
         }
     }

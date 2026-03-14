@@ -27,7 +27,7 @@ public class SteamAchievementManager : MonoBehaviour
         */
     }
 
-    public void TriggerAchievement(string Name, bool wee)
+    public void TriggerAchievement(string Name)
     {
         if (!SteamManager.Initialized)
             return;
