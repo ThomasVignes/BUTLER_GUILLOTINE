@@ -20,7 +20,10 @@ public class AchievementsLocalManager : MonoBehaviour
         if (achievement.Increments > 0)
             achievement.Increments--;
         else
+        {
             PersistentData.Instance.SteamAchievementManager.TriggerAchievement(achievement.ID);
+            Debug.Log("Triggered achievement: " +  achievement.ID);
+        }
     }
 
     public void FailAchievement(string ID)
@@ -34,6 +37,8 @@ public class AchievementsLocalManager : MonoBehaviour
             return;
 
         achievement.Implemented = false;
+
+        Debug.Log("Failed achievement: " + achievement.ID);
     }
 }
 

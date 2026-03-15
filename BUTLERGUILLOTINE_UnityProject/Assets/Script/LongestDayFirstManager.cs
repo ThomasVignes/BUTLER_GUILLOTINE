@@ -57,12 +57,6 @@ public class LongestDayFirstManager : ChapterManagerGeneric
 
             gameManager.WriteComment("My head's killing me. Ugh.");
             gameManager.PlayerReady();
-
-            if (restarting)
-            {
-                OnRestart?.Invoke();
-                restarting = false;
-            }
         }
     }
 
@@ -243,6 +237,6 @@ public class LongestDayFirstManager : ChapterManagerGeneric
         gameManager.Ready = true;
 
         Intro = true;
-        restarting = true;
+        OnRestart?.Invoke();
     }
 }

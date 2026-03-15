@@ -1136,4 +1136,11 @@ public class GameManager : MonoBehaviour
     {
         SpecialActive = active;
     }
+
+    //Debug stuff
+    [ContextMenu("Speedup Player")]
+    public void SpeedupAllPlayers()
+    {
+        player.Speedup();
+    }
 }

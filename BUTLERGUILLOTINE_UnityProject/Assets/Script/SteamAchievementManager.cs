@@ -38,7 +38,6 @@ public class SteamAchievementManager : MonoBehaviour
             {
                 bool done;
                 SteamUserStats.GetAchievement(item.SteamID, out done);
-                Debug.Log("Achievement: " + done);
                 if (!done)
                 { 
                     //SteamUserStats.RequestUserStats(SteamUser.GetSteamID());

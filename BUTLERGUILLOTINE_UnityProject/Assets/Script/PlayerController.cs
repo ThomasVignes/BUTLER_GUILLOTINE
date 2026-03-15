@@ -68,4 +68,11 @@ public class PlayerController : Character
             m.SetActive(!hidden);
         }
     }
+
+    //Debug stuff
+    public void Speedup()
+    {
+        runMultiplier = 20;
+        injuredMultiplier = 20;
+    }
 }

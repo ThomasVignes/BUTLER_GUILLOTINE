@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -17,6 +18,7 @@ public class MainMenuMaster : MonoBehaviour
     public bool AutoQuit;
     [SerializeField] float travelSpeed;
     [SerializeField] float fadeOutSpeed;
+    public UnityEvent OnStart;
 
     [Header("Modularity")]
     [SerializeField] float silenceTime;
@@ -84,6 +86,8 @@ public class MainMenuMaster : MonoBehaviour
 
 
         emitter.EventInstance.getVolume(out themeVolume);
+
+        OnStart?.Invoke();
     }
 
     private void Update()
@@ -194,7 +198,7 @@ public class MainMenuMaster : MonoBehaviour
         fadeOut = true;
 
         //Test
-        PersistentData.Instance.SteamAchievementManager.TriggerAchievement("BLANK");
+        //PersistentData.Instance.SteamAchievementManager.TriggerAchievement("BLANK");
 
         if (!toDiscs)
             yield return new WaitForSeconds(9f);
