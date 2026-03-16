@@ -35,14 +35,20 @@ public class RuthRitualManger : ChapterManagerGeneric
 
     IEnumerator C_Start()
     {
+        Intro = true;
+
         gameManager.ScreenEffects.FadeTo(1, 0.01f);
-        PersistentData.Instance.MusicVolume = 0;
 
         yield return new WaitForSeconds(2.3f);
 
-        PersistentData.Instance.MusicVolume = 1;
+        if (startCinematic != "")
+            gameManager.CinematicManager.PlayCinematic(startCinematic);
 
-        gameManager.CinematicManager.PlayCinematic(startCinematic);
+        gameManager.ScreenEffects.FadeTo(0, 4f);
+
+        yield return new WaitForSeconds(2.6f);
+
+        Intro = false;
         gameManager.Ready = true;
     }
 

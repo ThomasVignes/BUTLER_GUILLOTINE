@@ -21,6 +21,9 @@ public class PartnerManager : MonoBehaviour
     bool running;
     Transform partnerLockObject;
 
+    bool overrideMovement;
+    Vector3 overridePosition;
+
     public Character Partner {  get { return partner; } }   
 
     public void Init(GameManager gm)
@@ -46,6 +49,17 @@ public class PartnerManager : MonoBehaviour
         if (partner == null)
             return;
 
+        if (overrideMovement)
+        {
+            if (Vector3.Distance(partner.transform.position, overridePosition) < partner.MinDistanceToInteract)
+            {
+                partner.ToggleRun(false);
+                overrideMovement = false;
+            }
+            else
+                return;
+        }
+
         if (reactionTimer < Time.time)
         {
             var player = gameManager.Player;
@@ -70,6 +84,21 @@ public class PartnerManager : MonoBehaviour
     public void ConstantStep()
     {
 
+    }
+
+    public void HidePartner()
+    {
+        partner.transform.root.gameObject.SetActive(false);
+        partner = null;
+    }
+
+    public void OverrideMovement(Transform target)
+    {
+        overrideMovement = true;
+
+        partner.SetDestination(target.position);
+        partner.ToggleRun(true);
+        overridePosition = target.position;
     }
 
     public void SetPartner(Character partner)

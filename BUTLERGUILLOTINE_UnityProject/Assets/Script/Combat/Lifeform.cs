@@ -11,6 +11,7 @@ public class Lifeform : MonoBehaviour
     public UnityEvent OnDeath;
     public GameObject DeathRagdoll;
     public bool Unstunnable;
+    [SerializeField] GameObject[] objectsToSave;
 
     bool dead;
 
@@ -48,6 +49,16 @@ public class Lifeform : MonoBehaviour
         OnDeath?.Invoke();
 
         dead = true;
+
+        foreach (var item in objectsToSave)
+        {
+            item.transform.SetParent(null);
+            var rb = item.AddComponent<Rigidbody>();
+            item.AddComponent<FreezeRb>();
+
+            rb.AddForce(Vector3.up * 70f);
+        }
+
 
         if (DeathRagdoll != null)
         {

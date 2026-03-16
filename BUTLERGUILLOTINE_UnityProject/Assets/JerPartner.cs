@@ -94,8 +94,6 @@ public class JerPartner : Character
 
     public void DrawGun(bool active)
     {
-        base.ToggleSpecial(active);
-
         Aiming = active;
 
         hipGun.SetActive(!active);

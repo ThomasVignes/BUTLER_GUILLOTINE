@@ -51,6 +51,7 @@ public class Character : MonoBehaviour
     public NavMeshAgent Agent { get { return agent; } } 
     public bool SpecialMode { get { return specialMode; } }
     public bool Moving { get { if (gameObject.activeInHierarchy && agent.enabled) { return agent.remainingDistance > minDistanceToMove; } else { return false; } } }
+    public float MinDistanceToInteract { get { return minDistanceToInteract; } }
     public bool Rotating { get { return rotating; } }
     public bool Running { get { return running; } }
     public CursorType CursorType { get { return cursorType; } }
