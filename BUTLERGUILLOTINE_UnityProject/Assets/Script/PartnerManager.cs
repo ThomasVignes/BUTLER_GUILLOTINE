@@ -19,6 +19,7 @@ public class PartnerManager : MonoBehaviour
     GameManager gameManager;
     float reactionTimer;
     bool running;
+    Transform partnerLockObject;
 
     public Character Partner {  get { return partner; } }   
 
@@ -89,5 +90,26 @@ public class PartnerManager : MonoBehaviour
             partner.ToggleRun(false);
             running = false;
         }
+    }
+
+    public void LockPartnerToObject(Transform transform)
+    {
+        if (partner == null) return;
+
+        partner.LockToObject(transform);
+
+        partnerLockObject = transform;
+    }
+
+    public void UnlockPartnerFromObject()
+    {
+        if (partner == null) return;
+
+        if (partnerLockObject == null)
+            return;
+
+        partner.UnlockFromObject();
+
+        partnerLockObject = null;
     }
 }

@@ -1035,6 +1035,8 @@ public class GameManager : MonoBehaviour
         player.LockToObject(transform);
 
         playerLockObject = transform;
+
+        PartnerManager.LockPartnerToObject(transform);
     }
 
     public void UnlockPlayerFromObject()
@@ -1045,6 +1047,8 @@ public class GameManager : MonoBehaviour
         player.UnlockFromObject();
 
         playerLockObject = null;
+
+        PartnerManager.UnlockPartnerFromObject();
     }
 
     public void TeleportPlayer(Vector3 pos, Quaternion rot)

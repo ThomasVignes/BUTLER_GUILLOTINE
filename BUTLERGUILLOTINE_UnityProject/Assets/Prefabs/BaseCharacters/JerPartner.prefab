@@ -6585,7 +6585,7 @@ Transform:
   - {fileID: 6786458773514934541}
   - {fileID: 3544990672191260706}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 94.259, z: 0}
 --- !u!114 &339367032224788881
 MonoBehaviour:
@@ -20143,7 +20143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 593135160371075316}
-  - component: {fileID: 8918997474892347759}
+  - component: {fileID: 8282929738301550089}
   - component: {fileID: 818914030408527233}
   - component: {fileID: 707176536916989084}
   m_Layer: 0
@@ -20172,7 +20172,7 @@ Transform:
   m_Father: {fileID: 5682409206468921315}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
---- !u!114 &8918997474892347759
+--- !u!114 &8282929738301550089
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20181,7 +20181,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6597683146961179898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 429ad47ff717b5243881868fbce75361, type: 3}
+  m_Script: {fileID: 11500000, guid: cc78cadba6a1fcd4eb7eea69aa383212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 
@@ -20200,6 +20200,21 @@ MonoBehaviour:
   unparented: {fileID: 0}
   limbs: {fileID: 0}
   ragdoll: {fileID: 339367032224788881}
+  targetRange: 6.82
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 4096
+  shootCD: 0.67
+  drawDelay: 1
+  legIK: {fileID: 9148969492992054570}
+  gunshotEmitter: {fileID: 8021901394572462741}
+  hipGun: {fileID: 929237421856187894}
+  handGun: {fileID: 3496565818946018690}
+  muzzle: {fileID: 7883523756779476432}
+  shootParticle: {fileID: 1336949550903370, guid: ca5194d3810c6ba40b9ddcdfc6552fb1, type: 3}
+  bloodParticle: {fileID: 1336949550903370, guid: 4fb80429e9717684fb7000f06b38df12, type: 3}
+  muzzleParticle: {fileID: 1336949550903370, guid: b53255c3ce9525b4cadcb998f8d5d190, type: 3}
+  bloodDecal: {fileID: 6940568010354477028, guid: 17f7077f17d4275418ca80d689a05828, type: 3}
 --- !u!195 &818914030408527233
 NavMeshAgent:
   m_ObjectHideFlags: 0

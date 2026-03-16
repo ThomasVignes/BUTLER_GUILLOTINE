@@ -33368,26 +33368,34 @@ MonoBehaviour:
   - Occupied: 0
     Spot: {fileID: 4352881308726094865}
     Instance: {fileID: 0}
+    ItemUI: {fileID: 0}
   - Occupied: 0
     Spot: {fileID: 1487927949291533756}
     Instance: {fileID: 0}
+    ItemUI: {fileID: 0}
   - Occupied: 0
     Spot: {fileID: 4462835832221310760}
     Instance: {fileID: 0}
+    ItemUI: {fileID: 0}
   - Occupied: 0
     Spot: {fileID: 717962694539068325}
     Instance: {fileID: 0}
+    ItemUI: {fileID: 0}
   - Occupied: 0
     Spot: {fileID: 6201512982624674840}
     Instance: {fileID: 0}
+    ItemUI: {fileID: 0}
   - Occupied: 0
     Spot: {fileID: 6440913444306827668}
     Instance: {fileID: 0}
+    ItemUI: {fileID: 0}
   startItems:
   - {fileID: 11400000, guid: d5544948ce124e44d98951db7504cceb, type: 2}
   delayBetweenLetters: 0.02
   textUI: {fileID: 1241560125979555578}
   dialogue: {fileID: 8340269661568885008}
+  corrupted: 0
+  corruptedText: 
 --- !u!1 &5424753552420134310
 GameObject:
   m_ObjectHideFlags: 0
@@ -63778,6 +63786,9 @@ MonoBehaviour:
   moveStateLerp: 4
   minDistanceToMove: 0.1
   animator: {fileID: 4922412129681882350}
+  unparented: {fileID: 0}
+  limbs: {fileID: 0}
+  ragdoll: {fileID: 0}
   InventoryController: {fileID: 8233071743168496229}
   resetPos: {x: -0.00009011149, y: 0.9111375, z: 0.04616464}
   Choppers:
