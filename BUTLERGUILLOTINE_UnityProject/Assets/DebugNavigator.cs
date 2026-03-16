@@ -26,6 +26,12 @@ public class DebugNavigator : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            if (SceneManager.GetActiveScene().buildIndex == 0)
+                SceneManager.LoadScene("ContentWarning");
+        }
+
         if (Input.GetKeyDown(KeyCode.P))
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
