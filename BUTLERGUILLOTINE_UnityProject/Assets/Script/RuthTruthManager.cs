@@ -10,8 +10,10 @@ public class RuthTruthManager : ChapterManagerGeneric
     [Header("Settings")]
     public bool Skip;
     public string InterSceneName;
-    public DialogueCinematic startCinematic;
+    public string startCinematic;
     public UnityEvent OnStart;
+    [SerializeField] GameObject ruth, jer, cam1, cam2;
+    [SerializeField] Transform ruthTarget, jerTarget;
 
     public override void Init(GameManager gameManager)
     {
@@ -31,7 +33,6 @@ public class RuthTruthManager : ChapterManagerGeneric
         {
             Intro = false;
             gameManager.Ready = true;
-            startCinematic.Play();
             return;
         }
 
@@ -54,6 +55,8 @@ public class RuthTruthManager : ChapterManagerGeneric
 
         yield return new WaitForSeconds(2.3f);
 
+        if (startCinematic != "")
+            gameManager.CinematicManager.PlayCinematic(startCinematic);
 
         gameManager.ScreenEffects.FadeTo(0, 4f);
 
@@ -68,6 +71,11 @@ public class RuthTruthManager : ChapterManagerGeneric
     {
     }
 
+    public void ShowCharacters()
+    {
+
+    }
+
 
     public override void EndChapter()
     {
@@ -77,6 +85,23 @@ public class RuthTruthManager : ChapterManagerGeneric
 
     IEnumerator C_EndChapter()
     {
+        ruth.GetComponent<RagdollHider>().Show();
+        jer.GetComponent<RagdollHider>().Show();
+
+        cam1.SetActive(true);
+
+        yield return new WaitForSeconds(2);
+
+        ruth.GetComponentInChildren<Character>().SetDestination(ruthTarget.position);
+        jer.GetComponentInChildren<Character>().SetDestination(jerTarget.position);
+
+
+        yield return new WaitForSeconds(4);
+
+        cam2.SetActive(true);
+
+        yield return new WaitForSeconds(10);
+
         gameManager.ScreenEffects.FadeTo(1, 2.9f);
 
         yield return new WaitForSeconds(4);

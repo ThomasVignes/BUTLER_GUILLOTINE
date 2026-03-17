@@ -259,7 +259,9 @@ public class CinematicManager : MonoBehaviour
         cinematics[currentCinematic].OnEnd?.Invoke();
 
         playing = false;
-        gameManager.SetCinematicMode(false, cinematics[currentCinematic].NoBounce);
+
+        if (!cinematics[currentCinematic].ExperimentalNeverStopCinematic)
+            gameManager.SetCinematicMode(false, cinematics[currentCinematic].NoBounce);
 
         if (!cinematics[currentCinematic].Data.OverrideKeepsGoing)
         {
@@ -314,6 +316,7 @@ public class Cinematic
     public string ChainCinematic;
     public bool NoCamera;
     public bool NoBounce = true;
+    public bool ExperimentalNeverStopCinematic;
 
     [Header("Scene References")]
     public CinematicPuppet[] CinematicPuppets;

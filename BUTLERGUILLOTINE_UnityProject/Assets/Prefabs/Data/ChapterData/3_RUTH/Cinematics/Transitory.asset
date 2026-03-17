@@ -1,0 +1,174 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68b0cdbcdd5ad6d488c68dcef45efeeb, type: 3}
+  m_Name: Transitory
+  m_EditorClassIdentifier: 
+  ID: Transitory
+  Ambience: 
+  BlackScreenDuration: 4
+  lines:
+  - Text: 
+    Duration: 8
+    PuppetActions: []
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 'She started appearing when I gave up on my first book. '
+    Duration: 8
+    PuppetActions: []
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: Finished it in my stead.
+    Duration: 8
+    PuppetActions: []
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: Stopped me from ending it all.
+    Duration: 8
+    PuppetActions: []
+    cameraIndex: 1
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 4
+    PuppetActions: []
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 0.3
+    PuppetActions:
+    - PuppetName: Jer
+      Action: Why
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 'She also acts of her own accord. '
+    Duration: 5
+    PuppetActions: []
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: A shameful secret for someone who keeps pestering me about agency.
+    Duration: 6
+    PuppetActions: []
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 1
+    PuppetActions:
+    - PuppetName: Ruth
+      Action: Angry
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 'I''m not ashamed. '
+    Duration: 5
+    PuppetActions: []
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 0.2
+    PuppetActions:
+    - PuppetName: Ruth
+      Action: HeadTurn
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: Simply more attached than I would like to be.
+    Duration: 6
+    PuppetActions: []
+    cameraIndex: 3
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 0.5
+    PuppetActions:
+    - PuppetName: Jer
+      Action: LookUp
+    cameraIndex: 3
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: She's holding you back. That much is obvious.
+    Duration: 6
+    PuppetActions: []
+    cameraIndex: 3
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 1
+    PuppetActions:
+    - PuppetName: Ruth
+      Action: HeadBack
+    - PuppetName: Ruth
+      Action: CrossAgain
+    cameraIndex: 3
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: ...
+    Duration: 6
+    PuppetActions: []
+    cameraIndex: 1
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 6
+    PuppetActions: []
+    cameraIndex: 1
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: 
+    Duration: 0.2
+    PuppetActions:
+    - PuppetName: Ruth
+      Action: HeadTurn
+    cameraIndex: 1
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  - Text: I'm ready. Let's go.
+    Duration: 8
+    PuppetActions:
+    - PuppetName: Jer
+      Action: LookDown
+    cameraIndex: 2
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  EndBlackScreenDuration: 0
+  HidePlayer: 1
+  CutOnStart: 0
+  NoEndBlackscreen: 1
+  NoFadeOut: 1
+  OverrideKeepsGoing: 1
+  ResumeTheme: 

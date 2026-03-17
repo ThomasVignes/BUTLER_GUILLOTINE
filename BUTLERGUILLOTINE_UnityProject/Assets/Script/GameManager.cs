@@ -334,6 +334,11 @@ public class GameManager : MonoBehaviour
         player.Hide(masked);
     }
 
+    public void KickPlayer()
+    {
+        player.gameObject.SetActive(false);
+    }
+
     public void RemoveCharacter(Character character)
     {
         characters.Remove(character);

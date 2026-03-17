@@ -19769,7 +19769,11 @@ MonoBehaviour:
   InventoryController: {fileID: 7720394497629951927}
   resetPos: {x: -0.00009011149, y: 0.9111375, z: 0.04616464}
   Choppers: []
-  Maskables: []
+  Maskables:
+  - {fileID: 5207627824524655749}
+  - {fileID: 6607083313939639768}
+  - {fileID: 3050338330936211231}
+  - {fileID: 5819405005231182260}
 --- !u!54 &2644646852822719698
 Rigidbody:
   m_ObjectHideFlags: 0

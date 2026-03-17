@@ -152,9 +152,12 @@ public class ThemeManager : MonoBehaviour
 
     public void CreateInterScene(string areaName)
     {
+        ButlerEngineUtilities.ClearAllInterScenes();
+
         StopAmbiance();
 
         overrideAmbiance = true;
+
         //PersistentData.Instance.UpdateStepsVolume(1);   why ?
 
         foreach (var item in areas)
