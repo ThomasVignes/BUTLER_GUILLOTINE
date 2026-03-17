@@ -6,10 +6,11 @@ public class Blastable : Lifeform
 {
     [Header("Blastable butler specifics")]
     public bool changeBowtie;
-    [SerializeField] GameObject[] objectsToSave;
+    //[SerializeField] GameObject[] objectsToSave;
 
     public override void Death()
     {
+        /*
         foreach (var item in objectsToSave)
         {
             item.transform.SetParent(null);
@@ -18,6 +19,7 @@ public class Blastable : Lifeform
 
             rb.AddForce(Vector3.up * 70f);
         }
+        */
 
         base.Death();
     }

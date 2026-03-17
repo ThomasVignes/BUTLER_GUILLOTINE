@@ -127,7 +127,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639085020311018639
+  lastModified: 639093877519392638
   FileSizes: []
   Exists: 1
 --- !u!114 &-8883446772827240880
@@ -921,8 +921,8 @@ MonoBehaviour:
     Data3: -425350242
     Data4: 2090624715
   Banks:
-  - {fileID: 7964605896639709159}
   - {fileID: -6633441026754162406}
+  - {fileID: 7964605896639709159}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1220,8 +1220,8 @@ MonoBehaviour:
     Data3: -665384041
     Data4: -1711876676
   Banks:
-  - {fileID: 7964605896639709159}
   - {fileID: -9072090894377937510}
+  - {fileID: 7964605896639709159}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1788,10 +1788,10 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639085019831944464
+  lastModified: 639093877504668202
   FileSizes:
   - Name: 
-    Value: 9356
+    Value: 9388
   Exists: 1
 --- !u!114 &-735843984859671838
 MonoBehaviour:
@@ -2106,18 +2106,46 @@ MonoBehaviour:
   - {fileID: -9218882984718901386}
   - {fileID: -418906177545599106}
   - {fileID: -8227937711542542515}
-  - {fileID: 5103166148079802968}
   - {fileID: -1269371888755087178}
   - {fileID: -5469382584746088574}
   - {fileID: -6245904775599048402}
   - {fileID: -1728723569316255644}
+  - {fileID: 4079808328946959313}
+  - {fileID: 14659630603056866}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6000090139453766909}
   StringsBanks:
   - {fileID: -786783328031392545}
-  cacheTime: 639085020311018639
+  cacheTime: 639093877522278572
   cacheVersion: 131632
+--- !u!114 &14659630603056866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Gore
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Gore
+  Guid:
+    Data1: 550694426
+    Data2: 1128873870
+    Data3: 1561669518
+    Data4: 2006215797
+  Banks:
+  - {fileID: 7964605896639709159}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2148
 --- !u!114 &770953797004677913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2247,8 +2275,8 @@ MonoBehaviour:
     Data3: -771157089
     Data4: -631467166
   Banks:
-  - {fileID: 7964605896639709159}
   - {fileID: -6633441026754162406}
+  - {fileID: 7964605896639709159}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2644,6 +2672,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 249417
+--- !u!114 &4079808328946959313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/Sinfonia/Sinfonia - Edited
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/Sinfonia/Sinfonia - Edited
+  Guid:
+    Data1: -501420106
+    Data2: 1226849845
+    Data3: 1532905619
+    Data4: -410770468
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 262138
 --- !u!114 &4272137063169312076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2893,33 +2948,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 385011
---- !u!114 &5103166148079802968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/New/FullSamples/Sinfonia - Edited
-  m_EditorClassIdentifier: 
-  Path: event:/Music/New/FullSamples/Sinfonia - Edited
-  Guid:
-    Data1: -501420106
-    Data2: 1226849845
-    Data3: 1532905619
-    Data4: -410770468
-  Banks:
-  - {fileID: -9072090894377937510}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 262138
 --- !u!114 &5481067768880744543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2966,8 +2994,8 @@ MonoBehaviour:
     Data3: -4538444
     Data4: 1481716488
   Banks:
-  - {fileID: 7964605896639709159}
   - {fileID: -6633441026754162406}
+  - {fileID: 7964605896639709159}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3071,7 +3099,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639085019831934459
+  lastModified: 639093877504648196
   FileSizes: []
   Exists: 1
 --- !u!114 &6003941878807412242
@@ -3261,8 +3289,8 @@ MonoBehaviour:
     Data3: 1718452354
     Data4: -1742792521
   Banks:
-  - {fileID: 7964605896639709159}
   - {fileID: -6633441026754162406}
+  - {fileID: 7964605896639709159}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3456,8 +3484,8 @@ MonoBehaviour:
     Data3: -1085554285
     Data4: -1050354676
   Banks:
-  - {fileID: 7964605896639709159}
   - {fileID: -6633441026754162406}
+  - {fileID: 7964605896639709159}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -3484,8 +3512,8 @@ MonoBehaviour:
     Data3: 462837905
     Data4: 788421580
   Banks:
-  - {fileID: 7964605896639709159}
   - {fileID: -9072090894377937510}
+  - {fileID: 7964605896639709159}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -3649,7 +3677,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639084015231409206
+  lastModified: 639093877522278572
   FileSizes: []
   Exists: 1
 --- !u!114 &8342352198941902692
@@ -3837,8 +3865,8 @@ MonoBehaviour:
     Data3: -1053693785
     Data4: -2137811560
   Banks:
-  - {fileID: 7964605896639709159}
   - {fileID: -6633441026754162406}
+  - {fileID: 7964605896639709159}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3892,8 +3920,8 @@ MonoBehaviour:
     Data3: 1563365258
     Data4: 387401393
   Banks:
-  - {fileID: 7964605896639709159}
   - {fileID: -6633441026754162406}
+  - {fileID: 7964605896639709159}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

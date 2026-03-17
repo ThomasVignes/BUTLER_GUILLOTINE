@@ -48,6 +48,8 @@ public class RuthCeremonyManager : ChapterManagerGeneric
 
         gameManager.ScreenEffects.SetBlackScreenAlpha(1);
 
+        GameManager.Instance.ThemeManager.OverrideAmbiance("Funeral");
+
         yield return new WaitForSeconds(2.3f);
 
 
