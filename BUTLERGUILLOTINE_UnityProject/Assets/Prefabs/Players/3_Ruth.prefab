@@ -13620,7 +13620,9 @@ MonoBehaviour:
   InventoryController: {fileID: 7225512429146565511}
   resetPos: {x: 0, y: 0, z: 0}
   Choppers: []
-  Maskables: []
+  Maskables:
+  - {fileID: 9013110807575641433}
+  - {fileID: 8690798659746040341}
   targetLayer:
     serializedVersion: 2
     m_Bits: 64
