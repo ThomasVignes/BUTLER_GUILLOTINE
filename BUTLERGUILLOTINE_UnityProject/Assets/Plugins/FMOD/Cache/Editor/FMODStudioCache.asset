@@ -127,7 +127,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639093877519392638
+  lastModified: 639093927878660679
   FileSizes: []
   Exists: 1
 --- !u!114 &-8883446772827240880
@@ -1220,8 +1220,8 @@ MonoBehaviour:
     Data3: -665384041
     Data4: -1711876676
   Banks:
-  - {fileID: -9072090894377937510}
   - {fileID: 7964605896639709159}
+  - {fileID: -9072090894377937510}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1256,6 +1256,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 109318
+--- !u!114 &-3488171437185751468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/Intense/Lamento della ninfa - encore
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/Intense/Lamento della ninfa - encore
+  Guid:
+    Data1: -446835071
+    Data2: 1144137855
+    Data3: -2061099345
+    Data4: 758326273
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 78048
 --- !u!114 &-3485661312770802844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1788,10 +1815,10 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639093877504668202
+  lastModified: 639093927863690734
   FileSizes:
   - Name: 
-    Value: 9388
+    Value: 9438
   Exists: 1
 --- !u!114 &-735843984859671838
 MonoBehaviour:
@@ -2112,12 +2139,13 @@ MonoBehaviour:
   - {fileID: -1728723569316255644}
   - {fileID: 4079808328946959313}
   - {fileID: 14659630603056866}
+  - {fileID: -3488171437185751468}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6000090139453766909}
   StringsBanks:
   - {fileID: -786783328031392545}
-  cacheTime: 639093877522278572
+  cacheTime: 639093927878660679
   cacheVersion: 131632
 --- !u!114 &14659630603056866
 MonoBehaviour:
@@ -3099,7 +3127,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639093877504648196
+  lastModified: 639093927863670724
   FileSizes: []
   Exists: 1
 --- !u!114 &6003941878807412242
@@ -3512,8 +3540,8 @@ MonoBehaviour:
     Data3: 462837905
     Data4: 788421580
   Banks:
-  - {fileID: -9072090894377937510}
   - {fileID: 7964605896639709159}
+  - {fileID: -9072090894377937510}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0

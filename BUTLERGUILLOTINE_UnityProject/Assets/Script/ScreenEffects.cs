@@ -44,6 +44,11 @@ public class ScreenEffects : MonoBehaviour
         blackScreen.DOFade(0, 1f);
     }
 
+    public void WhiteFlash()
+    {
+        WhiteFadeInOut(0.01f, 1f, 0.5f);
+    }
+
     public void WhiteFadeInOut(float fadeInSpeed, float fadeOutSpeed, float delayWait)
     {
         StartCoroutine(C_WhiteFadeInOut(fadeInSpeed, fadeOutSpeed, delayWait));
