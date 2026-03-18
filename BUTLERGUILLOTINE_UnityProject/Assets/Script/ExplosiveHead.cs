@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ExplosiveHead : MonoBehaviour
 {
+    [Header("General")]
     public bool AutoOnStart;
     [SerializeField] float speedModifier;
     [SerializeField] float startBlastSpeed, endBlastSpeed;
@@ -12,6 +13,11 @@ public class ExplosiveHead : MonoBehaviour
     [SerializeField] GameObject[] headPieces;
     [SerializeField] Transform center;
     [SerializeField] GameObject[] hideThese;
+
+    [Header("Randomization")]
+    [SerializeField] bool randomizeSpeeds;
+    [SerializeField] float minStartSpeed, maxStartSpeed;
+    [SerializeField] float minEndSpeed, maxEndSpeed;
 
     float blastSpeed;
     bool move;
@@ -47,8 +53,15 @@ public class ExplosiveHead : MonoBehaviour
         }
         */
 
+        if (randomizeSpeeds)
+        {
+            startBlastSpeed = Random.Range(minStartSpeed, maxStartSpeed);
+            endBlastSpeed = Random.Range(minEndSpeed, maxEndSpeed);
+        }
+
         move = true;
         blastSpeed = startBlastSpeed;
+
 
         foreach (var item in hideThese)
         {

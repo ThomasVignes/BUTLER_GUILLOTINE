@@ -127,7 +127,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639093927878660679
+  lastModified: 639094624152597572
   FileSizes: []
   Exists: 1
 --- !u!114 &-8883446772827240880
@@ -1815,10 +1815,10 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639093927863690734
+  lastModified: 639094624137246090
   FileSizes:
   - Name: 
-    Value: 9438
+    Value: 9488
   Exists: 1
 --- !u!114 &-735843984859671838
 MonoBehaviour:
@@ -2140,12 +2140,13 @@ MonoBehaviour:
   - {fileID: 4079808328946959313}
   - {fileID: 14659630603056866}
   - {fileID: -3488171437185751468}
+  - {fileID: 6682370005935167566}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6000090139453766909}
   StringsBanks:
   - {fileID: -786783328031392545}
-  cacheTime: 639093927878660679
+  cacheTime: 639094624152597572
   cacheVersion: 131632
 --- !u!114 &14659630603056866
 MonoBehaviour:
@@ -3127,7 +3128,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639093927863670724
+  lastModified: 639094624137226094
   FileSizes: []
   Exists: 1
 --- !u!114 &6003941878807412242
@@ -3269,6 +3270,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2394697
+--- !u!114 &6682370005935167566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New/FullSamples/Lamento della ninfa - Edited
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New/FullSamples/Lamento della ninfa - Edited
+  Guid:
+    Data1: -613258059
+    Data2: 1149104628
+    Data3: 1153116581
+    Data4: -1810414037
+  Banks:
+  - {fileID: -9072090894377937510}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 153025
 --- !u!114 &6889158179913815937
 MonoBehaviour:
   m_ObjectHideFlags: 0
