@@ -30,6 +30,7 @@ public class RuthFirstTruthManager : ChapterManagerGeneric
         {
             Intro = false;
             gameManager.Ready = true;
+            OnStart?.Invoke();
             return;
         }
 

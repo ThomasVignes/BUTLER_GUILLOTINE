@@ -22,6 +22,7 @@ public class OrderablePhotographer : OrderedCharacter
 
         yield return new WaitForSeconds(timeBeforeAction);
 
+        EffectsManager.Instance.audioManager.Play("Flash");
         actionTarget.GetComponent<Portal>().Toggle(true);
         actionTarget = null;
 

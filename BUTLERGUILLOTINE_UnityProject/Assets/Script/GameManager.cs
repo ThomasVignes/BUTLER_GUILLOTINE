@@ -775,7 +775,8 @@ public class GameManager : MonoBehaviour
             ToggleInventoryMode(false);
         }
 
-        currentCamZone.active = !yes;
+        if (currentCamZone != null)
+            currentCamZone.active = !yes;
 
         if (!vnMode)
             inventoryCanvas.SetActive(!yes);
