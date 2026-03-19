@@ -60,7 +60,6 @@ public class DialogueBox : Interactable
         if (hidePlayer)
             GameManager.Instance.HidePlayer(true);
         GameManager.Instance.DialogueManager.StartDialogue(puppet, dialogueReference, this);
-
     }
 
     public void ChangeReference(int index)

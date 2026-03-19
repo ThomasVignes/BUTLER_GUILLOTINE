@@ -104,7 +104,8 @@ public class CinematicManager : MonoBehaviour
     {
         Cinematic current = cinematics[currentCinematic];
 
-        gameManager.OverrideAmbiance(current.Data.Ambience);
+        if (current.Data.Ambience != "STOP")
+            gameManager.OverrideAmbiance(current.Data.Ambience);
 
         if (instaFade)
             gameManager.ScreenEffects.FadeTo(1, 0.001f);
@@ -263,12 +264,15 @@ public class CinematicManager : MonoBehaviour
         if (!cinematics[currentCinematic].ExperimentalNeverStopCinematic)
             gameManager.SetCinematicMode(false, cinematics[currentCinematic].NoBounce);
 
-        if (!cinematics[currentCinematic].Data.OverrideKeepsGoing)
+        if (cinematics[currentCinematic].Data.Ambience != "STOP")
         {
-            if (cinematics[currentCinematic].Data.ResumeTheme == "")
-                gameManager.StopOverride();
-            else
-                gameManager.StopOverride(cinematics[currentCinematic].Data.ResumeTheme);
+            if (!cinematics[currentCinematic].Data.OverrideKeepsGoing)
+            {
+                if (cinematics[currentCinematic].Data.ResumeTheme == "")
+                    gameManager.StopOverride();
+                else
+                    gameManager.StopOverride(cinematics[currentCinematic].Data.ResumeTheme);
+            }
         }
 
         if (cinematics[currentCinematic].ChainCinematic != "")
