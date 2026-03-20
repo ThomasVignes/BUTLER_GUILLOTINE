@@ -37,7 +37,11 @@ public class ShootableLock : Lifeform
         if (lockMesh != null)
         {
             GameObject go = Instantiate(lockMesh, transform.position, transform.rotation);
-            go.GetComponent<Rigidbody>().AddForce(80 * -transform.right.normalized + 30 * -Vector3.up);
+            
+            var rb = go.GetComponent<Rigidbody>();
+
+            if (rb != null)
+                go.GetComponent<Rigidbody>().AddForce(80 * -transform.right.normalized + 30 * -Vector3.up);
         }
 
         Destroy(gameObject);
