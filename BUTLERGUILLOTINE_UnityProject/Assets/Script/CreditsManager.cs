@@ -10,8 +10,9 @@ using UnityEngine.UI;
 
 public class CreditsManager : MonoBehaviour
 {
-    [SerializeField] float scrollSpeed, creditsDuration, stillDuration;
+    [SerializeField] float scrollSpeed, stillDuration;
     [SerializeField] RectTransform scroller;
+    [SerializeField] RectTransform limit, limitMove;
     public UnityEvent OnStart;
     /*
     [SerializeField] Button skipButton;
@@ -25,9 +26,9 @@ public class CreditsManager : MonoBehaviour
     [Header("Debug")]
     [SerializeField] GameObject toMenu;
 
-    float creditsTimer, stillTimer;
+    float stillTimer;
 
-    bool active;
+    bool active, done;
 
     Vector3 originalPos;
 
@@ -63,7 +64,6 @@ public class CreditsManager : MonoBehaviour
     {
         active = true;
 
-        creditsTimer = Time.time + creditsDuration + 1;
         stillTimer = Time.time + stillDuration + 1;
 
 
@@ -92,8 +92,9 @@ public class CreditsManager : MonoBehaviour
         if (!active)
             return;
 
-        if (creditsTimer < Time.time)
+        if (!done && limit.transform.position.y < limitMove.transform.position.y)
         {
+            done = true;
             EnableOptions();
         }
 

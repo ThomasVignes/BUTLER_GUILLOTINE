@@ -21,7 +21,9 @@ public class AchievementsLocalManager : MonoBehaviour
             achievement.Increments--;
         else
         {
-            PersistentData.Instance.SteamAchievementManager.TriggerAchievement(achievement.ID);
+            if (PersistentData.Instance != null)
+                PersistentData.Instance.SteamAchievementManager.TriggerAchievement(achievement.ID);
+
             Debug.Log("Triggered achievement: " +  achievement.ID);
         }
     }
