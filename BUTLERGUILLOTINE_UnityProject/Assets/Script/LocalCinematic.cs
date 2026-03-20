@@ -42,6 +42,7 @@ public class LocalCinematic : MonoBehaviour
     [SerializeField] bool lastCinematic;
     [SerializeField] bool noEndingBlackScreen;
     [SerializeField] bool dontDeleteLines;
+    [SerializeField] bool invert;
 
     GameManager gameManager;
 
@@ -117,6 +118,16 @@ public class LocalCinematic : MonoBehaviour
             //Write text
             #region Write text
             yield return new WaitForSeconds(delayBeforeDialogue);
+
+            if (invert)
+            {
+                //Play animations
+                foreach (var item in line.PuppetActions)
+                {
+                    PlayPuppetAction(item.PuppetName, item.Action);
+                }
+            }
+
             if (writeText)
             {
                 var text = line.Text;
@@ -164,10 +175,13 @@ public class LocalCinematic : MonoBehaviour
             }
             #endregion
 
-            //Play animations
-            foreach (var item in line.PuppetActions)
+            if (!invert)
             {
-                PlayPuppetAction(item.PuppetName, item.Action);
+                //Play animations
+                foreach (var item in line.PuppetActions)
+                {
+                    PlayPuppetAction(item.PuppetName, item.Action);
+                }
             }
 
             //Play effects
