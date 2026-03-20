@@ -145,7 +145,7 @@ public class LongestDayFourthManager : ChapterManagerGeneric
 
         yield return new WaitForSeconds(3.3f);
 
-        gameManager.OverrideAmbiance("Empty");
+        gameManager.OverrideAmbiance("Silence");
         titleText.SetActive(true);
 
         yield return new WaitForSeconds(2);

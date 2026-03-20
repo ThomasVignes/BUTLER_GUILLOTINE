@@ -123,6 +123,14 @@ public class ProceduralDialogueManager : MonoBehaviour
         return batch.lines[index];
     }
 
+    public void PauseAll(bool pause)
+    {
+        foreach (var item in dialogueCharacters)
+        {
+            item.TogglePause(pause);
+        }
+    }
+
     public bool IndexAvailable(int index, DialogueBatch batch) 
     {
         foreach (var item in indexes)

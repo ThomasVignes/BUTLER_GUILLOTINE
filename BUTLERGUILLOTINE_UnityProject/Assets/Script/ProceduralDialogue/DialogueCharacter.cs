@@ -155,6 +155,14 @@ public class DialogueCharacter : Interactable
         character.Pause();
     }
 
+    public void TogglePause(bool pause)
+    {
+        Paused = pause;
+
+        if (Paused)
+            character.Pause();
+    }
+
     public void Speak(string text)
     {
         speakText.text = text;

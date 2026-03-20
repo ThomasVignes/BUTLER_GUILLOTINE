@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: C_Banquet
   m_EditorClassIdentifier: 
   ID: Banquet
-  Ambience: Empty
-  BlackScreenDuration: 1
+  Ambience: 
+  BlackScreenDuration: 2
   lines:
   - Text: 
     Duration: 6
@@ -23,8 +23,16 @@ MonoBehaviour:
     cameraEffect: 0
     newAmbience: 
     soundEffects: []
-  EndBlackScreenDuration: 1
+  - Text: '  Let''s now proceed to our main award.'
+    Duration: 6
+    PuppetActions: []
+    cameraIndex: 0
+    cameraEffect: 0
+    newAmbience: 
+    soundEffects: []
+  EndBlackScreenDuration: 5
   HidePlayer: 0
+  CutOnStart: 0
   NoEndBlackscreen: 0
   NoFadeOut: 0
   OverrideKeepsGoing: 0
