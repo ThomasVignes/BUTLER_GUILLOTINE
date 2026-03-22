@@ -1220,8 +1220,8 @@ MonoBehaviour:
     Data3: -665384041
     Data4: -1711876676
   Banks:
-  - {fileID: 7964605896639709159}
   - {fileID: -9072090894377937510}
+  - {fileID: 7964605896639709159}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1815,10 +1815,10 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639094624137246090
+  lastModified: 639097864085334084
   FileSizes:
   - Name: 
-    Value: 9488
+    Value: 9522
   Exists: 1
 --- !u!114 &-735843984859671838
 MonoBehaviour:
@@ -2141,12 +2141,13 @@ MonoBehaviour:
   - {fileID: 14659630603056866}
   - {fileID: -3488171437185751468}
   - {fileID: 6682370005935167566}
+  - {fileID: 9103591085946501344}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6000090139453766909}
   StringsBanks:
   - {fileID: -786783328031392545}
-  cacheTime: 639094624152597572
+  cacheTime: 639097865594380984
   cacheVersion: 131632
 --- !u!114 &14659630603056866
 MonoBehaviour:
@@ -3128,7 +3129,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639094624137226094
+  lastModified: 639097864085314695
   FileSizes: []
   Exists: 1
 --- !u!114 &6003941878807412242
@@ -3568,8 +3569,8 @@ MonoBehaviour:
     Data3: 462837905
     Data4: 788421580
   Banks:
-  - {fileID: 7964605896639709159}
   - {fileID: -9072090894377937510}
+  - {fileID: 7964605896639709159}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -3733,7 +3734,7 @@ MonoBehaviour:
   Path: ../FMOD/BUTLERGUILLOTINE/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639093877522278572
+  lastModified: 639097865594380984
   FileSizes: []
   Exists: 1
 --- !u!114 &8342352198941902692
@@ -3985,3 +3986,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 339
+--- !u!114 &9103591085946501344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/bonk
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/bonk
+  Guid:
+    Data1: 1120799220
+    Data2: 1123648719
+    Data3: 2067867780
+    Data4: -913888144
+  Banks:
+  - {fileID: 7964605896639709159}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 260
