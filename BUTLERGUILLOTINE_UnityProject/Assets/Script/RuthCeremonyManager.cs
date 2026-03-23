@@ -60,6 +60,8 @@ public class RuthCeremonyManager : ChapterManagerGeneric
 
         Intro = false;
         gameManager.Ready = true;
+
+        OnStart?.Invoke();
     }
 
     public override void RestartGame()

@@ -30197,6 +30197,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 974558630886115723}
     m_Modifications:
+    - target: {fileID: 4351297371653068485, guid: b46c1c3a41a898447a127b8bb714e519, type: 3}
+      propertyPath: forcedVanishDelay
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4876591654360299837, guid: b46c1c3a41a898447a127b8bb714e519, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -30320,7 +30324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7938330859930989623, guid: 6a47bd760270e3449a71fd2229140625, type: 3}
       propertyPath: m_VersionIndex
-      value: 910
+      value: 922
       objectReference: {fileID: 0}
     - target: {fileID: 8630205526008207988, guid: 6a47bd760270e3449a71fd2229140625, type: 3}
       propertyPath: m_Name

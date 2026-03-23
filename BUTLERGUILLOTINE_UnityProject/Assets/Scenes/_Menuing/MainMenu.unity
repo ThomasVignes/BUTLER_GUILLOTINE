@@ -19991,7 +19991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &827986066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44390,8 +44390,12 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+  OnRagdoll:
+    m_PersistentCalls:
+      m_Calls: []
   DeathRagdoll: {fileID: 891356915718001356, guid: 80e6212d34fd2e149a7f7f9f2e980178, type: 3}
   Unstunnable: 1
+  objectsToSave: []
 --- !u!1 &1791197201
 GameObject:
   m_ObjectHideFlags: 0

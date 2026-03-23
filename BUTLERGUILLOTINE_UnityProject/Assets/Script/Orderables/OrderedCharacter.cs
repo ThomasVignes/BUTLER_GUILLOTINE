@@ -12,6 +12,7 @@ public class OrderedCharacter : MonoBehaviour
     [SerializeField] protected float timeBeforeFadeout, timeBeforeDeactivated;
     [SerializeField] protected float actionDistance;
     [SerializeField] protected float spawnDistanceFromTarget;
+    [SerializeField] protected float forcedVanishDelay = 5f;
 
     [Header("References")]
     [SerializeField] protected Character character;
@@ -22,6 +23,9 @@ public class OrderedCharacter : MonoBehaviour
 
     protected Transform actionTarget;
     protected Vector3 targetPos;
+
+    float vanishedDelay;
+    bool vanishDelay;
 
     public void Init(Transform ruth)
     {
@@ -40,16 +44,34 @@ public class OrderedCharacter : MonoBehaviour
         {
             float distance = Vector3.Distance(character.transform.position, targetPos);
 
+            bool done = false;
+
             if (distance < actionDistance)
             {
+                vanishDelay = false;
                 moving = false;
                 character.Pause();
                 TryAction();
+
+                done = true;
             }
 
-            if (!character.Moving && !character.Rotating)
+            if (!done && !character.Moving && !character.Rotating && !action)
             {
-                //Vanish();
+                if (!vanishDelay)
+                {
+                    vanishDelay = true;
+                    vanishedDelay = forcedVanishDelay;
+                }
+                else
+                {
+                    vanishedDelay -= Time.deltaTime;
+                    if (vanishedDelay <= 0)
+                    {
+                        vanishDelay = false;
+                        Vanish();
+                    }
+                }
             }
         }
     }
@@ -66,6 +88,7 @@ public class OrderedCharacter : MonoBehaviour
             return;
 
         active = true;
+        vanishDelay = false;
 
         actionTarget = target;
         targetPos = target.position;

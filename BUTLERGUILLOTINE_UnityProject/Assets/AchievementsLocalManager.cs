@@ -19,7 +19,8 @@ public class AchievementsLocalManager : MonoBehaviour
 
         if (achievement.Increments > 0)
             achievement.Increments--;
-        else
+
+        if (achievement.Increments <= 0)
         {
             if (PersistentData.Instance != null)
                 PersistentData.Instance.SteamAchievementManager.TriggerAchievement(achievement.ID);

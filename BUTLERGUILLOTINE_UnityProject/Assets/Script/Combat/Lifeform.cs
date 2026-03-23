@@ -9,6 +9,7 @@ public class Lifeform : MonoBehaviour
     public int HP;
     public Character Character;
     public UnityEvent OnDeath;
+    public UnityEvent OnRagdoll;
     public GameObject DeathRagdoll;
     public bool Unstunnable;
     [SerializeField] GameObject[] objectsToSave;
@@ -47,6 +48,7 @@ public class Lifeform : MonoBehaviour
             return;
         
         OnDeath?.Invoke();
+        OnRagdoll?.Invoke();
 
         dead = true;
 
