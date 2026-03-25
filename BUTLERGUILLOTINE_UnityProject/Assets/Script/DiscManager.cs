@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DiscManager : MonoBehaviour
@@ -20,6 +21,7 @@ public class DiscManager : MonoBehaviour
     [SerializeField] GameObject raycastBlocker;
     [SerializeField] Animator ruthAnimator;
     [SerializeField] Animator discPlayerAnimator, cameraAnimator;
+    public UnityEvent OnAchievementCheck;
 
     [Header("Text references")]
     [SerializeField] TextMeshProUGUI jerTitle;
@@ -32,6 +34,8 @@ public class DiscManager : MonoBehaviour
 
     bool fadeOut;
     float themeVolume;
+
+    bool achievementChecked;
 
     EventInstance currentInstance;
     Coroutine playSong;
@@ -252,8 +256,13 @@ public class DiscManager : MonoBehaviour
             currentIndex--;
 
         if (currentIndex >= 0 && currentIndex < songs.Count)
+        {
             hasEdited = !songs[currentIndex].edited.IsNull;
 
+            //Achievement logic
+            songs[currentIndex].ShownOnce = true;
+            AchievementCheck();
+        }
 
         //Animation logic
         if (currentIndex < 0 || currentIndex >= songs.Count)
@@ -329,6 +338,29 @@ public class DiscManager : MonoBehaviour
 
         Application.OpenURL(songs[currentIndex].URL);
     }
+
+    void AchievementCheck()
+    {
+        if (achievementChecked)
+            return;
+
+        bool achievementDone = true;
+
+        foreach (var item in songs)
+        {
+            if (!item.ShownOnce)
+            {
+                achievementDone = false;
+                break;
+            }
+        }
+
+        if (achievementDone)
+        {
+            achievementChecked = true;
+            OnAchievementCheck?.Invoke();
+        }
+    }
 }
 
 [System.Serializable]
@@ -342,4 +374,5 @@ public class DiscSong
     public string URL;
     public EventReference original;
     public EventReference edited;
+    public bool ShownOnce;
 }
