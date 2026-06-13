@@ -39,6 +39,7 @@ public class CreditsManager : MonoBehaviour
         if (PersistentData.Instance != null)
         {
             PersistentData.Instance.GameFinished = true;
+            PersistentData.Instance.NGPlus = true;
             PersistentData.Instance.SaveData();
         }
     }

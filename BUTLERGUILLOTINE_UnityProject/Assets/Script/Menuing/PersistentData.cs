@@ -29,6 +29,7 @@ public class PersistentData : MonoBehaviour
     [Header("NG+")]
     public bool GameFinished;
     public bool NGPlus;
+    public bool NGNotificationDone;
 
     [Header("Demo Specific Data")]
     public bool FinishedOnce;
@@ -184,6 +185,7 @@ public class PersistentData : MonoBehaviour
 
         GameFinished = ngPlusSettings.GameFinished;
         NGPlus = ngPlusSettings.NGPlus;
+        NGNotificationDone = ngPlusSettings.NGNotificationDone;
     }
 
     public void SaveData(bool saveCurrentScene)
@@ -196,7 +198,7 @@ public class PersistentData : MonoBehaviour
             CurrentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         }
 
-        var data = new SaveData(CurrentScene, CurrentSceneIndex, FinishedOnce, HasKey, Screen, Stereo, Framerate, Vsync, PostProcessAffectsUI, GameFinished, NGPlus);
+        var data = new SaveData(CurrentScene, CurrentSceneIndex, FinishedOnce, HasKey, Screen, Stereo, Framerate, Vsync, PostProcessAffectsUI, GameFinished, NGPlus, NGNotificationDone);
         var json = JsonUtility.ToJson(data, true);
 
         string fullPath = Application.dataPath + savePath + "SaveData";
@@ -223,7 +225,7 @@ public class SaveData
     public NGPlusSettings NGPlusSettings;
     public DemoTriggers DemoTriggers;
 
-    public SaveData(string currentScene, int currentSceneIndex, bool finishedOnce, bool hasKey, FullScreenMode screen, bool stereo, int framerate, bool vsync,bool postprocessui, bool gameFinished, bool ngPlus)
+    public SaveData(string currentScene, int currentSceneIndex, bool finishedOnce, bool hasKey, FullScreenMode screen, bool stereo, int framerate, bool vsync,bool postprocessui, bool gameFinished, bool ngPlus, bool ngNotificationDone)
     {
         GeneralData = new GeneralData();
         GeneralData.CurrentScene = currentScene;
@@ -245,6 +247,7 @@ public class SaveData
 
         NGPlusSettings.GameFinished = gameFinished;
         NGPlusSettings.NGPlus = ngPlus;
+        NGPlusSettings.NGNotificationDone = ngNotificationDone;
     }
 }
 
@@ -270,6 +273,7 @@ public class NGPlusSettings
 {
     public bool GameFinished;
     public bool NGPlus;
+    public bool NGNotificationDone;
 }
 
 

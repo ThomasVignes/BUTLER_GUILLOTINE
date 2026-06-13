@@ -27,7 +27,7 @@ public class MainMenuMaster : MonoBehaviour
     [Header("References")]
     [SerializeField] SettingsManager settingsManager;
     [SerializeField] Texture2D BaseCursor;
-    [SerializeField] GameObject chapterSelect, chapterSelectButton;
+    [SerializeField] GameObject chapterSelect, chapterSelectButton, ngPlusNotification;
     [SerializeField] private Image BlackScreen;
     [SerializeField] Transform Elevator;
     [SerializeField] Transform[] Spots;
@@ -85,7 +85,9 @@ public class MainMenuMaster : MonoBehaviour
 
         //NG plus
         if (PersistentData.Instance.GameFinished)
+        {
             UpdateNGPlus();
+        }
 
 
         emitter.EventInstance.getVolume(out themeVolume);
@@ -245,6 +247,15 @@ public class MainMenuMaster : MonoBehaviour
 
         CanInput = true;
         eventSystem.SetActive(true);
+
+        yield return new WaitForSeconds(0.5f);
+
+        //NG notification
+        if (!PersistentData.Instance.NGNotificationDone)
+        {
+            PersistentData.Instance.NGNotificationDone = true;
+            ngPlusNotification.SetActive(true);
+        }
     }
 
     public void ToggleChapterSelect(bool toggle)

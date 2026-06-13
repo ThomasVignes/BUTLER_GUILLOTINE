@@ -8,8 +8,15 @@ public class ChapterSelector : MonoBehaviour
     [SerializeField] Transform grid;
     [SerializeField] GameObject instance;
 
+    bool init;
+
     public void Init()
     {
+        if (init)
+            return;
+
+        init = true;
+
         foreach (var item in menuChapters)
         {
             GameObject go = Instantiate(instance);
