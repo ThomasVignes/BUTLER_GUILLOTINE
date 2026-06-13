@@ -7,12 +7,14 @@ using UnityEngine.UI;
 public class PauseManager : Manager
 {
     [SerializeField] SettingsManager settingsManager;
-    [SerializeField] GameObject pauseUI, optionsUI;
+    [SerializeField] GameObject pauseUI, optionsUI, noSaveUI;
     bool canPause, optionsOpen;
 
     float baseScale;
 
     public bool CanPause { get { return canPause; } set { canPause = value; } }
+
+    bool noSaveNotification;
 
 
     public override void Init(GameManager gameManager)
@@ -77,6 +79,17 @@ public class PauseManager : Manager
 
     public void MainMenu()
     {
+        if (noSaveNotification)
+        {
+            noSaveUI.SetActive(true);
+            return;
+        }
+
+        ForceMainMenu();
+    }
+
+    public void ForceMainMenu()
+    {
         UnPause();
 
         Cursor.visible = true;
@@ -91,5 +104,16 @@ public class PauseManager : Manager
         UnPause();
 
         PersistentData.Instance.BuildNavigator.RequestQuit();
+    }
+
+    public void ToggleNoSaveNotification(bool on)
+    {
+        noSaveNotification = on;
+    }
+
+    [ContextMenu("NoSave")]
+    public void NoSave()
+    {
+        ToggleNoSaveNotification(true);
     }
 }

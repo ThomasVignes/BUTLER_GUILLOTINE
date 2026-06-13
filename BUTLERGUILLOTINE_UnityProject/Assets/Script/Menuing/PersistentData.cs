@@ -225,7 +225,8 @@ public class SaveData
     public NGPlusSettings NGPlusSettings;
     public DemoTriggers DemoTriggers;
 
-    public SaveData(string currentScene, int currentSceneIndex, bool finishedOnce, bool hasKey, FullScreenMode screen, bool stereo, int framerate, bool vsync,bool postprocessui, bool gameFinished, bool ngPlus, bool ngNotificationDone)
+    public SaveData(string currentScene, int currentSceneIndex, bool finishedOnce, bool hasKey, FullScreenMode screen, bool stereo, int framerate, bool vsync,bool postprocessui, 
+        bool gameFinished, bool ngPlus, bool ngNotificationDone)
     {
         GeneralData = new GeneralData();
         GeneralData.CurrentScene = currentScene;
@@ -275,7 +276,6 @@ public class NGPlusSettings
     public bool NGPlus;
     public bool NGNotificationDone;
 }
-
 
 [System.Serializable]
 public class DemoTriggers
