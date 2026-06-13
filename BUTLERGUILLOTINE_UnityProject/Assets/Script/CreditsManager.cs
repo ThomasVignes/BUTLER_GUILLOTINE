@@ -35,6 +35,12 @@ public class CreditsManager : MonoBehaviour
     private void Start()
     {
         Init();
+
+        if (PersistentData.Instance != null)
+        {
+            PersistentData.Instance.GameFinished = true;
+            PersistentData.Instance.SaveData();
+        }
     }
 
     public void Init()

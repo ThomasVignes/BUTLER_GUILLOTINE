@@ -27,7 +27,7 @@ public class MainMenuMaster : MonoBehaviour
     [Header("References")]
     [SerializeField] SettingsManager settingsManager;
     [SerializeField] Texture2D BaseCursor;
-    [SerializeField] GameObject chapterSelect;
+    [SerializeField] GameObject chapterSelect, chapterSelectButton;
     [SerializeField] private Image BlackScreen;
     [SerializeField] Transform Elevator;
     [SerializeField] Transform[] Spots;
@@ -74,7 +74,6 @@ public class MainMenuMaster : MonoBehaviour
 
         Elevator.position = Spots[targetSpot].position;
         
-        chapterSelector.Init();
 
         bool canContinue = PersistentData.Instance.BuildNavigator.CanContinue();
 
@@ -84,10 +83,24 @@ public class MainMenuMaster : MonoBehaviour
             continueButton.GetComponentInChildren<TextMeshProUGUI>().color = Color.gray;
         }
 
+        //NG plus
+        if (PersistentData.Instance.GameFinished)
+            UpdateNGPlus();
+
 
         emitter.EventInstance.getVolume(out themeVolume);
 
         OnStart?.Invoke();
+    }
+
+    public void UpdateNGPlus()
+    {
+        bool active = PersistentData.Instance.NGPlus;
+
+        chapterSelectButton.SetActive(active);
+        
+        if (active)
+            chapterSelector.Init();
     }
 
     private void Update()

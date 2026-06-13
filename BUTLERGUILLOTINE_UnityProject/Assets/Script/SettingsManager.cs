@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class SettingsManager : MonoBehaviour
 {
     [SerializeField] private PostProcessOnUI postProcessOnUI;
     [SerializeField] private TMP_Dropdown screen, sound, fps;
-    [SerializeField] private Toggle vsync, postOnUI;
+    [SerializeField] private Toggle vsync, postOnUI, ngPlus;
     [SerializeField] private Slider masterVolume, musicVolume, sfxVolume;
+    [SerializeField] GameObject ngPlusOptions;
+    public UnityEvent OnNGPlusToggle;
 
     public void Init()
     {
@@ -19,6 +22,8 @@ public class SettingsManager : MonoBehaviour
             Defaults();
         else
             InitValues(data);
+
+        ngPlusOptions.SetActive(PersistentData.Instance.GameFinished);
     }
 
     void InitValues(PersistentData data)
@@ -64,6 +69,7 @@ public class SettingsManager : MonoBehaviour
 
         vsync.isOn = data.Vsync;
         postOnUI.isOn = data.PostProcessAffectsUI;
+        ngPlus.isOn = data.NGPlus;
 
         masterVolume.value = data.MasterVolume;
         musicVolume.value = data.MusicVolume;
@@ -173,6 +179,15 @@ public class SettingsManager : MonoBehaviour
             PersistentData.Instance.MusicVolume = musicVolume.value;
             PersistentData.Instance.SFXVolume = sfxVolume.value;
         }
+    }
+
+    public void UpdateNGPlus()
+    {
+        bool toggle = ngPlus.isOn;
+
+        PersistentData.Instance.NGPlus = toggle;
+
+        OnNGPlusToggle?.Invoke();
     }
 
 

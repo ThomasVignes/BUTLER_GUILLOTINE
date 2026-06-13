@@ -1,7 +1,7 @@
 {
     "GeneralData": {
-        "CurrentScene": "CEREMONY_1.5",
-        "CurrentSceneIndex": 5
+        "CurrentScene": "MainMenu",
+        "CurrentSceneIndex": 0
     },
     "Settings": {
         "Screen": 2,
@@ -9,6 +9,10 @@
         "Framerate": 0,
         "Vsync": true,
         "PostProcessAffectsUI": true
+    },
+    "NGPlusSettings": {
+        "GameFinished": false,
+        "NGPlus": false
     },
     "DemoTriggers": {
         "FinishedOnce": false,

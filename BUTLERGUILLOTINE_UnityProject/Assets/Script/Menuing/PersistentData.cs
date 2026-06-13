@@ -26,6 +26,10 @@ public class PersistentData : MonoBehaviour
 
     [HideInInspector] public bool FastMode, CopyrightFree;
 
+    [Header("NG+")]
+    public bool GameFinished;
+    public bool NGPlus;
+
     [Header("Demo Specific Data")]
     public bool FinishedOnce;
     public bool HasKey;
@@ -175,6 +179,11 @@ public class PersistentData : MonoBehaviour
         Framerate = settings.Framerate;
         Vsync = settings.Vsync;
         PostProcessAffectsUI = settings.PostProcessAffectsUI;
+
+        NGPlusSettings ngPlusSettings = saveData.NGPlusSettings;
+
+        GameFinished = ngPlusSettings.GameFinished;
+        NGPlus = ngPlusSettings.NGPlus;
     }
 
     public void SaveData(bool saveCurrentScene)
@@ -187,7 +196,7 @@ public class PersistentData : MonoBehaviour
             CurrentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         }
 
-        var data = new SaveData(CurrentScene, CurrentSceneIndex, FinishedOnce, HasKey, Screen, Stereo, Framerate, Vsync, PostProcessAffectsUI);
+        var data = new SaveData(CurrentScene, CurrentSceneIndex, FinishedOnce, HasKey, Screen, Stereo, Framerate, Vsync, PostProcessAffectsUI, GameFinished, NGPlus);
         var json = JsonUtility.ToJson(data, true);
 
         string fullPath = Application.dataPath + savePath + "SaveData";
@@ -211,9 +220,10 @@ public class SaveData
 {
     public GeneralData GeneralData;
     public Settings Settings;
+    public NGPlusSettings NGPlusSettings;
     public DemoTriggers DemoTriggers;
 
-    public SaveData(string currentScene, int currentSceneIndex, bool finishedOnce, bool hasKey, FullScreenMode screen, bool stereo, int framerate, bool vsync,bool postprocessui)
+    public SaveData(string currentScene, int currentSceneIndex, bool finishedOnce, bool hasKey, FullScreenMode screen, bool stereo, int framerate, bool vsync,bool postprocessui, bool gameFinished, bool ngPlus)
     {
         GeneralData = new GeneralData();
         GeneralData.CurrentScene = currentScene;
@@ -230,6 +240,11 @@ public class SaveData
         Settings.Framerate = framerate;
         Settings.Vsync = vsync;
         Settings.PostProcessAffectsUI = postprocessui;
+
+        NGPlusSettings = new NGPlusSettings();
+
+        NGPlusSettings.GameFinished = gameFinished;
+        NGPlusSettings.NGPlus = ngPlus;
     }
 }
 
@@ -248,6 +263,13 @@ public class GeneralData
 {
     public string CurrentScene;
     public int CurrentSceneIndex;
+}
+
+[System.Serializable]
+public class NGPlusSettings
+{
+    public bool GameFinished;
+    public bool NGPlus;
 }
 
 
